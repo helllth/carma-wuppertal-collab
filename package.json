@@ -6,7 +6,8 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "storybook": "nx run carma-wuppertal-collab:storybook"
+    "storybook": "nx run carma-wuppertal-collab:storybook",
+    "build-storybook": "nx run carma-wuppertal-collab:build-storybook"
   },
   "private": true,
   "dependencies": {
