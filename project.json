@@ -5,5 +5,37 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project carma-wuppertal-collab --web",
-  "targets": {}
+  "targets": {
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "./.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/carma-wuppertal-collab",
+        "configDir": "./.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c ./.storybook --url=http://localhost:4400"
+      }
+    }
+  }
 }
