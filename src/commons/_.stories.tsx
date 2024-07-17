@@ -1,20 +1,20 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import Attribution from './Attribution';
-import GenericDigitalTwinReferenceTextComponent from './GenericDigitalTwinReferenceTextComponent';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Attribution } from "./";
+import { GenericDigitalTwinReferenceTextComponent } from "./";
 const meta: Meta = {
-  title: 'Commons',
+  title: "Commons",
   args: {
-    applicationName: 'GreatApp',
-    applicationVersion: 'abcd',
+    applicationName: "GreatApp",
+    applicationVersion: "abcd",
   },
   argTypes: {
     applicationName: {
-      control: 'text',
-      description: 'Name of the application',
+      control: "text",
+      description: "Name of the application",
     },
     applicationVersion: {
-      control: 'text',
-      description: 'Version of the application',
+      control: "text",
+      description: "Version of the application",
     },
   },
 };
