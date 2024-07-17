@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 type AttributionProps = {
   applicationName: string;
   applicationVersion: string;
 };
 
-const Attribution: React.FC<AttributionProps> = ({
+export const Attribution: React.FC<AttributionProps> = ({
   applicationName = document.title,
   applicationVersion,
 }) => {
@@ -13,20 +13,20 @@ const Attribution: React.FC<AttributionProps> = ({
     <div>
       <b>
         {applicationName} #{applicationVersion}
-      </b>{' '}
-      made with ❤️ by{' '}
+      </b>{" "}
+      made with ❤️ by{" "}
       <a href="https://cismet.de/" target="_cismet">
         cismet GmbH
-      </a>{' '}
-      auf Basis von{' '}
+      </a>{" "}
+      auf Basis von{" "}
       <a href="https://cismet.de/#refs" target="_cismet">
         cids
-      </a>{' '}
-      und{' '}
+      </a>{" "}
+      und{" "}
       <a href="https://github.com/cismet/carma" target="_cismet">
         carma
-      </a>{' '}
-      |{' '}
+      </a>{" "}
+      |{" "}
       <a
         target="_blank"
         rel="noopener noreferrer"
