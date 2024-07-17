@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import KompaktanleitungSection from './KompaktanleitungSection';
+
 const meta: Meta = {
   title: 'Bäderkarte',
 };
@@ -7,5 +8,17 @@ const meta: Meta = {
 export default meta;
 
 export const Kompaktanleitung: StoryObj = {
-  render: () => <KompaktanleitungSection />,
+  render: () => {
+    const modalBodyStyle = {
+      overflowY: 'auto',
+      overflowX: 'hidden',
+      maxHeight: '100vh',
+    };
+
+    return (
+      <div id="myMenu" style={modalBodyStyle}>
+        <KompaktanleitungSection />
+      </div>
+    );
+  },
 };

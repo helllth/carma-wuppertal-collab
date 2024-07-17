@@ -6,7 +6,6 @@ import GenericHelpTextForMyLocation from 'react-cismap/topicmaps/docBlocks/Gener
 import Section from 'react-cismap/topicmaps/menu/Section';
 import LicenseLuftbildkarte from 'react-cismap/topicmaps/wuppertal/LicenseLuftbildkarte';
 import LicenseStadtplanTagNacht from 'react-cismap/topicmaps/wuppertal/LicenseStadtplanTagNacht';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { getSymbolSVGGetter } from 'react-cismap/tools/uiHelper';
 
 const hallenbadSVGsrc = `
