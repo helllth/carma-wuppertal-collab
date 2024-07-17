@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import KompaktanleitungSection from './KompaktanleitungSection';
+import { KompaktanleitungSection } from './KompaktanleitungSection';
 
 const meta: Meta = {
   title: 'Bäderkarte',

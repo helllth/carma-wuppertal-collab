@@ -50,7 +50,7 @@ const defaultNichtOeffentlichesVereinsbadSVG = getSymbolSVGGetter(
   }
 )(18, '#4AC1D1', 'helpTextSVG4');
 
-const KompaktanleitungSection = ({
+export const KompaktanleitungSection = ({
   hallenBadSVG = defaultHallenBadSVG,
   freibadBadSVG = defaultFreibadBadSVG,
   staedtischesFreibadSVG = defaultStaedtischesFreibadSVG,
@@ -363,5 +363,3 @@ const KompaktanleitungSection = ({
     />
   );
 };
-
-export default KompaktanleitungSection;
