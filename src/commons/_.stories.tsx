@@ -1,17 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import TopicMapContextProvider from 'react-cismap/contexts/TopicMapContextProvider';
 import Attribution from './Attribution';
 import GenericDigitalTwinReferenceTextComponent from './GenericDigitalTwinReferenceTextComponent';
 const meta: Meta = {
   title: 'Commons',
+  args: {
+    applicationName: 'GreatApp',
+    applicationVersion: 'abcd',
+  },
+  argTypes: {
+    applicationName: {
+      control: 'text',
+      description: 'Name of the application',
+    },
+    applicationVersion: {
+      control: 'text',
+      description: 'Version of the application',
+    },
+  },
 };
 
 export default meta;
 
 export const attribution: StoryObj = {
-  render: () => (
-    <Attribution applicationName="GreatApp" applicationVersion="abcd" />
-  ),
+  render: (args) => <Attribution {...args} />,
 };
 
 export const genericDigitalTwinReferenceTextComponent: StoryObj = {
