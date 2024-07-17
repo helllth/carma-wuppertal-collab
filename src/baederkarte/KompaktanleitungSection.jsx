@@ -1,13 +1,13 @@
-import Icon from 'react-cismap/commons/Icon';
+import Icon from "react-cismap/commons/Icon";
 
-import ConfigurableDocBlocks from 'react-cismap/topicmaps/ConfigurableDocBlocks';
-import GenericHelpTextForMyLocation from 'react-cismap/topicmaps/docBlocks/GenericHelpTextForMyLocation';
+import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
+import GenericHelpTextForMyLocation from "react-cismap/topicmaps/docBlocks/GenericHelpTextForMyLocation";
 
-import Section from 'react-cismap/topicmaps/menu/Section';
-import LicenseLuftbildkarte from 'react-cismap/topicmaps/wuppertal/LicenseLuftbildkarte';
-import LicenseStadtplanTagNacht from 'react-cismap/topicmaps/wuppertal/LicenseStadtplanTagNacht';
-import { getSymbolSVGGetter } from 'react-cismap/tools/uiHelper';
-
+import Section from "react-cismap/topicmaps/menu/Section";
+import LicenseLuftbildkarte from "react-cismap/topicmaps/wuppertal/LicenseLuftbildkarte";
+import LicenseStadtplanTagNacht from "react-cismap/topicmaps/wuppertal/LicenseStadtplanTagNacht";
+import { getSymbolSVGGetter } from "react-cismap/tools/uiHelper";
+import AdressMarker from "./assets/AdressMarker.jpg";
 const hallenbadSVGsrc = `
 <svg xmlns="http://www.w3.org/2000/svg" width="20.0" height="20.0">
 <path class="fg-fill" fill="#FFF"  d="M0 0h20.008v20.945H0z"/>
@@ -26,29 +26,29 @@ const freiBadSVGsrc = `
 const defaultHallenBadSVG = getSymbolSVGGetter(hallenbadSVGsrc, {
   width: 20,
   height: 20,
-})(18, '#565B5E', 'helpTextSVG0');
+})(18, "#565B5E", "helpTextSVG0");
 
 const defaultFreibadBadSVG = getSymbolSVGGetter(freiBadSVGsrc, {
   width: 20,
   height: 20,
-})(18, '#565B5E', 'helpTextSVG1');
+})(18, "#565B5E", "helpTextSVG1");
 
 const defaultStaedtischesFreibadSVG = getSymbolSVGGetter(freiBadSVGsrc, {
   width: 20,
   height: 20,
-})(18, '#1A4860', 'helpTextSVG2');
+})(18, "#1A4860", "helpTextSVG2");
 
 const defaultOeffentlichesVereinsbadSVG = getSymbolSVGGetter(freiBadSVGsrc, {
   width: 20,
   height: 20,
-})(18, '#107FC9', 'helpTextSVG3');
+})(18, "#107FC9", "helpTextSVG3");
 const defaultNichtOeffentlichesVereinsbadSVG = getSymbolSVGGetter(
   freiBadSVGsrc,
   {
     width: 20,
     height: 20,
   }
-)(18, '#4AC1D1', 'helpTextSVG4');
+)(18, "#4AC1D1", "helpTextSVG4");
 
 export const KompaktanleitungSection = ({
   hallenBadSVG = defaultHallenBadSVG,
@@ -67,13 +67,13 @@ export const KompaktanleitungSection = ({
         <ConfigurableDocBlocks
           configs={[
             {
-              type: 'FAQS',
+              type: "FAQS",
               configs: [
                 {
-                  title: 'Datengrundlage',
-                  bsStyle: 'warning',
+                  title: "Datengrundlage",
+                  bsStyle: "warning",
                   contentBlockConf: {
-                    type: 'REACTCOMP',
+                    type: "REACTCOMP",
                     content: (
                       <div>
                         <p>
@@ -88,20 +88,20 @@ export const KompaktanleitungSection = ({
                         </ul>
 
                         <p>
-                          Zusätzlich nutzt die Bäderkarte den Datensatz{' '}
+                          Zusätzlich nutzt die Bäderkarte den Datensatz{" "}
                           <a
                             target="_legal"
                             href="https://offenedaten-wuppertal.de/dataset/interessante-orte-poi-wuppertal"
                           >
                             POI Wuppertal
-                          </a>{' '}
-                          des{' '}
+                          </a>{" "}
+                          des{" "}
                           <a
                             target="_legal"
                             href="https://www.wuppertal.de/rathaus-buergerservice/karten_vermessung/index.php"
                           >
                             Ressorts Vermessung, Katasteramt und Geodaten
-                          </a>{' '}
+                          </a>{" "}
                           aus dem Open-Data-Angebot der Stadt Wuppertal, der
                           auch die Wuppertaler Schwimmbäder umfasst.
                         </p>
@@ -110,13 +110,13 @@ export const KompaktanleitungSection = ({
                   },
                 },
                 {
-                  title: 'Bäder auswählen und abfragen',
-                  bsStyle: 'secondary',
+                  title: "Bäder auswählen und abfragen",
+                  bsStyle: "secondary",
                   contentBlockConf: {
-                    type: 'REACTCOMP',
+                    type: "REACTCOMP",
                     content: (
                       <div>
-                        {' '}
+                        {" "}
                         <p>
                           Bewegen Sie den Mauszeiger im Kartenfenster auf eines
                           der Schwimmbad-Symbole, um sich den Namen des Bades
@@ -129,11 +129,11 @@ export const KompaktanleitungSection = ({
                           Schwimmbad-Symbols gesetzt, das zweite Antippen
                           blendet den Namen ein.) Außerdem werden Ihnen in der
                           Info-Box weiterführende (Kommunikations-) Links zu
-                          diesem Schwimmbad angezeigt:{' '}
-                          <Icon name="external-link-square" /> Internet,{' '}
-                          <span style={{ whiteSpace: 'nowrap' }}>
+                          diesem Schwimmbad angezeigt:{" "}
+                          <Icon name="external-link-square" /> Internet,{" "}
+                          <span style={{ whiteSpace: "nowrap" }}>
                             <Icon name="envelope-square" /> E-Mail
-                          </span>{' '}
+                          </span>{" "}
                           und <Icon name="phone" /> Telefon. Durch Anklicken des
                           Kalender-Symbols <Icon name="calendar" /> gelangen Sie
                           bei einigen städtischen Bädern zum
@@ -145,20 +145,20 @@ export const KompaktanleitungSection = ({
                           Wenn Sie noch kein Schwimmbad im aktuellen
                           Kartenausschnitt selektiert haben, wird der Fokus
                           automatisch auf das nördlichste Bad gesetzt. Mit den
-                          Funktionen <a>&lt;&lt;</a> vorheriger Treffer und{' '}
+                          Funktionen <a>&lt;&lt;</a> vorheriger Treffer und{" "}
                           <a>&gt;&gt;</a> nächster Treffer können Sie ausgehend
                           von dem Schwimmbad, auf dem gerade der Fokus liegt, in
                           nördlicher bzw. südlicher Richtung alle aktuell im
                           Kartenfenster angezeigten Bäder durchmustern.
                         </p>
                         <p>
-                          Mit der Schaltfläche{' '}
+                          Mit der Schaltfläche{" "}
                           <Icon name="chevron-circle-down" /> im dunkelgrau
                           abgesetzten rechten Rand der Info-Box lässt sich diese
                           so verkleinern, dass nur noch die thematische
                           Zuordnung und der Name des Schwimmbades sowie die
                           Link-Symbole angezeigt werden - nützlich für Endgeräte
-                          mit kleinem Display. Mit der Schaltfläche{' '}
+                          mit kleinem Display. Mit der Schaltfläche{" "}
                           <Icon name="chevron-circle-up" /> an derselben Stelle
                           können Sie die Info-Box dann wieder vollständig
                           einblenden.
@@ -178,22 +178,22 @@ export const KompaktanleitungSection = ({
                   },
                 },
                 {
-                  title: 'Kartendarstellung der Bäder',
-                  bsStyle: 'secondary',
+                  title: "Kartendarstellung der Bäder",
+                  bsStyle: "secondary",
                   contentBlockConf: {
-                    type: 'REACTCOMP',
+                    type: "REACTCOMP",
                     content: (
                       <div>
                         <p>
                           Zur Darstellung der Schwimmbäder in der Karte werden
-                          unterschiedliche Symbole für Hallenbäder{' '}
-                          {hallenBadSVG} und Freibäder {freibadBadSVG}{' '}
+                          unterschiedliche Symbole für Hallenbäder{" "}
+                          {hallenBadSVG} und Freibäder {freibadBadSVG}{" "}
                           verwendet. Dabei werden 3 unterschiedliche
-                          Hintergrundfarben verwendet: {staedtischesFreibadSVG}{' '}
+                          Hintergrundfarben verwendet: {staedtischesFreibadSVG}{" "}
                           steht für städtische Bäder, die alle öffentlich
-                          zugänglich sind. {oeffentlichesVereinsbadSVG}{' '}
+                          zugänglich sind. {oeffentlichesVereinsbadSVG}{" "}
                           kennzeichnet öffentlich zugängliche Bäder in
-                          Vereinsregie und {nichtOeffentlichesVereinsbadSVG}{' '}
+                          Vereinsregie und {nichtOeffentlichesVereinsbadSVG}{" "}
                           wird für nicht öffentlich zugängliche Vereinsbäder
                           eingesetzt. Diese Farben werden in der Titelzeile der
                           Info-Box aufgegriffen. Zusätzlich werden dort die
@@ -206,13 +206,13 @@ export const KompaktanleitungSection = ({
                   },
                 },
                 {
-                  title: 'In Karte positionieren',
-                  bsStyle: 'secondary',
+                  title: "In Karte positionieren",
+                  bsStyle: "secondary",
                   contentBlockConf: {
-                    type: 'REACTCOMP',
+                    type: "REACTCOMP",
                     content: (
                       <div>
-                        {' '}
+                        {" "}
                         <p>
                           Um die Schwimmbäder in einem bestimmten Bereich des
                           Stadtgebietes zu erkunden, geben Sie den Anfang eines
@@ -223,11 +223,11 @@ export const KompaktanleitungSection = ({
                           Treffer angeboten. (Wenn Sie weitere Zeichen eingeben,
                           wird der Inhalt der Auswahlliste angepasst.) Durch das
                           vorangestellte Symbol erkennen Sie, ob es sich dabei
-                          um einen <Icon name="circle" /> Stadtbezirk, ein{' '}
-                          <Icon name="pie-chart" /> Quartier, eine{' '}
-                          <Icon name="home" /> Adresse, eine{' '}
+                          um einen <Icon name="circle" /> Stadtbezirk, ein{" "}
+                          <Icon name="pie-chart" /> Quartier, eine{" "}
+                          <Icon name="home" /> Adresse, eine{" "}
                           <Icon name="road" /> Straße ohne zugeordnete
-                          Hausnummern, einen <Icon name="tag" /> POI, die{' '}
+                          Hausnummern, einen <Icon name="tag" /> POI, die{" "}
                           <Icon name="tags" /> alternative Bezeichnung eines
                           POI, eine <Icon name="child" /> Kindertageseinrichtung
                           oder eine <Icon name="graduation-cap" /> Schule
@@ -238,9 +238,9 @@ export const KompaktanleitungSection = ({
                           Karte auf die zugehörige Position zentriert. Bei
                           Suchbegriffen mit Punktgeometrie (Adresse, Straße,
                           POI) wird außerdem ein großer Maßstab (Zoomstufe 14)
-                          eingestellt und ein Marker{' '}
-                          <img alt="Cluster" src="images/AdressMarker.jpg" />{' '}
-                          auf der Zielposition platziert. Bei Suchbegriffen mit
+                          eingestellt und ein Marker{" "}
+                          <img alt="Cluster" src={AdressMarker} /> auf der
+                          Zielposition platziert. Bei Suchbegriffen mit
                           Flächengeometrie (Stadtbezirk, Quartier) wird der
                           Maßstab so eingestellt, dass die Fläche vollständig
                           dargestellt werden kann. Zusätzlich wird der Bereich
@@ -248,7 +248,7 @@ export const KompaktanleitungSection = ({
                           (Spotlight-Effekt).
                         </p>
                         <p>
-                          Durch Anklicken des Werkzeugs <Icon name="times" />{' '}
+                          Durch Anklicken des Werkzeugs <Icon name="times" />{" "}
                           links neben dem Eingabefeld können Sie die Suche
                           zurücksetzen (Entfernung von Marker bzw. Abdunklung,
                           Löschen des Textes im Eingabefeld).
@@ -267,10 +267,10 @@ export const KompaktanleitungSection = ({
                   },
                 },
                 {
-                  title: 'Mein Standort',
-                  bsStyle: 'secondary',
+                  title: "Mein Standort",
+                  bsStyle: "secondary",
                   contentBlockConf: {
-                    type: 'REACTCOMP',
+                    type: "REACTCOMP",
                     content: (
                       <div>
                         <GenericHelpTextForMyLocation />
@@ -279,10 +279,10 @@ export const KompaktanleitungSection = ({
                   },
                 },
                 {
-                  title: 'Einstellungen',
-                  bsStyle: 'success',
+                  title: "Einstellungen",
+                  bsStyle: "success",
                   contentBlockConf: {
-                    type: 'REACTCOMP',
+                    type: "REACTCOMP",
                     content: (
                       <div>
                         <p>
@@ -316,7 +316,7 @@ export const KompaktanleitungSection = ({
                           invertierte Graustufenkarte ("
                           <em>Stadtplan (Nacht)</em>
                           "), zu der uns die von vielen PKW-Navis bei Dunkelheit
-                          eingesetzte Darstellungsweise inspiriert hat.{' '}
+                          eingesetzte Darstellungsweise inspiriert hat.{" "}
                           <strong>Hinweis:</strong> Der Stadtplan (Nacht) wird
                           Ihnen nur angeboten, wenn Ihr Browser
                           CSS3-Filtereffekte unterstützt, also z. B. nicht beim
@@ -328,7 +328,7 @@ export const KompaktanleitungSection = ({
                           Möglichkeit steht eine Luftbildkarte zur Verfügung,
                           die die Anschaulichkeit des Luftbildes mit der
                           Eindeutigkeit des Stadtplans (Kartenschrift,
-                          durchscheinende Linien) verbindet.{' '}
+                          durchscheinende Linien) verbindet.{" "}
                         </p>
                         <p>
                           Im Vorschaubild sehen Sie direkt die prinzipielle
@@ -339,10 +339,10 @@ export const KompaktanleitungSection = ({
                   },
                 },
                 {
-                  title: 'Personalisierung',
-                  bsStyle: 'success',
+                  title: "Personalisierung",
+                  bsStyle: "success",
                   contentBlockConf: {
-                    type: 'REACTCOMP',
+                    type: "REACTCOMP",
                     content: (
                       <p>
                         Ihre Themenauswahl und Einstellungen bleiben auch nach
