@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Attribution } from "./";
 import { GenericDigitalTwinReferenceTextComponent } from "./";
+import { wuppertalCollabProjectVersion } from "..";
 const meta: Meta = {
   title: "Commons",
   args: {
@@ -20,6 +21,10 @@ const meta: Meta = {
 };
 
 export default meta;
+
+export const version: StoryObj = {
+  render: (args) => <div>{wuppertalCollabProjectVersion}</div>,
+};
 
 export const attribution: StoryObj = {
   render: (args) => <Attribution {...args} />,
