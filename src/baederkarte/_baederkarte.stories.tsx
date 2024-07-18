@@ -29,7 +29,7 @@ export const MenuFußzeile: StoryObj = {
   render: () => {
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter />
+        <MenuFooter title="Bäderkarte" version="xyz" />
       </TopicMapContextProvider>
     );
   },
