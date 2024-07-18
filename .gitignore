@@ -25,3 +25,9 @@ dist-ssr
 src/examplestories/*
 storybook-static/*
 
+
+.package.json.without.version
+.version
+.githash
+.gitdescribe
+.npmrc

@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "postversion": "echo Postversionhook && rm -f .version ; rm -f .githash ; rm -f .gitdescribe; sed '/^.*\"version\":.*$/d' package.json > .package.json.without.version && echo $npm_package_version && echo $npm_package_version > .version && git rev-parse HEAD > .githash && echo $(git describe --always --tags) | sed 's/^v//' > .gitdescribe"
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
