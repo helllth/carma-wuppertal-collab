@@ -16,7 +16,7 @@ export const KompletterModalerDialog: StoryObj = {
     const footerLogoUrl = undefined;
     const email = "opensource@cismet.de";
     return (
-      <TopicMapContextProvider appKey="ais-generix-texts-tester">
+      <TopicMapContextProvider appKey="storybook-appkey">
         <ModalApplicationMenu
           {...getCollabedHelpComponentConfig({
             version,
@@ -24,6 +24,7 @@ export const KompletterModalerDialog: StoryObj = {
             footerLogoUrl,
             email,
           })}
+          visible={true}
         />
       </TopicMapContextProvider>
     );
