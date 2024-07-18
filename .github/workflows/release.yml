@@ -1,4 +1,4 @@
-name: Release package
+name: Release Action
 on:
   workflow_dispatch:
     inputs:
@@ -28,9 +28,7 @@ jobs:
           git config --global user.email "902348742+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions"
       - name: Install Packages
-        run: yarn install
-      - name: Build the package
-        run: yarn build:package
+        run: npm install
       - name: Checkout main branch and merge dev
         run: |
           git fetch --all
@@ -50,14 +48,6 @@ jobs:
           git merge main --no-ff --strategy-option=theirs --allow-unrelated-histories -m "Merge main back to dev with new release version"
       - name: Push changes to dev branch
         run: git push origin dev
-      - name: .npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISHING_TOKEN }}" > dist/.npmrc
-      - name: Build the package to have the proper version
-        run: yarn build:package
-      - name: Publish the package
-        run: cd dist && npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Additional steps for deployment and build process
       # copied from gh-pages
       - name: prepare 0
@@ -68,16 +58,14 @@ jobs:
         run: HASH=`cat .githash`; sed -i "s/%LIB_HASH%/$HASH/" src/version.js
       - name: prepare 3 (gitdescribe stuff)
         run: DESCRIBE=`cat .gitdescribe`; sed -i "s/%LIB_DESCRIBE%/$DESCRIBE/" src/version.js
-      - name: debug version.js
-        run: cat src/version.js
-      - name: Build page
-        run: yarn run build
+      - name: Build Storybook
+        run: npm run build-storybook
         env:
           CI: false
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./storybook-static
       - name: show deployed folder
-        run: ls build
+        run: ls storybook-static
