@@ -1,6 +1,10 @@
 import Icon from "react-cismap/commons/Icon";
 
-export const InfoBoxText = ({ setAppMenuVisible }) => {
+export const InfoBoxText = ({
+  setAppMenuVisible,
+}: {
+  setAppMenuVisible: (visible: boolean) => void;
+}) => {
   return (
     <>
       <ul>
