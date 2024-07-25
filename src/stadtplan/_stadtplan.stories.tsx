@@ -3,6 +3,7 @@ import { MenuIntroduction } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import { KompaktanleitungSection } from ".";
 import { MenuFooter } from ".";
+import { MenuTitle } from ".";
 
 const meta: Meta = {
   title: "Stadtplan",
@@ -44,6 +45,14 @@ export const MenuFußzeile: StoryObj = {
       <TopicMapContextProvider appKey="storybook-appkey">
         <MenuFooter title="Stadtplan" version={"xyz"} />
       </TopicMapContextProvider>
+    );
+  },
+};
+
+export const TitleMenu: StoryObj = {
+  render: () => {
+    return (
+      <MenuTitle title="Themenstadtplan, Einstellungen und Kompaktanleitung" />
     );
   },
 };
