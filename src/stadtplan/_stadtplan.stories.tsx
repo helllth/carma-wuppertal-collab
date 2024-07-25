@@ -2,11 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { MenuIntroduction } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import { KompaktanleitungSection } from ".";
-import {
-  Attribution,
-  GenericDigitalTwinReferenceTextComponent,
-} from "../commons";
-import { wuppertalCollabProjectVersion } from "..";
+import { MenuFooter } from ".";
+
 const meta: Meta = {
   title: "Stadtplan",
 };
@@ -41,14 +38,12 @@ export const Kompaktanleitung: StoryObj = {
   },
 };
 
-export const genericDigitalTwinReferenceTextComponent: StoryObj = {
-  render: () => <GenericDigitalTwinReferenceTextComponent />,
-};
-
-export const version: StoryObj = {
-  render: (args) => <div>{wuppertalCollabProjectVersion}</div>,
-};
-
-export const attribution: StoryObj = {
-  render: (args) => <Attribution {...args} />,
+export const MenuFußzeile: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <MenuFooter title="Stadtplan" version={"xyz"} />
+      </TopicMapContextProvider>
+    );
+  },
 };
