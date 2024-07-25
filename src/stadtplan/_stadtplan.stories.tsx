@@ -1,24 +1,27 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
-import { KompaktanleitungSection } from ".";
-import { MenuFooter } from ".";
 import { MenuIntroduction } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
+import { KompaktanleitungSection } from ".";
+import { MenuFooter } from ".";
+import { MenuTitle } from ".";
 import type { CSSProperties } from "react";
+import { action } from "@storybook/addon-actions";
 
 const meta: Meta = {
-  title: "E-Auto Ladestationskarte",
+  title: "Stadtplan",
 };
 
 export default meta;
 
-export const MenuEinleitung: StoryObj = {
+export const IntroductionMenu: StoryObj = {
   render: () => {
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuIntroduction
-          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-        />
+        <div>
+          <MenuIntroduction
+            setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+          />
+        </div>
       </TopicMapContextProvider>
     );
   },
@@ -26,7 +29,7 @@ export const MenuEinleitung: StoryObj = {
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
-    const modalBodyStyle : CSSProperties = {
+    const modalBodyStyle: CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh",
@@ -44,8 +47,20 @@ export const MenuFußzeile: StoryObj = {
   render: () => {
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter />
+        <MenuFooter
+          title="Stadtplan"
+          version={"xyz"}
+          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+        />
       </TopicMapContextProvider>
+    );
+  },
+};
+
+export const TitleMenu: StoryObj = {
+  render: () => {
+    return (
+      <MenuTitle title="Themenstadtplan, Einstellungen und Kompaktanleitung" />
     );
   },
 };
