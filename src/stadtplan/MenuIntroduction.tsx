@@ -7,7 +7,7 @@ import {
 } from "react-cismap/contexts/FeatureCollectionContextProvider";
 import { useContext } from "react";
 
-const MenuIntroduction = () => {
+export const MenuIntroduction = () => {
   // @ts-ignore
   const { setAppMenuActiveMenuSection } = useContext(UIDispatchContext);
 
@@ -67,5 +67,3 @@ const MenuIntroduction = () => {
     </span>
   );
 };
-
-export default MenuIntroduction;
