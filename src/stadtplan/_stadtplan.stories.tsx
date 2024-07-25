@@ -2,7 +2,11 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { MenuIntroduction } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import { KompaktanleitungSection } from ".";
-
+import {
+  Attribution,
+  GenericDigitalTwinReferenceTextComponent,
+} from "../commons";
+import { wuppertalCollabProjectVersion } from "..";
 const meta: Meta = {
   title: "Stadtplan",
 };
@@ -35,4 +39,16 @@ export const Kompaktanleitung: StoryObj = {
       </div>
     );
   },
+};
+
+export const genericDigitalTwinReferenceTextComponent: StoryObj = {
+  render: () => <GenericDigitalTwinReferenceTextComponent />,
+};
+
+export const version: StoryObj = {
+  render: (args) => <div>{wuppertalCollabProjectVersion}</div>,
+};
+
+export const attribution: StoryObj = {
+  render: (args) => <Attribution {...args} />,
 };
