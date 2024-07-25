@@ -8,7 +8,7 @@ import{j as e}from"./jsx-runtime-DFnSfiB4.js";import{G as P,I as n,T as S}from".
   }
 }`,...(u=(o=i.parameters)==null?void 0:o.docs)==null?void 0:u.source}}};var c,h,m;r.parameters={...r.parameters,docs:{...(c=r.parameters)==null?void 0:c.docs,source:{originalSource:`{
   render: () => {
-    const modalBodyStyle: React.CSSProperties = {
+    const modalBodyStyle: CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh"

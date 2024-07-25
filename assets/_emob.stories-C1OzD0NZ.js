@@ -27,7 +27,7 @@ viewBox="0 0 524.197 523.652"
   }
 }`,...(c=(o=r.parameters)==null?void 0:o.docs)==null?void 0:c.source}}};var u,h,g;s.parameters={...s.parameters,docs:{...(u=s.parameters)==null?void 0:u.docs,source:{originalSource:`{
   render: () => {
-    const modalBodyStyle = {
+    const modalBodyStyle: CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh"

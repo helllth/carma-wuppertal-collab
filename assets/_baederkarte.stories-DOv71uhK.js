@@ -30,7 +30,7 @@ import{j as e}from"./jsx-runtime-DFnSfiB4.js";import{G as x,I as n,D as k,T as w
   }
 )(18, "#4AC1D1", "helpTextSVG4")`,computed:!0},required:!1}}};const f=({title:t=document.title,version:d})=>{const{setAppMenuActiveMenuSection:l}=B.useContext(k);return e.jsxs("div",{style:{fontSize:"11px"},children:[e.jsx("b",{children:"Hintergrundkarten"}),": Stadtkarte 2.0 © (RVR) | True Orthophoto 2022 © Stadt Wuppertal"," ",e.jsx("a",{onClick:()=>l("help"),children:"(Details und Nutzungsbedingungen)"}),e.jsx("br",{}),e.jsxs("div",{children:[e.jsxs("b",{children:[t," #",d]}),":"," ",e.jsx("a",{href:"https://cismet.de/",target:"_cismet",children:"cismet GmbH"})," ","auf Basis von"," ",e.jsx("a",{href:"http://leafletjs.com/",target:"_more",children:"Leaflet"})," ","und"," ",e.jsx("a",{href:"https://github.com/cismet/carma",target:"_carma",children:"carma"})," ","|"," ",e.jsx("a",{target:"_blank",rel:"noopener noreferrer",href:"https://cismet.de/datenschutzerklaerung.html",children:"Datenschutzerklärung (Privacy Policy)"})]})]})};f.__docgenInfo={description:"",methods:[],displayName:"MenuFooter",props:{title:{defaultValue:{value:"document.title",computed:!0},required:!1}}};const L={title:"Bäderkarte"},r={render:()=>{const t={overflowY:"auto",overflowX:"hidden",maxHeight:"100vh"};return e.jsx("div",{id:"myMenu",style:t,children:e.jsx(p,{})})}},s={render:()=>e.jsx(w,{appKey:"storybook-appkey",children:e.jsx(f,{title:"Bäderkarte",version:"xyz"})})};var o,h,c;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
   render: () => {
-    const modalBodyStyle = {
+    const modalBodyStyle: CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh"
