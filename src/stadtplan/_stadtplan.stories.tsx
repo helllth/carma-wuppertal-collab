@@ -25,7 +25,7 @@ export const IntroductionMenu: StoryObj = {
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
-    const modalBodyStyle = {
+    const modalBodyStyle: React.CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh",

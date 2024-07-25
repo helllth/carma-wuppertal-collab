@@ -4,7 +4,16 @@ import { wuppertalCollabProjectVersion } from "..";
 import { scroller } from "react-scroll";
 import { Attribution } from "../commons/Attribution";
 
-export const MenuFooter = ({ title = document.title, version }) => {
+interface MenuFooterProps {
+  title?: string;
+  version: string;
+}
+
+export const MenuFooter: React.FC<MenuFooterProps> = ({
+  title = document.title,
+  version,
+}) => {
+  // @ts-ignore
   const { setAppMenuActiveMenuSection } = useContext(UIDispatchContext);
   console.log("xxx title", title);
   return (
