@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { MenuIntroduction } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
+import { KompaktanleitungSection } from ".";
 
 const meta: Meta = {
   title: "Stadtplan",
@@ -16,6 +17,22 @@ export const IntroductionMenu: StoryObj = {
           <MenuIntroduction />
         </div>
       </TopicMapContextProvider>
+    );
+  },
+};
+
+export const Kompaktanleitung: StoryObj = {
+  render: () => {
+    const modalBodyStyle = {
+      overflowY: "auto",
+      overflowX: "hidden",
+      maxHeight: "100vh",
+    };
+
+    return (
+      <div id="myMenu" style={modalBodyStyle}>
+        <KompaktanleitungSection />
+      </div>
     );
   },
 };
