@@ -3,7 +3,6 @@ import GenericModalMenuSection from "react-cismap/topicmaps/menu/Section";
 import Logo_DigiTalZwilling from "./assets/Logo_DigiTalZwilling.png";
 import KFW_Logo from "./assets/KFW_Logo.jpg";
 import BMWSB_Logo from "./assets/BMWSB_Logo.png";
-/* eslint-disable jsx-a11y/anchor-is-valid */
 
 const Component = ({ email }) => {
   return (

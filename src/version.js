@@ -3,7 +3,6 @@ const LIBHASH = "#%LIB_HASH%";
 const LIBGITDESCRIBE = "%LIB_DESCRIBE%";
 
 export const getLibVersion = () => {
-  /*eslint-disable no-useless-concat*/
   if (LIBVERSION === "%LIB" + "_" + "VERSION%") {
     return "dev-hot-reload";
   } else {

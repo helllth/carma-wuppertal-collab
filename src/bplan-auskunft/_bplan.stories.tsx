@@ -3,6 +3,7 @@ import { Modal } from ".";
 import { InfoBoxText } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import { action } from "@storybook/addon-actions";
+import type { CSSProperties } from "react";
 
 const meta: Meta = {
   title: "BPlan Auskunft",
@@ -12,7 +13,7 @@ export default meta;
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
-    const modalBodyStyle = {
+    const modalBodyStyle : CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh",

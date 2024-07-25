@@ -23,10 +23,11 @@ const meta: Meta = {
 export default meta;
 
 export const version: StoryObj = {
-  render: (args) => <div>{wuppertalCollabProjectVersion}</div>,
+  render: () => <div>{wuppertalCollabProjectVersion}</div>,
 };
 
 export const attribution: StoryObj = {
+  // @ts-expect-error: TODO: fix type
   render: (args) => <Attribution {...args} />,
 };
 

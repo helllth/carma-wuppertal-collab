@@ -4,6 +4,7 @@ import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvid
 import { KompaktanleitungSection } from ".";
 import { MenuFooter } from ".";
 import { MenuTitle } from ".";
+import type { CSSProperties } from "react";
 import { action } from "@storybook/addon-actions";
 
 const meta: Meta = {
@@ -28,7 +29,7 @@ export const IntroductionMenu: StoryObj = {
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
-    const modalBodyStyle: React.CSSProperties = {
+    const modalBodyStyle: CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh",

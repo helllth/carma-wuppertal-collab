@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { KompaktanleitungSection } from ".";
 import { MenuFooter } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
+import type { CSSProperties } from "react";
 
 const meta: Meta = {
   title: "Bäderkarte",
@@ -11,7 +12,7 @@ export default meta;
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
-    const modalBodyStyle = {
+    const modalBodyStyle: CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh",

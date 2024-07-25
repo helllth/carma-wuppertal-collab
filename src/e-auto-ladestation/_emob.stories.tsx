@@ -4,6 +4,7 @@ import { KompaktanleitungSection } from ".";
 import { MenuFooter } from ".";
 import { MenuIntroduction } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
+import type { CSSProperties } from "react";
 
 const meta: Meta = {
   title: "E-Auto Ladestationskarte",
@@ -25,7 +26,7 @@ export const MenuEinleitung: StoryObj = {
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
-    const modalBodyStyle = {
+    const modalBodyStyle : CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh",
