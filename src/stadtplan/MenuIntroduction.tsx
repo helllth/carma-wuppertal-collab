@@ -1,28 +1,12 @@
 import { Link } from "react-scroll";
 
-import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
-import {
-  FeatureCollectionContext,
-  FeatureCollectionDispatchContext,
-} from "react-cismap/contexts/FeatureCollectionContextProvider";
-import { useContext } from "react";
+interface MenuIntroductionProps {
+  setAppMenuActiveMenuSection: (arg: string) => void;
+}
 
-export const MenuIntroduction = () => {
-  // @ts-ignore
-  const { setAppMenuActiveMenuSection } = useContext(UIDispatchContext);
-
-  // @ts-ignore
-  const {
-    filterState,
-    filterMode,
-    filteredItems,
-    shownFeatures,
-    itemsDictionary,
-  } = useContext(FeatureCollectionContext);
-  const { setFilterState, setFilterMode } = useContext(
-    FeatureCollectionDispatchContext
-  );
-
+export const MenuIntroduction: React.FC<MenuIntroductionProps> = ({
+  setAppMenuActiveMenuSection,
+}) => {
   return (
     <span>
       Verwandeln Sie den Wuppertaler Online-Stadtplan in Ihren persönlichen

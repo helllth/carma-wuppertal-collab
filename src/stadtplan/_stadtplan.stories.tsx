@@ -4,6 +4,7 @@ import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvid
 import { KompaktanleitungSection } from ".";
 import { MenuFooter } from ".";
 import { MenuTitle } from ".";
+import { action } from "@storybook/addon-actions";
 
 const meta: Meta = {
   title: "Stadtplan",
@@ -16,7 +17,9 @@ export const IntroductionMenu: StoryObj = {
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
         <div>
-          <MenuIntroduction />
+          <MenuIntroduction
+            setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+          />
         </div>
       </TopicMapContextProvider>
     );
@@ -43,7 +46,11 @@ export const MenuFußzeile: StoryObj = {
   render: () => {
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter title="Stadtplan" version={"xyz"} />
+        <MenuFooter
+          title="Stadtplan"
+          version={"xyz"}
+          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+        />
       </TopicMapContextProvider>
     );
   },
