@@ -4,8 +4,9 @@ import {
   KompaktanleitungSection,
   MenuTitle,
   MenuIntroduction,
-  InfoBoxText,
+  InfoBoxTextTitle,
   SearchTextPlaceholder,
+  InfoBoxTextContent,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import type { CSSProperties } from "react";
@@ -51,9 +52,14 @@ export const Kompaktanleitung: StoryObj = {
   },
 };
 
-export const TextInInfoBox: StoryObj = {
+export const TextInInfoBoxTitle: StoryObj = {
   render: () => {
-    return <InfoBoxText />;
+    return <InfoBoxTextTitle />;
+  },
+};
+export const TextInInfoBoxContent: StoryObj = {
+  render: () => {
+    return <InfoBoxTextContent />;
   },
 };
 
