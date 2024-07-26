@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { MenuTitle } from ".";
-import { MenuIntroduction } from ".";
+import { KompaktanleitungSection, MenuTitle, MenuIntroduction } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
+import type { CSSProperties } from "react";
 
 const meta: Meta = {
   title: "E-bikes",
@@ -25,6 +25,22 @@ export const IntroductionMenu: StoryObj = {
           />
         </div>
       </TopicMapContextProvider>
+    );
+  },
+};
+
+export const Kompaktanleitung: StoryObj = {
+  render: () => {
+    const modalBodyStyle: CSSProperties = {
+      overflowY: "auto",
+      overflowX: "hidden",
+      maxHeight: "100vh",
+    };
+
+    return (
+      <div id="myMenu" style={modalBodyStyle}>
+        <KompaktanleitungSection />
+      </div>
     );
   },
 };
