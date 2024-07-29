@@ -41,7 +41,7 @@ export const KompaktanleitungSection = () => {
     <Section
       sectionKey="help"
       sectionTitle="Kompaktanleitung"
-      sectionBsStyle="success"
+      sectionBsStyle="default"
       sectionContent={
         <ConfigurableDocBlocks
           configs={[
