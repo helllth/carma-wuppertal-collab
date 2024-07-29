@@ -1,5 +1,1 @@
-export const SearchTextPlaceholder = ({
-  text = "Ladestation | Verleih | Adresse",
-}) => {
-  return text;
-};
+export const searchTextPlaceholder = "Ladestation | Verleih | Adresse";
