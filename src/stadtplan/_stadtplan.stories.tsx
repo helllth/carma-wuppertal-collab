@@ -1,5 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { MenuIntroduction, MenuTooltip, searchTextPlaceholder } from ".";
+import {
+  InfoBoxTextContent,
+  InfoBoxTextTitle,
+  MenuIntroduction,
+  MenuTooltip,
+  searchTextPlaceholder,
+} from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import { KompaktanleitungSection } from ".";
 import { MenuFooter } from ".";
@@ -74,5 +80,17 @@ export const menuTooltipString: StoryObj = {
 export const TextInSearchPlaceholder: StoryObj = {
   render: () => {
     return <div>{searchTextPlaceholder}</div>;
+  },
+};
+
+export const TextInInfoBoxTitle: StoryObj = {
+  render: () => {
+    return <InfoBoxTextTitle />;
+  },
+};
+
+export const TextInInfoBoxContent: StoryObj = {
+  render: () => {
+    return <InfoBoxTextContent />;
   },
 };
