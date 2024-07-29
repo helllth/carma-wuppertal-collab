@@ -5,7 +5,7 @@ import {
   MenuTitle,
   MenuIntroduction,
   InfoBoxTextTitle,
-  SearchTextPlaceholder,
+  searchTextPlaceholder,
   InfoBoxTextContent,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
@@ -65,6 +65,6 @@ export const TextInInfoBoxContent: StoryObj = {
 
 export const TextInSearchPlaceholder: StoryObj = {
   render: () => {
-    return <SearchTextPlaceholder />;
+    return <div>{searchTextPlaceholder}</div>;
   },
 };
