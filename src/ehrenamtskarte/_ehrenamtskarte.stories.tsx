@@ -2,7 +2,13 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import type { CSSProperties } from "react";
-import { MenuIntroduction, MenuTitle, KompaktanleitungSection } from ".";
+import {
+  MenuIntroduction,
+  MenuTitle,
+  KompaktanleitungSection,
+  searchTextPlaceholder,
+  TextInMerkliste,
+} from ".";
 
 const meta: Meta = {
   title: "Ehrenamtskarte",
@@ -43,5 +49,17 @@ export const Kompaktanleitung: StoryObj = {
         <KompaktanleitungSection />
       </div>
     );
+  },
+};
+
+export const TextInSearchPlaceholder: StoryObj = {
+  render: () => {
+    return <div>{searchTextPlaceholder}</div>;
+  },
+};
+
+export const TextWithEmail: StoryObj = {
+  render: () => {
+    return <TextInMerkliste />;
   },
 };
