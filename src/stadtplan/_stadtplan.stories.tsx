@@ -1,5 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { MenuIntroduction } from ".";
+import {
+  InfoBoxTextContent,
+  InfoBoxTextTitle,
+  MenuIntroduction,
+  MenuTooltip,
+  searchTextPlaceholder,
+} from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import { KompaktanleitungSection } from ".";
 import { MenuFooter } from ".";
@@ -62,5 +68,29 @@ export const TitleMenu: StoryObj = {
     return (
       <MenuTitle title="Themenstadtplan, Einstellungen und Kompaktanleitung" />
     );
+  },
+};
+
+export const menuTooltipString: StoryObj = {
+  render: () => {
+    return <MenuTooltip />;
+  },
+};
+
+export const TextInSearchPlaceholder: StoryObj = {
+  render: () => {
+    return <div>{searchTextPlaceholder}</div>;
+  },
+};
+
+export const TextInInfoBoxTitle: StoryObj = {
+  render: () => {
+    return <InfoBoxTextTitle />;
+  },
+};
+
+export const TextInInfoBoxContent: StoryObj = {
+  render: () => {
+    return <InfoBoxTextContent />;
   },
 };
