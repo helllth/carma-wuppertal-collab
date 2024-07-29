@@ -8,6 +8,7 @@ import {
   KompaktanleitungSection,
   searchTextPlaceholder,
   TextInMerkliste,
+  MenuFooter,
 } from ".";
 
 const meta: Meta = {
@@ -61,5 +62,19 @@ export const TextInSearchPlaceholder: StoryObj = {
 export const TextWithEmail: StoryObj = {
   render: () => {
     return <TextInMerkliste />;
+  },
+};
+
+export const MenuFußzeile: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <MenuFooter
+          title="Ehrenamtskarte Wuppertal"
+          version={"xyz"}
+          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+        />
+      </TopicMapContextProvider>
+    );
   },
 };
