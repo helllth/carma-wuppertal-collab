@@ -4,3 +4,4 @@ export { KompaktanleitungSection } from "./KompaktanleitungSection";
 export { InfoBoxTextTitle } from "./InfoBoxTextTitle";
 export { searchTextPlaceholder } from "./SearchTextPlaceholder";
 export { InfoBoxTextContent } from "./InfoBoxTextContent";
+export { MenuTooltip } from "./MenuTooltip";
