@@ -6,6 +6,11 @@ import {
   RechtsplanUndArbeitskarte,
   InKartePositionieren,
   MeinStandort,
+  AenderungsverfahrenAnzeigenUndAbfragen,
+  AenderungsverfahrenSuchenUndDurchmustern,
+  FlaechenInDerArbeitskarteAuswaehlenUndAbfragen,
+  DokumenteBetrachten,
+  DokumenteHerunterladen,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 
@@ -51,6 +56,71 @@ export const MeinStandortSection: StoryObj = {
       <TopicMapContextProvider appKey="storybook-appkey">
         <div>
           <MeinStandort />
+        </div>
+      </TopicMapContextProvider>
+    );
+  },
+};
+
+export const AenderungsUndAbfragenSection: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <div>
+          <AenderungsverfahrenAnzeigenUndAbfragen
+            setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+          />
+        </div>
+      </TopicMapContextProvider>
+    );
+  },
+};
+
+export const AenderungsUndDurchmusternSection: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <div>
+          <AenderungsverfahrenSuchenUndDurchmustern
+            setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+          />
+        </div>
+      </TopicMapContextProvider>
+    );
+  },
+};
+export const FlaechenInDerArbeitskarteAuswaehlenUndAbfragenSection: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <div>
+          <FlaechenInDerArbeitskarteAuswaehlenUndAbfragen
+            setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+          />
+        </div>
+      </TopicMapContextProvider>
+    );
+  },
+};
+
+export const DokumenteBetrachtenSection: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <div>
+          <DokumenteBetrachten />
+        </div>
+      </TopicMapContextProvider>
+    );
+  },
+};
+
+export const DokumenteHerunterladenSection: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <div>
+          <DokumenteHerunterladen />
         </div>
       </TopicMapContextProvider>
     );

@@ -3,3 +3,8 @@ export { MenuIntroduction } from "./MenuIntroduction";
 export { RechtsplanUndArbeitskarte } from "./RechtsplanUndArbeitskarte";
 export { InKartePositionieren } from "./InKartePositionieren";
 export { MeinStandort } from "./MeinStandort";
+export { DokumenteBetrachten } from "./DokumenteBetrachten";
+export { DokumenteHerunterladen } from "./DokumenteHerunterladen";
+export { AenderungsverfahrenAnzeigenUndAbfragen } from "./AenderungsverfahrenAnzeigenUndAbfragen";
+export { AenderungsverfahrenSuchenUndDurchmustern } from "./AenderungsverfahrenSuchenUndDurchmustern";
+export { FlaechenInDerArbeitskarteAuswaehlenUndAbfragen } from "./FlaechenInDerArbeitskarteAuswaehlenUndAbfragen";
