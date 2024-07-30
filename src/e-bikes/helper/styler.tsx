@@ -43,7 +43,7 @@ export const verleihstationSVG = `<?xml version="1.0" encoding="UTF-8" standalon
 export const getSymbolSVG = (
   svgSize = 30,
   bg = '#FF0000',
-  kind = '-',
+  // kind = '-',
   svgStyleRelatedId = 'default',
   svgCodeInput = verleihstationSVG
 ) => {
@@ -117,7 +117,7 @@ export const getConnectorImageUrl = (type) => {
 
 export const getFeatureStyler = (
   svgSize = 24,
-  colorizer = getColorForProperties
+  //colorizer = getColorForProperties
 ) => {
   return (feature) => {
     var color = Color(getColorForProperties(feature.properties));

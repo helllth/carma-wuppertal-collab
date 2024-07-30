@@ -15,25 +15,22 @@ import { Link } from "react-scroll";
 import EbikeCluster from "./assets/ebikes_cluster.png";
 
 export const KompaktanleitungSection = () => {
-  let urlPrefix = window.location.origin + window.location.pathname;
+  // let urlPrefix = window.location.origin + window.location.pathname;
   const chargingOnlineSVG = getSymbolSVG(
     30,
     "#1EA342",
-    "pr",
     "onlineSVGinHELP",
     ladestationSVG
   );
   const chargingOfflineSVG = getSymbolSVG(
     30,
     "#999999",
-    "pr",
     "offlineSVGinHELP",
     ladestationSVG
   );
   const rentingSVG = getSymbolSVG(
     30,
     "#EC7529",
-    "pr",
     "verleihSVGinHELP",
     verleihstationSVG
   );

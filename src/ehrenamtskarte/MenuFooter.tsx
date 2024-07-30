@@ -8,7 +8,7 @@ interface MenuFooterProps {
 export const MenuFooter: React.FC<MenuFooterProps> = ({
   title = document.title,
   version,
-  setAppMenuActiveMenuSection,
+  //setAppMenuActiveMenuSection,
 }) => {
   return (
     <div style={{ fontSize: "11px" }}>
