@@ -74,11 +74,7 @@ export const MenuFußzeile: StoryObj = {
   render: () => {
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter
-          title="Ehrenamtskarte Wuppertal"
-          version={"xyz"}
-          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-        />
+        <MenuFooter title="Ehrenamtskarte Wuppertal" version={"xyz"} />
       </TopicMapContextProvider>
     );
   },

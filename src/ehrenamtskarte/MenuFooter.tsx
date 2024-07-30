@@ -3,12 +3,10 @@ import { Attribution } from "../commons/Attribution";
 interface MenuFooterProps {
   title?: string;
   version: string;
-  setAppMenuActiveMenuSection: (arg: string) => void;
 }
 export const MenuFooter: React.FC<MenuFooterProps> = ({
   title = document.title,
   version,
-  setAppMenuActiveMenuSection,
 }) => {
   return (
     <div style={{ fontSize: "11px" }}>
