@@ -1,6 +1,5 @@
-const ts = require("@typescript-eslint/eslint-plugin");
-const tsParser = require("@typescript-eslint/parser");
 const eslint = require("@eslint/js");
+const tseslint = require("typescript-eslint");
 const a11y = require("eslint-plugin-jsx-a11y");
 const importPlugin = require("eslint-plugin-import");
 const reactRefresh = require("eslint-plugin-react-refresh");
@@ -10,21 +9,21 @@ const globals = require("globals");
 
 delete globals.browser["AudioWorkletGlobalScope "]; // some weird bug
 
-const baseConfig = {
-  ...eslint.configs.recommendedTypeChecked,
+const baseConfig =
+{
   name: "Base Config",
-  files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
-  ignores: ["dist/**"],
+  files: ["src/**/*.ts", "src/**/*.tsx"],
+  ignores: ["dist/**", "storybook-static/**", "./vite.config.ts"],
   plugins: {
     import: importPlugin,
     "jsx-a11y": a11y,
     react,
     "react-hooks": reactHooks,
     "react-refresh": reactRefresh,
-    "@typescript-eslint": ts,
+    "@typescript-eslint": tseslint.plugin
   },
   languageOptions: {
-    parser: tsParser,
+    parser: tseslint.parser,
     parserOptions: {
       ecmaVersion: 2022,
       project: true,
@@ -40,8 +39,8 @@ const baseConfig = {
     },
   },
   rules: {
-    ...ts.configs["eslint-recommended"].rules,
-    ...ts.configs["recommended"].rules,
+    ...eslint.configs.recommended.rules,
+    ...tseslint.configs.recommendedTypeChecked.rules,
     ...a11y.configs["recommended"].rules,
     ...importPlugin.configs["recommended"].rules,
     ...react.configs["recommended"].rules,
