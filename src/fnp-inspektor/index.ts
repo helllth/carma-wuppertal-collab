@@ -5,6 +5,7 @@ export { InKartePositionieren } from "./InKartePositionieren";
 export { MeinStandort } from "./MeinStandort";
 export { DokumenteBetrachten } from "./DokumenteBetrachten";
 export { DokumenteHerunterladen } from "./DokumenteHerunterladen";
+export { MenuTooltip } from "./MenuTooltip";
 export { AenderungsverfahrenAnzeigenUndAbfragen } from "./AenderungsverfahrenAnzeigenUndAbfragen";
 export { AenderungsverfahrenSuchenUndDurchmustern } from "./AenderungsverfahrenSuchenUndDurchmustern";
 export { FlaechenInDerArbeitskarteAuswaehlenUndAbfragen } from "./FlaechenInDerArbeitskarteAuswaehlenUndAbfragen";

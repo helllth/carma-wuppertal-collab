@@ -11,6 +11,7 @@ import {
   FlaechenInDerArbeitskarteAuswaehlenUndAbfragen,
   DokumenteBetrachten,
   DokumenteHerunterladen,
+  MenuTooltip,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 
@@ -124,5 +125,11 @@ export const DokumenteHerunterladenSection: StoryObj = {
         </div>
       </TopicMapContextProvider>
     );
+  },
+};
+
+export const menuTooltipString: StoryObj = {
+  render: () => {
+    return <MenuTooltip />;
   },
 };
