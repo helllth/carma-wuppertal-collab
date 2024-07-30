@@ -4,7 +4,9 @@ import {
   searchTextPlaceholder,
   MenuIntroduction,
   RechtsplanUndArbeitskarte,
+  InKartePositionieren,
 } from ".";
+import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 
 const meta: Meta = {
   title: "Fnp-inspektor",
@@ -26,5 +28,18 @@ export const IntroductionMenu: StoryObj = {
 export const RechtsplanUndArbeitskarteSection: StoryObj = {
   render: () => {
     return <RechtsplanUndArbeitskarte />;
+  },
+};
+export const InKartePositionierenSection: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <div>
+          <InKartePositionieren
+            setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+          />
+        </div>
+      </TopicMapContextProvider>
+    );
   },
 };
