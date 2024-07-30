@@ -1,0 +1,1 @@
+export { searchTextPlaceholder } from "./searchTextPlaceholder";
