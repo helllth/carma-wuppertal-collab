@@ -2,11 +2,7 @@ import Section from "react-cismap/topicmaps/menu/Section";
 import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
 import LicenseLuftbildkarte from "react-cismap/topicmaps/wuppertal/LicenseLuftbildkarte";
 import LicenseStadtplanTagNacht from "react-cismap/topicmaps/wuppertal/LicenseStadtplanTagNacht";
-import {
-  getSymbolSVG,
-  ladestationSVG,
-  verleihstationSVG,
-} from "./helper/styler";
+import { getSymbolSVG } from "./helper/styler";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Icon from "react-cismap/commons/Icon";
@@ -19,23 +15,15 @@ export const KompaktanleitungSection = () => {
     30,
     "#1EA342",
     "pr",
-    "onlineSVGinHELP",
-    ladestationSVG
+    "onlineSVGinHELP"
   );
   const chargingOfflineSVG = getSymbolSVG(
     30,
     "#999999",
     "pr",
-    "offlineSVGinHELP",
-    ladestationSVG
+    "offlineSVGinHELP"
   );
-  const rentingSVG = getSymbolSVG(
-    30,
-    "#EC7529",
-    "pr",
-    "verleihSVGinHELP",
-    verleihstationSVG
-  );
+  const rentingSVG = getSymbolSVG(30, "#EC7529", "pr", "verleihSVGinHELP");
   return (
     <Section
       sectionKey="help"
