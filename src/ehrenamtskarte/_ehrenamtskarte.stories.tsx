@@ -13,6 +13,7 @@ import {
   SectionTitleKen,
   SectionTitleZg,
   SectionTitleMerkliste,
+  MenuTooltip,
 } from ".";
 
 const meta: Meta = {
@@ -101,5 +102,11 @@ export const ZielgruppenSectionTitle: StoryObj = {
 export const MerklisteSectionTitle: StoryObj = {
   render: () => {
     return <SectionTitleMerkliste bookmarks={0} />;
+  },
+};
+
+export const menuTooltipString: StoryObj = {
+  render: () => {
+    return <MenuTooltip />;
   },
 };
