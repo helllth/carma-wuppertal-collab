@@ -251,9 +251,7 @@ export const KompaktanleitungSection = () => {
 
                           <li>
                             Mit{" "}
-                            <font color="#C33D17">
-                              <Icon name="minus-square" />
-                            </font>{" "}
+                            <Icon name="minus-square" style={{ color: "#C33D17" }} />
                             können Sie das zugehörige Angebot aus Ihrer
                             Merkliste entfernen.
                           </li>

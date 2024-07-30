@@ -11,7 +11,7 @@ const globals = require("globals");
 delete globals.browser["AudioWorkletGlobalScope "]; // some weird bug
 
 const baseConfig = {
-  ...eslint.configs.recommended,
+  ...eslint.configs.recommendedTypeChecked,
   name: "Base Config",
   files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
   ignores: ["dist/**"],
@@ -27,7 +27,7 @@ const baseConfig = {
     parser: tsParser,
     parserOptions: {
       ecmaVersion: 2022,
-      project: "{projectRoot}tsconfig.json",
+      project: true,
       ecmaFeatures: {
         jsx: true,
         modules: true,
