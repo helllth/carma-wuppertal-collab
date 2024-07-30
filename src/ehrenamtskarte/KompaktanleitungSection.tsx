@@ -4,7 +4,9 @@ import GenericHelpTextForMyLocation from "react-cismap/topicmaps/docBlocks/Gener
 import Section from "react-cismap/topicmaps/menu/Section";
 import LicenseLuftbildkarte from "react-cismap/topicmaps/wuppertal/LicenseLuftbildkarte";
 import LicenseStadtplanTagNacht from "react-cismap/topicmaps/wuppertal/LicenseStadtplanTagNacht";
-
+import PoiZusammen from "./assets/poi_zusammen-BgsY8zlP.png";
+import AdressMarker from "./assets/AdressMarker.jpg";
+import Keinethemenausw from "./assets/sf_keinethemenausw.png";
 export const KompaktanleitungSection = () => {
   return (
     <Section
@@ -87,9 +89,8 @@ export const KompaktanleitungSection = () => {
                           Räumlich nah beieinander liegende POI werden
                           standardmäßig maßstabsabhängig zu größeren Punkten
                           zusammengefasst, mit der Anzahl der repräsentierten
-                          POI im Zentrum{" "}
-                          <img alt="Cluster" src="images/poi_zusammen.png" />.
-                          Vergrößern Sie ein paar Mal durch direktes Anklicken
+                          POI im Zentrum <img alt="Cluster" src={PoiZusammen} />
+                          . Vergrößern Sie ein paar Mal durch direktes Anklicken
                           eines solchen Punktes oder mit <Icon name="plus" />{" "}
                           die Darstellung, so werden die zusammengefassten POI
                           Schritt für Schritt in die kleineren Symbole für die
@@ -193,8 +194,8 @@ export const KompaktanleitungSection = () => {
                           Suchbegriffen mit Punktgeometrie (Adresse, Straße,
                           POI) wird außerdem ein großer Maßstab (Zoomstufe 14)
                           eingestellt und ein Marker{" "}
-                          <img alt="Cluster" src="images/AdressMarker.jpg" />{" "}
-                          auf der Zielposition platziert. Bei Suchbegriffen mit
+                          <img alt="Cluster" src={AdressMarker} /> auf der
+                          Zielposition platziert. Bei Suchbegriffen mit
                           Flächengeometrie (Stadtbezirk, Quartier) wird der
                           Maßstab so eingestellt, dass die Fläche vollständig
                           dargestellt werden kann. Zusätzlich wird der Bereich
@@ -236,12 +237,9 @@ export const KompaktanleitungSection = () => {
                           Sie im Anwendungsmenü <Icon name="bars" /> auswählen,
                           welche POI-Kategorien in der Karte dargestellt werden.
                           Über die Schaltfläche{" "}
-                          <img
-                            alt="Cluster"
-                            src="images/sf_keinethemenausw.png"
-                          />{" "}
-                          können Sie die POI vollständig ausblenden - auch die
-                          Info-Box wird dann nicht mehr angezeigt.
+                          <img alt="Cluster" src={Keinethemenausw} /> können Sie
+                          die POI vollständig ausblenden - auch die Info-Box
+                          wird dann nicht mehr angezeigt.
                         </p>
                         <p>
                           Zur Filterung der POI-Kategorien bieten wir Ihnen die
