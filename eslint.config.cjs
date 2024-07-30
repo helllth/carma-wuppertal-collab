@@ -42,7 +42,9 @@ const baseConfig = {
     ...importPlugin.configs["recommended"].rules,
     ...react.configs["recommended"].rules,
     ...reactHooks.configs["recommended"].rules,
-    "react-refresh/only-export-components": "warn",
+    "react-refresh/only-export-components": ["warn",
+      { allowConstantExport: true },
+    ],
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
     "jsx-a11y/anchor-is-valid": "warn",
@@ -75,6 +77,8 @@ const baseConfig = {
     },
   },
 };
+
+// TODO add storybook plugin when it support flat configs https://github.com/storybookjs/eslint-plugin-storybook/issues/135
 
 // order here specific to least specific
 module.exports = [
