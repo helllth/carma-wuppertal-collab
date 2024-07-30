@@ -9,6 +9,10 @@ import {
   searchTextPlaceholder,
   TextInMerkliste,
   MenuFooter,
+  SectionTitleGLB,
+  SectionTitleKen,
+  SectionTitleZg,
+  SectionTitleMerkliste,
 } from ".";
 
 const meta: Meta = {
@@ -76,5 +80,26 @@ export const MenuFußzeile: StoryObj = {
         />
       </TopicMapContextProvider>
     );
+  },
+};
+
+export const GlobalbereicheSectionTitle: StoryObj = {
+  render: () => {
+    return <SectionTitleGLB />;
+  },
+};
+export const KenntnisseSectionTitle: StoryObj = {
+  render: () => {
+    return <SectionTitleKen />;
+  },
+};
+export const ZielgruppenSectionTitle: StoryObj = {
+  render: () => {
+    return <SectionTitleZg />;
+  },
+};
+export const MerklisteSectionTitle: StoryObj = {
+  render: () => {
+    return <SectionTitleMerkliste bookmarks={0} />;
   },
 };
