@@ -15,7 +15,6 @@ import { Link } from "react-scroll";
 import EbikeCluster from "./assets/ebikes_cluster.png";
 
 export const KompaktanleitungSection = () => {
-  let urlPrefix = window.location.origin + window.location.pathname;
   const chargingOnlineSVG = getSymbolSVG(
     30,
     "#1EA342",
