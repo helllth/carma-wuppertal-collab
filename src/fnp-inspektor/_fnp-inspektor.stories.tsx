@@ -5,6 +5,7 @@ import {
   MenuIntroduction,
   RechtsplanUndArbeitskarte,
   InKartePositionieren,
+  MeinStandort,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 
@@ -38,6 +39,18 @@ export const InKartePositionierenSection: StoryObj = {
           <InKartePositionieren
             setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
           />
+        </div>
+      </TopicMapContextProvider>
+    );
+  },
+};
+
+export const MeinStandortSection: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <div>
+          <MeinStandort />
         </div>
       </TopicMapContextProvider>
     );
