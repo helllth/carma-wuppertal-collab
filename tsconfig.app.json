@@ -24,7 +24,7 @@
     "noFallthroughCasesInSwitch": true,
     "verbatimModuleSyntax": true,
     /* Legacy Allow remove eventually*/
-    "noImplicitAny": false,
+    "noImplicitAny": false
   },
   "include": ["src"]
 }
