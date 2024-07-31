@@ -59,7 +59,7 @@ const baseConfig = {
     "react/jsx-no-target-blank": "warn",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "react/no-unescaped-entities": "off", // TODO discuss template format
+    //"react/no-unescaped-entities": "off", // TODO discuss template format
     "react/no-unknown-property": "warn",
     "react/prop-types": "warn",
     "react/react-in-jsx-scope": "off", // not needed with jsx since react 17
