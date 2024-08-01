@@ -8,9 +8,11 @@ import {
   MenuTitle,
   MenuIntroduction,
   //   MenuFooter,
-  //   KompaktanleitungSection,
+  ListWithSymbolsKlimaorte,
   ConfigurableDocBlocks,
   configurableDocBlocks,
+  FilternTextHeplerKlima,
+  SimpleHelpKlimaorte,
 } from ".";
 import type { CSSProperties } from "react";
 
@@ -91,5 +93,21 @@ export const Kompaktanleitung: StoryObj = {
         <ConfigurableDocBlocks configs={configurableDocBlocks} style={{}} />
       </div>
     );
+  },
+};
+
+export const ListWithSymbolsInKlimaorte: StoryObj = {
+  render: () => {
+    return <ListWithSymbolsKlimaorte />;
+  },
+};
+export const SimpleTextHelpKlimaorte: StoryObj = {
+  render: () => {
+    return <SimpleHelpKlimaorte />;
+  },
+};
+export const FilternTextHeplerInKlima: StoryObj = {
+  render: () => {
+    return <FilternTextHeplerKlima />;
   },
 };
