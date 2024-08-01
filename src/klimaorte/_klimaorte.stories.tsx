@@ -8,7 +8,9 @@ import {
   MenuTitle,
   MenuIntroduction,
   MenuFooter,
+  KompaktanleitungSection,
 } from ".";
+import type { CSSProperties } from "react";
 
 const meta: Meta = {
   title: "Klimaorte",
@@ -70,6 +72,22 @@ export const MenuFußzeile: StoryObj = {
           setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
         />
       </TopicMapContextProvider>
+    );
+  },
+};
+
+export const Kompaktanleitung: StoryObj = {
+  render: () => {
+    const modalBodyStyle: CSSProperties = {
+      overflowY: "auto",
+      overflowX: "hidden",
+      maxHeight: "100vh",
+    };
+
+    return (
+      <div id="myMenu" style={modalBodyStyle}>
+        <KompaktanleitungSection />
+      </div>
     );
   },
 };
