@@ -1,6 +1,5 @@
-import { getSimpleHelpForTM } from "react-cismap/tools/uiHelper";
+import { getSimpleHelpForTM , getSymbolSVGGetter } from "react-cismap/tools/uiHelper";
 import { featureSamples4Icons } from "./iconFactory";
-import { getSymbolSVGGetter } from "react-cismap/tools/uiHelper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Icon from "react-cismap/commons/Icon";
 import {
@@ -90,9 +89,7 @@ configurableDocBlocks[0].configs.splice(6, 0, {
           alphabetisch sortieren Menge an Schlagworten (Tags) bestimmte Begriffe
           per Mausklick selektieren bzw. deselektieren; die Auswahl aller bzw.
           keines der Schlagworte erfolgt über die Schaltfläche{" "}
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a className="renderAsLink">alle</a> bzw.{" "}
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a className="renderAsLink">keine</a>.
         </p>
         <p>

@@ -18,9 +18,7 @@ export const FilternTextHeplerKlima = () => {
         alphabetisch sortieren Menge an Schlagworten (Tags) bestimmte Begriffe
         per Mausklick selektieren bzw. deselektieren; die Auswahl aller bzw.
         keines der Schlagworte erfolgt über die Schaltfläche{" "}
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a className="renderAsLink">alle</a> bzw.{" "}
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a className="renderAsLink">keine</a>.
       </p>
       <p>

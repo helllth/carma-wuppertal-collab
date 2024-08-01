@@ -3,7 +3,7 @@ interface MenuIntroductionProps {
 }
 export const MenuIntroduction: React.FC<MenuIntroductionProps> = ({
   setAppMenuActiveMenuSection,
-}) => {
+}: MenuIntroductionProps) => {
   return (
     <span>
       Benutzen Sie die Auswahlmöglichkeiten unter{" "}

@@ -221,8 +221,11 @@ export const getPoiClusterIconCreatorFunction = (
   //return a function because the functionCall of the iconCreateFunction cannot be manipulated
   return (cluster) => {
     var childCount = cluster.getChildCount();
-    const values: any = [];
-    const colors: any = [];
+    // TODO get types from cluster
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const values: any[] = [];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const colors: any[] = [];
 
     const r = svgSize / 1.5;
     // Pie with default colors

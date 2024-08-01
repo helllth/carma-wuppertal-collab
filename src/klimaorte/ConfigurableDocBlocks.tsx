@@ -12,7 +12,8 @@ import Einstellungen from "react-cismap/topicmaps/docBlocks/Einstellungen";
 import KartendarstellungDerFachobjekte from "react-cismap/topicmaps/docBlocks/KartendarstellungDerFachobjekte";
 import FachobjekteAuswaehlenUndAbfragen from "react-cismap/topicmaps/docBlocks/FachobjekteAuswaehlenUndAbfragen";
 import CustomizableComp from "react-cismap/topicmaps/docBlocks/CustomizableComp";
-export const DOCBLOCKSTYLES = {
+
+const DOCBLOCKSTYLES = {
   TEXT: "TEXT",
   HTML: "HTML",
   REACTCOMP: "REACTCOMP",
@@ -29,6 +30,17 @@ export const DOCBLOCKSTYLES = {
   CUSTOMIZABLECOMP: "CUSTOMIZABLECOMP",
 };
 
+type BlockConfig = {
+  type: keyof typeof DOCBLOCKSTYLES;
+  style?: React.CSSProperties;
+  text?: string;
+};
+
+interface ConfigurableDocBlocksConfig {
+  configs: BlockConfig[];
+  style?: React.CSSProperties;
+}
+
 export const ConfigurableDocBlocks = ({
   configs = [
     {
@@ -40,7 +52,7 @@ export const ConfigurableDocBlocks = ({
     },
   ],
   style,
-}) => {
+}: ConfigurableDocBlocksConfig) => {
   const blocks = [];
 
   for (const block of configs) {

@@ -1,6 +1,10 @@
 import Icon from "react-cismap/commons/Icon";
 
-const NW = (props) => {
+interface NwProps {
+  children?: React.ReactNode;
+}
+
+const NW = (props: NwProps) => {
   return <span style={{ whiteSpace: "nowrap" }}>{props.children}</span>;
 };
 export const ListWithSymbolsKlimaorte = () => {

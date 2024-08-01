@@ -7,7 +7,7 @@ interface InKartePositionierenProps {
 
 export const InKartePositionieren: React.FC<InKartePositionierenProps> = ({
   setAppMenuActiveMenuSection,
-}) => {
+}: InKartePositionierenProps) => {
   return (
     <Section
       sectionKey="InKartePositionieren"
