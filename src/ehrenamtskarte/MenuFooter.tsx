@@ -7,7 +7,7 @@ interface MenuFooterProps {
 export const MenuFooter: React.FC<MenuFooterProps> = ({
   title = document.title,
   version,
-}) => {
+}: MenuFooterProps) => {
   return (
     <div style={{ fontSize: "11px" }}>
       <b>Hintergrundkarten</b>: Stadtkarte 2.0 © Regionalverband Ruhr (RVR) und

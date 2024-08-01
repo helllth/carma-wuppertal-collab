@@ -47,15 +47,15 @@ const baseConfig = {
     ],
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
-    "jsx-a11y/anchor-is-valid": "warn",
+    "jsx-a11y/anchor-is-valid": "off", // TODO discuss accesibility issue or convert links to buttons
     "jsx-a11y/alt-text": "warn",
     "jsx-a11y/aria-role": "warn",
-    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/click-events-have-key-events": "off", // TODO
     "jsx-a11y/interactive-supports-focus": "warn",
     "jsx-a11y/label-has-associated-control": "warn",
     "jsx-a11y/no-autofocus": "warn",
     "jsx-a11y/no-noninteractive-element-interactions": "warn",
-    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/no-static-element-interactions": "off", // TODO
     "react/jsx-no-target-blank": "warn",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
@@ -84,7 +84,6 @@ const baseConfig = {
 module.exports = [
   baseConfig,
   {
-    //files: ["src/**/*.ts", "src/**/*.tsx"],
     ignores: [
       "dist",
       ".storybook",

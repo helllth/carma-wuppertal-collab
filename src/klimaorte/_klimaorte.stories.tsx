@@ -8,13 +8,7 @@ import {
   MenuTitle,
   MenuIntroduction,
   MenuFooter,
-  ListWithSymbolsKlimaorte,
-  ConfigurableDocBlocks,
-  configurableDocBlocks,
-  FilternTextHeplerKlima,
-  SimpleHelpKlimaorte,
 } from ".";
-import type { CSSProperties } from "react";
 
 const meta: Meta = {
   title: "Klimaorte",
@@ -77,37 +71,5 @@ export const MenuFußzeile: StoryObj = {
         />
       </TopicMapContextProvider>
     );
-  },
-};
-
-export const Kompaktanleitung: StoryObj = {
-  render: () => {
-    const modalBodyStyle: CSSProperties = {
-      overflowY: "auto",
-      overflowX: "hidden",
-      maxHeight: "100vh",
-    };
-
-    return (
-      <div id="myMenu" style={modalBodyStyle}>
-        <ConfigurableDocBlocks configs={configurableDocBlocks} style={{}} />
-      </div>
-    );
-  },
-};
-
-export const ListWithSymbolsInKlimaorte: StoryObj = {
-  render: () => {
-    return <ListWithSymbolsKlimaorte />;
-  },
-};
-export const SimpleTextHelpKlimaorte: StoryObj = {
-  render: () => {
-    return <SimpleHelpKlimaorte />;
-  },
-};
-export const FilternTextHeplerInKlima: StoryObj = {
-  render: () => {
-    return <FilternTextHeplerKlima />;
   },
 };

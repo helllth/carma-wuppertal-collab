@@ -4,7 +4,7 @@ interface MenuIntroductionProps {
 }
 export const MenuIntroduction: React.FC<MenuIntroductionProps> = ({
   setAppMenuActiveMenuSection,
-}) => {
+}: MenuIntroductionProps) => {
   return (
     <span>
       W&auml;hlen Sie Ihre Such- und Ausschlussbedingungen in den{" "}

@@ -6,7 +6,7 @@ interface MenuIntroductionProps {
 
 export const MenuIntroduction: React.FC<MenuIntroductionProps> = ({
   setAppMenuActiveMenuSection,
-}) => {
+}: MenuIntroductionProps) => {
   return (
     <span>
       Verwandeln Sie den Wuppertaler Online-Stadtplan in Ihren persönlichen

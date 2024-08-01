@@ -9,7 +9,7 @@ export const MenuFooter: React.FC<MenuFooterProps> = ({
   title = document.title,
   version,
   setAppMenuActiveMenuSection,
-}) => {
+}: MenuFooterProps) => {
   return (
     <div style={{ fontSize: "11px" }}>
       <b>Hintergrundkarten</b>: Stadtkarte 2.0 © RVR | True Orthophoto 2022 ©
