@@ -8,3 +8,4 @@ export { configurableDocBlocks } from "./helper/configurableDocBlocks";
 export { ListWithSymbolsKlimaorte } from "./ListWithSymbolsKlimaorte";
 export { SimpleHelpKlimaorte } from "./SimpleHelpKlimaorte";
 export { FilternTextHeplerKlima } from "./FilternTextHeplerKlima";
+export { MenuFooter } from "./MenuFooter";

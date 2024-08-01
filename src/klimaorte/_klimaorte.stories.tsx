@@ -7,7 +7,7 @@ import {
   MenuTooltip,
   MenuTitle,
   MenuIntroduction,
-  //   MenuFooter,
+  MenuFooter,
   ListWithSymbolsKlimaorte,
   ConfigurableDocBlocks,
   configurableDocBlocks,
@@ -66,19 +66,19 @@ export const IntroductionMenu: StoryObj = {
   },
 };
 
-// export const MenuFußzeile: StoryObj = {
-//   render: () => {
-//     return (
-//       <TopicMapContextProvider appKey="storybook-appkey">
-//         <MenuFooter
-//           title="Kita-Finder Wuppertal"
-//           version={"xyz"}
-//           setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-//         />
-//       </TopicMapContextProvider>
-//     );
-//   },
-// };
+export const MenuFußzeile: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <MenuFooter
+          title="Klimaortkarte Wuppertal"
+          version={"xyz"}
+          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+        />
+      </TopicMapContextProvider>
+    );
+  },
+};
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
