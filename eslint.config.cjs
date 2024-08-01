@@ -84,7 +84,6 @@ const baseConfig = {
 module.exports = [
   baseConfig,
   {
-    //files: ["src/**/*.ts", "src/**/*.tsx"],
     ignores: [
       "dist",
       ".storybook",
