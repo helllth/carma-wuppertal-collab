@@ -8,7 +8,10 @@ import {
   MenuTitle,
   MenuIntroduction,
   MenuFooter,
+  KompaktanleitungSection,
+  InfoBoxTextContent,
 } from ".";
+import type { CSSProperties } from "react";
 
 const meta: Meta = {
   title: "Klimaorte",
@@ -27,11 +30,11 @@ export const TextInInfoBoxTitle: StoryObj = {
     return <InfoBoxTextTitle />;
   },
 };
-// export const TextInInfoBoxContent: StoryObj = {
-//   render: () => {
-//     return <InfoBoxTextContent />;
-//   },
-// };
+export const TextInInfoBoxContent: StoryObj = {
+  render: () => {
+    return <InfoBoxTextContent />;
+  },
+};
 
 export const menuTooltipString: StoryObj = {
   render: () => {
@@ -70,6 +73,22 @@ export const MenuFußzeile: StoryObj = {
           setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
         />
       </TopicMapContextProvider>
+    );
+  },
+};
+
+export const Kompaktanleitung: StoryObj = {
+  render: () => {
+    const modalBodyStyle: CSSProperties = {
+      overflowY: "auto",
+      overflowX: "hidden",
+      maxHeight: "100vh",
+    };
+
+    return (
+      <div id="myMenu" style={modalBodyStyle}>
+        <KompaktanleitungSection />
+      </div>
     );
   },
 };
