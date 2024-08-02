@@ -1,20 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
-import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
+// import { action } from "@storybook/addon-actions";
+// import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import {
   searchTextPlaceholder,
   MenuTooltip,
   InfoBoxTextContent,
-  //   InfoBoxTextTitle,
   //   MenuTitle,
   //   MenuIntroduction,
   //   MenuFooter,
-  //   KompaktanleitungSection,
+  KompaktanleitungSection,
 } from ".";
-// import type { CSSProperties } from "react";
+import type { CSSProperties } from "react";
 
 const meta: Meta = {
-  title: "Kulturstadtplan",
+  title: "Luftmessstationen",
 };
 
 export default meta;
@@ -25,19 +24,9 @@ export const TextInSearchPlaceholder: StoryObj = {
   },
 };
 
-// export const TextInInfoBoxTitle: StoryObj = {
-//   render: () => {
-//     return <InfoBoxTextTitle />;
-//   },
-// };
 export const TextInInfoBoxContent: StoryObj = {
   render: () => {
-    return (
-      <InfoBoxTextContent
-        setAppMenuVisible={action("setAppMenuVisible")}
-        setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-      />
-    );
+    return <InfoBoxTextContent />;
   },
 };
 
@@ -81,18 +70,18 @@ export const menuTooltipString: StoryObj = {
 //   },
 // };
 
-// export const Kompaktanleitung: StoryObj = {
-//   render: () => {
-//     const modalBodyStyle: CSSProperties = {
-//       overflowY: "auto",
-//       overflowX: "hidden",
-//       maxHeight: "100vh",
-//     };
+export const Kompaktanleitung: StoryObj = {
+  render: () => {
+    const modalBodyStyle: CSSProperties = {
+      overflowY: "auto",
+      overflowX: "hidden",
+      maxHeight: "100vh",
+    };
 
-//     return (
-//       <div id="myMenu" style={modalBodyStyle}>
-//         <KompaktanleitungSection />
-//       </div>
-//     );
-//   },
-// };
+    return (
+      <div id="myMenu" style={modalBodyStyle}>
+        <KompaktanleitungSection />
+      </div>
+    );
+  },
+};

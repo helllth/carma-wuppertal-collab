@@ -2,17 +2,10 @@ import Icon from "react-cismap/commons/Icon";
 import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
 import Section from "react-cismap/topicmaps/menu/Section";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInfoCircle,
-  faMagnifyingGlassMinus,
-  faRandom,
-  faStop,
-  faLocationArrow,
-} from "@fortawesome/free-solid-svg-icons";
-import { getSymbolSVGGetter } from "react-cismap/tools/uiHelper";
-import { featureSamples4Icons } from "./helper/iconFactory";
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import meinStandpunktMarkerDoppel from "./assets/MeinStandpunktMarkerDoppel.jpg";
 import meinStandpunktMarkerMitKompass from "./assets/MeinStandpunktMarkerMitKompass.jpg";
+import { Link } from "react-scroll";
 export const KompaktanleitungSection = () => {
   return (
     <Section
@@ -34,9 +27,11 @@ export const KompaktanleitungSection = () => {
                     content: (
                       <div>
                         <p>
-                          Die Karte <b>Hintergrund</b> bietet ihnen die
-                          folgenden Hintergrundkarten an, die auf verschiedenen
-                          Geodatendiensten und Geodaten basieren:
+                          Die Karte{" "}
+                          <strong>Luftmessstationskarte Wuppertal </strong>{" "}
+                          bietet ihnen die folgenden Hintergrundkarten an, die
+                          auf verschiedenen Geodatendiensten und Geodaten
+                          basieren:
                         </p>
                         <ul>
                           <li>
@@ -46,7 +41,7 @@ export const KompaktanleitungSection = () => {
                               True Orthophoto aus Bildflug vom 16.03.2022
                             </strong>
                             , hergestellt durch Aerowest GmbH/Dortmund,
-                            Bodenauflösung 5 cm. (True Orthophoto: Aus
+                            Bodenauflösung 10 cm. (True Orthophoto: Aus
                             Luftbildern mit hoher Längs- und Querüberdeckung in
                             einem automatisierten Bildverarbeitungsprozess
                             berechnetes Bild in Parallelprojektion, also ohne
@@ -100,109 +95,52 @@ export const KompaktanleitungSection = () => {
                             (OpenStreetMap contributors).
                           </li>
                         </ul>
+                        <p>
+                          Neben dem Datensatz der{" "}
+                          <a
+                            href="https://offenedaten-wuppertal.de/dataset/umweltzonen-wuppertal"
+                            target="_opendata"
+                          >
+                            Umweltzonen Wuppertal
+                          </a>{" "}
+                          stellt die Luftmessstationskarte auch die Daten der
+                          Luftmessstationen aus dem Open-Data-Angebot der Stadt
+                          Wuppertal dar:
+                        </p>
                         <ul>
                           <li>
-                            <strong>Fernwärme</strong>: Kartendienst (WMS) der
-                            Stadt Wuppertal in Zusammenarbeit mit der{" "}
                             <a
-                              target="_wsw"
-                              href="https://www.wsw-online.de/wsw-energie-wasser/privatkunden/produkte/fernwaerme/talwaerme-wuppertal/"
+                              target="_opendata"
+                              href="https://offenedaten-wuppertal.de/dataset/luftmessstationen-wuppertal-passivsammler"
                             >
-                              WSW GmbH
+                              Stammdaten der Luftmessstationen
                             </a>
-                            . Datengrundlage: Fernwärmeleitungen der Wuppertaler
-                            Stadtwerke GmbH (Stand 02.2021) mit einer
-                            Puffergröße von 10 m. ©{" "}
+                          </li>
+                          <li>
                             <a
-                              target="_wsw"
-                              href="https://www.wsw-online.de/impressum/"
+                              target="_opendata"
+                              href="https://offenedaten-wuppertal.de/dataset/no2-messdaten-wuppertal-passivsammler-ab-2008"
                             >
-                              Wuppertaler Stadtwerke GmbH
+                              Messdaten (Monatsmittelwerte) seit dem Jahr 2008
                             </a>
-                            .
+                          </li>
+                          <li>
+                            <a
+                              target="_opendata"
+                              href="https://offenedaten-wuppertal.de/dataset/no2-jahresmittelwerte-wuppertal-passivsammler-ab-2008"
+                            >
+                              Jahresmittelwerte seit dem Jahr 2008
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              target="_opendata"
+                              href="https://offenedaten-wuppertal.de/dataset/no2-messdaten-wuppertal-passivsammler-2006-und-2007"
+                            >
+                              Messdaten der Jahre 2006 und 2007
+                            </a>
                           </li>
                         </ul>
-
-                        <div>
-                          Im Bereich der{" "}
-                          <span style={{ whiteSpace: "nowrap" }}>
-                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                            <a className="styleaslink">
-                              <FontAwesomeIcon icon={faRandom} /> Klimaorte
-                            </a>
-                          </span>{" "}
-                          stellt die Klimaortkarte Wuppertal zusätzlich die
-                          Daten der{" "}
-                          <a
-                            href="https://offenedaten-wuppertal.de/dataset/klimaorte-wuppertal"
-                            target="_opendata"
-                          >
-                            Klimaorte
-                          </a>{" "}
-                          und eine Auswahl der{" "}
-                          <a
-                            href="https://offenedaten-wuppertal.de/dataset/radrouten-wuppertal"
-                            target="_opendata"
-                          >
-                            Radrouten
-                          </a>{" "}
-                          (mit{" "}
-                          <span style={{ whiteSpace: "nowrap" }}>
-                            1,5 Meter
-                          </span>{" "}
-                          Puffer) aus dem Open-Data-Angebot der Stadt Wuppertal
-                          dar. Im Bereich der{" "}
-                          <span style={{ whiteSpace: "nowrap" }}>
-                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                            <a className="styleaslink">
-                              <FontAwesomeIcon icon={faRandom} /> Klimarouten
-                            </a>
-                          </span>{" "}
-                          stellt die Klimaortkarte Wuppertal zusätzlich die
-                          Daten der Klimarouten, aus dem Open-Data-Angebot
-                          (dieses befindet sich in Vorbereitung) der Stadt
-                          Wuppertal dar, welche ausgewählte Fahrrad- und
-                          Fußwegrouten symbolisieren (
-                          <span style={{ whiteSpace: "nowrap" }}>2 Meter</span>{" "}
-                          Puffer um Linienstruktur). Die Routen sind in
-                          Kooperation mit{" "}
-                          <a href="https://www.komoot.de/" target="_komoot">
-                            komoot{" "}
-                          </a>{" "}
-                          hergestellt worden, wobei sich im jeweiligen
-                          Datenblatt <FontAwesomeIcon icon={faInfoCircle} /> der
-                          Link zur externen Datenquelle befindet. Weitere
-                          Objekte, welche sich in einem Abstand von{" "}
-                          <span style={{ whiteSpace: "nowrap" }}>
-                            60 Metern
-                          </span>{" "}
-                          zur Klimaroute befinden, werden ebenfalls präsentiert
-                          bzw. der Route zugeordnet:
-                          <ul>
-                            <li>Klimaorte</li>
-                            <li>
-                              Aussichtspunkte und die von dort sichtbaren
-                              Klimaorte (Open-Data-Angebot befindet sich in
-                              Vorbereitung)
-                            </li>
-                            <li>
-                              Zwischenstopps, als Symbol für weitere Highlights
-                              im Routenverlauf (Open-Data-Angebot befindet sich
-                              in Vorbereitung)
-                            </li>
-                            <li>
-                              ausgewählte Point of Interests (
-                              <a
-                                href="https://offenedaten-wuppertal.de/dataset/interessante-orte-poi-wuppertal"
-                                target="_opendata"
-                              >
-                                Interessante Orte Wuppertal
-                              </a>
-                              , Anpassung des Open-Data-Angebots befindet sich
-                              in Vorbereitung).
-                            </li>
-                          </ul>
-                        </div>
                       </div>
                     ),
                   },
@@ -215,71 +153,128 @@ export const KompaktanleitungSection = () => {
                     content: (
                       <div>
                         <p>
-                          Die Möglichkeiten zum Klima- und Umweltschutz werden
-                          aktuell global diskutiert, wobei bereits auf
-                          kommunaler Ebene viele Akteure und Einrichtungen an
-                          deren Umsetzung beteiligt sind. An den im Kartenbild
-                          gezeigten "Klimaorten" wird das Thema Klimaschutz
-                          praktiziert und vermittelt; hier wird der Klimaschutz
-                          für die Bürger:innen erlebbar. Viele dieser Klimaorte
-                          sind im Rahmen von innovativen Projekten durch den
-                          Wissenstransfer und das Engagement von Unternehmen,
-                          Vereinen, Verbänden sowie Quartiersbewohner:innen
-                          entstanden, die sich aktiv für Lösungen zum Klima- und
-                          Umweltschutz in ihrem Quartier und für die Stadt
-                          Wuppertal einsetzen. Zu den zielführenden Projekten
-                          gehören z.B. Wuppertals Klimasiedlungen, Anlagen zur
-                          effizienten und/oder regenerativen Energieerzeugung,
-                          Projekte der Verkehrswende sowie der Klima- und
-                          Umweltbildung, an denen zahlreiche Akteure mitwirken
-                          und mitgestalten.
+                          Die Stadt Wuppertal führt seit vielen Jahren Messungen
+                          und Kartierungen durch, um Aufschlüsse über die
+                          Luftbelastungssituation zu erhalten. Diese
+                          Erkenntnisse werden für Maßnahmen zur Luftreinhaltung
+                          und die Stadtentwicklung genutzt. Einer der derzeit am
+                          meisten diskutierte Luftschadstoff ist
+                          Stickstoffdioxid (NO₂). Dieser wird als Reizgas mit
+                          stechend-stickigem Geruch bereits in geringen
+                          Konzentrationen wahrgenommen. Die Inhalation ist für
+                          den Menschen der einzig relevante Aufnahmeweg.{" "}
                         </p>
                         <p>
-                          Mit den Klimarouten steht den Bürger:innen eine
-                          weitere Möglichkeit zur Erkundung der Klimaorte im
-                          Wuppertaler Stadtgebiet zur Verfügung. Verschiedene
-                          Routen (zu Fuß oder mit dem Fahrrad) führen Sie an
-                          ausgewählten Klimaorten vorbei: Aussichtspunkte{" "}
-                          {getSymbolSVGGetter(
-                            featureSamples4Icons.aussichtspunkt?.properties
-                              ?.svgBadge,
-                            featureSamples4Icons.aussichtspunkt?.properties
-                              ?.svgBadgeDimension
-                          )(
-                            20,
-                            featureSamples4Icons.aussichtspunkt?.properties
-                              .color,
-                            "aussichtspunktsample_"
-                          )}{" "}
-                          ermöglichen Ihnen den Blick auf weitere Klimaorte aus
-                          größerer Entfernung zu werfen und Zwischenstopps{" "}
-                          {getSymbolSVGGetter(
-                            featureSamples4Icons.zwischenstopp?.properties
-                              ?.svgBadge,
-                            featureSamples4Icons.zwischenstopp?.properties
-                              ?.svgBadgeDimension
-                          )(
-                            20,
-                            featureSamples4Icons.zwischenstopp?.properties
-                              .color,
-                            "zwischenstoppsample_"
-                          )}{" "}
-                          bieten Ihnen ausgewählte Highlights im Routenverlauf
-                          an.
+                          Die europäische Union hat für ihre Mitgliedsstaaten
+                          mit mehreren Luftqualitätsrichtlinien verbindliche
+                          Luftqualitätsziele zur Vermeidung oder Verringerung
+                          schädlicher Auswirkungen auf die menschliche
+                          Gesundheit und die Umwelt festgelegt. Danach wird die
+                          Luftqualität in den Staaten der EU nach einheitlichen
+                          Methoden und Kriterien beurteilt. In der
+                          Bundesrepublik Deutschland wurden diese Richtlinien
+                          durch Novellierung des
+                          Bundes-Immissions­schutzgesetzes (BImSchG) sowie durch
+                          die Einführung der 39. Verordnung zum BImSchG (39.
+                          BImSchV) in deutsches Recht umgesetzt. Für
+                          Stickstoffdioxid (NO₂) gilt seit dem Jahr 2010 ein
+                          Jahresmittelwert für NO₂ von 40 µg pro Kubikmeter
+                          Luft. Die Messungen von Stickstoffdioxid (NO₂) werden
+                          in Wuppertal mit sogenannten Passivsammlern
+                          durchgeführt und nahezu monatlich abgelesen.
                         </p>
                         <p>
-                          Ergänzt wird dieses Angebot durch weitere interessante
-                          Orte (Point of Interest, POI) entlang des
-                          Routenverlaufs. Begeben Sie sich auf Erkundungstour:
-                          die Welt des Klimaschutzes und nachhaltiger Ideen
-                          erwarten Sie.
+                          Die Luftmessstationskarte zeigt die Positionen dieser
+                          Passivsammler im Wuppertaler Stadtgebiet, welche in
+                          den vergangenen zehn Jahren Messwerte lieferten. Die
+                          farbigen Signaturen in der Karte beziehen sich dabei
+                          auf den zuletzt verfügbaren monatlichen NO₂-Messwert:
+                          unauffällig grün (≦ 35 mg/m³), auffällig gelb (&gt; 35
+                          µg/m³) und warnend rot ({">"} 40 µg/m³). Die
+                          Signaturen für Passivsammler, welche bei der letzten
+                          monatlichen Ablesung keinen Messwert geliefert haben,
+                          sind türkis eingefärbt (temporärer Ausfall). Wenn eine
+                          Messstation in den letzten zehn Jahren abgebaut wurde
+                          und damit keine weiteren NO₂-Messwerte liefert, liegt
+                          eine blaugraue Signatur vor.
+                        </p>
+                        <p>
+                          Ein Passivsammler ist ein kleines mit Adsorbermaterial
+                          gefülltes Röhrchen, welches ohne Pumpe (ohne aktive
+                          Probenahme) Schadstoffe aus der Luft über die
+                          natürliche Ausbreitung und Verteilung (Diffusion)
+                          aufnehmen und anreichern kann. Zur Verringerung von
+                          wind- und turbulenzbedingten Einflüssen befindet sich
+                          an der offenen Seite des Probeentnahmeröhrchens eine
+                          Glasfritte. Zum Schutz vor Witterungseinflüssen werden
+                          die Sammler in einem nach unten geöffneten Gehäuse
+                          eingehängt und exponiert.
+                        </p>
+                        <div style={{ textAlign: "center" }}>
+                          <img
+                            width="50%"
+                            src="https://topicmaps-wuppertal.github.io/luftmessstationen/img/passivsammler.jpg"
+                          />
+                        </div>
+                        <p>
+                          {" "}
+                          <em>
+                            Beispiel für einen{" "}
+                            <a href="https://www.lanuv.nrw.de/fileadmin/lanuv/luft/gifs/no2_gr.jpg">
+                              Passivsammler
+                            </a>
+                            ; Bildquelle: Landesamt für Natur- Umwelt und
+                            Verbraucherschutz NRW (
+                            <a href="https://www.lanuv.nrw.de/impressum">
+                              LANUV
+                            </a>
+                            ).
+                          </em>
+                        </p>
+                        <p>
+                          Die Funktionsweise eines Passivsammlers basiert auf
+                          der Anreicherung von Stickstoffdioxid (NO₂) an einem
+                          geeigneten Adsorbens ohne aktive Probennahme. Das
+                          Probeentnahmesystem besteht aus einem
+                          Kunststoffröhrchen, an dessen einem Ende sich ein mit
+                          Triethanolamin imprägniertes Edelstahl-Drahtsieb als
+                          Adsorbens befindet. Das in der Außenluft enthaltene
+                          NO₂ wird durch Diffusion zu diesem Adsorbens
+                          transportiert und dort adsorbiert. Die Röhrchen bzw.
+                          die Stickstoffdioxidmenge werden anschließend im Labor
+                          als Nitrit, z.B. mittels Fotometrie, analysiert. Aus
+                          der Analytmenge, dem Expositionszeitraum und der
+                          Sammelrate wird die mittlere Konzentration im
+                          Expositionszeitraum berechnet. Typische
+                          Expositionszeiträume liegen im Bereich von zwei bis
+                          sechs Wochen.
+                        </p>
+                        <p>
+                          Für die in Wuppertal durchgeführten Messungen wurden
+                          Expositions- bzw. Messzeiträume von etwa vier Wochen
+                          realisiert, um eine Auswertung auf
+                          Monatsmittelwertbasis zu ermöglichen. Der vorliegende
+                          Messwert beschreibt die mittlere Konzentration im
+                          Expositionsraum. Nach etwa vier Wochen erfolgt an den
+                          Wuppertaler Messstationen der Probeentnahmewechsel
+                          durch ein beauftragtes Unternehmen. Nach dem Wechsel
+                          werden die Proben im Labor analysiert. Die
+                          Messergebnisse liegen ca. 2-3 Wochen nach dem Wechsel
+                          vor; mögliche Verzögerungen bei der Datenlieferung
+                          treten selten auf. Nach Vorliegen der Daten werden
+                          diese seitens der Stadt Wuppertal auf Plausibilität
+                          geprüft. Die Daten werden spätestens eine Woche nach
+                          Erhalt in das Fachsystem übernommen. Es ergibt sich
+                          daraus eine maximale Verzögerung hinsichtlich des
+                          Zeitpunkts der Veröffentlichung der NO₂-Messwerte von
+                          ca. vier Wochen.
                         </p>
                       </div>
                     ),
                   },
                 },
                 {
-                  title: "Kartendarstellung der Fachobjekte",
+                  title: "Fachobjekte auswählen und abfragen",
                   bsStyle: "success",
                   contentBlockConf: {
                     type: "REACTCOMP",
@@ -287,8 +282,7 @@ export const KompaktanleitungSection = () => {
                       <div>
                         <p>
                           Bewegen Sie den Mauszeiger im Kartenfenster auf eines
-                          der farbigen Symbole (Signaturen oder dunkelblaue
-                          Fahrradtrassen), mit denen die Fachobjekte des
+                          der farbigen Symbole, mit denen die Fachobjekte des
                           Kartenthemas in der Karte dargestellt werden, um sich
                           den Namen des jeweiligen Fachobjektes anzeigen zu
                           lassen. Ein Klick auf das Symbol setzt den Fokus auf
@@ -388,107 +382,13 @@ export const KompaktanleitungSection = () => {
                   },
                 },
                 {
-                  title: "Datenblatt",
-                  bsStyle: "success",
-                  contentBlockConf: {
-                    type: "REACTCOMP",
-                    content: (
-                      <div>
-                        <p>
-                          Wenn Sie ein Objekt in der Karte markiert haben,
-                          werden Ihnen Objektangaben in der Infobox präsentiert.
-                          Bei manchen TopicMaps übersteigt die Menge an
-                          Informationen zu diesem Objekt (oder auch der
-                          Gestaltungsspielraum) die Möglichkeiten der Infobox,
-                          z. B. bei der Präsentation von Messwerten über einen
-                          längeren Zeitraum in Form von Diagrammen. Daher wird
-                          bei manchen TopicMaps ein ergänzendes Datenblatt
-                          angeboten, welches Sie über die Schaltfläche{" "}
-                          <FontAwesomeIcon icon={faInfoCircle} /> in der Infobox
-                          erreichen. Für das Datenblatt einer Klimaroute folgen
-                          die Erläuterungen zu den einzelnen Abschnitten und
-                          möglichen Funktionen.
-                        </p>
-                        <h5>
-                          <b>Höhenprofil</b>
-                        </h5>
-                        <p>
-                          In der Graphik wird Ihnen das Höhenprofil der
-                          jeweiligen Klimaroute auf der komoot-Datengrundlage
-                          als blaue Linie präsentiert (Höhen- und
-                          Entfernungswerte auf{" "}
-                          <span style={{ whiteSpace: "nowrap" }}>1 Meter</span>{" "}
-                          gerundet). Dadurch sind Bereiche mit flachem Terrain
-                          oder großem Gefälle/ großer Steigung schnell
-                          ersichtlich. Besonders für Wuppertal mit der markanten
-                          Topographie kann dies beim Erkunden der Klimaroute
-                          hilfreich sein. Per Mouseover oder Fingertipp auf die
-                          blaue Linie können Sie die entsprechenden Höhenwerte
-                          und einen Abstand zum Startpunkt der Klimaroute
-                          ermitteln. Am oberen Ende der Graphik befinden sich{" "}
-                          <span style={{ whiteSpace: "nowrap" }}>
-                            Markierungen{" "}
-                            <FontAwesomeIcon
-                              style={{ color: "#dddddd" }}
-                              icon={faStop}
-                            />
-                            ,
-                          </span>{" "}
-                          welche auf die an der Klimaroute befindlichen
-                          Stationen hinweisen. Ähnlich wie zuvor, lassen sich
-                          für die Stationen die Höhenwerte oder Entfernungen zum
-                          Klimaroutenstartpunkt ermitteln. Für die genauere
-                          Betrachtung eines Routenabschnitts bzgl. des
-                          Höhenprofils markieren Sie mit der Maus den
-                          gewünschten Bereich oder verwenden Sie die
-                          Zoom-In-Geste (oder Zoom-Out) auf Ihrem mobilen
-                          Endgerät. Ein Zurücksetzen des Zooms ist mit einem
-                          Klick auf das Lupen-Symbol{" "}
-                          <FontAwesomeIcon icon={faMagnifyingGlassMinus} />{" "}
-                          möglich.
-                        </p>
-                        <h5>
-                          <b>Routenverlauf</b>
-                        </h5>
-
-                        <p>
-                          In der Graphik wird Ihnen in einer Verlaufsansicht die
-                          Stationsabfolge an einer Klimaroute präsentiert:
-                          Station folgt auf Station entlang der Klimaroute. Die
-                          Entfernung zum Klimaroutenstartpunkt (auf{" "}
-                          <span style={{ whiteSpace: "nowrap" }}>
-                            {" "}
-                            100 Meter
-                          </span>{" "}
-                          gerundet) wird Ihnen im linken Bereich der
-                          Verlaufsansicht geboten.
-                        </p>
-
-                        <h5>
-                          <b>Route in umgekehrter Reihenfolge</b>
-                        </h5>
-                        <p>
-                          Sie möchten das Höhenprofil bzw. den Routenverlauf in
-                          umgekehrter Reihenfolge anzeigen lassen? Im
-                          Kopfbereich des Datenblattes befindet sich hierzu die
-                          Schaltfläche "umgekehrte Reihenfolge anzeigen". Ein
-                          Klick darauf wechselt anschließend die
-                          Verlaufsrichtung der Graphiken. Ein weiterer Klick auf
-                          die jetzt "ursprüngliche Reihenfolge anzeigen"
-                          benannte Schaltfläche, setzt die Sortierung wieder in
-                          die Ausgangslage zurück.
-                        </p>
-                      </div>
-                    ),
-                  },
-                },
-                {
                   title: "In Karte positionieren",
                   bsStyle: "warning",
                   contentBlockConf: {
                     type: "REACTCOMP",
                     content: (
                       <div>
+                        {" "}
                         <p>
                           Um in der Karte direkt zu einer bestimmten Adresse zu
                           gelangen, geben Sie den Anfang des betreffenden
@@ -508,10 +408,12 @@ export const KompaktanleitungSection = () => {
                           <Icon name="circle" /> Stadtbezirk, ein{" "}
                           <Icon name="pie-chart" /> Quartier, eine{" "}
                           <Icon name="home" /> Adresse, eine{" "}
-                          <Icon name="road" /> Straße ohne Hausnummern, eine{" "}
+                          <Icon name="road" /> Straße ohne Hausnummern, einen{" "}
+                          <Icon name="tag" /> POI, die <Icon name="tags" />{" "}
+                          alternative Bezeichnung eines POI, eine{" "}
                           <Icon name="child" /> Kindertageseinrichtung, eine{" "}
-                          <Icon name="graduation-cap" /> Schule oder einen{" "}
-                          <Icon name="sun" /> Klimaort handelt.
+                          <Icon name="graduation-cap" /> Schule oder eine{" "}
+                          <Icon name="cloudscale" /> Luftmessstation handelt.
                         </p>
                         <p>
                           Nach der Auswahl eines Treffers aus der Liste wird die
@@ -646,44 +548,55 @@ export const KompaktanleitungSection = () => {
                     content: (
                       <div>
                         <p>
-                          Im Bereich &quot;<strong>Meine Klimaorte</strong>
-                          &quot; können Sie im Anwendungsmenü{" "}
-                          <Icon name="bars" /> die in der Karte angezeigten
-                          Klimaorte so ausdünnen, dass nur die für Sie
-                          interessanten Orte übrig bleiben. Dabei umfasst die
-                          Filterung die Angebote an den Klimastandorten, wobei
-                          sich ein Angebot aus einem Thema und einer Kategorie
-                          ergibt. Standardmäßig sind die Einstellungen hier so
-                          gesetzt, dass alle verfügbaren Klimaorte angezeigt
-                          werden.
+                          Im Bereich &quot;
+                          <strong>Messstationen der Luftqualität</strong>&quot;
+                          können Sie im Anwendungsmenü <Icon name="bars" /> die
+                          in der Karte angezeigten Luftmessstationen so
+                          ausdünnen, dass nur die für Sie interessanten
+                          Stationen übrig bleiben. Standardmäßig sind die
+                          Einstellungen hier so gesetzt, dass alle verfügbaren
+                          Luftmessstationen angezeigt werden.
                         </p>
                         <p>
-                          Ihnen stehen somit zwei Filterkriterien zur Verfügung:
-                          "Themen" und "Kategorien". Innerhalb dieser Kriterien
-                          können sie in einer alphabetisch sortieren Menge an
-                          Schlagworten (Tags) bestimmte Begriffe per Mausklick
-                          selektieren bzw. deselektieren; die Auswahl aller bzw.
-                          keines der Schlagworte erfolgt über die Schaltfläche{" "}
-                          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                          <a className="renderAsLink">alle</a> bzw.{" "}
-                          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                          <a className="renderAsLink">keine</a>.
+                          Mit den Optionsgruppen &quot;
+                          <strong>aktive Messstationen</strong>&quot; und &quot;
+                          <strong>inaktive Messstationen</strong>&quot; können
+                          Sie die Kartenanzeige auf Luftmessstationen
+                          beschränken, die im letzten verfügbaren Messzeitraum
+                          NO₂-Messwerte lieferten (ggf. kann ein temporärer
+                          Messausfall vorliegen) oder bei denen es sich um
+                          abmontierte Stationen handelt (ggf. werden in der
+                          Vergangenheit erfasste Messwerte im Datenblatt
+                          präsentiert). Die Unterteilung (Klassifizierung) der
+                          Stationen in der Optionsgruppe &quot;
+                          <strong>aktive Messstationen</strong>
+                          &quot; wird anhand des NO₂-Messwertes vorgenommen:
+                          unauffällig grün (≦ 35 µg/m³), auffällig gelb (&gt; 35
+                          µg/m³), warnend rot (&gt; 40 µg/m³); temporärer
+                          Ausfall türkis (siehe auch Abschnitt{" "}
+                          <Link
+                            to={"Hintergrund"}
+                            containerId={"myMenu"}
+                            style={{ cursor: "pointer", color: "#4688F7" }}
+                          >
+                            Hintergrund
+                          </Link>
+                          ) .
                         </p>
                         <p>
                           Ihre Einstellungen werden direkt in der blauen
-                          Titelzeile des Bereichs "
-                          <strong>Meine Klimaorte</strong>" und in dem
-                          Donut-Diagramm, das Sie rechts neben oder unter den
-                          Filteroptionen finden, ausgewertet. Die Titelzeile
-                          zeigt die Gesamtanzahl der Klimaorte, die den von
-                          Ihnen gesetzten Filterbedingungen entsprechen. Das
-                          Donut-Diagramm zeigt zusätzlich die Verteilung der
-                          Klimaorte entsprechend der Filterkriterien "Themen"
-                          oder "Kategorien". Bewegen Sie dazu den Mauszeiger auf
-                          eines der farbigen Segmente des Diagramms. Die Farben
-                          des Donut-Diagramms entsprechen den farbigen
-                          Hintergründen der Schlagworte aus dem Filterkriterium
-                          "Themen".
+                          Titelzeile des Bereichs &quot;
+                          <strong>Messstationen der Luftqualität</strong>&quot;
+                          und in dem Donut-Diagramm, das Sie rechts neben oder
+                          unter den Filteroptionen finden, ausgewertet. Die
+                          Titelzeile zeigt die Gesamtanzahl der
+                          Luftmessstationen, die den von Ihnen gesetzten
+                          Filterbedingungen entsprechen. Das Donut-Diagramm
+                          zeigt zusätzlich die Verteilung der klassifizierten
+                          Luftmessstationen (unauffällige, auffällige, warnende
+                          Stationen; Stationen mit Messausfall; abmontierte
+                          Stationen). Bewegen Sie dazu den Mauszeiger auf eines
+                          der farbigen Segmente des Diagramms.
                         </p>
                       </div>
                     ),
@@ -691,53 +604,64 @@ export const KompaktanleitungSection = () => {
                 },
                 {
                   title: "Einstellungen",
-                  bsStyle: "warning",
+                  bsStyle: "info",
                   contentBlockConf: {
                     type: "REACTCOMP",
                     content: (
                       <div>
-                        <p>
-                          Unter "<strong>Einstellungen</strong>" können Sie im
-                          Anwendungsmenü festlegen, wie die Hintergrundkarte und
-                          die Fachobjekte des Kartenthemas angezeigt werden
-                          sollen.
-                        </p>
-                        <p>
-                          Unter "
-                          <strong>
-                            <em>Hintergrundkarte</em>
-                          </strong>
-                          "können Sie auswählen, ob Sie die standardmäßig
-                          aktivierte farbige Hintergrundkarte verwenden möchten
-                          ("
-                          <em>Stadtplan (Tag)</em>") oder lieber eine
-                          invertierte Graustufenkarte ("
-                          <em>Stadtplan (Nacht)</em>"), zu der uns die von
-                          vielen PKW-Navis bei Dunkelheit eingesetzte
-                          Darstellungsweise inspiriert hat.{" "}
-                          <strong>Hinweis</strong>: Der Stadtplan (Nacht) wird
-                          Ihnen nur angeboten, wenn Ihr Browser
-                          CSS3-Filtereffekte unterstützt, also z. B. nicht beim
-                          Microsoft Internet Explorer. Die Nacht-Karte erzeugt
-                          einen deutlicheren Kontrast mit den farbigen Symbolen
-                          der Lade- und Verleihstationen, die unterschiedlichen
-                          Flächennutzungen in der Hintergrundkarte lassen sich
-                          aber nicht mehr so gut unterscheiden wie in der
-                          Tag-Karte. Als dritte Möglichkeit steht eine{" "}
-                          <i>Luftbildkarte</i> zur Verfügung, die die
-                          Anschaulichkeit des Luftbildes mit der Eindeutigkeit
-                          des Stadtplans (Kartenschrift, durchscheinende Linien)
-                          verbindet.
-                        </p>
-
-                        <p>
-                          In der{" "}
-                          <b>
-                            <i>Vorschau</i>
-                          </b>{" "}
-                          sehen Sie direkt die Wirkung ihrer Einstellungen in
-                          einem fest eingestellten Kartenausschnitt.
-                        </p>
+                        <div>
+                          <p>
+                            Unter &quot;<strong>Einstellungen</strong>&quot;
+                            können Sie im Anwendungsmenü festlegen, wie die
+                            Hintergrundkarte und die Fachobjekte des
+                            Kartenthemas angezeigt werden sollen.
+                          </p>
+                          <p>
+                            Unter &quot;
+                            <strong>
+                              <em>Hintergrundkarte</em>
+                            </strong>
+                            &quot; können Sie auswählen, ob Sie die
+                            standardmäßig aktivierte farbige Hintergrundkarte
+                            verwenden möchten (&quot;Stadtplan (Tag)&quot;) oder
+                            lieber eine invertierte Graustufenkarte
+                            (&quot;Stadtplan (Nacht)&quot;), zu der uns die von
+                            vielen PKW-Navis bei Dunkelheit eingesetzte
+                            Darstellungsweise inspiriert hat.{" "}
+                            <strong>Hinweis</strong>: Der Stadtplan (Nacht) wird
+                            Ihnen nur angeboten, wenn Ihr Browser
+                            CSS3-Filtereffekte unterstützt, also z. B. nicht
+                            beim Microsoft Internet Explorer. Die Nacht-Karte
+                            erzeugt einen deutlicheren Kontrast mit den farbigen
+                            Symbolen für die Fachobjekte des Kartenthemas, die
+                            unterschiedlichen Flächennutzungen in der
+                            Hintergrundkarte lassen sich aber nicht mehr so gut
+                            unterscheiden wie in der Tag-Karte. Als dritte
+                            Möglichkeit steht eine Luftbildkarte zur Verfügung,
+                            die die Anschaulichkeit des Luftbildes mit der
+                            Eindeutigkeit des Stadtplans (Kartenschrift,
+                            durchscheinende Linien) verbindet.
+                          </p>
+                          <p>
+                            Unter &quot;
+                            <strong>
+                              <em>Symbolgröße</em>
+                            </strong>
+                            &quot; können Sie in Abhängigkeit von Ihrer
+                            Bildschirmauflösung und Ihrem Sehvermögen auswählen,
+                            ob die Fachobjekte mit kleinen (25 Pixel), mittleren
+                            (35 Pixel) oder großen (45 Pixel) Symbolen angezeigt
+                            werden.
+                          </p>
+                          <p>
+                            In der{" "}
+                            <strong>
+                              <em>Vorschau</em>
+                            </strong>{" "}
+                            sehen Sie direkt die prinzipielle Wirkung ihrer
+                            Einstellungen.
+                          </p>
+                        </div>
                       </div>
                     ),
                   },
