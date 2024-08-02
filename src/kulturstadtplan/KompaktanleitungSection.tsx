@@ -2,15 +2,7 @@ import Icon from "react-cismap/commons/Icon";
 import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
 import Section from "react-cismap/topicmaps/menu/Section";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInfoCircle,
-  faMagnifyingGlassMinus,
-  faRandom,
-  faStop,
-  faLocationArrow,
-} from "@fortawesome/free-solid-svg-icons";
-import { getSymbolSVGGetter } from "react-cismap/tools/uiHelper";
-import { featureSamples4Icons } from "./helper/iconFactory";
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import meinStandpunktMarkerDoppel from "./assets/MeinStandpunktMarkerDoppel.jpg";
 import meinStandpunktMarkerMitKompass from "./assets/MeinStandpunktMarkerMitKompass.jpg";
 import bergischeMusikschule from "./assets/bergische_musikschule.png";
