@@ -9,6 +9,7 @@ import {
   MenuIntroduction,
   MenuFooter,
   KompaktanleitungSection,
+  InfoBoxTextContent,
 } from ".";
 import type { CSSProperties } from "react";
 
@@ -29,11 +30,11 @@ export const TextInInfoBoxTitle: StoryObj = {
     return <InfoBoxTextTitle />;
   },
 };
-// export const TextInInfoBoxContent: StoryObj = {
-//   render: () => {
-//     return <InfoBoxTextContent />;
-//   },
-// };
+export const TextInInfoBoxContent: StoryObj = {
+  render: () => {
+    return <InfoBoxTextContent />;
+  },
+};
 
 export const menuTooltipString: StoryObj = {
   render: () => {
