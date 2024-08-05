@@ -1,6 +1,5 @@
 import React from "react";
 import GenericModalMenuSection from "react-cismap/topicmaps/menu/Section";
-import MyLocation from "react-cismap/topicmaps/docBlocks/GenericHelpTextForMyLocation";
 import meinStandpunktMarkerDoppel from "./assets/MeinStandpunktMarkerDoppel.jpg";
 import meinStandpunktMarkerMitKompass from "./assets/MeinStandpunktMarkerMitKompass.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
