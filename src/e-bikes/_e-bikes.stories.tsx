@@ -20,7 +20,7 @@ export default meta;
 
 export const TitleMenu: StoryObj = {
   render: () => {
-    return <MenuTitle title="Filter, Einstellungen und Kompaktanleitung" />;
+    return <MenuTitle />;
   },
 };
 export const IntroductionMenu: StoryObj = {
