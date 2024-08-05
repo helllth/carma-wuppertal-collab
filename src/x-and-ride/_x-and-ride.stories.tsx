@@ -8,7 +8,7 @@ import {
   MenuTitle,
   MenuIntroduction,
   MenuFooter,
-  //   KompaktanleitungSection,
+  KompaktanleitungSection,
   InfoBoxTextContent,
 } from ".";
 import type { CSSProperties } from "react";
@@ -81,18 +81,20 @@ export const MenuFußzeile: StoryObj = {
   },
 };
 
-// export const Kompaktanleitung: StoryObj = {
-//   render: () => {
-//     const modalBodyStyle: CSSProperties = {
-//       overflowY: "auto",
-//       overflowX: "hidden",
-//       maxHeight: "100vh",
-//     };
+export const Kompaktanleitung: StoryObj = {
+  render: () => {
+    const modalBodyStyle: CSSProperties = {
+      overflowY: "auto",
+      overflowX: "hidden",
+      maxHeight: "100vh",
+    };
 
-//     return (
-//       <div id="myMenu" style={modalBodyStyle}>
-//         <KompaktanleitungSection />
-//       </div>
-//     );
-//   },
-// };
+    return (
+      <div id="myMenu" style={modalBodyStyle}>
+        <KompaktanleitungSection
+          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+        />
+      </div>
+    );
+  },
+};
