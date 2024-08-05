@@ -14,13 +14,13 @@ export const Attribution: React.FC<AttributionProps> = ({
       <b>
         {applicationName} #{applicationVersion}
       </b>{" "}
-      made with ❤️ by{" "}
+      powered by{" "}
       <a href="https://cismet.de/" target="_cismet">
         cismet GmbH
       </a>{" "}
       auf Basis von{" "}
-      <a href="https://cismet.de/#refs" target="_cismet">
-        cids
+      <a href="http://leafletjs.com/" target="_cismet">
+        Leaflet
       </a>{" "}
       und{" "}
       <a href="https://github.com/cismet/carma" target="_cismet">
@@ -32,8 +32,9 @@ export const Attribution: React.FC<AttributionProps> = ({
         rel="noopener noreferrer"
         href="https://cismet.de/datenschutzerklaerung.html"
       >
-        Datenschutzerklärung (Privacy Policy)
-      </a>
+        Datenschutzerklärung
+      </a>{" "}
+      | <a href="https://www.wsw-online.de/impressum/">Impressum</a>
     </div>
   );
 };

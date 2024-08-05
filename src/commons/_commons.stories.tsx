@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Attribution } from ".";
 import { GenericDigitalTwinReferenceTextComponent } from ".";
+import { MenuFooter } from ".";
 import { wuppertalCollabProjectVersion } from "..";
+import { action } from "@storybook/addon-actions";
+import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 const meta: Meta = {
   title: "Commons",
   args: {
@@ -33,4 +36,18 @@ export const attribution: StoryObj = {
 
 export const genericDigitalTwinReferenceTextComponent: StoryObj = {
   render: () => <GenericDigitalTwinReferenceTextComponent />,
+};
+
+export const MenuFußzeile: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <MenuFooter
+          title="TopicMaps Wuppertal"
+          version={"1.23.0"}
+          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+        />
+      </TopicMapContextProvider>
+    );
+  },
 };
