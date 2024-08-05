@@ -1,3 +1,3 @@
-export const SectionTitleZg = ({ title = "Mit wem möchte ich arbeiten?" }) => {
-  return title;
+export const SectionTitleZg = () => {
+  return "Mit wem möchte ich arbeiten?";
 };

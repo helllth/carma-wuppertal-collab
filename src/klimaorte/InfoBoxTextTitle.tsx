@@ -1,3 +1,3 @@
-export const InfoBoxTextTitle = ({ title = "Keine Klimarouten gefunden" }) => {
-  return title;
+export const InfoBoxTextTitle = () => {
+  return "Keine Klimarouten gefunden";
 };

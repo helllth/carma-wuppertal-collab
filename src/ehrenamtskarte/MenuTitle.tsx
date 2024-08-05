@@ -1,5 +1,3 @@
-export const MenuTitle = ({
-  title = "Filter, Merkliste und Kompaktanleitung",
-}) => {
-  return title;
+export const MenuTitle = () => {
+  return "Filter, Merkliste und Kompaktanleitung";
 };

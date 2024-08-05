@@ -1,3 +1,3 @@
-export const InfoBoxTextTitle = ({ title = "Keine Stationen Gefunden!" }) => {
-  return title;
+export const InfoBoxTextTitle = () => {
+  return "Keine Stationen Gefunden!";
 };
