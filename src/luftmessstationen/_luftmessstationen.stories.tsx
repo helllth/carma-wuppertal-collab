@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-// import { action } from "@storybook/addon-actions";
-// import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
+import { action } from "@storybook/addon-actions";
+import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import {
   searchTextPlaceholder,
   MenuTooltip,
   InfoBoxTextContent,
-  //   MenuTitle,
-  //   MenuIntroduction,
-  //   MenuFooter,
+  MenuTitle,
+  MenuIntroduction,
+  MenuFooter,
   KompaktanleitungSection,
 } from ".";
 import type { CSSProperties } from "react";
@@ -36,39 +36,39 @@ export const menuTooltipString: StoryObj = {
   },
 };
 
-// export const TitleMenu: StoryObj = {
-//   render: () => {
-//     return <MenuTitle />;
-//   },
-// };
+export const TitleMenu: StoryObj = {
+  render: () => {
+    return <MenuTitle />;
+  },
+};
 
-// export const IntroductionMenu: StoryObj = {
-//   render: () => {
-//     return (
-//       <TopicMapContextProvider appKey="storybook-appkey">
-//         <div>
-//           <MenuIntroduction
-//             setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-//           />
-//         </div>
-//       </TopicMapContextProvider>
-//     );
-//   },
-// };
+export const IntroductionMenu: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <div>
+          <MenuIntroduction
+            setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+          />
+        </div>
+      </TopicMapContextProvider>
+    );
+  },
+};
 
-// export const MenuFußzeile: StoryObj = {
-//   render: () => {
-//     return (
-//       <TopicMapContextProvider appKey="storybook-appkey">
-//         <MenuFooter
-//           title="TopicMaps Wuppertal"
-//           version={"Version 1.23.0"}
-//           setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-//         />
-//       </TopicMapContextProvider>
-//     );
-//   },
-// };
+export const MenuFußzeile: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <MenuFooter
+          title="Luftmessstationskarte Wuppertal"
+          version={"v1.0.10"}
+          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+        />
+      </TopicMapContextProvider>
+    );
+  },
+};
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
