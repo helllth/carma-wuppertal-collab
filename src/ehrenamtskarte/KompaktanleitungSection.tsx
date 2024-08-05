@@ -5,7 +5,7 @@ import PoiZusammen from "./assets/colorcircle_k.jpg";
 import AdressMarker from "./assets/AdressMarker.jpg";
 import Merkliste from "./assets/merkliste_akt.jpg";
 import Activfilter from "./assets/filter_akt.jpg";
-import meinStandpunktMarkerDoppelIcon from "./assets/MeinStandpunktMarkerDoppel.jpg";
+import meinStandpunktMarkerDoppelIcon from "./assets/meinStandpunktMarkerDoppelIcon.jpg";
 import meinStandpunktMarkerMitKompass from "./assets/MeinStandpunktMarkerMitKompass.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
