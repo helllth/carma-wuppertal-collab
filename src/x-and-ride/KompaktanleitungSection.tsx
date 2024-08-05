@@ -21,8 +21,8 @@ interface KompaktanleitungSectionProps {
 export const KompaktanleitungSection: React.FC<
   KompaktanleitungSectionProps
 > = ({ setAppMenuActiveMenuSection }) => {
-  const inlinePRVSVG = getSymbolSVG(24, "#FFFFFF", "pr", "prSVG", prSVG);
-  const inlineBRVSVG = getSymbolSVG(24, "#FFFFFF", "br", "brSVG", brSVG);
+  const inlinePRVSVG = getSymbolSVG(24, "#FFFFFF", "prSVG", prSVG);
+  const inlineBRVSVG = getSymbolSVG(24, "#FFFFFF", "brSVG", brSVG);
   return (
     <Section
       key="help"

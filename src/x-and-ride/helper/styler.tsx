@@ -1,13 +1,13 @@
-import Color from 'color';
-import createElement from 'svg-create-element';
-import createSVGPie from 'create-svg-pie';
-import L from 'leaflet';
+import Color from "color";
+import createElement from "svg-create-element";
+import createSVGPie from "create-svg-pie";
+import L from "leaflet";
 
 export const getColorForProperties = (properties) => {
-  if (properties.schluessel === 'B') {
-    return '#009A3F';
+  if (properties.schluessel === "B") {
+    return "#009A3F";
   } else {
-    return '#004986';
+    return "#004986";
   }
 };
 
@@ -72,9 +72,8 @@ export const prSVG = `<svg  clip-rule="evenodd" fill-rule="evenodd" image-render
 
 export const getSymbolSVG = (
   svgSize = 30,
-  bg = '#FF0000',
-  kind = '-',
-  svgStyleRelatedId = 'default',
+  bg = "#FF0000",
+  svgStyleRelatedId = "default",
   svgCodeInput = prSVG
 ) => {
   let bdim = {
@@ -100,26 +99,23 @@ export const getSymbolSVG = (
                     /* ]]> */
                     </style>
                 <svg x="${svgSize / bdim.width / 2}" y="${
-    svgSize / bdim.height / 2
-  }"  width="${svgSize - (2 * svgSize) / bdim.width / 2}" height="${
-    svgSize - (2 * svgSize) / bdim.height / 2
-  }" viewBox="0 0 ${bdim.width} ${bdim.height || 24}">       
+                  svgSize / bdim.height / 2
+                }"  width="${svgSize - (2 * svgSize) / bdim.width / 2}" height="${
+                  svgSize - (2 * svgSize) / bdim.height / 2
+                }" viewBox="0 0 ${bdim.width} ${bdim.height || 24}">       
                     ${svgCodeInput}
                 </svg>
                 </svg>  `;
 
   return (
     <span
-      style={{ width: 'fit-content' }}
+      style={{ width: "fit-content" }}
       dangerouslySetInnerHTML={{ __html: svgCode }}
     />
   );
 };
 
-export const getFeatureStyler = (
-  svgSize = 24,
-  colorizer = getColorForProperties
-) => {
+export const getFeatureStyler = (svgSize = 24) => {
   return (feature) => {
     var color = Color(getColorForProperties(feature.properties));
     let radius = svgSize / 2; //needed for the Tooltip Positioning
@@ -155,10 +151,10 @@ export const getFeatureStyler = (
                       /* ]]> */
                       </style>
                   <svg x="${svgSize / 12}" y="${svgSize / 12}"  width="${
-      svgSize - (2 * svgSize) / 12
-    }" height="${svgSize - (2 * svgSize) / 12}" viewBox="0 0 ${
-      feature.properties.svgBadgeDimension?.width
-    } ${feature.properties.svgBadgeDimension?.height}">       
+                    svgSize - (2 * svgSize) / 12
+                  }" height="${svgSize - (2 * svgSize) / 12}" viewBox="0 0 ${
+                    feature.properties.svgBadgeDimension?.width
+                  } ${feature.properties.svgBadgeDimension?.height}">       
                       ${badge}
                   </svg>
                   </svg>  `;
@@ -195,8 +191,8 @@ export const getFeatureStyler = (
                       </style>
                   <rect x="${selectionOffset}" y="${selectionOffset}" rx="8" ry="8" width="${selectionBox}" height="${selectionBox}" fill="rgba(67, 149, 254, 0.8)" stroke-width="0"/>
                   <svg x="${selectionOffset + innerBadgeOffset}" y="${
-          selectionOffset + innerBadgeOffset
-        }" width="${badgeDimension}" height="${badgeDimension}" viewBox="0 0 ` +
+                    selectionOffset + innerBadgeOffset
+                  }" width="${badgeDimension}" height="${badgeDimension}" viewBox="0 0 ` +
         feature.properties.svgBadgeDimension?.width +
         ` ` +
         feature.properties.svgBadgeDimension?.height +
@@ -248,7 +244,7 @@ export const getPoiClusterIconCreatorFunction = (
     const pie = createSVGPie(values, r, colors);
 
     let canvasSize = (svgSize / 3.0) * 5.0;
-    let background = createElement('svg', {
+    let background = createElement("svg", {
       width: canvasSize,
       height: canvasSize,
       viewBox: `0 0 ${canvasSize} ${canvasSize}`,
@@ -256,19 +252,19 @@ export const getPoiClusterIconCreatorFunction = (
 
     //Kleiner Kreis in der Mitte
     // (blau wenn selektion)
-    let innerCircleColor = '#ffffff';
+    let innerCircleColor = "#ffffff";
     if (containsSelection) {
-      innerCircleColor = 'rgb(67, 149, 254)';
+      innerCircleColor = "rgb(67, 149, 254)";
     }
 
     //inner circle
     pie.appendChild(
-      createElement('circle', {
+      createElement("circle", {
         cx: r,
         cy: r,
         r: svgSize / 3.0,
-        'stroke-width': 0,
-        opacity: '0.5',
+        "stroke-width": 0,
+        opacity: "0.5",
         fill: innerCircleColor,
       })
     );
@@ -290,50 +286,50 @@ export const getPoiClusterIconCreatorFunction = (
 
     // Umrandung
     background.appendChild(
-      createElement('circle', {
+      createElement("circle", {
         cx: canvasSize / 2.0,
         cy: canvasSize / 2.0,
         r: r,
-        'stroke-width': 2,
-        stroke: '#000000',
-        opacity: '0.5',
-        fill: 'none',
+        "stroke-width": 2,
+        stroke: "#000000",
+        opacity: "0.5",
+        fill: "none",
       })
     );
 
     if (inCart) {
       background
         .appendChild(
-          createElement('text', {
-            x: '50%',
-            y: '50%',
-            'text-anchor': 'middle',
-            'font-family': 'FontAwesome',
-            fill: '#fff',
-            'font-size': '26',
-            dy: '.4em',
-            opacity: '0.5',
+          createElement("text", {
+            x: "50%",
+            y: "50%",
+            "text-anchor": "middle",
+            "font-family": "FontAwesome",
+            fill: "#fff",
+            "font-size": "26",
+            dy: ".4em",
+            opacity: "0.5",
           })
         )
-        .appendChild(document.createTextNode('\uf005'));
+        .appendChild(document.createTextNode("\uf005"));
     }
 
     background
       .appendChild(
-        createElement('text', {
-          x: '50%',
-          y: '50%',
-          'text-anchor': 'middle',
-          dy: '.3em',
+        createElement("text", {
+          x: "50%",
+          y: "50%",
+          "text-anchor": "middle",
+          dy: ".3em",
         })
       )
       .appendChild(document.createTextNode(childCount));
 
-    pie.setAttribute('x', (canvasSize - r * 2) / 2.0);
-    pie.setAttribute('y', (canvasSize - r * 2) / 2.0);
+    pie.setAttribute("x", (canvasSize - r * 2) / 2.0);
+    pie.setAttribute("y", (canvasSize - r * 2) / 2.0);
 
     var divIcon = L.divIcon({
-      className: 'leaflet-data-marker',
+      className: "leaflet-data-marker",
       html:
         background.outerHTML ||
         new XMLSerializer().serializeToString(background), //IE11 Compatibility
