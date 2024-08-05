@@ -1,5 +1,3 @@
-export const SectionTitleGLB = ({
-  title = "Welches Ausgabenfeld interessiert mich?",
-}) => {
-  return title;
+export const SectionTitleGLB = () => {
+  return "Welches Ausgabenfeld interessiert mich?";
 };

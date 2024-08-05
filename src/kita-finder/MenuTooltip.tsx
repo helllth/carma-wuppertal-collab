@@ -1,5 +1,3 @@
-export const MenuTooltip = ({
-  text = "Filter | Einstellungen | Kompaktanleitung",
-}) => {
-  return text;
+export const MenuTooltip = () => {
+  return "Filter | Einstellungen | Kompaktanleitung";
 };

@@ -1,5 +1,3 @@
-export const MenuTitle = ({
-  title = "Kompaktanleitung FNP-Inspektor Wuppertal",
-}) => {
-  return title;
+export const MenuTitle = () => {
+  return "Kompaktanleitung FNP-Inspektor Wuppertal";
 };

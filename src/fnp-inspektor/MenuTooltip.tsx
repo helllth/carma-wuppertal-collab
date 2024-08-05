@@ -1,3 +1,3 @@
-export const MenuTooltip = ({ text = "Kompaktanleitung anzeigen" }) => {
-  return text;
+export const MenuTooltip = () => {
+  return "Kompaktanleitung anzeigen";
 };
