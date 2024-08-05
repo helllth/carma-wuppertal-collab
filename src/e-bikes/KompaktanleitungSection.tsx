@@ -6,7 +6,6 @@ import { getSymbolSVG } from "./helper/styler";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Icon from "react-cismap/commons/Icon";
-import GenericHelpTextForMyLocation from "react-cismap/topicmaps/docBlocks/GenericHelpTextForMyLocation";
 import { Link } from "react-scroll";
 import EbikeCluster from "./assets/ebikes_cluster.png";
 import meinStandpunktMarkerDoppel from "./assets/MeinStandpunktMarkerDoppel.jpg";
