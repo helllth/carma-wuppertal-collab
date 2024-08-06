@@ -4,7 +4,6 @@ import {
   //   Help20Karteninhalt,
   //   Help80ModellfehlerMelden,
   //   Help90Haftungsausschluss,
-  Help99Footer,
 } from "@cismet-collab/rainhazardmaps-base-texts";
 
 import Help10AllgemeineHinweise from "./help/Help10AllgemeineHinweise";
@@ -21,6 +20,8 @@ import Help90Haftungsausschluss from "./help/Help90Haftungsausschluss";
 import Help98DigitalerZwilling from "./help/Help98DigitalerZwilling";
 import DigiTalLogo from "./help/assets/Logo_DigiTalZwilling.png";
 import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
+import HelpFooter from "./help/HelpFooter";
+
 const getCollabedHelpComponentConfig = ({
   version,
   versionString,
@@ -31,38 +32,10 @@ const getCollabedHelpComponentConfig = ({
   const MyFooter = () => {
     const { setAppMenuActiveMenuSection } = useContext(UIDispatchContext);
     return (
-      <Help99Footer
-        appName="Teilzwilling Hochwassergefahrenkarte Wuppertal"
-        taglineModelling={
-          <div>
-            <b>Modellierung</b>:{" "}
-            <a
-              target="_wsw"
-              href="https://www.gis-rest.nrw.de/atomFeed/rest/atom/182925c1-879f-4054-bd69-b6f28e05b270.html"
-            >
-              Land NRW
-            </a>{" "}
-            (2. Umsetzungszyklus der EU-HWRM-RL 12/2019)
-          </div>
-        }
+      <HelpFooter
         version={version}
-        versionString={versionString}
-        reactCismapRHMVersion={reactCismapRHMVersion}
-        hintergrundkartenText="True Orthophoto 2022, Amtliche Basiskarte (ABK), Hillshade © Stadt Wuppertal | Stadtkarte 2.0 © RVR | basemap.de web Vektor © GeoBasis-DE / BKG"
-        logo={
-          <a
-            className="renderAsLink"
-            onClick={() => {
-              setAppMenuActiveMenuSection("zwilling");
-            }}
-          >
-            <img
-              style={{ width: 50, margin: 5, marginTop: -5, cursor: "pointer" }}
-              align="right"
-              src={footerLogoUrl}
-            />
-          </a>
-        }
+        title="Hochwassergefahrenkarte Wuppertal"
+        setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
       />
     );
   };

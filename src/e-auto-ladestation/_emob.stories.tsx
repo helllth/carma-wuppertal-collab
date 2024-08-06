@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { KompaktanleitungSection } from ".";
-import { MenuFooter } from ".";
 import { MenuIntroduction } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import type { CSSProperties } from "react";
@@ -26,7 +25,7 @@ export const MenuEinleitung: StoryObj = {
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
-    const modalBodyStyle : CSSProperties = {
+    const modalBodyStyle: CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh",
@@ -36,16 +35,6 @@ export const Kompaktanleitung: StoryObj = {
       <div id="myMenu" style={modalBodyStyle}>
         <KompaktanleitungSection />
       </div>
-    );
-  },
-};
-
-export const MenuFußzeile: StoryObj = {
-  render: () => {
-    return (
-      <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter />
-      </TopicMapContextProvider>
     );
   },
 };

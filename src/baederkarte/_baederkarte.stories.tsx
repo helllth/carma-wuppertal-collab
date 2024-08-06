@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { KompaktanleitungSection } from ".";
-import { MenuFooter } from ".";
-import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import type { CSSProperties } from "react";
 
 const meta: Meta = {
@@ -22,16 +20,6 @@ export const Kompaktanleitung: StoryObj = {
       <div id="myMenu" style={modalBodyStyle}>
         <KompaktanleitungSection />
       </div>
-    );
-  },
-};
-
-export const MenuFußzeile: StoryObj = {
-  render: () => {
-    return (
-      <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter title="Bäderkarte" version="xyz" />
-      </TopicMapContextProvider>
     );
   },
 };

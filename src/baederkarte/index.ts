@@ -1,2 +1,1 @@
-export { KompaktanleitungSection } from './KompaktanleitungSection';
-export { MenuFooter } from './MenuFooter';
+export { KompaktanleitungSection } from "./KompaktanleitungSection";

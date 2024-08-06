@@ -7,7 +7,6 @@ import {
   MenuTooltip,
   MenuTitle,
   MenuIntroduction,
-  MenuFooter,
   KompaktanleitungSection,
   InfoBoxTextContent,
 } from ".";
@@ -62,20 +61,6 @@ export const IntroductionMenu: StoryObj = {
             setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
           />
         </div>
-      </TopicMapContextProvider>
-    );
-  },
-};
-
-export const MenuFußzeile: StoryObj = {
-  render: () => {
-    return (
-      <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter
-          title="TopicMaps Wuppertal"
-          version={"Version 1.23.0)"}
-          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-        />
       </TopicMapContextProvider>
     );
   },
