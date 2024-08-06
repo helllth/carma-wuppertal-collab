@@ -1,9 +1,6 @@
-import React, { useContext } from 'react';
-import { UIDispatchContext } from 'react-cismap/contexts/UIContextProvider';
-import GenericModalMenuSection from 'react-cismap/topicmaps/menu/Section';
-import LicenseLBK from 'react-cismap/topicmaps/wuppertal/LicenseLuftbildkarte';
-import LicenseStadtplanTagNacht from 'react-cismap/topicmaps/wuppertal/LicenseStadtplanTagNacht';
-import aislogo from './assets/Signet_AIS_RZ.png';
+import React, { useContext } from "react";
+import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
+import GenericModalMenuSection from "react-cismap/topicmaps/menu/Section";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 const Component = ({ dev = false }) => {
@@ -16,7 +13,7 @@ const Component = ({ dev = false }) => {
       sectionContent={
         <div>
           <p>
-            Die Stadt Wuppertal publiziert seit Ende 2018 eine interaktive{' '}
+            Die Stadt Wuppertal publiziert seit Ende 2018 eine interaktive{" "}
             <a
               target="_legal"
               href="https://digital-twin-wuppertal-live.github.io/rainhazardmap/#/hoehen?lat=51.271680556266894&lng=7.199681997299195&zoom=18"
@@ -59,13 +56,13 @@ const Component = ({ dev = false }) => {
           </p>
           <p>
             Die Hochwassergefahrenkarte Wuppertal stellt die Maximalwerte von
-            Wassertiefen dar, die im Verlauf der drei vom Land NRW simulierten{' '}
+            Wassertiefen dar, die im Verlauf der drei vom Land NRW simulierten{" "}
             <a
               className="renderAsLink"
-              onClick={() => setAppMenuActiveMenuSection('szenarien')}
+              onClick={() => setAppMenuActiveMenuSection("szenarien")}
             >
               Hochwasser-Szenarien
-            </a>{' '}
+            </a>{" "}
             auftreten. Dazu wird ein Raster mit einer Kantenlänge von 1 m
             benutzt. Die Wassertiefen werden mit demselben Farbverlauf wie in
             der Starkregengefahrenkarte visualisiert, also mit den Eckwerten 20

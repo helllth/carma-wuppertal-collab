@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import GenericModalMenuSection from "react-cismap/topicmaps/menu/Section";
-import LicenseStadtplanTagNacht from "react-cismap/topicmaps/wuppertal/LicenseStadtplanTagNacht";
-import LicenseLBK from "react-cismap/topicmaps/wuppertal/LicenseLuftbildkarte";
 import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
@@ -56,27 +54,27 @@ const Component = () => {
             zufließende Regenwasser modelliert. Es kann in den Simulationen nun
             also nicht mehr zu einem Rückstau kommen, bei dem das Regenwasser
             Flächen in der Talsohle überflutet, weil es von der Wupper nicht
-            mehr abgeleitet werden kann. Die Überflutungen, die durch hohe 
-            Pegelstände entlang der Wupper und einiger wichtiger Zuflüsse der 
-            Wupper entstehen können, werden in den Hochwassersimulationen des 
-            Landes NRW betrachtet. Die Stadt Wuppertal stellt den hieraus für 
+            mehr abgeleitet werden kann. Die Überflutungen, die durch hohe
+            Pegelstände entlang der Wupper und einiger wichtiger Zuflüsse der
+            Wupper entstehen können, werden in den Hochwassersimulationen des
+            Landes NRW betrachtet. Die Stadt Wuppertal stellt den hieraus für
             Wuppertal relevanten Ausschnitt seit Mai 2024 in der interaktiven{" "}
             <a
-                target="_legal"
-                href="https://digital-twin-wuppertal-live.github.io/floodingmap/#?lat=51.271680556266894&lng=7.199681997299195&zoom=18"
-              >
-                Hochwassergefahrenkarte Wuppertal
-            </a>{" "} 
-            bereit, die weitgehend wie die 
-            Starkregengefahrenkarte zu bedienen ist. Die beiden Karten lassen 
-            sich so miteinander{" "} 
+              target="_legal"
+              href="https://digital-twin-wuppertal-live.github.io/floodingmap/#?lat=51.271680556266894&lng=7.199681997299195&zoom=18"
+            >
+              Hochwassergefahrenkarte Wuppertal
+            </a>{" "}
+            bereit, die weitgehend wie die Starkregengefahrenkarte zu bedienen
+            ist. Die beiden Karten lassen sich so miteinander{" "}
             <a
               className="renderAsLink"
               onClick={() => setAppMenuActiveMenuSection("koppelung")}
             >
               koppeln
-            </a>,{" "}dass man die Gefahr durch beide 
-            Szenarien - Starkregen und Flusshochwasser - gut beurteilen kann.{" "}
+            </a>
+            , dass man die Gefahr durch beide Szenarien - Starkregen und
+            Flusshochwasser - gut beurteilen kann.{" "}
             <strong>
               Bei kleineren Gewässern wie dem Mirker Bach wird die Überlagerung
               der Überflutungen durch ablaufendes Regenwasser und über die Ufer
@@ -100,15 +98,16 @@ const Component = () => {
               simulierte Szenarien
             </a>{" "}
             an, drei "Modellregen" sowie das anhand der Niederschlagsmessungen
-            desselben Tages nachgestellte Starkregenereignis vom 29.05.2018. 
-            Die maximalen Wassertiefen und Fließgeschwindigkeiten zu allen vier
+            desselben Tages nachgestellte Starkregenereignis vom 29.05.2018. Die
+            maximalen Wassertiefen und Fließgeschwindigkeiten zu allen vier
             Szenarien publizieren wir auch auf dem Wuppertaler{" "}
             <a
-                target="_legal"
-                href="https://offenedaten-wuppertal.de/search?query=starkregen"
-              >
-                Open-Data-Portal
-            </a>.{" "} 
+              target="_legal"
+              href="https://offenedaten-wuppertal.de/search?query=starkregen"
+            >
+              Open-Data-Portal
+            </a>
+            .{" "}
           </p>
 
           <p>
@@ -118,52 +117,88 @@ const Component = () => {
           </p>
 
           <ul>
-          <li>
-              <strong>Topographische Karte</strong>: (1) Kartendienste (WMS) der 
-              Stadt Wuppertal. Datengrundlagen: (a) <b>Amtliche Basiskarte ABK 
-              Graustufen</b>. (Wöchentlich in einem automatisierten Prozess aus dem 
-              Fachverfahren ALKIS des Liegenschaftskatasters abgeleitete 
-              großmaßstäbige topographische Karte in Graustufen.) © Stadt Wuppertal 
-              (<a
-                target="_legal"
-                href="https://www.govdata.de/dl-de/zero-2-0"
-              >
+            <li>
+              <strong>Topographische Karte</strong>: (1) Kartendienste (WMS) der
+              Stadt Wuppertal. Datengrundlagen: (a){" "}
+              <b>Amtliche Basiskarte ABK Graustufen</b>. (Wöchentlich in einem
+              automatisierten Prozess aus dem Fachverfahren ALKIS des
+              Liegenschaftskatasters abgeleitete großmaßstäbige topographische
+              Karte in Graustufen.) © Stadt Wuppertal (
+              <a target="_legal" href="https://www.govdata.de/dl-de/zero-2-0">
                 Datenlizenz Deutschland - Zero - Version 2.0)
-              </a>.{" "}
-              (b) <b>Hillshade</b> (Schummerungsdarstellung eines für hydrologische 
-              Fragestellungen optimierten Digitalen Geländemodells aus 
-              Laserscanner-Befliegungen (12/2008 und 01/2009) mit ergänztem 
-              Gebäudebestand (Auflösung 25 cm x 25 cm), ausgeführt in 2012 vom 
-              Ingenieurbüro Reinhard Beck GmbH & Co. KG / Wuppertal.) © Wuppertaler 
-              Stadtwerke WSW Energie & Wasser AG. (2) Kartendienst (WMS) des 
-              Regionalverbandes Ruhr (RVR). Datengrundlage: <b>Stadtkarte 2.0</b>{" "} 
-              ohne Kartenschrift. (Details s. Hintergrundkarte Stadtplan.) 
-              (3) Kartendienst (WMS) des Bundesamtes für 
-              Kartographie und Geodäsie (
-              <a
-                target="_blank"
-                href="https://www.bkg.bund.de/"
-              >
+              </a>
+              . (b) <b>Hillshade</b> (Schummerungsdarstellung eines für
+              hydrologische Fragestellungen optimierten Digitalen Geländemodells
+              aus Laserscanner-Befliegungen (12/2008 und 01/2009) mit ergänztem
+              Gebäudebestand (Auflösung 25 cm x 25 cm), ausgeführt in 2012 vom
+              Ingenieurbüro Reinhard Beck GmbH & Co. KG / Wuppertal.) ©
+              Wuppertaler Stadtwerke WSW Energie & Wasser AG. (2) Kartendienst
+              (WMS) des Regionalverbandes Ruhr (RVR). Datengrundlage:{" "}
+              <b>Stadtkarte 2.0</b> ohne Kartenschrift. (Details s.
+              Hintergrundkarte Stadtplan.) (3) Kartendienst (WMS) des
+              Bundesamtes für Kartographie und Geodäsie (
+              <a target="_blank" href="https://www.bkg.bund.de/">
                 BKG
-              </a>). Datengrundlage: <b>basemap.de Web 
-              Vektor</b> © GeoBasis-DE /{" "} 
-              <a
-                target="_blank"
-                href="https://www.bkg.bund.de/"
-              >
+              </a>
+              ). Datengrundlage: <b>basemap.de Web Vektor</b> © GeoBasis-DE /{" "}
+              <a target="_blank" href="https://www.bkg.bund.de/">
                 BKG
-              </a>{" "} (2024){" "}  
+              </a>{" "}
+              (2024){" "}
               <a
                 target="_blank"
                 href="https://creativecommons.org/licenses/by/4.0/"
               >
                 CC BY 4.0
-              </a>.
+              </a>
+              .
             </li>
 
-            <LicenseLBK />
+            <li>
+              <strong>Luftbildkarte</strong>: (1) Kartendienst (WMS) der Stadt
+              Wuppertal. Datengrundlage:{" "}
+              <strong>True Orthophoto aus Bildflug vom 16.03.2022</strong>,
+              hergestellt durch Aerowest GmbH/Dortmund, Bodenauflösung 5 cm.
+              (True Orthophoto: Aus Luftbildern mit hoher Längs- und
+              Querüberdeckung in einem automatisierten Bildverarbeitungsprozess
+              berechnetes Bild in Parallelprojektion, also ohne
+              Gebäudeverkippung und sichttote Bereiche.) © Stadt Wuppertal (
+              <a
+                target="_legal"
+                href="https://www.wuppertal.de/geoportal/Nutzungsbedingungen/NB-GDIKOM-C_Geodaten.pdf"
+              >
+                NB-GDIKOM C
+              </a>
+              ). (2) Kartendienste (WMS) des Regionalverbandes Ruhr (RVR).
+              Datengrundlagen: <strong>Stadtkarte 2.0</strong> und{" "}
+              <strong>Kartenschrift aus der Stadtkarte 2.0</strong>. (Details s.
+              Hintergrundkarte Stadtplan).
+            </li>
 
-            <LicenseStadtplanTagNacht stylesDesc="" />
+            <li>
+              <strong>Stadtplan</strong>: Kartendienst (WMS) des
+              Regionalverbandes Ruhr (RVR). Datengrundlage:{" "}
+              <strong>Stadtkarte 2.0</strong>. Wöchentlich in einem
+              automatischen Prozess aktualisierte Zusammenführung des
+              Straßennetzes der OpenStreetMap mit Amtlichen Geobasisdaten des
+              Landes NRW aus den Fachverfahren ALKIS (Gebäude, Flächennutzungen)
+              und ATKIS (Gewässer). © RVR und Kooperationspartner (
+              <a target="_legal" href="https://www.govdata.de/dl-de/by-2-0">
+                Datenlizenz Deutschland - Namensnennung - Version 2.0
+              </a>
+              ). Lizenzen der Ausgangsprodukte:{" "}
+              <a target="_legal" href="https://www.govdata.de/dl-de/zero-2-0">
+                Datenlizenz Deutschland - Zero - Version 2.0
+              </a>{" "}
+              (Amtliche Geobasisdaten) und{" "}
+              <a
+                target="_legal"
+                href="https://www.opendatacommons.org/licenses/odbl/1.0/"
+              >
+                ODbL
+              </a>{" "}
+              (OpenStreetMap contributors).
+            </li>
           </ul>
         </div>
       }
