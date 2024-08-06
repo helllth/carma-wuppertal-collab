@@ -13,7 +13,7 @@ export default meta;
 
 export const Kompaktanleitung: StoryObj = {
   render: () => {
-    const modalBodyStyle : CSSProperties = {
+    const modalBodyStyle: CSSProperties = {
       overflowY: "auto",
       overflowX: "hidden",
       maxHeight: "100vh",
@@ -22,7 +22,7 @@ export const Kompaktanleitung: StoryObj = {
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
         <div id="myMenu" style={modalBodyStyle}>
-          <Modal visible={true} />
+          <Modal visible={true} version="xyz" />
         </div>
       </TopicMapContextProvider>
     );
