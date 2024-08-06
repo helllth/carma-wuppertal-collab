@@ -4,7 +4,6 @@ import {
   //   Help20Karteninhalt,
   //   Help80ModellfehlerMelden,
   //   Help90Haftungsausschluss,
-  Help99Footer,
 } from "@cismet-collab/rainhazardmaps-base-texts";
 
 import Help10AllgemeineHinweise from "./help/Help10AllgemeineHinweise";

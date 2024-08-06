@@ -7,7 +7,6 @@ import {
   MenuTooltip,
   MenuTitle,
   MenuIntroduction,
-  MenuFooter,
   KompaktanleitungSection,
   InfoBoxTextContent,
 } from ".";
@@ -58,20 +57,6 @@ export const IntroductionMenu: StoryObj = {
             appMode="ORTE"
           />
         </div>
-      </TopicMapContextProvider>
-    );
-  },
-};
-
-export const MenuFußzeile: StoryObj = {
-  render: () => {
-    return (
-      <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter
-          title="Klimaortkarte Wuppertal"
-          version={"xyz"}
-          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-        />
       </TopicMapContextProvider>
     );
   },

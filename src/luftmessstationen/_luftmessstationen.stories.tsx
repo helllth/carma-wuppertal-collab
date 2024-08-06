@@ -7,7 +7,6 @@ import {
   InfoBoxTextContent,
   MenuTitle,
   MenuIntroduction,
-  MenuFooter,
   KompaktanleitungSection,
 } from ".";
 import type { CSSProperties } from "react";
@@ -51,20 +50,6 @@ export const IntroductionMenu: StoryObj = {
             setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
           />
         </div>
-      </TopicMapContextProvider>
-    );
-  },
-};
-
-export const MenuFußzeile: StoryObj = {
-  render: () => {
-    return (
-      <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter
-          title="Luftmessstationskarte Wuppertal"
-          version={"v1.0.10"}
-          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-        />
       </TopicMapContextProvider>
     );
   },

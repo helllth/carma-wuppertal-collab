@@ -13,7 +13,6 @@ import {
   DokumenteHerunterladen,
   MenuTooltip,
   loadingText,
-  MenuFooter,
   MenuTitle,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
@@ -140,20 +139,6 @@ export const menuTooltipString: StoryObj = {
 export const InitialLoadingText: StoryObj = {
   render: () => {
     return <div>{loadingText}</div>;
-  },
-};
-
-export const MenuFußzeile: StoryObj = {
-  render: () => {
-    return (
-      <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter
-          title="TopicMaps Wuppertal"
-          version={"xyz"}
-          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-        />
-      </TopicMapContextProvider>
-    );
   },
 };
 

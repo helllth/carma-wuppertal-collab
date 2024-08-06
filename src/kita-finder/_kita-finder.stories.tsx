@@ -8,7 +8,6 @@ import {
   MenuTooltip,
   MenuTitle,
   MenuIntroduction,
-  MenuFooter,
   KompaktanleitungSection,
 } from ".";
 import type { CSSProperties } from "react";
@@ -57,20 +56,6 @@ export const IntroductionMenu: StoryObj = {
             setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
           />
         </div>
-      </TopicMapContextProvider>
-    );
-  },
-};
-
-export const MenuFußzeile: StoryObj = {
-  render: () => {
-    return (
-      <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter
-          title="Kita-Finder Wuppertal"
-          version={"xyz"}
-          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-        />
       </TopicMapContextProvider>
     );
   },

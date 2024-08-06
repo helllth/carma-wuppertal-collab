@@ -8,7 +8,6 @@ import {
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import { KompaktanleitungSection } from ".";
-import { MenuFooter } from ".";
 import { MenuTitle } from ".";
 import type { CSSProperties } from "react";
 import { action } from "@storybook/addon-actions";
@@ -45,20 +44,6 @@ export const Kompaktanleitung: StoryObj = {
       <div id="myMenu" style={modalBodyStyle}>
         <KompaktanleitungSection />
       </div>
-    );
-  },
-};
-
-export const MenuFußzeile: StoryObj = {
-  render: () => {
-    return (
-      <TopicMapContextProvider appKey="storybook-appkey">
-        <MenuFooter
-          title="Stadtplan"
-          version={"xyz"}
-          setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
-        />
-      </TopicMapContextProvider>
     );
   },
 };
