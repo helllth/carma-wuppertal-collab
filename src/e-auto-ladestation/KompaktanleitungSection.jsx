@@ -1,15 +1,14 @@
 import Icon from "react-cismap/commons/Icon";
 
 import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
-import GenericHelpTextForMyLocation from "react-cismap/topicmaps/docBlocks/GenericHelpTextForMyLocation";
-
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import Section from "react-cismap/topicmaps/menu/Section";
-import LicenseLuftbildkarte from "react-cismap/topicmaps/wuppertal/LicenseLuftbildkarte";
-import LicenseStadtplanTagNacht from "react-cismap/topicmaps/wuppertal/LicenseStadtplanTagNacht";
 import { getSymbolSVGGetter } from "react-cismap/tools/uiHelper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
+import meinStandpunktMarkerDoppel from "./assets/MeinStandpunktMarkerDoppel.jpg";
+import meinStandpunktMarkerMitKompass from "./assets/MeinStandpunktMarkerMitKompass.jpg";
 
 const urlPrefix = window.location.origin + window.location.pathname;
 
@@ -71,8 +70,66 @@ export const KompaktanleitungSection = ({
                         </p>
 
                         <ul>
-                          <LicenseStadtplanTagNacht />
-                          <LicenseLuftbildkarte />
+                          <li>
+                            <strong>Stadtplan (Tag | Nacht)</strong>:
+                            Kartendienst (WMS) des Regionalverbandes Ruhr (RVR).
+                            Datengrundlage: <strong>Stadtkarte 2.0</strong>.
+                            Wöchentlich in einem automatischen Prozess
+                            aktualisierte Zusammenführung des Straßennetzes der
+                            OpenStreetMap mit Amtlichen Geobasisdaten des Landes
+                            NRW aus den Fachverfahren ALKIS (Gebäude,
+                            Flächennutzungen) und ATKIS (Gewässer). © RVR und
+                            Kooperationspartner (
+                            <a
+                              target="_legal"
+                              href="https://www.govdata.de/dl-de/by-2-0"
+                            >
+                              Datenlizenz Deutschland - Namensnennung - Version
+                              2.0
+                            </a>
+                            ). Lizenzen der Ausgangsprodukte:{" "}
+                            <a
+                              target="_legal"
+                              href="https://www.govdata.de/dl-de/zero-2-0"
+                            >
+                              Datenlizenz Deutschland - Zero - Version 2.0
+                            </a>{" "}
+                            (Amtliche Geobasisdaten) und{" "}
+                            <a
+                              target="_legal"
+                              href="https://www.opendatacommons.org/licenses/odbl/1.0/"
+                            >
+                              ODbL
+                            </a>{" "}
+                            (OpenStreetMap contributors).
+                          </li>
+                          <li>
+                            <strong>Luftbildkarte</strong>: (1) Kartendienst
+                            (WMS) der Stadt Wuppertal. Datengrundlage:{" "}
+                            <strong>
+                              True Orthophoto aus Bildflug vom 16.03.2022
+                            </strong>
+                            , hergestellt durch Aerowest GmbH/Dortmund,
+                            Bodenauflösung 5 cm. (True Orthophoto: Aus
+                            Luftbildern mit hoher Längs- und Querüberdeckung in
+                            einem automatisierten Bildverarbeitungsprozess
+                            berechnetes Bild in Parallelprojektion, also ohne
+                            Gebäudeverkippung und sichttote Bereiche.) © Stadt
+                            Wuppertal (
+                            <a
+                              target="_legal"
+                              href="https://www.wuppertal.de/geoportal/Nutzungsbedingungen/NB-GDIKOM-C_Geodaten.pdf"
+                            >
+                              NB-GDIKOM C
+                            </a>
+                            ). (2) Kartendienste (WMS) des Regionalverbandes
+                            Ruhr (RVR). Datengrundlagen:{" "}
+                            <strong>Stadtkarte 2.0</strong> und{" "}
+                            <strong>
+                              Kartenschrift aus der Stadtkarte 2.0
+                            </strong>
+                            . (Details s. Hintergrundkarte Stadtplan).
+                          </li>
                         </ul>
 
                         <p>
@@ -274,7 +331,98 @@ export const KompaktanleitungSection = ({
                     type: "REACTCOMP",
                     content: (
                       <div>
-                        <GenericHelpTextForMyLocation />
+                        <p>
+                          Das Werkzeug &quot;Mein Standort&quot;{" "}
+                          <FontAwesomeIcon icon={faLocationArrow} />{" "}
+                          funktioniert so wie hier beschrieben nur auf mobilen
+                          Endgeräten wie Smartphones und Tablet-PC&#39;s, die i.
+                          d. R. mit einem GNSS-Empfänger als Positionssensor
+                          ausgestattet sind (GNSS steht für Global Navigation
+                          Satellite Systems, z.B.{" "}
+                          <a
+                            target="_info"
+                            href="https://dvw.de/sites/default/files/landesverein-bayern/VeroeffentlichungenMitteilungen1996_4/DVW_1996_4_Schlie%C3%9Fer_GPS_Systemgrundlagen.pdf"
+                          >
+                            GPS
+                          </a>
+                          ). Mit dem ersten Antippen dieses Werkzeugs aktivieren
+                          Sie den &quot;Follow me&quot;-Modus, erkennbar an der
+                          orangefarbigen Darstellung des Werkzeug-Symbols. Ggf.
+                          werden Sie vom Browser bzw. dem Betriebssystem Ihres
+                          Endgerätes zur Freigabe der Lokalisierung
+                          aufgefordert. Die Karte wird auf Ihren aktuellen
+                          Standort zentriert, der mit einem blauen Kreissymbol{" "}
+                          <img
+                            alt="MeinStandpunktMarker"
+                            src={meinStandpunktMarkerMitKompass}
+                          />{" "}
+                          markiert wird. Das kleine blaue Dreieck am Rand dieses
+                          Standortsymbols zeigt Ihre aktuelle Blickrichtung an
+                          (genauer: die Richtung, in die Ihr Endgerät zeigt).
+                          Das Standortsymbol ist umgeben von einem zweiten Kreis
+                          mit transparenter, blauer Füllung, dessen Radius die
+                          Unsicherheit der Positionsbestimmung angibt{" "}
+                          <img
+                            alt="MeinStandpunktMarkerDoppel"
+                            src={meinStandpunktMarkerDoppel}
+                          />
+                          . Durch Antippen dieses Kreises können Sie einen
+                          Texthinweis mit einer konkreten Angabe der aktuellen
+                          Positionsgenauigkeit einblenden. Dieser Hinweis kann
+                          durch das Antippen einer beliebigen Stelle außerhalb
+                          seines Textfeldes geschlossen werden. Wenn Sie sich
+                          mit Ihrem Endgerät bewegen (z. B. bei einer
+                          Wanderung), wird Ihre aktuelle Position im
+                          &quot;Follow me&quot;-Modus in schneller Folge neu
+                          bestimmt und stets in der Mitte der Karte angezeigt.
+                          Die Karte wird dazu automatisiert nachgeführt. Ein
+                          weiteres Antippen von &quot;Mein Standort&quot;
+                          schaltet die Anzeige Ihrer Position wieder ab
+                          (schwarzes Werkzeug-Symbol).{" "}
+                        </p>
+                        <p>
+                          Wenn Sie die Karte im aktivierten &quot;Follow
+                          me&quot;-Modus manuell verschieben, wird der
+                          &quot;Follow me&quot;-Modus unterbrochen, erkennbar an
+                          einer blauen Darstellung des Werkzeug-Symbols. Ihr
+                          aktueller Standort wird weiterhin angezeigt und in
+                          schneller Folge aktualisiert. Der Kartenausschnitt
+                          wird jetzt aber nicht mehr automatisch an den
+                          aktuellen Standort angepasst. Bei fortgesetzter
+                          Bewegung in eine Richtung wird das Standortsymbol
+                          daher vom Zentrum zum Rand des Kartenfensters wandern
+                          und dann verschwinden - Ihr Standort liegt jetzt nicht
+                          mehr im aktuell eingestellten Kartenausschnitt! In
+                          diesem Fall führt ein erneutes Antippen von &quot;Mein
+                          Standort&quot; dazu, dass wieder in den &quot;Follow
+                          me&quot;-Modus zurückgewechselt wird. Wenn Ihr
+                          aktueller Standort dagegen noch in der Karte sichtbar
+                          ist, wird durch diese Aktion die Anzeige der Position
+                          abgeschaltet (schwarzes Werkzeug-Symbol). Sie können
+                          die Unterbrechung des &quot;Follow me&quot;-Modus bei
+                          einer Wanderung o. ä. nutzen, wenn Sie sich die vor
+                          Ihnen liegende Strecke in der Karte anschauen wollen.
+                          Verschieben Sie dazu den Kartenausschnitt manuell auf
+                          den Abschnitt Ihres Interesses. Ihr aktueller Standort
+                          wird dann zumeist nicht mehr dargestellt werden
+                          können. Der &quot;Follow me&quot;-Modus wird
+                          unterbrochen (blaues Werkzeug-Symbol). Wenn Sie sich
+                          ausreichend über den weiteren Streckenverlauf
+                          informiert haben, reaktivieren Sie durch erneutes
+                          Antippen von &quot;Mein Standort&quot; den
+                          &quot;Follow me&quot;-Modus und setzen die Karte damit
+                          wieder auf Ihren aktuellen Standort zurück.{" "}
+                        </p>
+                        <p>
+                          Noch ein Hinweis zur Genauigkeit: Die Richtigkeit der
+                          Positionsanzeige ist nicht garantiert. Ihre
+                          Genauigkeit hängt von verschiedenen Faktoren ab, u. a.
+                          von der Qualität des GNSS-Empfängers in Ihrem
+                          Endgerät, der Umgebungssituation (z. B. hohe Gebäude
+                          oder spiegelnde Oberflächen in der Nachbarschaft)
+                          sowie der Methode, mit der Ihr Endgerät und der von
+                          Ihnen verwendete Browser die Position bestimmen.
+                        </p>
                       </div>
                     ),
                   },
