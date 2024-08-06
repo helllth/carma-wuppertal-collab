@@ -7,9 +7,16 @@ import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import meinStandpunktMarkerDoppel from "./MeinStandpunktMarkerDoppel.jpg";
 import meinStandpunktMarkerMitKompass from "./MeinStandpunktMarkerMitKompass.jpg";
 import Icon from "react-cismap/commons/Icon";
+import { MenuFooter } from "../commons";
 
-export const Modal = ({ visible }: { visible: boolean }) => {
-  const { setAppMenuActiveMenuSection } = useContext<typeof UIDispatchContext>(UIDispatchContext);
+interface ModalProps {
+  visible: boolean;
+  version: string;
+}
+
+export const Modal: React.FC<ModalProps> = ({ visible, version }) => {
+  const { setAppMenuActiveMenuSection } =
+    useContext<typeof UIDispatchContext>(UIDispatchContext);
   return (
     <ModalApplicationMenu
       visible={visible}
@@ -160,17 +167,17 @@ export const Modal = ({ visible }: { visible: boolean }) => {
                   alt="MeinStandpunktMarkerDoppel"
                   src={meinStandpunktMarkerDoppel}
                 />
-                . Durch Antippen des inneren Kreises können Sie einen Texthinweis mit
-                einer konkreten Angabe der aktuellen Positionsgenauigkeit
-                einblenden. Dieser Hinweis kann durch das Antippen einer
-                beliebigen Stelle außerhalb seines Textfeldes geschlossen
-                werden. Wenn Sie sich mit ihrem Endgerät bewegen (z. B. bei
-                einer Wanderung), wird ihre aktuelle Position im &quot;Follow
-                me&quot;-Modus in schneller Folge neu bestimmt und stets in der
-                Mitte der Karte angezeigt. Die Karte wird dazu automatisiert
-                nachgeführt. Ein weiteres Antippen von &quot;Mein Standort&quot;
-                schaltet die Anzeige Ihrer Position wieder ab (schwarzes
-                Werkzeug-Symbol).{" "}
+                . Durch Antippen des inneren Kreises können Sie einen
+                Texthinweis mit einer konkreten Angabe der aktuellen
+                Positionsgenauigkeit einblenden. Dieser Hinweis kann durch das
+                Antippen einer beliebigen Stelle außerhalb seines Textfeldes
+                geschlossen werden. Wenn Sie sich mit ihrem Endgerät bewegen (z.
+                B. bei einer Wanderung), wird ihre aktuelle Position im
+                &quot;Follow me&quot;-Modus in schneller Folge neu bestimmt und
+                stets in der Mitte der Karte angezeigt. Die Karte wird dazu
+                automatisiert nachgeführt. Ein weiteres Antippen von &quot;Mein
+                Standort&quot; schaltet die Anzeige Ihrer Position wieder ab
+                (schwarzes Werkzeug-Symbol).{" "}
               </p>
               <p>
                 Wenn Sie die Karte im aktivierten &quot;Follow me&quot;-Modus
@@ -527,63 +534,10 @@ export const Modal = ({ visible }: { visible: boolean }) => {
         />,
       ]}
       menuFooter={
-        <div>
-          <span style={{ fontSize: "11px" }}>
-            <div>
-              <strong>Hintergrundkarte</strong>: Stadtkarte 2.0 © RVR |
-              Amtliche Basiskarte (ABK), B-Plan-Geltungsbereiche (
-              <a
-                target="ackmore"
-                href="https://offenedaten-wuppertal.de/dataset/rechtsverbindliche-bebauungspl%C3%A4ne-wuppertal"
-              >
-                rechtswirksam{" "}
-              </a>{" "}
-              |{" "}
-              <a
-                target="ackmore"
-                href="https://offenedaten-wuppertal.de/dataset/laufende-bebauungsplanverfahren-wuppertal"
-              >
-                laufende Verfahren
-              </a>
-              ) © Stadt Wuppertal |
-              <a
-                target="ackmore"
-                href="http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&amp;gdz_akt_zeile=4&amp;gdz_anz_zeile=4&amp;gdz_unt_zeile=0&amp;gdz_user_id=0"
-              >
-                {" "}
-                WebAtlasDE
-              </a>{" "}
-              © BKG{" "}
-              <a
-                onClick={() => setAppMenuActiveMenuSection("hintergrundkarte")}
-              >
-                (Details und Nutzungsbedingungen)
-              </a>
-              <div>
-                <b>TopicMaps Wuppertal (Version 1.22.5)</b>:{" "}
-                <a href="https://cismet.de/" target="_cismet">
-                  cismet GmbH
-                </a>{" "}
-                auf Basis von{" "}
-                <a href="http://leafletjs.com/" target="_more">
-                  Leaflet
-                </a>{" "}
-                und{" "}
-                <a href="https://cismet.de/#refs" target="_cismet">
-                  cids | WuNDa
-                </a>{" "}
-                |{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://cismet.de/datenschutzerklaerung.html"
-                >
-                  Datenschutzerklärung (Privacy Policy)
-                </a>
-              </div>
-            </div>
-          </span>
-        </div>
+        <MenuFooter
+          version={version}
+          setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
+        />
       }
     />
   );
