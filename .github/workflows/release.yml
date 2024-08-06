@@ -33,7 +33,7 @@ jobs:
         run: |
           git fetch --all
           git checkout main
-          git merge origin/dev
+          git merge origin/dev --allow-unrelated-histories
       - name: Change release version and create tag
         run: npm version ${{ env.RELEASE_TYPE }}
         env:
