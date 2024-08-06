@@ -33,7 +33,7 @@ const getCollabedHelpComponentConfig = ({
     const { setAppMenuActiveMenuSection } = useContext(UIDispatchContext);
     return (
       <HelpFooter
-        version={version}
+        version={versionString}
         title="Hochwassergefahrenkarte Wuppertal"
         setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
       />
