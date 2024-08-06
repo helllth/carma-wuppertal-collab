@@ -1,20 +1,18 @@
-import React, { useContext } from "react";
 import { Attribution } from "../../commons";
 import { scroller } from "react-scroll";
 import Logo_DigiTalZwilling from "./assets/Logo_DigiTalZwilling.png";
-import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
 
 interface HelpFooterProps {
   title?: string;
   version: string;
+  setAppMenuActiveMenuSection: (arg: string) => void;
 }
 
 const HelpFooter: React.FC<HelpFooterProps> = ({
   title = document.title,
   version,
+  setAppMenuActiveMenuSection,
 }) => {
-  // @ts-ignore
-  const { setAppMenuActiveMenuSection } = useContext(UIDispatchContext);
   return (
     <div
       style={{
