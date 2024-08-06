@@ -12,7 +12,7 @@ export const Attribution: React.FC<AttributionProps> = ({
   return (
     <div>
       <b>
-        {applicationName} #{applicationVersion}
+        Teilzwilling {applicationName} #{applicationVersion}
       </b>{" "}
       powered by{" "}
       <a href="https://cismet.de/" target="_cismet">
