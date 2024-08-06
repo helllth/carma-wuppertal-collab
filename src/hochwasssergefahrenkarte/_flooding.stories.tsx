@@ -14,6 +14,7 @@ export const KompletterModalerDialog: StoryObj = {
     const version = "0.test.0";
     const reactCismapRHMVersion = "0.test.0";
     const footerLogoUrl = undefined;
+    const versionString = "xyz";
     const email = "opensource@cismet.de";
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
@@ -23,6 +24,7 @@ export const KompletterModalerDialog: StoryObj = {
             reactCismapRHMVersion,
             footerLogoUrl,
             email,
+            versionString,
           })}
           visible={true}
         />
