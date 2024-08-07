@@ -1,0 +1,9 @@
+export { MenuNameUbersicht } from "./menu/MenuNameUbersicht";
+export { MenuNameVerwaltungsbereiche } from "./menu/MenuNameVerwaltungsbereiche";
+export { MenuNameMIPA } from "./menu/MenuNameMIPA";
+export { MenuNameREBA } from "./menu/MenuNameREBA";
+export { MenuNameNutzung } from "./menu/MenuNameNutzung";
+export { MenuNameVorgange } from "./menu/MenuNameVorgange";
+export { MenuNameHistorie } from "./menu/MenuNameHistorie";
+export { MenuNameKassenzeichen } from "./menu/MenuNameKassenzeichen";
+export { MenuNameDMS } from "./menu/MenuNameDMS";
