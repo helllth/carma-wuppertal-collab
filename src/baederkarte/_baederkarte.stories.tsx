@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { KompaktanleitungSection } from ".";
+import { KompaktanleitungSection, Footer } from ".";
 import type { CSSProperties } from "react";
+import { action } from "@storybook/addon-actions";
 
 const meta: Meta = {
   title: "Bäderkarte",
@@ -20,6 +21,17 @@ export const Kompaktanleitung: StoryObj = {
       <div id="myMenu" style={modalBodyStyle}>
         <KompaktanleitungSection />
       </div>
+    );
+  },
+};
+
+export const MenuFooter: StoryObj = {
+  render: () => {
+    return (
+      <Footer
+        version="xyz"
+        setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+      />
     );
   },
 };

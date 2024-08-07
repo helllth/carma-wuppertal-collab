@@ -5,6 +5,7 @@ import {
   MenuIntroduction,
   MenuTooltip,
   searchTextPlaceholder,
+  Footer,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import { KompaktanleitungSection } from ".";
@@ -77,5 +78,16 @@ export const TextInInfoBoxTitle: StoryObj = {
 export const TextInInfoBoxContent: StoryObj = {
   render: () => {
     return <InfoBoxTextContent />;
+  },
+};
+
+export const MenuFooter: StoryObj = {
+  render: () => {
+    return (
+      <Footer
+        version="xyz"
+        setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+      />
+    );
   },
 };
