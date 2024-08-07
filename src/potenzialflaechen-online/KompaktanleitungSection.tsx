@@ -16,7 +16,9 @@ import {
   faFilePdf,
   faInfoCircle,
   faSearch,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
+import IconComp from "react-cismap/commons/Icon";
 
 export const KompaktanleitungSection = () => {
   return (
@@ -768,7 +770,290 @@ export const KompaktanleitungSection = () => {
                   bsStyle: "success",
                   contentBlockConf: {
                     type: "REACTCOMP",
-                    content: <div></div>,
+                    content: (
+                      <div>
+                        <p>
+                          Um in der Karte direkt zu einer bestimmten Adresse zu
+                          gelangen, geben Sie den Anfang des betreffenden
+                          Straßennamens im Eingabefeld links unten ein
+                          (mindestens 2 Zeichen). In der inkrementellen
+                          Auswahlliste werden Ihnen passende Treffer angeboten.
+                          (Wenn Sie weitere Zeichen eingeben, wird der Inhalt
+                          der Auswahlliste angepasst.) Sie können auch andere
+                          Suchbegriffe eingeben, nämlich Stadtteil (Stadtbezirk
+                          oder Quartier), Straßenname (bei Straßen ohne
+                          zugeordnete Hausnummern) oder "Point of Interest"
+                          (interessanter Ort, kurz als POI bezeichnet).
+                        </p>
+                        <p>
+                          Durch das in der Auswahlliste vorangestellte Symbol
+                          erkennen Sie, ob es sich bei einem Treffer um einen{" "}
+                          <Icon name="circle" /> Stadtbezirk, ein{" "}
+                          <Icon name="pie-chart" /> Quartier, eine{" "}
+                          <Icon name="home" /> Adresse, eine{" "}
+                          <Icon name="road" /> Straße ohne Hausnummern, einen{" "}
+                          <Icon name="tag" /> POI, die <Icon name="tags" />{" "}
+                          alternative Bezeichnung eines POI, eine{" "}
+                          <Icon name="child" /> Kindertageseinrichtung oder eine{" "}
+                          <Icon name="graduation-cap" /> Schule handelt.
+                        </p>
+                        <p>
+                          Zusätzlich können Sie auch die Bezeichnung einer
+                          Potenzialfläche als Suchbegriff eingeben. Die
+                          Kategorien der Treffer werden in der Auswahlliste
+                          durch die Symbole{" "}
+                          <IconComp name="square" overlay="G" /> für{" "}
+                          <strong>G</strong>ewerbepotenzialflächen,{" "}
+                          <IconComp name="square" overlay="W" /> für{" "}
+                          <strong>W</strong>ohnbaupotenzialflächen,{" "}
+                          <IconComp name="square" overlay="N" /> für Wieder
+                          <strong>N</strong>
+                          utzungspotenziale,{" "}
+                          <IconComp name="square" overlay="L" /> für Bau
+                          <strong>L</strong>
+                          ücken und perspektivisch auch{" "}
+                          <IconComp name="square" overlay="B" /> für{" "}
+                          <strong>B</strong>
+                          rachflächen angezeigt. Beim turnusmäßigen Import der
+                          Daten aus dem Fachverfahren WuNDa/Potenzialflächen
+                          werden für alle Potenzialflächen Aliasse generiert,
+                          die den Kennbuchstaben aus den Kategorie-Symbolen und
+                          ein Leerzeichen als Präfix erhalten. So entsteht z. B
+                          für die Wohnbauflächen &quot;Stollenstraße&quot; der
+                          Alias &quot;W Stollenstraße&quot;. Damit können Sie
+                          durch die Eingabe des jeweiligen Kennbuchstabens und
+                          eines Leerzeichens im Eingabefeld eine Auswahlliste
+                          aller Potenzialflächen dieser Kategorie generieren, z.
+                          B. durch Eingabe von &quot;W &quot; eine Auswahlliste
+                          aller Wohnbaupotenzialflächen.
+                        </p>
+                        <p>
+                          Nach der Auswahl eines Treffers aus der Liste wird die
+                          Karte auf die zugehörige Position zentriert. Bei
+                          Suchbegriffen mit Punktgeometrie (Adresse, Straße,
+                          POI) wird außerdem ein großer Maßstab (Zoomstufe 18)
+                          eingestellt und ein Marker auf der Zielposition
+                          platziert. Bei Suchbegriffen mit Flächengeometrie
+                          (Stadtbezirk, Quartier) wird der Maßstab so
+                          eingestellt, dass die Fläche vollständig dargestellt
+                          werden kann. Zusätzlich wird der Bereich außerhalb
+                          dieser Fläche abgedunkelt (Spotlight-Effekt).
+                        </p>
+                        <p>
+                          Durch Anklicken des Werkzeugs <Icon name="times" />{" "}
+                          links neben dem Eingabefeld können Sie die Suche
+                          zurücksetzen (Entfernung von Marker bzw. Abdunklung,
+                          Löschen des Textes im Eingabefeld).
+                        </p>
+                      </div>
+                    ),
+                  },
+                },
+                {
+                  title: "Mein Standort",
+                  bsStyle: "success",
+                  contentBlockConf: {
+                    type: "REACTCOMP",
+                    content: (
+                      <div>
+                        <p>
+                          Das Werkzeug &quot;Mein Standort&quot;{" "}
+                          <FontAwesomeIcon icon={faLocationArrow} />{" "}
+                          funktioniert so wie hier beschrieben nur auf mobilen
+                          Endgeräten wie Smartphones und Tablet-PC&#39;s, die i.
+                          d. R. mit einem GNSS-Empfänger als Positionssensor
+                          ausgestattet sind (GNSS steht für Global Navigation
+                          Satellite Systems, z.B.{" "}
+                          <a
+                            target="_info"
+                            href="https://dvw.de/sites/default/files/landesverein-bayern/VeroeffentlichungenMitteilungen1996_4/DVW_1996_4_Schlie%C3%9Fer_GPS_Systemgrundlagen.pdf"
+                          >
+                            GPS
+                          </a>
+                          ). Mit dem ersten Antippen dieses Werkzeugs aktivieren
+                          Sie den &quot;Follow me&quot;-Modus, erkennbar an der
+                          orangefarbigen Darstellung des Werkzeug-Symbols. Ggf.
+                          werden Sie vom Browser bzw. dem Betriebssystem Ihres
+                          Endgerätes zur Freigabe der Lokalisierung
+                          aufgefordert. Die Karte wird auf Ihren aktuellen
+                          Standort zentriert, der mit einem blauen Kreissymbol{" "}
+                          <img
+                            alt="MeinStandpunktMarker"
+                            src={meinStandpunktMarkerMitKompass}
+                          />{" "}
+                          markiert wird. Das kleine blaue Dreieck am Rand dieses
+                          Standortsymbols zeigt Ihre aktuelle Blickrichtung an
+                          (genauer: die Richtung, in die Ihr Endgerät zeigt).
+                          Das Standortsymbol ist umgeben von einem zweiten Kreis
+                          mit transparenter, blauer Füllung, dessen Radius die
+                          Unsicherheit der Positionsbestimmung angibt{" "}
+                          <img
+                            alt="MeinStandpunktMarkerDoppel"
+                            src={meinStandpunktMarkerDoppel}
+                          />
+                          . Durch Antippen dieses Kreises können Sie einen
+                          Texthinweis mit einer konkreten Angabe der aktuellen
+                          Positionsgenauigkeit einblenden. Dieser Hinweis kann
+                          durch das Antippen einer beliebigen Stelle außerhalb
+                          seines Textfeldes geschlossen werden. Wenn Sie sich
+                          mit Ihrem Endgerät bewegen (z. B. bei einer
+                          Wanderung), wird Ihre aktuelle Position im
+                          &quot;Follow me&quot;-Modus in schneller Folge neu
+                          bestimmt und stets in der Mitte der Karte angezeigt.
+                          Die Karte wird dazu automatisiert nachgeführt. Ein
+                          weiteres Antippen von &quot;Mein Standort&quot;
+                          schaltet die Anzeige Ihrer Position wieder ab
+                          (schwarzes Werkzeug-Symbol).{" "}
+                        </p>
+                        <p>
+                          Wenn Sie die Karte im aktivierten &quot;Follow
+                          me&quot;-Modus manuell verschieben, wird der
+                          &quot;Follow me&quot;-Modus unterbrochen, erkennbar an
+                          einer blauen Darstellung des Werkzeug-Symbols. Ihr
+                          aktueller Standort wird weiterhin angezeigt und in
+                          schneller Folge aktualisiert. Der Kartenausschnitt
+                          wird jetzt aber nicht mehr automatisch an den
+                          aktuellen Standort angepasst. Bei fortgesetzter
+                          Bewegung in eine Richtung wird das Standortsymbol
+                          daher vom Zentrum zum Rand des Kartenfensters wandern
+                          und dann verschwinden - Ihr Standort liegt jetzt nicht
+                          mehr im aktuell eingestellten Kartenausschnitt! In
+                          diesem Fall führt ein erneutes Antippen von &quot;Mein
+                          Standort&quot; dazu, dass wieder in den &quot;Follow
+                          me&quot;-Modus zurückgewechselt wird. Wenn Ihr
+                          aktueller Standort dagegen noch in der Karte sichtbar
+                          ist, wird durch diese Aktion die Anzeige der Position
+                          abgeschaltet (schwarzes Werkzeug-Symbol). Sie können
+                          die Unterbrechung des &quot;Follow me&quot;-Modus bei
+                          einer Wanderung o. ä. nutzen, wenn Sie sich die vor
+                          Ihnen liegende Strecke in der Karte anschauen wollen.
+                          Verschieben Sie dazu den Kartenausschnitt manuell auf
+                          den Abschnitt Ihres Interesses. Ihr aktueller Standort
+                          wird dann zumeist nicht mehr dargestellt werden
+                          können. Der &quot;Follow me&quot;-Modus wird
+                          unterbrochen (blaues Werkzeug-Symbol). Wenn Sie sich
+                          ausreichend über den weiteren Streckenverlauf
+                          informiert haben, reaktivieren Sie durch erneutes
+                          Antippen von &quot;Mein Standort&quot; den
+                          &quot;Follow me&quot;-Modus und setzen die Karte damit
+                          wieder auf Ihren aktuellen Standort zurück.{" "}
+                        </p>
+                        <p>
+                          Noch ein Hinweis zur Genauigkeit: Die Richtigkeit der
+                          Positionsanzeige ist nicht garantiert. Ihre
+                          Genauigkeit hängt von verschiedenen Faktoren ab, u. a.
+                          von der Qualität des GNSS-Empfängers in Ihrem
+                          Endgerät, der Umgebungssituation (z. B. hohe Gebäude
+                          oder spiegelnde Oberflächen in der Nachbarschaft)
+                          sowie der Methode, mit der Ihr Endgerät und der von
+                          Ihnen verwendete Browser die Position bestimmen.
+                        </p>
+                      </div>
+                    ),
+                  },
+                },
+                {
+                  title: 'Filterung ("Meine Potenzialflächen")',
+                  bsStyle: "warning",
+                  contentBlockConf: {
+                    type: "REACTCOMP",
+                    content: (
+                      <div>
+                        {" "}
+                        <p>
+                          Unter &quot;<strong>Meine Potenzialflächen</strong>
+                          &quot; können Sie im Anwendungsmenü{" "}
+                          <FontAwesomeIcon icon={faBars} /> auswählen, welche
+                          Kategorien von Potenzialflächen in der Karte
+                          dargestellt werden. Durch Anklicken bzw. Antippen der
+                          Schaltfläche &quot;Filter zurücksetzen&quot; machen
+                          Sie Ihre Auswahl dergestalt rückgängig, dass wieder
+                          alle Kategorien zur Anzeige ausgewählt werden.
+                        </p>
+                        <p>
+                          Ihre Einstellungen werden direkt in der blauen
+                          Titelzeile des Bereichs &quot;Meine
+                          Potenzialflächen&quot; und in dem Donut-Diagramm, das
+                          Sie rechts neben oder unter den Filteroptionen finden,
+                          ausgewertet. Die Titelzeile zeigt die Gesamtanzahl der
+                          Potenzialflächen in den von Ihnen ausgewählten
+                          Kategorien. Das Donut-Diagramm zeigt zusätzlich die
+                          Verteilung auf die einzelnen Kategorien. Bewegen Sie
+                          dazu den Mauszeiger auf eines der farbigen Segmente
+                          des Diagramms.
+                        </p>
+                      </div>
+                    ),
+                  },
+                },
+                {
+                  title: "Anmeldung und Offline-Benutzung",
+                  bsStyle: "warning",
+                  contentBlockConf: {
+                    type: "REACTCOMP",
+                    content: (
+                      <div>
+                        <p>
+                          Die interaktive Kartenanwendung
+                          &quot;Potenzialflächen-Online&quot; ist für die
+                          spezifische Gruppe der Nutzer in Verwaltung und
+                          politischen Gremien gedacht, die in die Prozesse zur
+                          Entwicklung von städtebaulichen Potenzialflächen
+                          involviert sind. Sie ist daher nicht uneingeschränkt
+                          öffentlich zugänglich, sondern erfordert eine
+                          Anmeldung mit Benutzername und Passwort. Die
+                          Zugangssteuerung erfolgt dabei über die
+                          Nutzerverwaltung des Wuppertaler Navigations- und
+                          Datenmanagementsystems WuNDa. Zugangsdaten können bei
+                          der WuNDa-Administration (
+                          <a href="mailto:wunda@stadt.wuppertal.de">
+                            wunda@stadt.wuppertal.de
+                          </a>
+                          ) beantragt werden, die hierzu auch ein{" "}
+                          <a href="https://formulare.wuppertal.de/metaform/Form-Solutions/sid/assistant/61fbb0516de84f231ac18ee3">
+                            Online-Formular
+                          </a>{" "}
+                          bereitstellt.{" "}
+                        </p>
+                        <p>
+                          Nach der Anmeldung bei Potenzialflächen-Online wird
+                          Ihr Nutzername im Titelbereich zusammen mit der
+                          letzten Aktualisierung des Cache-Speichers der
+                          Kartenanwendung in der Form &quot;
+                          <strong>Potenzialflächen-Online</strong> (Nutzername,
+                          Datum der letzten Cache-Aktualisierung, Uhrzeit der
+                          letzten Cache-Aktualisierung)&quot; angezeigt. Hier
+                          finden Sie auch den Hyperlink{" "}
+                          <a className="styleAsLink">abmelden</a>, mit dem Sie
+                          die Anwendung in den Offline-Modus versetzen können.
+                          Es erscheint dann zunächst wieder der Login-Dialog.
+                          Wenn Sie hier auf &quot;Offline arbeiten&quot;
+                          klicken, greift die Anwendung nicht mehr via Internet
+                          auf die servergespeicherten Fachdaten und
+                          Kartendienste zu, sondern auf deren im Anwendungscache
+                          gespeicherte Kopien. Das Arbeiten im Offline-Modus ist
+                          sinnvoll, wenn sich Ihr Einsatzort in einem Bereich
+                          mit schwacher oder unzuverlässiger
+                          Mobilfunknetzabdeckung befindet
+                          (&quot;Funklöcher&quot;). Wichtig: im Offline-Modus
+                          müssen Sie im Abschnitt &quot;Einstellungen&quot; des
+                          Anwendungsmenüs eine Vektor-
+                          <a href="url">Hintergrundkarte</a> auswählen, deren
+                          Daten auf Ihr Endgerät heruntergeladen werden können.
+                          Sie erkennen diese Karten an dem Download-Symbol
+                          [Download-Icon] neben der Kartenbezeichnung. Im
+                          Offline-Modus wird im Titelbereich anstelle Ihres
+                          Nutzernamens der Text &quot;Daten aus dem Cache&quot;
+                          zusammen mit Datum und Uhrzeit der letzten
+                          Aktualisierung des Cache angezeigt. Der in diesem
+                          Zustand angebotene Hyperlink{" "}
+                          <a href="url">anmelden und Daten aktualisieren</a>{" "}
+                          öffnet wiederum den Login-Dialog. Hier können Sie sich
+                          wieder mit Nutzername und Passwort anmelden, wenn Sie
+                          das Funkloch verlassen haben.{" "}
+                        </p>
+                      </div>
+                    ),
                   },
                 },
               ],
