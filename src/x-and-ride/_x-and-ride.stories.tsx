@@ -9,6 +9,7 @@ import {
   MenuIntroduction,
   KompaktanleitungSection,
   InfoBoxTextContent,
+  Footer,
 } from ".";
 import type { CSSProperties } from "react";
 
@@ -80,6 +81,17 @@ export const Kompaktanleitung: StoryObj = {
           setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
         />
       </div>
+    );
+  },
+};
+
+export const MenuFooter: StoryObj = {
+  render: () => {
+    return (
+      <Footer
+        version="xyz"
+        setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+      />
     );
   },
 };

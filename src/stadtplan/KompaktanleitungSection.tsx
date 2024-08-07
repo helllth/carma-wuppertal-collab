@@ -314,7 +314,7 @@ export const KompaktanleitungSection = () => {
                             alt="MeinStandpunktMarkerDoppel"
                             src={meinStandpunktMarkerDoppel}
                           />
-                          . Durch Antippen dieses Kreises können Sie einen
+                          . Durch Antippen des inneren Kreises können Sie einen
                           Texthinweis mit einer konkreten Angabe der aktuellen
                           Positionsgenauigkeit einblenden. Dieser Hinweis kann
                           durch das Antippen einer beliebigen Stelle außerhalb
