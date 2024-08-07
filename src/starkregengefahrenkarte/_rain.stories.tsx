@@ -11,18 +11,14 @@ export default meta;
 
 export const KompletterModalerDialog: StoryObj = {
   render: () => {
-    const version = "0.test.0";
+    const versionString = "0.test.0";
     const reactCismapRHMVersion = "0.test.0";
-    const footerLogoUrl = undefined;
-    const email = "opensource@cismet.de";
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
         <ModalApplicationMenu
           {...getCollabedHelpComponentConfig({
-            version,
+            versionString,
             reactCismapRHMVersion,
-            footerLogoUrl,
-            email,
           })}
           visible={true}
         />
