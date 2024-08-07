@@ -6,12 +6,14 @@ interface HelpFooterProps {
   title?: string;
   version: string;
   setAppMenuActiveMenuSection: (arg: string) => void;
+  reactCismapRHMVersion?: string;
 }
 
 const HelpFooter: React.FC<HelpFooterProps> = ({
   title = document.title,
   version,
   setAppMenuActiveMenuSection,
+  reactCismapRHMVersion = "(Version 2.1 | 10/2022)",
 }) => {
   return (
     <div
@@ -35,16 +37,25 @@ const HelpFooter: React.FC<HelpFooterProps> = ({
           (Details und Nutzungsbedingungen)
         </a>
         <br />
-        <b>Modellierung</b>:{" "}
+        <b>Modellierung und Simulationsberechnung</b>{" "}
+        <span>{reactCismapRHMVersion}:</span>{" "}
         <a
           className="pleaseRenderAsLink"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.gis-rest.nrw.de/atomFeed/rest/atom/182925c1-879f-4054-bd69-b6f28e05b270.html"
+          href="https://www.wsw-online.de/energie/"
         >
-          Land NRW{" "}
+          WSW Energie und Wasser AG{" "}
         </a>
-        (2. Umsetzungszyklus der EU-HWRM-RL 12/2019)
+        |{" "}
+        <a
+          className="pleaseRenderAsLink"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.pecher.de/"
+        >
+          Dr. Pecher AG (Erkrath)
+        </a>
         <br />
         <Attribution applicationName={title} applicationVersion={version} />
       </div>

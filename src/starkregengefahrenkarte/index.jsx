@@ -20,6 +20,8 @@ import Help90Haftungsausschluss from "./help/Help90HaftungsausschlussWupp";
 import Help98DigitalerZwilling from "./help/Help98DigitalerZwilling";
 import DigiTalLogo from "./help/assets/Logo_DigiTalZwilling.png";
 import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
+import HelpFooter from "./help/HelpFooter";
+
 const getCollabedHelpComponentConfig = ({
   version,
   versionString,
@@ -30,42 +32,10 @@ const getCollabedHelpComponentConfig = ({
   const MyFooter = () => {
     const { setAppMenuActiveMenuSection } = useContext(UIDispatchContext);
     return (
-      <Help99Footer
-        appName="Teilzwilling Starkregengefahrenkarte Wuppertal"
-        taglineModelling={
-          <div>
-            <b>Modellierung und Simulationsberechnung</b> (Version 2.1 |
-            10/2022):{" "}
-            <a
-              target="_customer"
-              href="https://www.wsw-online.de/wsw-energie-wasser/privatkunden/"
-            >
-              WSW Energie und Wasser AG
-            </a>{" "}
-            |{" "}
-            <a target="_pecher" href="https://www.pecher.de/">
-              Dr. Pecher AG (Erkrath)
-            </a>
-          </div>
-        }
-        version={version}
-        versionString={versionString}
-        reactCismapRHMVersion={reactCismapRHMVersion}
-        hintergrundkartenText="True Orthophoto 2022, Amtliche Basiskarte (ABK), Hillshade © Stadt Wuppertal | Stadtkarte 2.0 © RVR | basemap.de web Vektor © GeoBasis-DE / BKG"
-        logo={
-          <a
-            className="renderAsLink"
-            onClick={() => {
-              setAppMenuActiveMenuSection("zwilling");
-            }}
-          >
-            <img
-              style={{ width: 50, margin: 5, marginTop: -5, cursor: "pointer" }}
-              align="right"
-              src={footerLogoUrl}
-            />
-          </a>
-        }
+      <HelpFooter
+        version={versionString}
+        title="Starkregengefahrenkarte Wuppertal"
+        setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
       />
     );
   };
