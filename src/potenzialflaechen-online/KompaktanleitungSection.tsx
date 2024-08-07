@@ -8,6 +8,15 @@ import meinStandpunktMarkerDoppel from "./assets/MeinStandpunktMarkerDoppel.jpg"
 import meinStandpunktMarkerMitKompass from "./assets/MeinStandpunktMarkerMitKompass.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
+import slugify from "slugify";
+import {
+  faChevronCircleDown,
+  faChevronCircleUp,
+  faFilePdf,
+  faInfoCircle,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const KompaktanleitungSection = () => {
   return (
@@ -23,183 +32,732 @@ export const KompaktanleitungSection = () => {
               type: "FAQS",
               configs: [
                 {
-                  title: "Datengrundlage",
+                  title: "Überblick",
                   bsStyle: "secondary",
                   contentBlockConf: {
                     type: "REACTCOMP",
                     content: (
                       <div>
                         <p>
-                          Der <strong>Kita-Finder Wuppertal</strong> bietet
-                          ihnen die folgenden Hintergrundkarten an, die auf
-                          verschiedenen Geodatendiensten und Geodaten basieren:
+                          Nach § 200 Baugesetzbuch können Gemeinden bebaubare
+                          Flächen in Karten und Listen erfassen
+                          (Baulandkataster). In Wuppertal wurde hierzu im Jahr
+                          2021 in Zusammenarbeit der Ressorts 101
+                          (Stadtentwicklung und Städtebau) und 102 (Vermessung,
+                          Katasteramt und Geodaten) das Fachverfahren{" "}
+                          <strong>WuNDa/Potenzialflächen</strong> innerhalb des
+                          Wuppertaler Navigations- und Datenmanagementsystems
+                          WuNDa realisiert. In diesem Verfahren werden nunmehr
+                          die zuvor getrennt verwalteten Flächen aller
+                          Kategorien von städtebaulichen Potenzialflächen
+                          georeferenziert digitalisiert und in einem
+                          übergeordneten, gemeinsamen Datenmodell beschrieben.
+                          Unterschieden werden dabei die Kategorien
+                          Gewerbepotenzialflächen, Wohnbaupotenzialflächen,
+                          Wiedernutzungspotenziale, Baulücken und Brachflächen.
+                          In WuNDa/Potenzialflächen erfolgt auch die laufende
+                          Aktualisierung der Daten durch die Abteilung 101.1
+                          Stadtentwicklung.
                         </p>
-                        <ul>
-                          <li>
-                            <strong>Stadtplan (Tag | Nacht)</strong>:
-                            Kartendienst (WMS) des Regionalverbandes Ruhr (RVR).
-                            Datengrundlage: <strong>Stadtkarte 2.0</strong>.
-                            Wöchentlich in einem automatischen Prozess
-                            aktualisierte Zusammenführung des Straßennetzes der
-                            OpenStreetMap mit Amtlichen Geobasisdaten des Landes
-                            NRW aus den Fachverfahren ALKIS (Gebäude,
-                            Flächennutzungen) und ATKIS (Gewässer). © RVR und
-                            Kooperationspartner (
-                            <a
-                              target="_legal"
-                              href="https://www.govdata.de/dl-de/by-2-0"
-                            >
-                              Datenlizenz Deutschland - Namensnennung - Version
-                              2.0
-                            </a>
-                            ). Lizenzen der Ausgangsprodukte:{" "}
-                            <a
-                              target="_legal"
-                              href="https://www.govdata.de/dl-de/zero-2-0"
-                            >
-                              Datenlizenz Deutschland - Zero - Version 2.0
-                            </a>{" "}
-                            (Amtliche Geobasisdaten) und{" "}
-                            <a
-                              target="_legal"
-                              href="https://www.opendatacommons.org/licenses/odbl/1.0/"
-                            >
-                              ODbL
-                            </a>{" "}
-                            (OpenStreetMap contributors).
-                          </li>
-                          <li>
-                            <strong>Luftbildkarte</strong>: (1) Kartendienst
-                            (WMS) der Stadt Wuppertal. Datengrundlage:{" "}
-                            <strong>
-                              True Orthophoto aus Bildflug vom 16.03.2022
-                            </strong>
-                            , hergestellt durch Aerowest GmbH/Dortmund,
-                            Bodenauflösung 5 cm. (True Orthophoto: Aus
-                            Luftbildern mit hoher Längs- und Querüberdeckung in
-                            einem automatisierten Bildverarbeitungsprozess
-                            berechnetes Bild in Parallelprojektion, also ohne
-                            Gebäudeverkippung und sichttote Bereiche.) © Stadt
-                            Wuppertal (
-                            <a
-                              target="_legal"
-                              href="https://www.wuppertal.de/geoportal/Nutzungsbedingungen/NB-GDIKOM-C_Geodaten.pdf"
-                            >
-                              NB-GDIKOM C
-                            </a>
-                            ). (2) Kartendienste (WMS) des Regionalverbandes
-                            Ruhr (RVR). Datengrundlagen:{" "}
-                            <strong>Stadtkarte 2.0</strong> und{" "}
-                            <strong>
-                              Kartenschrift aus der Stadtkarte 2.0
-                            </strong>
-                            . (Details s. Hintergrundkarte Stadtplan).
-                          </li>
-                        </ul>
-
                         <p>
-                          Zusätzlich nutzt der Kita-Finder den Datensatz{" "}
+                          Um die Informationen aus WuNDa/Potenzialflächen für
+                          alle beteiligten Akteurinnen und Akteure in den
+                          politischen Gremien und der Verwaltung verfügbar zu
+                          machen, wurde die hier vorliegende, nicht öffentlich
+                          zugängliche Web-Anwendung{" "}
+                          <strong>Potenzialflächen-Online</strong> entwickelt.
+                          Sie erlaubt es, mit verschiedenen (insbesondere auch
+                          mobilen) Endgeräten ortsunabhängig auf die
+                          freigegebenen Daten des Fachverfahrens zuzugreifen.
+                          Zum Zeitpunkt der Inbetriebnahme von
+                          Potenzialflächen-Online im Juni 2022 war die
+                          Überarbeitung der Brachflächen-Daten im neuen
+                          Datenmodell noch nicht abgeschlossen, sodass die
+                          Flächendaten aus dieser Kategorie anfänglich noch
+                          nicht angeboten werden. Das Baulückenkataster als
+                          Teilkategorie von WuNDa/Potenzialflächen befand sich
+                          im Juni 2022 im erstmaligen systematischen Aufbau für
+                          das gesamte Wuppertaler Stadtgebiet. Hierbei wird
+                          stadtbezirksweise vorgegangen. In
+                          Potenzialflächen-Online sind nur die Daten der
+                          vollständig bearbeiteten Stadtbezirke verfügbar,
+                          beginnend mit den Stadtbezirken Ronsdorf und
+                          Uellendahl-Katernberg.
+                        </p>
+                        <p>
+                          Neben der <strong>Kartendarstellung</strong> einer
+                          jeden Potenzialfläche können alle weiteren
+                          Informationen zur jeweiligen Fläche in einer
+                          interaktiven <strong>Datenblattansicht</strong> oder
+                          einem <strong>PDF-Steckbrief</strong> abgerufen
+                          werden. Die Daten umfassen u. a. die Flächennummer
+                          (beginnend mit der Stadtbezirksnummer), die
+                          Bezeichnung der Fläche, ihre Größe (in m² und gerundet
+                          in ha), die betroffenen Stadtbezirke und Quartiere,
+                          die Eigentümerkategorie (anonymisiert),
+                          Lagebeschreibungen (bezogen auf Verkehr, den
+                          Siedlungsraum und die Topografie), das geltende
+                          Planungsrecht (Ausweisung im Regionalplan und
+                          Flächennutzungsplan, Angabe der betroffenen
+                          Bebauungspläne), die Umgebungsnutzungen, die bisherige
+                          Nutzung mit der bestehenden Bebauung und Versiegelung,
+                          die Wohnlagenklasse gemäß der{" "}
                           <a
-                            target="_legal"
-                            href="https://offenedaten-wuppertal.de/dataset/kindertageseinrichtungen-wuppertal"
+                            target="_more"
+                            href="https://offenedaten-wuppertal.de/dataset/wohnlagen-wuppertal"
                           >
-                            Kindertageseinrichtungen Wuppertal
+                            Wohnlagenkarte des Gutachterausschusses
+                          </a>
+                          , eine langtextliche Beschreibung der Fläche (u. a.
+                          mit Historie, Informationen und Planungen) sowie
+                          (soweit einschätzbar) verschiedene Bewertungen des
+                          Entwicklungspotenzials der Fläche (Innen- oder
+                          Außenentwicklung, Potenzialarten, Restriktionen,
+                          empfohlene Nutzung, Entwicklungsaussichten,
+                          Verfügbarkeit, Verwertbarkeit, Revitalisierung,
+                          Handlungsdruck, Handlungspriorität).
+                        </p>
+                        <p>
+                          Die Potenzialflächen können über das Eingabefeld nach
+                          Bezugsflächen (Stadtbezirk und Quartier) oder durch
+                          Eingabe von entsprechenden Kürzeln nach ihrer
+                          Kategorie gefiltert werden. Über die Eingabe ihrer
+                          Bezeichnung im Eingabefeld kann eine Fläche auch
+                          direkt gesucht und in der Karte angesprungen werden.
+                          Die Fachdaten zu den Potenzialflächen und eine
+                          Vektor-Hintergrundkarte werden in den Cache-Speicher
+                          der Kartenanwendung geladen, sodass diese mit geringen
+                          Einschränkungen auch im Offline-Modus genutzt werden
+                          kann. Das Arbeiten im Offline-Modus ist sinnvoll, wenn
+                          sich der Einsatzort in einem Bereich mit schwacher
+                          oder unzuverlässiger Mobilfunknetzabdeckung befindet
+                          (&quot;Funklöcher&quot;).
+                        </p>
+                        <p>
+                          Anmerkungen und Hinweise können an{" "}
+                          <a href="mailto:potenzialfl%C3%A4chen@stadt.wuppertal.de">
+                            potenzialflaechen@stadt.wuppertal.de
                           </a>{" "}
-                          des Stadtbetriebs "Tageseinrichtungen für Kinder -
-                          Jugendamt" aus dem Open-Data-Angebot der Stadt
-                          Wuppertal.
+                          (R 101.11 Integrierte Stadtentwicklung und regionale
+                          Kooperation) gesendet werden.{" "}
                         </p>
                       </div>
                     ),
                   },
                 },
                 {
-                  title: "Kartendarstellung der Kitas",
-                  bsStyle: "warning",
+                  title: "Fachdatenquellen",
+                  bsStyle: "secondary",
                   contentBlockConf: {
                     type: "REACTCOMP",
                     content: (
                       <div>
                         <p>
-                          Für die Darstellung der Kitas in der Karte stehen
-                          Ihnen 2 Zeichenvorschriften zur Verfügung, zwischen
-                          denen Sie unter "<strong>Einstellungen</strong>"
-                          umschalten können. Standardmäßig wird die Vorschrift "
-                          <em>nach Trägertyp</em>" verwendet, bei der die Kitas
-                          in 6 unterschiedlichen Farben für die 6
-                          unterschiedenen Trägertypen (städtisch, evangelisch,
-                          katholisch, Elterninitiative, Betrieb, freier Träger)
-                          ausgeprägt werden. Die Zeichenvorschrift "
-                          <em>nach Profil (Inklusionsschwerpunkt j/n)</em>"
-                          benutzt nur 2 Farben für die Unterscheidung zwischen
-                          Einrichtungen mit Schwerpunkt Inklusion und solchen
-                          ohne Inklusionsschwerpunkt.
+                          In Potenzialflächen-Online werden die folgenden
+                          Kategorien von städtebaulichen Potenzialflächen
+                          angeboten:{" "}
+                        </p>
+                        <ul>
+                          <li>
+                            <strong>Gewerbepotenzialflächen</strong>:
+                            Regionalplanerisch gesicherte Flächen mit einer
+                            Größe von mehr als 2.000 m², auf denen mit oder ohne
+                            Flächennutzungsplan- und / oder
+                            Bebauungsplanänderungen gewerbliche Nutzungen
+                            erfolgen können und vorgesehen sind. Etliche
+                            Gewerbepotenzialflächen sind Brachflächen oder
+                            Wiedernutzungspotenziale und werden auch in diesen
+                            Kategorien geführt. Seit Ende der 1990er Jahre
+                            werden Gewerbeflächenpotenziale in
+                            Handlungsprogrammen systematisch erhoben, zuletzt im{" "}
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=12384"
+                            >
+                              Handlungsprogramm Gewerbeflächen von 2011
+                            </a>{" "}
+                            (
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/to0050.php?__ktonr=50039"
+                            >
+                              Ratsbeschluss vom 23.05.2011
+                            </a>
+                            ) mit{" "}
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=18635"
+                            >
+                              Fortschreibung im Jahr 2017
+                            </a>{" "}
+                            (
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/to0050.php?__ktonr=83736"
+                            >
+                              Ratsbeschluss vom 07.05.2018
+                            </a>
+                            ) und{" "}
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=24105"
+                            >
+                              Aktualisierung im Jahr 2020
+                            </a>{" "}
+                            (Ratsvorlage vom 22.06.2020). Durchgreifende
+                            Überarbeitung für die laufende Pflege mit
+                            WuNDa/Potenzialflächen im Jahr 2021.
+                          </li>
+                          <li>
+                            <strong>Wohnbaupotenzialflächen</strong>:
+                            Regionalplanerisch gesicherte Flächen mit einer
+                            Größe von mehr als 2.000 m², auf denen mit oder ohne
+                            Flächennutzungsplan- und / oder
+                            Bebauungsplanänderungen wohnbauliche Nutzungen
+                            erfolgen können und seitens der Stadtentwicklung
+                            vorgesehen sind. Etliche Wohnbaupotenzialflächen
+                            sind Brachflächen oder Wiedernutzungspotenziale und
+                            werden auch in diesen Kategorien geführt. Erstmalige
+                            systematische Erhebung im Rahmen des
+                            Aufstellungsverfahrens für den Flächennutzungsplan
+                            2005, Aktualisierung und Ergänzungen für das
+                            Handlungsprogramm Wohnen (Ratsbeschluss vom
+                            29.06.2009), das Konzept &quot;
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=23214"
+                            >
+                              Neue Wohnbauflächen für Wuppertal
+                            </a>
+                            &quot; (
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/to0050.php?__ktonr=100704"
+                            >
+                              Ratsbeschluss vom 22.06.2020
+                            </a>
+                            ) und das{" "}
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=24476"
+                            >
+                              Innenentwicklungskonzept Wuppertal
+                            </a>{" "}
+                            (
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/to0050.php?__ktonr=102431"
+                            >
+                              Ratsbeschluss vom 07.12.2020
+                            </a>
+                            ). Durchgreifende Überarbeitung für die laufende
+                            Pflege mit WuNDa/Potenzialflächen im Jahr 2021.
+                          </li>
+                          <li>
+                            <strong>Wiedernutzungspotenziale</strong>: Flächen
+                            mit einer Größe von mehr als 2.000 m², die
+                            perspektivisch als Potenzial für neue Nutzungen
+                            dienen können. Entweder ist eine Nutzungsaufgabe
+                            konkret geplant, obwohl sich die Fläche noch in
+                            Nutzung befindet oder die Fläche ist bereits wie
+                            eine Brachfläche nach Aufgabe einer
+                            gewerblich-industriellen oder sonstigen baulichen
+                            Nutzung ungenutzt bzw. deutlich mindergenutzt oder
+                            funktionslos, jedoch erst für einen kurzen Zeitraum
+                            und noch nicht mindestens zwei Jahre (sog.
+                            &quot;junge&quot; Brache). Wiedernutzungspotenziale
+                            werden je nach Nutzungsperspektive auch in anderen
+                            Kategorien geführt. Systematischer Aufbau dieser
+                            Kategorie für die zukünftige laufende Pflege mit
+                            WuNDa/Potenzialflächen in der ersten Jahreshälfte
+                            2022 durch Neuerfassungen und Übernahme von Flächen
+                            aus den anderen Kategorien.{" "}
+                          </li>
+                          <li>
+                            <strong>Baulücken</strong>: Flächen mit einer Größe
+                            von 400 bis 2.000 m², auf denen bereits Baurecht in
+                            einem geltenden Bebauungsplan oder nach § 34 BauGB
+                            für eine Wohnbebauung besteht und deren Erschließung
+                            entweder bereits gesichert ist oder über eine
+                            Grundstücksteilung oder eine Baulast einfach
+                            gesichert werden kann. Baulücken sind Baupotenziale
+                            auf unbebauten oder auf bereits bebauten
+                            Grundstücken (Ergänzungspotenziale). Der
+                            Datenbestand wird stadtbezirksweise seit 2021 neu
+                            aufgebaut. Stand Juni 2022 waren die Erhebungen für
+                            die Stadtbezirke Ronsdorf und Uellendahl-Katernberg
+                            abgeschlossen.
+                          </li>
+                          <li>
+                            <strong>Brachflächen</strong>: Nach Aufgabe einer
+                            gewerblich-industriellen oder sonstigen baulichen
+                            Nutzung über einen Zeitraum von mindestens drei
+                            Jahren ungenutzte, deutlich mindergenutzte oder
+                            funktionslose Flächen mit Potenzial für neue
+                            Nutzungen (Mindestgröße 2.000 m²). Erstmalige
+                            systematische Erhebung für das Handlungsprogramm
+                            Brachflächen im Jahr 2005, erneuert mit dem{" "}
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=17710&amp;voselect=13689"
+                            >
+                              Handlungsprogramm Brachflächen 2016
+                            </a>{" "}
+                            (Kenntnisnahme durch den Rat am 02.05.2016),{" "}
+                            <a
+                              target="_more"
+                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=20083"
+                            >
+                              Fortschreibung im Jahr 2017
+                            </a>{" "}
+                            (Ratsvorlage vom 12.03.2018). Überarbeitung für die
+                            laufende Pflege mit WuNDa/Potenzialflächen seit
+                            Mitte 2021. Vollständige Bereitstellung in
+                            Potenzialflächen-Online geplant nach Abschluss
+                            dieser Überarbeitung.{" "}
+                          </li>
+                        </ul>
+                      </div>
+                    ),
+                  },
+                },
+                {
+                  title: "Hintergrundkarte",
+                  bsStyle: "secondary",
+                  contentBlockConf: {
+                    type: "REACTCOMP",
+                    content: (
+                      <div>
+                        <p>
+                          Im Anwendungsmenü <FontAwesomeIcon icon="bars" />{" "}
+                          können Sie im Abschnitt <strong>Einstellungen</strong>{" "}
+                          unter <strong>Hintergrundkarte</strong> festlegen,
+                          welche Basiskarte als Hintergrund verwendet werden
+                          soll. Die folgenden Basiskarten stehen zur Verfügung:
+                        </p>
+                        <ul>
+                          <li>
+                            <p>
+                              <strong>Stadtplan (grau)</strong>: Kartendienst
+                              (WMS) des Regionalverbandes Ruhr (RVR).
+                              Datengrundlage: Stadtkarte 2.0. Wöchentlich in
+                              einem automatischen Prozess aktualisierte
+                              Zusammenführung des Straßennetzes der
+                              OpenStreetMap mit Amtlichen Geobasisdaten des
+                              Landes NRW aus den Fachverfahren ALKIS (Gebäude,
+                              Flächennutzungen) und ATKIS (Gewässer). © RVR und
+                              Kooperationspartner (
+                              <a
+                                target="_more"
+                                href="https://www.govdata.de/dl-de/by-2-0"
+                              >
+                                Datenlizenz Deutschland - Namensnennung -
+                                Version 2.0
+                              </a>
+                              ). Lizenzen der Ausgangsprodukte:{" "}
+                              <a
+                                target="_more"
+                                href="https://www.govdata.de/dl-de/zero-2-0"
+                              >
+                                Datenlizenz Deutschland - Zero - Version 2.0
+                              </a>{" "}
+                              (Amtliche Geobasisdaten) und{" "}
+                              <a
+                                target="_more"
+                                href="https://www.opendatacommons.org/licenses/odbl/1.0/"
+                              >
+                                ODbL
+                              </a>{" "}
+                              (OpenStreetMap contributors).
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>Stadtplan (Vektordaten light)</strong>:
+                              Vektorkacheldienst (Vector tile service gemäß{" "}
+                              <a
+                                target="_more"
+                                href="https://github.com/mapbox/vector-tile-spec"
+                              >
+                                Mapbox Vector Tile Specification
+                              </a>
+                              ) auf der Basis eines von der Firma cismet GmbH
+                              gehosteten Sekundärdatenbestandes der
+                              OpenStreetMap Deutschland mit wöchentlicher
+                              Aktualisierung. Lizenz der Ausgangsdaten:{" "}
+                              <a
+                                target="_more"
+                                href="https://www.opendatacommons.org/licenses/odbl/1.0/"
+                              >
+                                ODbL
+                              </a>{" "}
+                              (OpenStreetMap contributors).
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>Amtliche Basiskarte</strong>: (1) In
+                              Detailmaßstäben Kartendienst (WMS) der Stadt
+                              Wuppertal. Datengrundlage: Amtliche Basiskarte ABK
+                              Graustufen (wöchentlich in einem automatisierten
+                              Prozess aus dem Fachverfahren ALKIS des
+                              Liegenschaftskatasters abgeleitete großmaßstäbige
+                              topographische Karte in Graustufen.) © Stadt
+                              Wuppertal (
+                              <a
+                                target="_more"
+                                href="https://www.govdata.de/dl-de/zero-2-0"
+                              >
+                                Datenlizenz Deutschland - Zero - Version 2.0
+                              </a>
+                              ). (2) In Übersichtsmaßstäben Kartendienst (WMS)
+                              des Bundesamtes für Kartographie und Geodäsie
+                              (BKG). Datengrundlage: WebAtlasDE © GeoBasis-DE /
+                              BKG 2018.{" "}
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <strong>Luftbildkarte</strong>: (1) Kartendienst
+                              (WMS) der Stadt Wuppertal. Datengrundlage: True
+                              Orthophoto aus Bildflug vom 16.03.2022,
+                              hergestellt durch Aerowest GmbH/Dortmund,
+                              Bodenauflösung 10 cm. (True Orthophoto: Aus
+                              Luftbildern mit hoher Längs- und Querüberdeckung
+                              in einem automatisierten Bildverarbeitungsprozess
+                              berechnetes Bild in Parallelprojektion, also ohne
+                              Gebäudeverkippung und sichttote Bereiche.) ©
+                              Stadt Wuppertal (
+                              <a
+                                target="_more"
+                                href="https://www.wuppertal.de/geoportal/Nutzungsbedingungen/NB-GDIKOM-C_Geodaten.pdf"
+                              >
+                                NB-GDIKOM C
+                              </a>
+                              ). (2) Kartendienste (WMS) des Regionalverbandes
+                              Ruhr (RVR). Datengrundlagen: Stadtkarte 2.0 und
+                              Kartenschrift aus der Stadtkarte 2.0. Details s.
+                              Hintergrundkarte Stadtplan (grau).
+                            </p>
+                          </li>
+                        </ul>
+                        <p>
+                          Die Vektordaten von &quot;Stadtplan (Vektordaten
+                          light)&quot; werden beim Starten der Anwendung auf das
+                          Endgerät übertragen, sofern das Kontrollkästchen
+                          &quot;Vektorlayer offline verfügbar machen&quot;
+                          aktiviert ist. Sie erkennen diesen Zustand auch an dem
+                          Download-Symbol <FontAwesomeIcon icon="download" />{" "}
+                          neben der Kartenbezeichnung. Diese Karte ist daher
+                          auch offline (ohne Internetzugang) verfügbar (vgl.
+                          Absatz{" "}
+                          <Link
+                            class="renderAsLink"
+                            to={slugify("Anmeldung und Offline-Benutzung")}
+                            containerId={"myMenu"}
+                            activeClass="active"
+                          >
+                            Anmeldung und Offline-Benutzung
+                          </Link>
+                          ).
                         </p>
                         <p>
-                          Räumlich nah beieinander liegende Einrichtungen werden
-                          standardmäßig maßstabsabhängig zu größeren
-                          Kreis-Symbolen zusammengefasst, jeweils mit der Anzahl
-                          der repräsentierten Kitas im Zentrum{" "}
-                          <img alt="Cluster" src={KitaZusammen} />. Vergrößern
-                          Sie ein paar Mal durch direktes Anklicken eines
-                          solchen Punktes oder mit <Icon name="plus" /> die
-                          Darstellung, so werden die zusammengefassten Kitas
-                          Schritt für Schritt in die kleineren
-                          Piktogramm-Symbole für die Einzel-Kitas zerlegt.
+                          In der <strong>Vorschau</strong> wird Ihnen anhand
+                          eines beispielhaften Kartenausschnitts stets die
+                          Wirkung Ihrer Basiskartenauswahl angezeigt.
                         </p>
                       </div>
                     ),
                   },
                 },
                 {
-                  title: "Kitas auswählen und abfragen",
-                  bsStyle: "warning",
+                  title: "Kartendarstellung der Potenzialflächen",
+                  bsStyle: "secondary",
+                  contentBlockConf: {
+                    type: "REACTCOMP",
+                    content: (
+                      <div>
+                        <p>
+                          Die Darstellung der Potenzialflächen in der Karte
+                          erfolgt über leicht transparente Farbflächen (mit
+                          dünnen, etwas abgedunkelten Umrandungen), wobei die
+                          verwendeten Farben die verschiedenen Kategorien von
+                          Potenzialflächen repräsentieren. Diese Farben werden
+                          in der Titelzeile der Info-Box aufgegriffen.
+                          Zusätzlich wird dort die Bezeichnung der jeweiligen
+                          Kategorie ausgeprägt, also z. B.
+                          &quot;Wohnbaupotenzialflächen&quot; bei den roten
+                          Flächen. Die Bedeutung der Flächenfarben erklärt sich
+                          auf diese Weise von selbst, sodass die Kartenanwendung
+                          keine klassische Legendengrafik benötigt.
+                        </p>
+                        <p>
+                          Die Kategorien der Potenzialflächen werden aus dem
+                          Fachverfahren WuNDa/Potenzialflächen in die Anwendung
+                          Potenzialflächen-Online übernommen. Neben den auf
+                          Dauer angelegten Kategorien wie Wohnbau- oder
+                          Gewerbepotenzialflächen können im Fachverfahren
+                          gelegentlich temporäre Kategorien entstehen, z. B. für
+                          die Standortauswahl bei Infrastrukturprojekten.
+                          Entsprechend kann sich auch die Liste der Kategorien
+                          in Potenzialflächen-Online und damit die Anzahl der
+                          hier verwendeten Flächenfarben von Zeit zu Zeit
+                          verändern.
+                        </p>
+                      </div>
+                    ),
+                  },
+                },
+                {
+                  title: "Flächen auswählen und abfragen",
+                  bsStyle: "success",
                   contentBlockConf: {
                     type: "REACTCOMP",
                     content: (
                       <div>
                         <p>
                           Bewegen Sie den Mauszeiger im Kartenfenster auf eine
-                          konkrete Einzel-Kita, um sich ihre strukturierte,
-                          eindeutige Kurzbezeichnung anzeigen zu lassen. Diese
-                          Bezeichnung besteht - sofern vorhanden - aus dem
-                          individuellen Namen der Kita, der Straße und dem
-                          Trägertyp. Ein Klick auf das zugehörige Kita-Symbol
-                          setzt den Fokus auf diese Einrichtung. Sie wird dann
-                          blau hinterlegt und die zugehörigen Informationen
-                          (Name, Straße und Hausnummer, Info-Text mit Angabe der
-                          Kapazität und des Trägertyps, Mindestaufnahmealter und
-                          angebotener Betreuungsumfang) werden unten rechts in
-                          der Info-Box angezeigt. (Auf einem Tablet-PC wird der
-                          Fokus durch das erste Antippen des Angebots gesetzt,
-                          das zweite Antippen blendet die Bezeichnung ein.)
-                          Außerdem werden Ihnen in der Info-Box weiterführende
-                          (Kommunikations-) Links zur Kita angezeigt:{" "}
-                          <Icon name="external-link-square" /> Internet und{" "}
-                          <Icon name="phone" /> Telefon.
+                          der farbigen Flächen, mit denen die Potenzialflächen
+                          in der Karte dargestellt werden, um sich die
+                          Bezeichnung der jeweiligen Fläche anzeigen zu lassen.
+                          Durch Anklicken bzw. kurzes Antippen einer farbigen
+                          Fläche setzen Sie den Fokus auf diese Potenzialfläche.
+                          Sie wird dann blau umrandet und mit geringerer
+                          Transparenz dargestellt, was sie deutlicher
+                          hervortreten lässt. Außerdem werden direkt einige
+                          Basisinformationen zu der ausgewählten Potenzialfläche
+                          in der Info-Box angezeigt, nämlich die Bezeichnung der
+                          Fläche, ihre eindeutige Nummer und ihre Größe in m².
                         </p>
                         <p>
-                          Wenn Sie noch nicht aktiv eine bestimmte Kita im
-                          aktuellen Kartenausschnitt selektiert haben, wird der
-                          Fokus automatisch auf die nördlichste Einrichtung
-                          gesetzt. Mit den Funktionen{" "}
-                          <img alt="Cluster" src={VorherTreffer} /> vorheriger
-                          Treffer und <a>&gt;&gt;</a> nächster Treffer können
-                          Sie ausgehend von der Kita, auf der gerade der Fokus
-                          liegt, in nördlicher bzw. südlicher Richtung alle
-                          aktuell im Kartenfenster angezeigten Kitas
-                          durchmustern.
+                          Außerdem werden Ihnen in der Info-Box einige
+                          weiterführende Funktionen zu der ausgewählten
+                          Potenzialfläche angeboten. Mit der Lupenfunktion{" "}
+                          <FontAwesomeIcon icon={faSearch} /> wird die Karte auf
+                          diese Fläche zentriert und gleichzeitig der größte
+                          Betrachtungsmaßstab eingestellt, in dem die Fläche
+                          vollständig dargestellt werden kann. (Diesen Zoom
+                          können Sie auch mit einem zweiten Anklicken oder
+                          Antippen einer bereits ausgewählten Potenzialfläche
+                          bewirken.) Mit der Funktion{" "}
+                          <Link
+                            class="renderAsLink"
+                            to={slugify("Datenblattansicht")}
+                            containerId={"myMenu"}
+                            activeClass="active"
+                          >
+                            Datenblatt anzeigen
+                          </Link>{" "}
+                          <FontAwesomeIcon icon={faInfoCircle} /> öffnen Sie ein
+                          Anwendungsfenster mit einer interaktiven
+                          Datenblattansicht zur ausgewählten Potenzialfläche,
+                          die alle hierzu im Fachverfahren
+                          WuNDa/Potenzialflächen geführten Informationen
+                          umfasst. Mit der Funktion{" "}
+                          <Link
+                            class="renderAsLink"
+                            to={slugify("Steckbriefe")}
+                            containerId={"myMenu"}
+                            activeClass="active"
+                          >
+                            Steckbrief erzeugen
+                          </Link>{" "}
+                          <FontAwesomeIcon icon={faFilePdf} /> erzeugen Sie zu
+                          dieser Fläche einen Steckbrief in Form eines
+                          PDF-Dokuments mit denselben Informationen wie in der
+                          Datenblattansicht.
+                        </p>
+                        <p>
+                          Auf Endgeräten mit Touch-Display blinkt die
+                          Bezeichnung der Potenzialfläche beim ersten und
+                          zweiten Antippen (Fokus auf diese Fläche, Zoom) kurz
+                          auf. Mit dem dritten Antippen wird die Bezeichnung
+                          dauerhaft eingeblendet, bis zu Ihrer nächsten
+                          Bildschirmaktion (z. B. Antippen der Karte außerhalb
+                          der aktuellen Potenzialfläche).{" "}
+                        </p>
+                        <p>
+                          Potenzialflächen unterschiedlicher Kategorien können
+                          sich vollständig oder teilweise überdecken. In diesem
+                          Fall werden entsprechend mehrere Info-Boxen
+                          übereinander angezeigt. Sie werden dabei so versetzt,
+                          dass die farbigen Titelzeilen aller Info-Boxen noch
+                          vollständig sichtbar sind. Durch Anklicken der
+                          jeweiligen Titelzeile setzen Sie den Fokus auf die
+                          zugehörige Potenzialfläche. Die Info-Box zu dieser
+                          Potenzialfläche wird dadurch in den Vordergrund
+                          geholt, zu den anderen Flächen sind dann nur noch die
+                          farbigen Titelzeilen mit der Angabe der
+                          Flächenkategorie zu sehen.{" "}
+                        </p>
+                        <p>
+                          Wenn Sie noch keine Potenzialfläche im aktuellen
+                          Kartenausschnitt selektiert haben, wird der Fokus
+                          automatisch auf die nördlichste Fläche gesetzt.
+                          Ausgewertet wird dabei die Position des
+                          Flächenschwerpunktes. Mit den Funktionen{" "}
+                          <a className="renderAsLink">&lt;&lt;</a> vorheriger
+                          Treffer und <a className="renderAsLink">&gt;&gt;</a>{" "}
+                          nächster Treffer können Sie ausgehend von dem Objekt,
+                          auf dem gerade der Fokus liegt, in nördlicher bzw.
+                          südlicher Richtung alle aktuell im Kartenfenster
+                          angezeigten Objekte durchmustern.
                         </p>
                         <p>
                           Mit der Schaltfläche{" "}
-                          <Icon name="chevron-circle-down" /> im dunkelgrau
-                          abgesetzten rechten Rand der Info-Box lässt sich diese
-                          so verkleinern, dass nur noch der Name der Kita und
-                          die Link-Symbole angezeigt werden - nützlich für
+                          <FontAwesomeIcon icon={faChevronCircleDown} /> im
+                          dunkelgrau abgesetzten rechten Rand der Info-Box lässt
+                          sich diese so verkleinern, dass nur noch die
+                          Bezeichnung der Potenzialfläche sowie die
+                          Funktionssymbole angezeigt werden - nützlich für
                           Endgeräte mit kleinem Display. Mit der Schaltfläche{" "}
-                          <Icon name="chevron-circle-up" /> an derselben Stelle
-                          können Sie die Info-Box dann wieder vollständig
-                          einblenden.
+                          <FontAwesomeIcon icon={faChevronCircleUp} /> an
+                          derselben Stelle können Sie die Info-Box dann wieder
+                          vollständig einblenden.
+                        </p>
+                      </div>
+                    ),
+                  },
+                },
+                {
+                  title: "Datenblattansicht",
+                  bsStyle: "success",
+                  contentBlockConf: {
+                    type: "REACTCOMP",
+                    content: (
+                      <div>
+                        <p>
+                          Durch Anklicken bzw. Antippen des{" "}
+                          <FontAwesomeIcon icon={faInfoCircle} /> -Symbols in
+                          der Info-Box öffnen Sie ein Anwendungsfenster mit
+                          einer interaktiven Datenblattansicht zu der aktuell in
+                          der Info-Box beschriebenen Potenzialfläche, die alle
+                          im Fachverfahren WuNDa/Potenzialflächen geführten
+                          Informationen zu dieser Fläche umfasst. Unter einem
+                          Kopfbereich mit immer sichtbaren Basisinformationen
+                          zur Potenzialfläche ist das Datenblatt in bis zu sechs
+                          thematische Blöcke von &quot;Lagebeschreibung&quot;
+                          bis &quot;Bewertung&quot; gegliedert. Der
+                          Informationsumfang des Datenblattes variiert von
+                          Fläche zu Fläche. Er ist insbesondere von der
+                          Flächenkategorie abhängig. So sind z. B. bei den
+                          Baulücken regelmäßig nur die Blöcke
+                          &quot;Planungsrecht / Bauordnungsrecht&quot; und
+                          &quot;Erweiterte Informationen&quot; belegt. Die
+                          einzelnen Blöcke lassen sich durch Anklicken bzw.
+                          Antippen der Überschriften in den farbig unterlegten
+                          Titelbereichen ein- und wieder ausklappen. Durch diese
+                          Möglichkeit ist die Datenblattansicht für die
+                          Informationsentnahme auf einem mobilen Endgerät (z. B.
+                          einem Smartphone) besser geeignet als der{" "}
+                          <Link
+                            class="renderAsLink"
+                            to={slugify("Steckbriefe")}
+                            containerId={"myMenu"}
+                            activeClass="active"
+                          >
+                            PDF-Steckbrief
+                          </Link>{" "}
+                          der Fläche.
+                        </p>
+                        <p>
+                          Da die Fachdaten zu den Potenzialflächen im
+                          Cache-Speicher von Potenzialflächen-Online gehalten
+                          werden, steht die Datenblattansicht auch im{" "}
+                          <Link
+                            class="renderAsLink"
+                            to={slugify("Anmeldung und Offline-Benutzung")}
+                            containerId={"myMenu"}
+                            activeClass="active"
+                          >
+                            Offline-Modus
+                          </Link>{" "}
+                          zur Verfügung. Um die Datenblattansicht zu schließen,
+                          klicken Sie auf die Schaltflächen &quot;Ok&quot;
+                          rechts im Fußbereich des Fensters.
+                        </p>
+                      </div>
+                    ),
+                  },
+                },
+                {
+                  title: "Steckbriefe",
+                  bsStyle: "success",
+                  contentBlockConf: {
+                    type: "REACTCOMP",
+                    content: (
+                      <div>
+                        <p>
+                          Durch Anklicken des{" "}
+                          <FontAwesomeIcon icon={faFilePdf} /> PDF-Symbols in
+                          der Info-Box erzeugen Sie zu der aktuell in der
+                          Info-Box beschriebenen Potenzialfläche einen
+                          Steckbrief mit allen Informationen, die im
+                          Fachverfahren WuNDa/Potenzialflächen zu dieser Fläche
+                          geführt werden. Hierzu wird ein aktueller Bericht aus
+                          der WuNDa-Datenbank angefordert, dessen einzelne
+                          Inhalte anschließend in eine PDF-Dokumentvorlage
+                          eingefügt werden. Die Erzeugung der Steckbriefe ist
+                          daher im{" "}
+                          <Link
+                            class="renderAsLink"
+                            to={slugify("Anmeldung und Offline-Benutzung")}
+                            containerId={"myMenu"}
+                            activeClass="active"
+                          >
+                            Offline-Modus
+                          </Link>{" "}
+                          nicht möglich! Nach der Fertigstellung des Berichtes
+                          wird dieser automatisch heruntergeladen und in einem
+                          separaten Fenster geöffnet. Zur Anzeige des
+                          Steckbriefes wird die auf Ihrem Endgerät für die
+                          Betrachtung von PDF-Dokumenten konfigurierte Anwendung
+                          gestartet, z. B. der Adobe Acrobat Reader.{" "}
+                        </p>
+                        <p>
+                          Im Fußbereich des Steckbriefes wird der Zeitstempel
+                          des angeforderten Datenbankberichtes ausgeprägt -
+                          diese Angabe ist wichtig, um aktuelle Steckbriefe von
+                          veralteten Dokumenten unterscheiden zu können. Im Feld
+                          &quot;Beschreibung der Fläche / Sachstand&quot; finden
+                          Sie rechts oben eine Aktualitätsangabe der Daten zu
+                          dieser Fläche. Zu diesem Zeitpunkt hat die Verwaltung
+                          die Informationen und/oder Bewertungen zu dieser
+                          Fläche in WuNDa/Potenzialflächen zuletzt
+                          fortgeschrieben. Der Steckbrief verwendet als
+                          Hintergrundfarbe der Titelzeile und für die
+                          Flächendarstellungen in den beiden eingebetteten
+                          Kartendarstellungen dieselben Farben, die auch im
+                          Kartenfenster von Potenzialflächen-Online verwendet
+                          werden (s.{" "}
+                          <Link
+                            class="renderAsLink"
+                            to={slugify(
+                              "Kartendarstellung der Potenzialflächen"
+                            )}
+                            containerId={"myMenu"}
+                            activeClass="active"
+                          >
+                            Kartendarstellung der Potenzialflächen
+                          </Link>
+                          ).
+                        </p>
+                        <p>
+                          Das Layout der Steckbriefe ist für einen Ausdruck im
+                          Format DIN A4 optimiert. Wenn Sie mit einem mobilen
+                          Endgerät mit entsprechend kleinem Bildschirm arbeiten,
+                          ist es für Sie komfortabler, sich mit Hilfe der
+                          interaktiven{" "}
+                          <Link
+                            class="renderAsLink"
+                            to={slugify("Datenblattansicht")}
+                            containerId={"myMenu"}
+                            activeClass="active"
+                          >
+                            Datenblattansicht
+                          </Link>{" "}
+                          über die aktuell geladene Potenzialfläche zu
+                          informieren.{" "}
                         </p>
                       </div>
                     ),
@@ -207,324 +765,10 @@ export const KompaktanleitungSection = () => {
                 },
                 {
                   title: "In Karte positionieren",
-                  bsStyle: "warning",
-                  contentBlockConf: {
-                    type: "REACTCOMP",
-                    content: (
-                      <div>
-                        <p>
-                          Um die Kitas in einem bestimmten Bereich des
-                          Stadtgebietes zu erkunden, geben Sie den Anfang eines
-                          Stadtteils (Stadtbezirk oder Quartier), einer Adresse,
-                          eines Straßennamens oder eines Kita-Namens im
-                          Eingabefeld links unten ein (mindestens 2 Zeichen). In
-                          der inkrementellen Auswahlliste werden Ihnen passende
-                          Treffer angeboten. (Wenn Sie weitere Zeichen eingeben,
-                          wird der Inhalt der Auswahlliste angepasst.) Durch das
-                          vorangestellte Symbol erkennen Sie, ob es sich dabei
-                          um einen <Icon name="circle" /> Stadtbezirk, ein{" "}
-                          <Icon name="pie-chart" /> Quartier, eine{" "}
-                          <Icon name="home" /> Adresse, eine{" "}
-                          <Icon name="road" /> Straße ohne zugeordnete
-                          Hausnummern, einen <Icon name="tag" /> POI oder eine{" "}
-                          <Icon name="child" /> Kita handelt.
-                        </p>
-                        <p>
-                          Nach der Auswahl eines Treffers aus der Liste wird die
-                          Karte auf die zugehörige Position zentriert. Bei
-                          Suchbegriffen mit Punktgeometrie (Adresse, Straße,
-                          Kita) wird außerdem ein großer Maßstab (Zoomstufe 14)
-                          eingestellt und ein Marker{" "}
-                          <img alt="Cluster" src={AdressMarker} /> auf der
-                          Zielposition platziert. Bei Suchbegriffen mit
-                          Flächengeometrie (Stadtbezirk, Quartier) wird der
-                          Maßstab so eingestellt, dass die Fläche vollständig
-                          dargestellt werden kann. Zusätzlich wird der Bereich
-                          außerhalb dieser Fläche abgedunkelt
-                          (Spotlight-Effekt).
-                        </p>
-                        <p>
-                          Durch Anklicken des Werkzeugs <Icon name="times" />{" "}
-                          links neben dem Eingabefeld können Sie die Suche
-                          zurücksetzen (Entfernung von Marker bzw. Abdunklung,
-                          Löschen des Textes im Eingabefeld).
-                        </p>
-                      </div>
-                    ),
-                  },
-                },
-                {
-                  title: "Mein Standort",
-                  bsStyle: "warning",
-                  contentBlockConf: {
-                    type: "REACTCOMP",
-                    content: (
-                      <div>
-                        <p>
-                          Das Werkzeug &quot;Mein Standort&quot;{" "}
-                          <FontAwesomeIcon icon={faLocationArrow} />{" "}
-                          funktioniert so wie hier beschrieben nur auf mobilen
-                          Endgeräten wie Smartphones und Tablet-PC&#39;s, die i.
-                          d. R. mit einem GNSS-Empfänger als Positionssensor
-                          ausgestattet sind (GNSS steht für Global Navigation
-                          Satellite Systems, z.B.{" "}
-                          <a
-                            target="_info"
-                            href="https://dvw.de/sites/default/files/landesverein-bayern/VeroeffentlichungenMitteilungen1996_4/DVW_1996_4_Schlie%C3%9Fer_GPS_Systemgrundlagen.pdf"
-                          >
-                            GPS
-                          </a>
-                          ). Mit dem ersten Antippen dieses Werkzeugs aktivieren
-                          Sie den &quot;Follow me&quot;-Modus, erkennbar an der
-                          orangefarbigen Darstellung des Werkzeug-Symbols. Ggf.
-                          werden Sie vom Browser bzw. dem Betriebssystem Ihres
-                          Endgerätes zur Freigabe der Lokalisierung
-                          aufgefordert. Die Karte wird auf Ihren aktuellen
-                          Standort zentriert, der mit einem blauen Kreissymbol{" "}
-                          <img
-                            alt="MeinStandpunktMarker"
-                            src={meinStandpunktMarkerMitKompass}
-                          />{" "}
-                          markiert wird. Das kleine blaue Dreieck am Rand dieses
-                          Standortsymbols zeigt Ihre aktuelle Blickrichtung an
-                          (genauer: die Richtung, in die Ihr Endgerät zeigt).
-                          Das Standortsymbol ist umgeben von einem zweiten Kreis
-                          mit transparenter, blauer Füllung, dessen Radius die
-                          Unsicherheit der Positionsbestimmung angibt{" "}
-                          <img
-                            alt="MeinStandpunktMarkerDoppel"
-                            src={meinStandpunktMarkerDoppel}
-                          />
-                          . Durch Antippen dieses Kreises können Sie einen
-                          Texthinweis mit einer konkreten Angabe der aktuellen
-                          Positionsgenauigkeit einblenden. Dieser Hinweis kann
-                          durch das Antippen einer beliebigen Stelle außerhalb
-                          seines Textfeldes geschlossen werden. Wenn Sie sich
-                          mit Ihrem Endgerät bewegen (z. B. bei einer
-                          Wanderung), wird Ihre aktuelle Position im
-                          &quot;Follow me&quot;-Modus in schneller Folge neu
-                          bestimmt und stets in der Mitte der Karte angezeigt.
-                          Die Karte wird dazu automatisiert nachgeführt. Ein
-                          weiteres Antippen von &quot;Mein Standort&quot;
-                          schaltet die Anzeige Ihrer Position wieder ab
-                          (schwarzes Werkzeug-Symbol).{" "}
-                        </p>
-                        <p>
-                          Wenn Sie die Karte im aktivierten &quot;Follow
-                          me&quot;-Modus manuell verschieben, wird der
-                          &quot;Follow me&quot;-Modus unterbrochen, erkennbar an
-                          einer blauen Darstellung des Werkzeug-Symbols. Ihr
-                          aktueller Standort wird weiterhin angezeigt und in
-                          schneller Folge aktualisiert. Der Kartenausschnitt
-                          wird jetzt aber nicht mehr automatisch an den
-                          aktuellen Standort angepasst. Bei fortgesetzter
-                          Bewegung in eine Richtung wird das Standortsymbol
-                          daher vom Zentrum zum Rand des Kartenfensters wandern
-                          und dann verschwinden - Ihr Standort liegt jetzt nicht
-                          mehr im aktuell eingestellten Kartenausschnitt! In
-                          diesem Fall führt ein erneutes Antippen von &quot;Mein
-                          Standort&quot; dazu, dass wieder in den &quot;Follow
-                          me&quot;-Modus zurückgewechselt wird. Wenn Ihr
-                          aktueller Standort dagegen noch in der Karte sichtbar
-                          ist, wird durch diese Aktion die Anzeige der Position
-                          abgeschaltet (schwarzes Werkzeug-Symbol). Sie können
-                          die Unterbrechung des &quot;Follow me&quot;-Modus bei
-                          einer Wanderung o. ä. nutzen, wenn Sie sich die vor
-                          Ihnen liegende Strecke in der Karte anschauen wollen.
-                          Verschieben Sie dazu den Kartenausschnitt manuell auf
-                          den Abschnitt Ihres Interesses. Ihr aktueller Standort
-                          wird dann zumeist nicht mehr dargestellt werden
-                          können. Der &quot;Follow me&quot;-Modus wird
-                          unterbrochen (blaues Werkzeug-Symbol). Wenn Sie sich
-                          ausreichend über den weiteren Streckenverlauf
-                          informiert haben, reaktivieren Sie durch erneutes
-                          Antippen von &quot;Mein Standort&quot; den
-                          &quot;Follow me&quot;-Modus und setzen die Karte damit
-                          wieder auf Ihren aktuellen Standort zurück.{" "}
-                        </p>
-                        <p>
-                          Noch ein Hinweis zur Genauigkeit: Die Richtigkeit der
-                          Positionsanzeige ist nicht garantiert. Ihre
-                          Genauigkeit hängt von verschiedenen Faktoren ab, u. a.
-                          von der Qualität des GNSS-Empfängers in Ihrem
-                          Endgerät, der Umgebungssituation (z. B. hohe Gebäude
-                          oder spiegelnde Oberflächen in der Nachbarschaft)
-                          sowie der Methode, mit der Ihr Endgerät und der von
-                          Ihnen verwendete Browser die Position bestimmen.
-                        </p>
-                      </div>
-                    ),
-                  },
-                },
-                {
-                  title: "Filtern",
-                  bsStyle: "primary",
-                  contentBlockConf: {
-                    type: "REACTCOMP",
-                    content: (
-                      <div>
-                        <p>
-                          Im Bereich "<strong>Filtern</strong>" können Sie im
-                          Anwendungsmenü <Icon name="bars" /> die in der Karte
-                          angezeigten Kitas so ausdünnen, dass nur die für Sie
-                          interessanten Einrichtungen übrig bleiben.
-                          Standardmäßig sind die Einstellungen hier so gesetzt,
-                          dass alle Kitas angezeigt werden. Zunächst können Sie
-                          hier unter "
-                          <em>
-                            <strong>Trägertyp</strong>
-                          </em>
-                          " die für Sie in Frage kommenden Kita-Träger auswählen
-                          und unter "
-                          <em>
-                            <strong>Profil</strong>
-                          </em>
-                          " einstellen, ob Einrichtungen mit oder ohne
-                          Schwerpunkt Inklusion (oder beide Typen) angezeigt
-                          werden sollen. Die beiden Zeichenvorschriften "
-                          <em>nach Träger</em>" und "<em>nach Profil</em>
-                          ", die Ihnen unter "<strong>Einstellungen</strong>"
-                          zur Auswahl angeboten werden, beziehen sich auf diese
-                          beiden Merkmale. Welche Zeichenvorschrift gerade aktiv
-                          ist, erkennen Sie an den farbigen Punkten, die als
-                          Legende entweder hinter den Auswahlmöglichkeiten für "
-                          <em>
-                            <strong>Trägertyp</strong>
-                          </em>
-                          " oder denen für "
-                          <em>
-                            <strong>Profil</strong>
-                          </em>
-                          " erscheinen.
-                        </p>
-                        <p>
-                          Unter "
-                          <em>
-                            <strong>Kindesalter</strong>
-                          </em>
-                          " sollten Sie das Alter des Kindes, für das Sie eine
-                          Unterbringung suchen, angeben. Dann werden alle Kitas,
-                          die ein höheres Mindestalter der Kinder fordern,
-                          ausgeblendet.
-                        </p>
-                        <p>
-                          Beim gewünschten "
-                          <em>
-                            <strong>Betreuungsumfang</strong>
-                          </em>
-                          " gilt es zu berücksichtigen, dass viele Kitas sowohl
-                          35 wie auch 45 Stunden als Betreuungsdauer anbieten.
-                          Diese werden angezeigt, sobald Sie eine der beiden
-                          Möglichkeiten (35 oder 45 Stunden pro Woche)
-                          ausgewählt haben. Bei einigen Einrichtungen hängt die
-                          angebotene Betreuungsdauer auch vom Alter des Kindes
-                          ab. Das geht aus den Daten, auf die der Kita-Finder
-                          Wuppertal zugreift, nicht hervor. Bitte erfragen Sie
-                          diesen Zusammenhang daher ggf. direkt bei der
-                          jeweiligen Einrichtung.
-                        </p>
-                        <p>
-                          Ihre Einstellungen werden direkt in der blauen
-                          Titelzeile des Bereichs "<strong>Filtern</strong>" und
-                          in dem Donut-Diagramm, das Sie rechts neben oder unter
-                          den Filteroptionen finden, ausgewertet. Die Titelzeile
-                          zeigt die Gesamtanzahl der Kitas, die den von Ihnen
-                          gesetzten Filterbedingungen entsprechen. Das
-                          Donut-Diagramm zeigt zusätzlich die Verteilung auf die
-                          Kategorien der aktuell gewählten Zeichenvorschrift.
-                          Bewegen Sie dazu den Mauszeiger auf eines der farbigen
-                          Segmente des Diagramms.
-                        </p>
-                      </div>
-                    ),
-                  },
-                },
-                {
-                  title: "Einstellungen",
                   bsStyle: "success",
                   contentBlockConf: {
                     type: "REACTCOMP",
-                    content: (
-                      <div>
-                        <p>
-                          Unter "<strong>Einstellungen</strong>
-                          " können Sie im Anwendungsmenü <Icon name="bars" />{" "}
-                          festlegen, wie die Kitas und die Hintergrundkarte
-                          angezeigt werden sollen. Zu den Kitas können Sie
-                          auswählen, ob Ihre unter "<strong>Filtern</strong>"
-                          festgelegten Filterbedingungen in einer Titelzeile
-                          ausgeprägt werden oder nicht. Weiter können Sie
-                          festlegen, ob räumlich nah beieinander liegende Kitas
-                          maßstabsabhängig zu einem Punktsymbol zusammengefasst
-                          werden oder nicht. "
-                          <em>
-                            <strong>Zeichenvorschrift</strong>
-                          </em>
-                          " erlaubt es Ihnen, zwischen der standardmäßig
-                          aktivierten Zeichenvorschrift "<em>nach Trägertyp</em>
-                          " und der Alternative "
-                          <em>nach Profil (Inklusionsschwerpunkt j/n)</em>" zu
-                          wechseln. Unter "
-                          <em>
-                            <strong>Symbolgröße</strong>
-                          </em>
-                          " können Sie in Abhängigkeit von Ihrer
-                          Bildschirmauflösung und Ihrem Sehvermögen auswählen,
-                          ob die Kitas mit kleinen (25 Pixel), mittleren (35
-                          Pixel) oder großen (45 Pixel) Symbolen angezeigt
-                          werden.
-                        </p>
-                        <p>
-                          Unter "
-                          <strong>
-                            <em>Hintergrundkarte</em>
-                          </strong>
-                          " können Sie auswählen, ob Sie die standardmäßig
-                          aktivierte farbige Hintergrundkarte verwenden möchten
-                          ("<em>Stadtplan (Tag)</em>") oder lieber eine
-                          invertierte Graustufenkarte ("
-                          <em>Stadtplan (Nacht)</em>"), zu der uns die von
-                          vielen PKW-Navis bei Dunkelheit eingesetzte
-                          Darstellungsweise inspiriert hat.{" "}
-                          <strong>Hinweis:</strong> Der Stadtplan (Nacht) wird
-                          Ihnen nur angeboten, wenn Ihr Browser
-                          CSS3-Filtereffekte unterstützt, also z. B. nicht beim
-                          Microsoft Internet Explorer. Die Nacht-Karte erzeugt
-                          einen deutlicheren Kontrast mit den farbigen
-                          Kita-Symbolen, die unterschiedlichen Flächennutzungen
-                          in der Hintergrundkarte lassen sich aber nicht mehr so
-                          gut unterscheiden wie in der Tag-Karte. Als dritte
-                          Möglichkeit steht eine Luftbildkarte zur Verfügung,
-                          die die Anschaulichkeit des Luftbildes mit der
-                          Eindeutigkeit des Stadtplans (Kartenschrift,
-                          durchscheinende Linien) verbindet.{" "}
-                        </p>
-                        <p>
-                          Im Vorschaubild sehen Sie direkt die prinzipielle
-                          Wirkung ihrer Einstellungen.
-                        </p>
-                      </div>
-                    ),
-                  },
-                },
-                {
-                  title: "Personalisierung",
-                  bsStyle: "success",
-                  contentBlockConf: {
-                    type: "REACTCOMP",
-                    content: (
-                      <div>
-                        {" "}
-                        <p>
-                          Ihre Filterbedingungen und Einstellungen bleiben auch
-                          nach einem Neustart der Anwendung erhalten. (Es sei
-                          denn, Sie löschen den Browser-Verlauf einschließlich
-                          der gehosteten App-Daten.) Damit können Sie mit
-                          wenigen Klicks aus dem Kita-Finder Wuppertal einen
-                          dauerhaft für Sie optimierten Kita-Finder machen.
-                        </p>
-                      </div>
-                    ),
+                    content: <div></div>,
                   },
                 },
               ],
