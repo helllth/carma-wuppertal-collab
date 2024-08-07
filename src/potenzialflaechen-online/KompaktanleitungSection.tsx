@@ -1,9 +1,6 @@
 import Icon from "react-cismap/commons/Icon";
 import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
 import Section from "react-cismap/topicmaps/menu/Section";
-import KitaZusammen from "./assets/kita_zusammen.png";
-import VorherTreffer from "./assets/vorher_treffer.png";
-import AdressMarker from "./assets/AdressMarker.jpg";
 import meinStandpunktMarkerDoppel from "./assets/MeinStandpunktMarkerDoppel.jpg";
 import meinStandpunktMarkerMitKompass from "./assets/MeinStandpunktMarkerMitKompass.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
