@@ -208,7 +208,7 @@ export const KompaktanleitungSection = ({
                           Lupensymbol <Icon name="search" /> links daneben wird
                           die Karte auf die Ladestation, die gerade den Fokus
                           hat, zentriert und gleichzeitig ein großer
-                          Betrachtungsmaßstab (Zoomstufe 14) eingestellt. Mit
+                          Betrachtungsmaßstab (Zoomstufe 15) eingestellt. Mit
                           den Symbolen <Icon name="phone" /> und{" "}
                           <Icon name="external-link-square" /> rechts daneben
                           können Sie den Betreiber via Smartphone direkt anrufen

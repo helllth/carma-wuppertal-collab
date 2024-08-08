@@ -304,7 +304,7 @@ export const KompaktanleitungSection = () => {
                           Mit der Lupenfunktion <Icon name="search" /> wird die
                           Karte auf das aktuelle Fachobjekt zentriert und
                           gleichzeitig ein großer Betrachtungsmaßstab (Zoomstufe
-                          14) eingestellt. Falls es mehr Informationen zu den
+                          15) eingestellt. Falls es mehr Informationen zu den
                           Fachobjekten gibt, als in der Info-Box dargestellt
                           werden können, können Sie sich diese über die
                           Datenblattfunktion <Icon name="info" /> anzeigen

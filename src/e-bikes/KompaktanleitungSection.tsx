@@ -192,7 +192,7 @@ export const KompaktanleitungSection = () => {
                           <Icon name="search" /> links daneben wird die Karte
                           auf die Station, die gerade den Fokus hat, zentriert
                           und gleichzeitig ein großer Betrachtungsmaßstab
-                          (Zoomstufe 14) eingestellt. Mit den Symbolen{" "}
+                          (Zoomstufe 15) eingestellt. Mit den Symbolen{" "}
                           <Icon name="phone" /> und{" "}
                           <Icon name="external-link-square" /> rechts daneben
                           können Sie den Betreiber oder Inhaber via Smartphone

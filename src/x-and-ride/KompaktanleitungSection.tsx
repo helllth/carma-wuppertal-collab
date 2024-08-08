@@ -196,7 +196,7 @@ export const KompaktanleitungSection: React.FC<
                           <FontAwesomeIcon icon={faSearchLocation} /> wird die
                           Karte auf die Anlage, die gerade den Fokus hat,
                           zentriert und gleichzeitig ein großer
-                          Betrachtungsmaßstab (Zoomstufe 14) eingestellt.{" "}
+                          Betrachtungsmaßstab (Zoomstufe 15) eingestellt.{" "}
                         </p>
                         <p>
                           Wenn Sie noch keine Anlage im aktuellen
