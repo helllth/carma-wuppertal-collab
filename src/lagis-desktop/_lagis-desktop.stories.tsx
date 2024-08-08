@@ -1,6 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { menuNamesHelper, drawerTextsHelper, overview, verwaltung } from ".";
-import { Card, Space } from "antd";
+import {
+  menuNamesHelper,
+  drawerTextsHelper,
+  overview,
+  verwaltung,
+  mipa,
+} from ".";
 
 const meta: Meta = {
   title: "Lagis-desktop",
@@ -142,5 +147,38 @@ const DisplayVerwaltung = () => {
 export const VerwaltungPage: StoryObj = {
   render: () => {
     return <DisplayVerwaltung />;
+  },
+};
+
+const DisplayMipa = () => {
+  const { mipaTable, bemerkung, querverweise } = mipa;
+  return (
+    <div>
+      <div>
+        <h3>{mipaTable.tableTitle}</h3>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>{mipaTable.lageCol}</span>
+          <span>{mipaTable.aktenzeichenCol}</span>
+          <span>{mipaTable.aktenzeichenCol}</span>
+          <span>{mipaTable.flaecheCol}</span>
+          <span>{mipaTable.nutzungCol}</span>
+          <span>{mipaTable.vertragsbeginCol}</span>
+          <span>{mipaTable.vertragsendeCol}</span>
+          <span>{mipaTable.merkmaleCol}</span>
+        </div>
+      </div>
+      <div style={{ margin: "2rem 0" }}>
+        <h3>{bemerkung.title}</h3>
+      </div>
+      <div style={{ margin: "2rem 0" }}>
+        <h3>{querverweise.title}</h3>
+      </div>
+    </div>
+  );
+};
+
+export const MipaPage: StoryObj = {
+  render: () => {
+    return <DisplayMipa />;
   },
 };
