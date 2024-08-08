@@ -46,7 +46,19 @@ export const MenuIntroduction: React.FC<MenuIntroductionProps> = ({
       >
         Kompaktanleitung
       </Link>{" "}
-      für detailliertere Bedienungsinformationen.
+      für detailliertere Bedienungsinformationen und{" "}
+      <Link
+        id="lnkUDZ"
+        to="digiTal"
+        containerId="myMenu"
+        smooth={true}
+        delay={100}
+        onClick={() => setAppMenuActiveMenuSection("digiTal")}
+        className="renderAsLink"
+      >
+        Urbaner Digitaler Zwilling
+      </Link>{" "}
+      für eine Einordnung der Park+Ride-Karte in das Gesamtsystem des Digitalen Zwillings der Stadt Wuppertal. 
     </span>
   );
 };
