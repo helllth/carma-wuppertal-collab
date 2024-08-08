@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Attribution } from ".";
+import { Attribution, GenericDigitalTwinReferenceSection } from ".";
 import { GenericDigitalTwinReferenceTextComponent } from ".";
 import { MenuFooter } from ".";
 import { wuppertalCollabProjectVersion } from "..";
@@ -36,6 +36,10 @@ export const attribution: StoryObj = {
 
 export const genericDigitalTwinReferenceTextComponent: StoryObj = {
   render: () => <GenericDigitalTwinReferenceTextComponent />,
+};
+
+export const genericDigitalTwinReferenceSection: StoryObj = {
+  render: () => <GenericDigitalTwinReferenceSection />,
 };
 
 export const MenuFußzeile: StoryObj = {
