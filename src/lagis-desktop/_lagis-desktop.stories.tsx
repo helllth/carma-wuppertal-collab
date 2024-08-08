@@ -7,6 +7,7 @@ import {
   mipa,
   rebe,
   nutzung,
+  vorgange,
 } from ".";
 
 const meta: Meta = {
@@ -249,5 +250,45 @@ const DisplayNutzung = () => {
 export const NutzungPage: StoryObj = {
   render: () => {
     return <DisplayNutzung />;
+  },
+};
+
+const DisplayVorgange = () => {
+  const { vorgangeTable, vertragsdaten, qkb } = vorgange;
+  return (
+    <div>
+      <div>
+        <h4>{vorgangeTable.vorgangeTitle}</h4>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>{vorgangeTable.vertragsartCol}</span>
+          <span>{vorgangeTable.nummerCol}</span>
+          <span>{vorgangeTable.quadratmeterpreisCol}</span>
+          <span>{vorgangeTable.kaufpreisCol}</span>
+        </div>
+      </div>
+      <div style={{ margin: "2rem 0" }}>
+        <h4>{vertragsdaten.title}</h4>
+        <p>{vertragsdaten.voreigentumerLabel}</p>
+        <p>{vertragsdaten.auflassungLabel}</p>
+        <p>{vertragsdaten.eintragungLabel}</p>
+        <p>{vertragsdaten.bemerkung}</p>
+      </div>
+      <div style={{ margin: "2rem 0" }}>
+        <h4>{qkb.title}</h4>
+        <h5 style={{ margin: "1rem 0" }}>{qkb.querverweiseTitle}</h5>
+        <h5>{qkb.kostenTitle}</h5>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>{qkb.kostenartCol}</span>
+          <span>{qkb.betragCol}</span>
+          <span>{qkb.anweisungCol}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const VorgangePage: StoryObj = {
+  render: () => {
+    return <DisplayVorgange />;
   },
 };
