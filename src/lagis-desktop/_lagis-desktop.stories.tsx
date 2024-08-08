@@ -10,6 +10,7 @@ import {
   vorgange,
   historie,
   kassenzeichen,
+  dms,
 } from ".";
 
 const meta: Meta = {
@@ -340,5 +341,28 @@ const DisplayKassenzeichen = () => {
 export const KassenzeichenaPage: StoryObj = {
   render: () => {
     return <DisplayKassenzeichen />;
+  },
+};
+
+const DisplayDms = () => {
+  const { dmsTable } = dms;
+  return (
+    <div>
+      <div>
+        <h4>{dmsTable.tableTitle}</h4>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>{dmsTable.nameCol}</span>
+          <span>{dmsTable.fileCol}</span>
+          <span>{dmsTable.beschreibungCol}</span>
+          <span>{dmsTable.vorschauCol}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DmsPage: StoryObj = {
+  render: () => {
+    return <DisplayDms />;
   },
 };

@@ -8,3 +8,4 @@ export { nutzung } from "./nutzung/nutzung";
 export { vorgange } from "./vorgange/vorgange";
 export { historie } from "./historie/historie";
 export { kassenzeichen } from "./kassenzeichen/kassenzeichen";
+export { dms } from "./dms/dms";
