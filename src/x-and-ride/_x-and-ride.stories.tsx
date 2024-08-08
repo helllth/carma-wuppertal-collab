@@ -99,6 +99,10 @@ export const MenuFooter: StoryObj = {
 
 export const InfoFooter: StoryObj = {
   render: () => {
-    return <SecondaryInfoFooter close={action("close")} version="xyz" />;
+    return (
+      <div style={{ width: "900px" }}>
+        <SecondaryInfoFooter close={action("close")} version="xyz" />
+      </div>
+    );
   },
 };
