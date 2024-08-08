@@ -11,3 +11,4 @@ export { loadingText } from "./loadingText";
 export { AenderungsverfahrenAnzeigenUndAbfragen } from "./AenderungsverfahrenAnzeigenUndAbfragen";
 export { AenderungsverfahrenSuchenUndDurchmustern } from "./AenderungsverfahrenSuchenUndDurchmustern";
 export { FlaechenInDerArbeitskarteAuswaehlenUndAbfragen } from "./FlaechenInDerArbeitskarteAuswaehlenUndAbfragen";
+export { Footer } from "./Footer";

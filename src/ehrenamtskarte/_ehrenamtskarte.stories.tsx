@@ -13,6 +13,7 @@ import {
   SectionTitleZg,
   SectionTitleMerkliste,
   MenuTooltip,
+  Footer,
 } from ".";
 
 const meta: Meta = {
@@ -93,5 +94,16 @@ export const MerklisteSectionTitle: StoryObj = {
 export const menuTooltipString: StoryObj = {
   render: () => {
     return <MenuTooltip />;
+  },
+};
+
+export const MenuFooter: StoryObj = {
+  render: () => {
+    return (
+      <Footer
+        version="xyz"
+        setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+      />
+    );
   },
 };

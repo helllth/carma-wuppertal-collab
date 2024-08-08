@@ -9,6 +9,7 @@ import {
   MenuIntroduction,
   KompaktanleitungSection,
   InfoBoxTextContent,
+  Footer,
 } from ".";
 import type { CSSProperties } from "react";
 
@@ -78,6 +79,17 @@ export const Kompaktanleitung: StoryObj = {
       <div id="myMenu" style={modalBodyStyle}>
         <KompaktanleitungSection />
       </div>
+    );
+  },
+};
+
+export const MenuFooter: StoryObj = {
+  render: () => {
+    return (
+      <Footer
+        version="xyz"
+        setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+      />
     );
   },
 };

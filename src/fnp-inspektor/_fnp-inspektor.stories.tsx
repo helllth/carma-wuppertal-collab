@@ -14,6 +14,7 @@ import {
   MenuTooltip,
   loadingText,
   MenuTitle,
+  Footer,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 
@@ -145,5 +146,16 @@ export const InitialLoadingText: StoryObj = {
 export const TitleMenu: StoryObj = {
   render: () => {
     return <MenuTitle />;
+  },
+};
+
+export const MenuFooter: StoryObj = {
+  render: () => {
+    return (
+      <Footer
+        version="xyz"
+        setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+      />
+    );
   },
 };

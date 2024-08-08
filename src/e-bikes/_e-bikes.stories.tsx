@@ -8,6 +8,7 @@ import {
   searchTextPlaceholder,
   InfoBoxTextContent,
   MenuTooltip,
+  Footer,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import type { CSSProperties } from "react";
@@ -73,5 +74,16 @@ export const TextInSearchPlaceholder: StoryObj = {
 export const menuTooltipString: StoryObj = {
   render: () => {
     return <MenuTooltip />;
+  },
+};
+
+export const MenuFooter: StoryObj = {
+  render: () => {
+    return (
+      <Footer
+        version="xyz"
+        setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+      />
+    );
   },
 };

@@ -5,3 +5,4 @@ export { MenuTooltip } from "./MenuTooltip";
 export { searchTextPlaceholder } from "./searchTextPlaceholder";
 export { InfoBoxTextTitle } from "./InfoBoxTextTitle";
 export { InfoBoxTextContent } from "./InfoBoxTextContent";
+export { Footer } from "./Footer";
