@@ -5,6 +5,7 @@ import {
   overview,
   verwaltung,
   mipa,
+  rebe,
 } from ".";
 
 const meta: Meta = {
@@ -44,15 +45,15 @@ const DisplayDrawer = () => {
   } = drawerTextsHelper;
   return (
     <div>
-      <h3>{allgemeinTitle}</h3>
+      <h4>{allgemeinTitle}</h4>
       <p>{synchronisierenText}</p>
-      <h3 style={{ margin: "2rem 0" }}>{karteTitle}</h3>
+      <h4 style={{ margin: "2rem 0" }}>{karteTitle}</h4>
       <h4>{optionaleTitle}</h4>
       <p>{abtOpt}</p>
       <p>{baulastnachweisOpt}</p>
       <p>{stadtFstckOpt}</p>
       <p>{alkisLandparcels}</p>
-      <h3 style={{ margin: "2rem 0" }}>{hintergrundTitle}</h3>
+      <h4 style={{ margin: "2rem 0" }}>{hintergrundTitle}</h4>
       <p>{liegenschaftskarteGrauOpt}</p>
       <p>{liegenschaftskarteBuntOpt}</p>
       <p>{trueOrthoOpt}</p>
@@ -85,17 +86,17 @@ const DisplayOverview = () => {
   } = overview;
   return (
     <div>
-      <h3>{verwaltungTitle}</h3>
+      <h4>{verwaltungTitle}</h4>
       <p>{verwaltungTitleSubtitle}</p>
-      <h3 style={{ margin: "2rem 0" }}>{mipaTitle}</h3>
-      <h3>{rebeTitle}</h3>
+      <h4 style={{ margin: "2rem 0" }}>{mipaTitle}</h4>
+      <h4>{rebeTitle}</h4>
       <p>{rebeSubtitle}</p>
-      <h3 style={{ marginTop: "2rem" }}>{nutzungTitle}</h3>
+      <h4 style={{ marginTop: "2rem" }}>{nutzungTitle}</h4>
       <p>{nutzungSubtitle}</p>
-      <h3 style={{ margin: "2rem 0" }}>{vorgangeTitle}</h3>
-      <h3 style={{ margin: "2rem 0" }}>{historieTitle}</h3>
-      <h3 style={{ margin: "2rem 0" }}>{kassenzeichenTitle}</h3>
-      <h3 style={{ margin: "2rem 0" }}>{dmsTitle}</h3>
+      <h4 style={{ margin: "2rem 0" }}>{vorgangeTitle}</h4>
+      <h4 style={{ margin: "2rem 0" }}>{historieTitle}</h4>
+      <h4 style={{ margin: "2rem 0" }}>{kassenzeichenTitle}</h4>
+      <h4 style={{ margin: "2rem 0" }}>{dmsTitle}</h4>
     </div>
   );
 };
@@ -112,7 +113,7 @@ const DisplayVerwaltung = () => {
   return (
     <div>
       <div>
-        <h3>{dienststellen.tableTitle}</h3>
+        <h4>{dienststellen.tableTitle}</h4>
         <div style={{ display: "flex", gap: "1rem" }}>
           <span>{dienststellen.dienststelleCol}</span>
           <span>{dienststellen.flacheCol}</span>
@@ -122,21 +123,21 @@ const DisplayVerwaltung = () => {
         </p>
       </div>
       <div style={{ margin: "2rem 0" }}>
-        <h3>{zusatzlicheRollen.tableTitle}</h3>
+        <h4>{zusatzlicheRollen.tableTitle}</h4>
         <div style={{ display: "flex", gap: "1rem" }}>
           <span>{zusatzlicheRollen.dienststelleCol}</span>
           <span>{zusatzlicheRollen.rolleCol}</span>
         </div>
       </div>
       <div style={{ margin: "2rem 0" }}>
-        <h3>{strassen.tableTitle}</h3>
+        <h4>{strassen.tableTitle}</h4>
         <div style={{ display: "flex", gap: "1rem" }}>
           <span>{strassen.strasseCol}</span>
           <span>{strassen.lange}</span>
         </div>
       </div>
       <div style={{ margin: "1rem 0" }}>
-        <h3>{bemerkungen.tableTitle}</h3>
+        <h4>{bemerkungen.tableTitle}</h4>
         <b>Checkbox text: </b>
         {bemerkungen.checkbox}
       </div>
@@ -155,7 +156,7 @@ const DisplayMipa = () => {
   return (
     <div>
       <div>
-        <h3>{mipaTable.tableTitle}</h3>
+        <h4>{mipaTable.tableTitle}</h4>
         <div style={{ display: "flex", gap: "1rem" }}>
           <span>{mipaTable.lageCol}</span>
           <span>{mipaTable.aktenzeichenCol}</span>
@@ -168,10 +169,10 @@ const DisplayMipa = () => {
         </div>
       </div>
       <div style={{ margin: "2rem 0" }}>
-        <h3>{bemerkung.title}</h3>
+        <h4>{bemerkung.title}</h4>
       </div>
       <div style={{ margin: "2rem 0" }}>
-        <h3>{querverweise.title}</h3>
+        <h4>{querverweise.title}</h4>
       </div>
     </div>
   );
@@ -180,5 +181,32 @@ const DisplayMipa = () => {
 export const MipaPage: StoryObj = {
   render: () => {
     return <DisplayMipa />;
+  },
+};
+
+const DisplayRebe = () => {
+  const { rebeTable } = rebe;
+  return (
+    <div>
+      <div>
+        <h4>{rebeTable.tableTitle}</h4>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>{rebeTable.farbeCol}</span>
+          <span>{rebeTable.rechtCol}</span>
+          <span>{rebeTable.artCol}</span>
+          <span>{rebeTable.artrechtCol}</span>
+          <span>{rebeTable.nummerCol}</span>
+          <span>{rebeTable.eintragungCol}</span>
+          <span>{rebeTable.loschungCol}</span>
+          <span>{rebeTable.bemerkungCol}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const RebePage: StoryObj = {
+  render: () => {
+    return <DisplayRebe />;
   },
 };
