@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { menuNamesHelper, drawerTextsHelper, overview } from ".";
+import { menuNamesHelper, drawerTextsHelper, overview, verwaltung } from ".";
+import { Card, Space } from "antd";
 
 const meta: Meta = {
   title: "Lagis-desktop",
@@ -97,5 +98,49 @@ const DisplayOverview = () => {
 export const OverviewPage: StoryObj = {
   render: () => {
     return <DisplayOverview />;
+  },
+};
+
+const DisplayVerwaltung = () => {
+  const { dienststellen, zusatzlicheRollen, strassen, bemerkungen } =
+    verwaltung;
+  return (
+    <div>
+      <div>
+        <h3>{dienststellen.tableTitle}</h3>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>{dienststellen.dienststelleCol}</span>
+          <span>{dienststellen.flacheCol}</span>
+        </div>
+        <p style={{ marginTop: "0.6rem" }}>
+          <b>Modal title:</b> {dienststellen.modalTitle}
+        </p>
+      </div>
+      <div style={{ margin: "2rem 0" }}>
+        <h3>{zusatzlicheRollen.tableTitle}</h3>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>{zusatzlicheRollen.dienststelleCol}</span>
+          <span>{zusatzlicheRollen.rolleCol}</span>
+        </div>
+      </div>
+      <div style={{ margin: "2rem 0" }}>
+        <h3>{strassen.tableTitle}</h3>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>{strassen.strasseCol}</span>
+          <span>{strassen.lange}</span>
+        </div>
+      </div>
+      <div style={{ margin: "1rem 0" }}>
+        <h3>{bemerkungen.tableTitle}</h3>
+        <b>Checkbox text: </b>
+        {bemerkungen.checkbox}
+      </div>
+    </div>
+  );
+};
+
+export const VerwaltungPage: StoryObj = {
+  render: () => {
+    return <DisplayVerwaltung />;
   },
 };
