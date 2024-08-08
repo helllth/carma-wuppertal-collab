@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { menuNamesHelper, drawerTextsHelper } from ".";
+import { menuNamesHelper, drawerTextsHelper, overview } from ".";
 
 const meta: Meta = {
   title: "Lagis-desktop",
@@ -60,5 +60,42 @@ const DisplayDrawer = () => {
 export const DrawerTexts: StoryObj = {
   render: () => {
     return <DisplayDrawer />;
+  },
+};
+
+const DisplayOverview = () => {
+  const {
+    verwaltungTitle,
+    verwaltungTitleSubtitle,
+    mipaTitle,
+    rebeTitle,
+    rebeSubtitle,
+    nutzungTitle,
+    nutzungSubtitle,
+    vorgangeTitle,
+    historieTitle,
+    kassenzeichenTitle,
+    dmsTitle,
+  } = overview;
+  return (
+    <div>
+      <h3>{verwaltungTitle}</h3>
+      <p>{verwaltungTitleSubtitle}</p>
+      <h3 style={{ margin: "2rem 0" }}>{mipaTitle}</h3>
+      <h3>{rebeTitle}</h3>
+      <p>{rebeSubtitle}</p>
+      <h3 style={{ marginTop: "2rem" }}>{nutzungTitle}</h3>
+      <p>{nutzungSubtitle}</p>
+      <h3 style={{ margin: "2rem 0" }}>{vorgangeTitle}</h3>
+      <h3 style={{ margin: "2rem 0" }}>{historieTitle}</h3>
+      <h3 style={{ margin: "2rem 0" }}>{kassenzeichenTitle}</h3>
+      <h3 style={{ margin: "2rem 0" }}>{dmsTitle}</h3>
+    </div>
+  );
+};
+
+export const OverviewPage: StoryObj = {
+  render: () => {
+    return <DisplayOverview />;
   },
 };
