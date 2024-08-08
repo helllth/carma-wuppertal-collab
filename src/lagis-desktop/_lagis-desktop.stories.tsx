@@ -9,6 +9,7 @@ import {
   nutzung,
   vorgange,
   historie,
+  kassenzeichen,
 } from ".";
 
 const meta: Meta = {
@@ -318,5 +319,26 @@ const DisplayHistorie = () => {
 export const HistoriePage: StoryObj = {
   render: () => {
     return <DisplayHistorie />;
+  },
+};
+
+const DisplayKassenzeichen = () => {
+  const { kassenzeichenTable } = kassenzeichen;
+  return (
+    <div>
+      <div>
+        <h4>{kassenzeichenTable.tableTitle}</h4>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>{kassenzeichenTable.kassenzeichenCol}</span>
+          <span>{kassenzeichenTable.zugeordnetCol}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const KassenzeichenaPage: StoryObj = {
+  render: () => {
+    return <DisplayKassenzeichen />;
   },
 };
