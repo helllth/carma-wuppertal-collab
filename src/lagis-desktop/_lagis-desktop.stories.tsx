@@ -8,6 +8,7 @@ import {
   rebe,
   nutzung,
   vorgange,
+  historie,
 } from ".";
 
 const meta: Meta = {
@@ -290,5 +291,32 @@ const DisplayVorgange = () => {
 export const VorgangePage: StoryObj = {
   render: () => {
     return <DisplayVorgange />;
+  },
+};
+
+const DisplayHistorie = () => {
+  const { informationen, darstellung, optionen } = historie;
+  return (
+    <div>
+      <div>
+        <h4>{informationen.title}</h4>
+        <p>{informationen.entstehungLabel}</p>
+        <p>{informationen.historischLabel}</p>
+        <p>{informationen.stadtbesitzLabel}</p>
+      </div>
+      <div style={{ margin: "2rem 0" }}>
+        <h4>{darstellung.title}</h4>
+      </div>
+      <div style={{ margin: "2rem 0" }}>
+        <h4>{optionen.title}</h4>
+        <p>{optionen.haltenitle}</p>
+      </div>
+    </div>
+  );
+};
+
+export const HistoriePage: StoryObj = {
+  render: () => {
+    return <DisplayHistorie />;
   },
 };

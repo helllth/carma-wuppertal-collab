@@ -6,3 +6,4 @@ export { mipa } from "./mipa/mipa";
 export { rebe } from "./rebe/rebe";
 export { nutzung } from "./nutzung/nutzung";
 export { vorgange } from "./vorgange/vorgange";
+export { historie } from "./historie/historie";
