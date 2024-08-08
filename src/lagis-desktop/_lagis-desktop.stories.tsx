@@ -6,6 +6,7 @@ import {
   verwaltung,
   mipa,
   rebe,
+  nutzung,
 } from ".";
 
 const meta: Meta = {
@@ -208,5 +209,45 @@ const DisplayRebe = () => {
 export const RebePage: StoryObj = {
   render: () => {
     return <DisplayRebe />;
+  },
+};
+
+const DisplayNutzung = () => {
+  const { nutzungTable, overviewTable } = nutzung;
+  return (
+    <div>
+      <div>
+        <h4>{nutzungTable.tableTitle}</h4>
+        <div
+          style={{ display: "flex", gap: "0.8rem 1.4rem", flexWrap: "wrap" }}
+        >
+          <span>{nutzungTable.nutzungCol}</span>
+          <span>{nutzungTable.buchungsCol}</span>
+          <span>{nutzungTable.anlageklasseCol}</span>
+          <span>{nutzungTable.bezeichnungCol}</span>
+          <span>{nutzungTable.flacheCol}</span>
+          <span>{nutzungTable.preisCol}</span>
+          <span>{nutzungTable.gesamtpreisCol}</span>
+          <span>{nutzungTable.stilleCol}</span>
+          <span>{nutzungTable.buchwertCol}</span>
+          <span>{nutzungTable.bemerkungCol}</span>
+        </div>
+      </div>
+      <div style={{ marginTop: "3rem" }}>
+        <h4>{overviewTable.tableTitle}</h4>
+        <div
+          style={{ display: "flex", gap: "0.8rem 1.4rem", flexWrap: "wrap" }}
+        >
+          <span>{overviewTable.anlageklasseCol}</span>
+          <span>{overviewTable.summeCol}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const NutzungPage: StoryObj = {
+  render: () => {
+    return <DisplayNutzung />;
   },
 };
