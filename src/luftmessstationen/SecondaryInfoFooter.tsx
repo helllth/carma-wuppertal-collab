@@ -1,14 +1,8 @@
-import { Button } from "react-bootstrap";
-
 interface SecondaryInfoFooterProps {
-  close: () => void;
   version: string;
 }
 
-export const SecondaryInfoFooter = ({
-  close,
-  version,
-}: SecondaryInfoFooterProps) => {
+export const SecondaryInfoFooter = ({ version }: SecondaryInfoFooterProps) => {
   return (
     <table
       style={{
@@ -50,15 +44,6 @@ export const SecondaryInfoFooter = ({
                 </div>
               </span>
             </div>
-          </td>
-          <td>
-            <Button
-              id="cmdCloseModalApplicationMenu"
-              type="submit"
-              onClick={close}
-            >
-              Ok
-            </Button>
           </td>
         </tr>
       </tbody>
