@@ -12,6 +12,13 @@ import { KompaktanleitungSection } from ".";
 import { MenuTitle } from ".";
 import type { CSSProperties } from "react";
 import { action } from "@storybook/addon-actions";
+import Section from "react-cismap/topicmaps/menu/Section";
+import {
+  FilterStyle,
+  getFilterHeader,
+  KompaktAnleitungStyle,
+  KompaktAnleitungTitle,
+} from "./SectionTitles";
 
 const meta: Meta = {
   title: "Stadtplan",
@@ -88,6 +95,23 @@ export const MenuFooter: StoryObj = {
         version="xyz"
         setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
       />
+    );
+  },
+};
+
+export const SecionTitles: StoryObj = {
+  render: () => {
+    return (
+      <div>
+        <Section
+          sectionBsStyle={FilterStyle}
+          sectionTitle={getFilterHeader(100, 10)}
+        />
+        <Section
+          sectionBsStyle={KompaktAnleitungStyle}
+          sectionTitle={KompaktAnleitungTitle}
+        />
+      </div>
     );
   },
 };

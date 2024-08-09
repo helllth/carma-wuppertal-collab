@@ -12,6 +12,13 @@ import {
   SecondaryInfoFooter,
 } from ".";
 import type { CSSProperties } from "react";
+import Section from "react-cismap/topicmaps/menu/Section";
+import {
+  FilterStyle,
+  getFilterHeader,
+  KompaktAnleitungStyle,
+  KompaktAnleitungTitle,
+} from "./SectionTitles";
 
 const meta: Meta = {
   title: "Luftmessstationen",
@@ -89,6 +96,23 @@ export const InfoFooter: StoryObj = {
     return (
       <div style={{ width: "900px" }}>
         <SecondaryInfoFooter version="xyz" />
+      </div>
+    );
+  },
+};
+
+export const SecionTitles: StoryObj = {
+  render: () => {
+    return (
+      <div>
+        <Section
+          sectionBsStyle={FilterStyle}
+          sectionTitle={getFilterHeader(100, 10)}
+        />
+        <Section
+          sectionBsStyle={KompaktAnleitungStyle}
+          sectionTitle={KompaktAnleitungTitle}
+        />
       </div>
     );
   },
