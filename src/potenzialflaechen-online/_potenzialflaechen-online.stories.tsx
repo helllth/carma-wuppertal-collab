@@ -10,6 +10,7 @@ import {
   MenuIntroduction,
   KompaktanleitungSection,
   Footer,
+  SecondaryInfoFooter,
 } from ".";
 import type { CSSProperties } from "react";
 
@@ -85,6 +86,16 @@ export const MenuFooter: StoryObj = {
         version="xyz"
         setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
       />
+    );
+  },
+};
+
+export const InfoFooter: StoryObj = {
+  render: () => {
+    return (
+      <div style={{ width: "900px" }}>
+        <SecondaryInfoFooter version="xyz" />
+      </div>
     );
   },
 };

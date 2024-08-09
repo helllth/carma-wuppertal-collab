@@ -9,6 +9,7 @@ import {
   InfoBoxTextContent,
   MenuTooltip,
   Footer,
+  SecondaryInfoFooter,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import type { CSSProperties } from "react";
@@ -84,6 +85,16 @@ export const MenuFooter: StoryObj = {
         version="xyz"
         setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
       />
+    );
+  },
+};
+
+export const InfoFooter: StoryObj = {
+  render: () => {
+    return (
+      <div style={{ width: "900px" }}>
+        <SecondaryInfoFooter close={action("close")} version="xyz" />
+      </div>
     );
   },
 };
