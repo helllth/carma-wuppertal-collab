@@ -7,7 +7,7 @@ export { MenuIntroduction } from "./MenuIntroduction";
 export { KompaktanleitungSection } from "./KompaktanleitungSection";
 export { Footer } from "./Footer";
 export {
-  FilterTitle,
+  getFilterHeader,
   FilterStyle,
   KompaktAnleitungTitle,
   KompaktAnleitungStyle,

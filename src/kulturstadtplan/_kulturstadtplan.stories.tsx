@@ -15,7 +15,7 @@ import type { CSSProperties } from "react";
 import Section from "react-cismap/topicmaps/menu/Section";
 import {
   FilterStyle,
-  FilterTitle,
+  getFilterHeader,
   KompaktAnleitungStyle,
   KompaktAnleitungTitle,
 } from "./SectionTitles";
@@ -105,7 +105,10 @@ export const SecionTitles: StoryObj = {
   render: () => {
     return (
       <div>
-        <Section sectionBsStyle={FilterStyle} sectionTitle={FilterTitle} />
+        <Section
+          sectionBsStyle={FilterStyle}
+          sectionTitle={getFilterHeader(100, 10)}
+        />
         <Section
           sectionBsStyle={KompaktAnleitungStyle}
           sectionTitle={KompaktAnleitungTitle}
