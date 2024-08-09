@@ -9,7 +9,7 @@ import bergischeMusikschule from "./assets/bergische_musikschule.png";
 import kontakthof from "./assets/kontakthof.png";
 import veranstaltungsorteZusammen from "./assets/veranstaltungsorte_zusammen.png";
 import AdressMarker from "./assets/AdressMarker.jpg";
-import { KompaktAnleitungStyle, KompaktAnleitungTitle } from "./SecionTitles";
+import { KompaktAnleitungStyle, KompaktAnleitungTitle } from "./SectionTitles";
 
 export const KompaktanleitungSection = () => {
   return (

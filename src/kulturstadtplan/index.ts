@@ -6,3 +6,9 @@ export { MenuTitle } from "./MenuTitle";
 export { MenuIntroduction } from "./MenuIntroduction";
 export { KompaktanleitungSection } from "./KompaktanleitungSection";
 export { Footer } from "./Footer";
+export {
+  FilterTitle,
+  FilterStyle,
+  KompaktAnleitungTitle,
+  KompaktAnleitungStyle,
+} from "./SectionTitles";

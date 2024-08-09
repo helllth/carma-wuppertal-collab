@@ -18,7 +18,7 @@ import {
   FilterTitle,
   KompaktAnleitungStyle,
   KompaktAnleitungTitle,
-} from "./SecionTitles";
+} from "./SectionTitles";
 
 const meta: Meta = {
   title: "Kulturstadtplan",
