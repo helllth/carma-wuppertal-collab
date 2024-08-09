@@ -12,6 +12,13 @@ import {
   Footer,
 } from ".";
 import type { CSSProperties } from "react";
+import Section from "react-cismap/topicmaps/menu/Section";
+import {
+  FilterStyle,
+  FilterTitle,
+  KompaktAnleitungStyle,
+  KompaktAnleitungTitle,
+} from "./SecionTitles";
 
 const meta: Meta = {
   title: "Kulturstadtplan",
@@ -90,6 +97,20 @@ export const MenuFooter: StoryObj = {
         version="xyz"
         setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
       />
+    );
+  },
+};
+
+export const SecionTitles: StoryObj = {
+  render: () => {
+    return (
+      <div>
+        <Section sectionBsStyle={FilterStyle} sectionTitle={FilterTitle} />
+        <Section
+          sectionBsStyle={KompaktAnleitungStyle}
+          sectionTitle={KompaktAnleitungTitle}
+        />
+      </div>
     );
   },
 };

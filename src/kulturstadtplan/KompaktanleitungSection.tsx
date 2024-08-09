@@ -9,14 +9,15 @@ import bergischeMusikschule from "./assets/bergische_musikschule.png";
 import kontakthof from "./assets/kontakthof.png";
 import veranstaltungsorteZusammen from "./assets/veranstaltungsorte_zusammen.png";
 import AdressMarker from "./assets/AdressMarker.jpg";
+import { KompaktAnleitungStyle, KompaktAnleitungTitle } from "./SecionTitles";
 
 export const KompaktanleitungSection = () => {
   return (
     <Section
       key="help"
       sectionKey="help"
-      sectionBsStyle="default"
-      sectionTitle="Kompaktanleitung"
+      sectionBsStyle={KompaktAnleitungStyle}
+      sectionTitle={KompaktAnleitungTitle}
       sectionContent={
         <ConfigurableDocBlocks
           configs={[
