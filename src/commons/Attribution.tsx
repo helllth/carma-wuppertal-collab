@@ -34,7 +34,14 @@ export const Attribution: React.FC<AttributionProps> = ({
       >
         Datenschutzerklärung
       </a>{" "}
-      | <a href="https://cismet.de/datenschutzerklaerung.html/">Impressum</a>
+      |{" "} 
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://cismet.de/impressum.html"
+      >
+        Impressum
+      </a>{" "}
     </div>
   );
 };
