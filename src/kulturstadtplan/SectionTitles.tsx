@@ -7,7 +7,7 @@ type Styling =
   | "danger"
   | "default";
 
-const getFilterHeader = (
+export const getFilterHeader = (
   numberOfFeatures: number,
   numberOfShownFeatures: number
 ) => {
@@ -23,7 +23,6 @@ const getFilterHeader = (
   } in der Karte)`;
 };
 
-export const FilterTitle = getFilterHeader(100, 10);
 export const FilterStyle: Styling = "primary";
 
 export const KompaktAnleitungTitle = "Kompaktanleitung";
