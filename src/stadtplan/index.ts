@@ -6,3 +6,9 @@ export { searchTextPlaceholder } from "./searchTextPlaceholder";
 export { InfoBoxTextTitle } from "./InfoBoxTextTitle";
 export { InfoBoxTextContent } from "./InfoBoxTextContent";
 export { Footer } from "./Footer";
+export {
+  getFilterHeader,
+  FilterStyle,
+  KompaktAnleitungTitle,
+  KompaktAnleitungStyle,
+} from "./SectionTitles";

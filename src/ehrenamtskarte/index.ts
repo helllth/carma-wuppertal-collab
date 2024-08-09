@@ -9,3 +9,9 @@ export { SectionTitleZg } from "./SectionTitleZg";
 export { SectionTitleMerkliste } from "./SectionTitleMerkliste";
 export { MenuTooltip } from "./MenuTooltip";
 export { Footer } from "./Footer";
+export {
+  getFilterHeader,
+  FilterStyle,
+  KompaktAnleitungTitle,
+  KompaktAnleitungStyle,
+} from "./SectionTitles";
