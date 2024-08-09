@@ -7,10 +7,8 @@ import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import meinStandpunktMarkerDoppel from "./MeinStandpunktMarkerDoppel.jpg";
 import meinStandpunktMarkerMitKompass from "./MeinStandpunktMarkerMitKompass.jpg";
 import Icon from "react-cismap/commons/Icon";
-import {
-  GenericDigitalTwinReferenceTextComponent,
-  MenuFooter,
-} from "../commons";
+import { GenericDigitalTwinReferenceSection } from "../commons";
+import { Footer } from ".";
 
 interface ModalProps {
   visible: boolean;
@@ -535,16 +533,10 @@ export const Modal: React.FC<ModalProps> = ({ visible, version }) => {
             </div>
           }
         />,
-        <Section
-          key="digiTal"
-          sectionKey="digiTal"
-          sectionTitle={"DigiTal Zwilling"}
-          sectionBsStyle="warning"
-          sectionContent={<GenericDigitalTwinReferenceTextComponent />}
-        ></Section>,
+        <GenericDigitalTwinReferenceSection />,
       ]}
       menuFooter={
-        <MenuFooter
+        <Footer
           version={version}
           setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
         />
