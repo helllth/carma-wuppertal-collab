@@ -11,7 +11,7 @@ import { GenericDigitalTwinReferenceSection } from "../commons";
 import { Footer } from ".";
 
 interface ModalProps {
-  visible: boolean;
+  visible?: boolean;
   version: string;
 }
 
