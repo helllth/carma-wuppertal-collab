@@ -95,7 +95,7 @@ export const InfoFooter: StoryObj = {
   render: () => {
     return (
       <div style={{ width: "900px" }}>
-        <SecondaryInfoFooter close={action("close")} version="xyz" />
+        <SecondaryInfoFooter version="xyz" />
       </div>
     );
   },
