@@ -27,26 +27,35 @@ export const SecondaryInfoFooter = ({
             <div>
               <span style={{ fontSize: "11px" }}>
                 <div>
-                  <b>Teilzwilling Park+Ride-Karte #{version}:</b>{" "}
+                  <b>Teilzwilling Park+Ride-Karte Wuppertal #{version}</b>{" "}
+                  powered by{" "}
                   <a href="https://cismet.de/" target="_cismet">
                     cismet GmbH
                   </a>{" "}
                   auf Basis von{" "}
-                  <a href="http://leafletjs.com/" target="_more">
+                  <a href="http://leafletjs.com/" target="_cismet">
                     Leaflet
                   </a>{" "}
                   und{" "}
-                  <a href="https://cismet.de/#refs" target="_cismet">
-                    cids | WuNDa
+                  <a href="https://github.com/cismet/carma" target="_cismet">
+                    carma
                   </a>{" "}
                   |{" "}
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://cismet.de/datenschutzerklaerung.html"
-                  >
-                    Datenschutzerklärung (Privacy Policy)
-                  </a>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://cismet.de/datenschutzerklaerung.html"
+                     >
+                      Datenschutzerklärung
+                    </a>{" "}
+                    |{" "} 
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://cismet.de/impressum.html"
+                    >
+                      Impressum
+                    </a>{" "}
                 </div>
               </span>
             </div>
