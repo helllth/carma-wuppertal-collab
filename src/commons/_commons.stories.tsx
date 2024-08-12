@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Attribution, GenericDigitalTwinReferenceSection } from ".";
 import { GenericDigitalTwinReferenceTextComponent } from ".";
 import { MenuFooter } from ".";
+import { MeinStandortText } from ".";
 import { wuppertalCollabProjectVersion } from "..";
 import { action } from "@storybook/addon-actions";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
@@ -54,4 +55,8 @@ export const MenuFußzeile: StoryObj = {
       </TopicMapContextProvider>
     );
   },
+};
+
+export const StandortText: StoryObj = {
+  render: () => <MeinStandortText />,
 };
