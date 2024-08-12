@@ -3,7 +3,7 @@ import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks"
 import Section from "react-cismap/topicmaps/menu/Section";
 import { getSymbolSVGGetter } from "react-cismap/tools/uiHelper";
 import AdressMarker from "./assets/AdressMarker.jpg";
-import { MeinStandortText } from "../commons/MeinStandortText";
+import { MeinStandortText } from "../commons";
 const hallenbadSVGsrc = `
 <svg xmlns="http://www.w3.org/2000/svg" width="20.0" height="20.0">
 <path class="fg-fill" fill="#FFF"  d="M0 0h20.008v20.945H0z"/>
