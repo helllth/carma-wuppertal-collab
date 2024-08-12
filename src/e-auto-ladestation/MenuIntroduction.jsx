@@ -26,19 +26,32 @@ export const MenuIntroduction = ({ setAppMenuActiveMenuSection }) => {
       >
         Einstellungen
       </Link>{" "}
-      können Sie die Darstellung der Hintergrundkarte und der Ladestationen an
-      Ihre Vorlieben anpassen. Wählen Sie{" "}
+      können Sie die Darstellung der Hintergrundkarte und der Anlagen an Ihre
+      Vorlieben anpassen. Wählen Sie{" "}
       <Link
-        className="useAClassNameToRenderProperLink"
+        id="lnkHelp"
         to="help"
         containerId="myMenu"
         smooth={true}
         delay={100}
         onClick={() => setAppMenuActiveMenuSection("help")}
+        className="renderAsLink"
       >
         Kompaktanleitung
       </Link>{" "}
-      für detailliertere Bedienungsinformationen.
+      für detailliertere Bedienungsinformationen und{" "}
+      <Link
+        id="lnkUDZ"
+        to="digiTal"
+        containerId="myMenu"
+        smooth={true}
+        delay={100}
+        onClick={() => setAppMenuActiveMenuSection("digiTal")}
+        className="renderAsLink"
+      >
+        Urbaner Digitaler Zwilling
+      </Link>{" "}
+      für eine Einordnung der E-Auto-Ladestationskarte in das Gesamtsystem des Digitalen Zwillings der Stadt Wuppertal. 
     </span>
   );
 };
