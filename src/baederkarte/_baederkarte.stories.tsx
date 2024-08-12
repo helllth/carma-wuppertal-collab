@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { KompaktanleitungSection, Footer } from ".";
+import { KompaktanleitungSection, Footer, MenuIntroduction } from ".";
 import type { CSSProperties } from "react";
 import { action } from "@storybook/addon-actions";
+import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 
 const meta: Meta = {
   title: "Bäderkarte",
@@ -32,6 +33,20 @@ export const MenuFooter: StoryObj = {
         version="xyz"
         setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
       />
+    );
+  },
+};
+
+export const IntroductionMenu: StoryObj = {
+  render: () => {
+    return (
+      <TopicMapContextProvider appKey="storybook-appkey">
+        <div>
+          <MenuIntroduction
+            setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+          />
+        </div>
+      </TopicMapContextProvider>
     );
   },
 };
