@@ -3,6 +3,8 @@ import { Attribution, GenericDigitalTwinReferenceSection } from ".";
 import { GenericDigitalTwinReferenceTextComponent } from ".";
 import { MenuFooter } from ".";
 import { MeinStandortText } from ".";
+import { StadtplanTagNachtText } from ".";
+import { LuftbildkarteText } from ".";
 import { wuppertalCollabProjectVersion } from "..";
 import { action } from "@storybook/addon-actions";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
@@ -59,4 +61,12 @@ export const MenuFußzeile: StoryObj = {
 
 export const StandortText: StoryObj = {
   render: () => <MeinStandortText />,
+};
+
+export const StadtplanTagNacht: StoryObj = {
+  render: () => <StadtplanTagNachtText />,
+};
+
+export const LuftbildkarteSimpleText: StoryObj = {
+  render: () => <LuftbildkarteText />,
 };
