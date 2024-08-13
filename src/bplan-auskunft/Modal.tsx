@@ -6,6 +6,7 @@ import Icon from "react-cismap/commons/Icon";
 import {
   GenericDigitalTwinReferenceSection,
   MeinStandortText,
+  StadtplanTagNachtText,
 } from "../commons";
 import { Footer } from ".";
 
@@ -51,37 +52,7 @@ export const Modal: React.FC<ModalProps> = ({ visible, version }) => {
                 und Daten, die maßstabsabhängig angesprochen werden:
               </p>
               <ul>
-                <li>
-                  <strong>Stadtplan, in allen Maßstäben</strong>: Kartendienst
-                  (WMS) des Regionalverbandes Ruhr (RVR). Datengrundlage:{" "}
-                  <strong>Stadtkarte 2.0</strong>. Wöchentlich in einem
-                  automatischen Prozess aktualisierte Zusammenführung des
-                  Straßennetzes der OpenStreetMap mit Amtlichen Geobasisdaten
-                  des Landes NRW aus den Fachverfahren ALKIS (Gebäude,
-                  Flächennutzungen) und ATKIS (Gewässer). © RVR und
-                  Kooperationspartner (
-                  <a
-                    href="https://www.govdata.de/dl-de/by-2-0"
-                    target="_license"
-                  >
-                    Datenlizenz Deutschland - Namensnennung - Version 2.0
-                  </a>
-                  ). Lizenzen der Ausgangsprodukte:{" "}
-                  <a
-                    href="https://www.govdata.de/dl-de/zero-2-0"
-                    target="_license"
-                  >
-                    Datenlizenz Deutschland - Zero - Version 2.0
-                  </a>{" "}
-                  (Amtliche Geobasisdaten) und{" "}
-                  <a
-                    href="https://www.opendatacommons.org/licenses/odbl/1.0/"
-                    target="_license"
-                  >
-                    ODbL
-                  </a>{" "}
-                  (OpenStreetMap contributors).
-                </li>
+                <StadtplanTagNachtText stylesDesc=" in allen Maßstäben" />
                 <li>
                   <strong>Amtliche Basiskarte ABK, in Detailmaßstäben</strong>:
                   Kartendienst (WMS) der Stadt Wuppertal. Datengrundlage:
