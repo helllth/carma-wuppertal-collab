@@ -100,7 +100,6 @@ export const TextInKartePositionieren: StoryObj = {
           vollständige Auswahlliste aller P+R- bzw. B+R-Anlagen.
         </p>
       }
-      marker={<img alt="Cluster" src={AdressMarker} />}
       posttext={
         <p>
           Wenn Sie die Karte wie oben beschrieben auf eine P+R- bzw. B+R-Anlage
@@ -110,7 +109,7 @@ export const TextInKartePositionieren: StoryObj = {
           <Link
             to="MeinThemenstadtplan"
             containerId="myMenu"
-            onClick={() => action("filter")}
+            onClick={action("filter")}
             className="renderAsLink"
           >
             Filtereinstellungen
