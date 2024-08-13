@@ -13,7 +13,7 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import IconComp from "react-cismap/commons/Icon";
-import { MeinStandortText } from "../commons";
+import { MeinStandortText, LuftbildkarteText } from "../commons";
 
 export const KompaktanleitungSection = () => {
   return (
@@ -413,30 +413,7 @@ export const KompaktanleitungSection = () => {
                               BKG 2018.{" "}
                             </p>
                           </li>
-                          <li>
-                            <p>
-                              <strong>Luftbildkarte</strong>: (1) Kartendienst
-                              (WMS) der Stadt Wuppertal. Datengrundlage: True
-                              Orthophoto aus Bildflug vom 16.03.2022,
-                              hergestellt durch Aerowest GmbH/Dortmund,
-                              Bodenauflösung 10 cm. (True Orthophoto: Aus
-                              Luftbildern mit hoher Längs- und Querüberdeckung
-                              in einem automatisierten Bildverarbeitungsprozess
-                              berechnetes Bild in Parallelprojektion, also ohne
-                              Gebäudeverkippung und sichttote Bereiche.) ©
-                              Stadt Wuppertal (
-                              <a
-                                target="_more"
-                                href="https://www.wuppertal.de/geoportal/Nutzungsbedingungen/NB-GDIKOM-C_Geodaten.pdf"
-                              >
-                                NB-GDIKOM C
-                              </a>
-                              ). (2) Kartendienste (WMS) des Regionalverbandes
-                              Ruhr (RVR). Datengrundlagen: Stadtkarte 2.0 und
-                              Kartenschrift aus der Stadtkarte 2.0. Details s.
-                              Hintergrundkarte Stadtplan (grau).
-                            </p>
-                          </li>
+                          <LuftbildkarteText details="Details s. Hintergrundkarte Stadtplan (grau)" />
                         </ul>
                         <p>
                           Die Vektordaten von &quot;Stadtplan (Vektordaten

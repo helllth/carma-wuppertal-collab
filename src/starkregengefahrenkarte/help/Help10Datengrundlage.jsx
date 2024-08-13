@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import GenericModalMenuSection from "react-cismap/topicmaps/menu/Section";
 import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
+import { LuftbildkarteText } from "../../commons";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 const Component = () => {
@@ -154,26 +155,7 @@ const Component = () => {
               .
             </li>
 
-            <li>
-              <strong>Luftbildkarte</strong>: (1) Kartendienst (WMS) der Stadt
-              Wuppertal. Datengrundlage:{" "}
-              <strong>True Orthophoto aus Bildflug vom 16.03.2022</strong>,
-              hergestellt durch Aerowest GmbH/Dortmund, Bodenauflösung 5 cm.
-              (True Orthophoto: Aus Luftbildern mit hoher Längs- und
-              Querüberdeckung in einem automatisierten Bildverarbeitungsprozess
-              berechnetes Bild in Parallelprojektion, also ohne
-              Gebäudeverkippung und sichttote Bereiche.) © Stadt Wuppertal (
-              <a
-                target="_legal"
-                href="https://www.wuppertal.de/geoportal/Nutzungsbedingungen/NB-GDIKOM-C_Geodaten.pdf"
-              >
-                NB-GDIKOM C
-              </a>
-              ). (2) Kartendienste (WMS) des Regionalverbandes Ruhr (RVR).
-              Datengrundlagen: <strong>Stadtkarte 2.0</strong> und{" "}
-              <strong>Kartenschrift aus der Stadtkarte 2.0</strong>. (Details s.
-              Hintergrundkarte Stadtplan).
-            </li>
+            <LuftbildkarteText />
 
             <li>
               <strong>Stadtplan</strong>: Kartendienst (WMS) des
