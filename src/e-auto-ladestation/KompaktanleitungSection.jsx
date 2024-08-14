@@ -10,6 +10,7 @@ import {
   MeinStandortText,
   StadtplanTagNachtText,
   LuftbildkarteText,
+  InKartePositionierenText,
 } from "../commons";
 
 const urlPrefix = window.location.origin + window.location.pathname;
@@ -206,65 +207,52 @@ export const KompaktanleitungSection = ({
                   contentBlockConf: {
                     type: "REACTCOMP",
                     content: (
-                      <div>
-                        {" "}
-                        <p>
-                          Um direkt zu einer Ladestation zu gelangen, geben Sie
-                          den Anfang des Namens dieser Ladestation im
-                          Eingabefeld links unten ein (mindestens 2 Zeichen). In
-                          der inkrementellen Auswahlliste werden Ihnen passende
-                          Treffer angeboten. (Wenn Sie weitere Zeichen eingeben,
-                          wird der Inhalt der Auswahlliste angepasst.) Sie
-                          können auch andere Suchbegriffe eingeben, nämlich
-                          Stadtteil (Stadtbezirk oder Quartier), Adresse,
-                          Straßenname oder POI. Durch das in der Auswahlliste
-                          vorangestellte Symbol erkennen Sie, ob es sich bei
-                          einem Treffer um eine <Icon name="charging-station" />{" "}
-                          Ladestation, einen <Icon name="circle" /> Stadtbezirk,
-                          ein <Icon name="pie-chart" /> Quartier, eine{" "}
-                          <Icon name="home" /> Adresse, eine{" "}
-                          <Icon name="road" /> Straße ohne zugeordnete
-                          Hausnummern, einen <Icon name="tag" /> POI, die{" "}
-                          <Icon name="tags" /> alternative Bezeichnung eines
-                          POI, eine <Icon name="child" /> Kindertageseinrichtung
-                          oder eine <Icon name="graduation-cap" /> Schule
-                          handelt.
-                        </p>
-                        <p>
-                          Nach der Auswahl eines Treffers aus der Liste wird die
-                          Karte auf die zugehörige Position zentriert. Bei
-                          Suchbegriffen mit Punktgeometrie (Ladestation,
-                          Adresse, Straße, POI) wird außerdem ein großer Maßstab
-                          (Zoomstufe 14) eingestellt und ein Marker{" "}
-                          <Icon name="map-marker" /> auf der Zielposition
-                          platziert. Bei Suchbegriffen mit Flächengeometrie
-                          (Stadtbezirk, Quartier) wird der Maßstab so
-                          eingestellt, dass die Fläche vollständig dargestellt
-                          werden kann. Zusätzlich wird der Bereich außerhalb
-                          dieser Fläche abgedunkelt (Spotlight-Effekt).
-                        </p>
-                        <p>
-                          Durch Anklicken des Werkzeugs <Icon name="times" />{" "}
-                          links neben dem Eingabefeld können Sie die Suche
-                          zurücksetzen (Entfernung von Marker bzw. Abdunklung,
-                          Löschen des Textes im Eingabefeld).
-                        </p>
-                        <p>
-                          Wenn Sie die Karte wie oben beschrieben auf eine
-                          Ladestation positionieren, erhält diese sofort den
-                          Fokus, sodass die zugehörigen Informationen direkt in
-                          der Info-Box angezeigt werden. Voraussetzung dafür
-                          ist, dass die aktuellen{" "}
-                          <Link
-                            to="MeinThemenstadtplan"
-                            className="useAClassNameToRenderProperLink"
-                            containerId="myMenu"
-                          >
-                            Filtereinstellungen
-                          </Link>{" "}
-                          die Darstellung der Ladestation in der Karte erlauben.
-                        </p>
-                      </div>
+                      <InKartePositionierenText
+                        pretext={
+                          <p>
+                            Um direkt zu einer Ladestation zu gelangen, geben
+                            Sie den Anfang des Namens dieser Ladestation im
+                            Eingabefeld links unten ein (mindestens 2 Zeichen).
+                            In der inkrementellen Auswahlliste werden Ihnen
+                            passende Treffer angeboten. (Wenn Sie weitere
+                            Zeichen eingeben, wird der Inhalt der Auswahlliste
+                            angepasst.) Sie können auch andere Suchbegriffe
+                            eingeben, nämlich Stadtteil (Stadtbezirk oder
+                            Quartier), Adresse, Straßenname oder POI. Durch das
+                            in der Auswahlliste vorangestellte Symbol erkennen
+                            Sie, ob es sich bei einem Treffer um eine{" "}
+                            <Icon name="charging-station" /> Ladestation, einen{" "}
+                            <Icon name="circle" /> Stadtbezirk, ein{" "}
+                            <Icon name="pie-chart" /> Quartier, eine{" "}
+                            <Icon name="home" /> Adresse, eine{" "}
+                            <Icon name="road" /> Straße ohne zugeordnete
+                            Hausnummern, einen <Icon name="tag" /> POI, die{" "}
+                            <Icon name="tags" /> alternative Bezeichnung eines
+                            POI, eine <Icon name="child" />{" "}
+                            Kindertageseinrichtung oder eine{" "}
+                            <Icon name="graduation-cap" /> Schule handelt.
+                          </p>
+                        }
+                        punktgeometrie="(Ladestation, Adresse, Straße, POI)"
+                        posttext={
+                          <p>
+                            Wenn Sie die Karte wie oben beschrieben auf eine
+                            Ladestation positionieren, erhält diese sofort den
+                            Fokus, sodass die zugehörigen Informationen direkt
+                            in der Info-Box angezeigt werden. Voraussetzung
+                            dafür ist, dass die aktuellen{" "}
+                            <Link
+                              to="MeinThemenstadtplan"
+                              className="useAClassNameToRenderProperLink"
+                              containerId="myMenu"
+                            >
+                              Filtereinstellungen
+                            </Link>{" "}
+                            die Darstellung der Ladestation in der Karte
+                            erlauben.
+                          </p>
+                        }
+                      />
                     ),
                   },
                 },
