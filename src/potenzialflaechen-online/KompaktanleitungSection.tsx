@@ -747,77 +747,72 @@ export const KompaktanleitungSection = () => {
                   contentBlockConf: {
                     type: "REACTCOMP",
                     content: (
-                      <div>
-                        <InKartePositionierenText
-                          pretext={
-                            <>
-                              <p>
-                                Um in der Karte direkt zu einer bestimmten
-                                Adresse zu gelangen, geben Sie den Anfang des
-                                betreffenden Straßennamens im Eingabefeld links
-                                unten ein (mindestens 2 Zeichen). In der
-                                inkrementellen Auswahlliste werden Ihnen
-                                passende Treffer angeboten. (Wenn Sie weitere
-                                Zeichen eingeben, wird der Inhalt der
-                                Auswahlliste angepasst.) Sie können auch andere
-                                Suchbegriffe eingeben, nämlich Stadtteil
-                                (Stadtbezirk oder Quartier), Straßenname (bei
-                                Straßen ohne zugeordnete Hausnummern) oder
-                                "Point of Interest" (interessanter Ort, kurz als
-                                POI bezeichnet).
-                              </p>
-                              <p>
-                                Durch das in der Auswahlliste vorangestellte
-                                Symbol erkennen Sie, ob es sich bei einem
-                                Treffer um einen <Icon name="circle" />{" "}
-                                Stadtbezirk, ein <Icon name="pie-chart" />{" "}
-                                Quartier, eine <Icon name="home" /> Adresse,
-                                eine <Icon name="road" /> Straße ohne
-                                Hausnummern, einen <Icon name="tag" /> POI, die{" "}
-                                <Icon name="tags" /> alternative Bezeichnung
-                                eines POI, eine <Icon name="child" />{" "}
-                                Kindertageseinrichtung oder eine{" "}
-                                <Icon name="graduation-cap" /> Schule handelt.
-                              </p>
-                              <p>
-                                Zusätzlich können Sie auch die Bezeichnung einer
-                                Potenzialfläche als Suchbegriff eingeben. Die
-                                Kategorien der Treffer werden in der
-                                Auswahlliste durch die Symbole{" "}
-                                <IconComp name="square" overlay="G" /> für{" "}
-                                <strong>G</strong>ewerbepotenzialflächen,{" "}
-                                <IconComp name="square" overlay="W" /> für{" "}
-                                <strong>W</strong>ohnbaupotenzialflächen,{" "}
-                                <IconComp name="square" overlay="N" /> für
-                                Wieder
-                                <strong>N</strong>
-                                utzungspotenziale,{" "}
-                                <IconComp name="square" overlay="L" /> für Bau
-                                <strong>L</strong>
-                                ücken und perspektivisch auch{" "}
-                                <IconComp name="square" overlay="B" /> für{" "}
-                                <strong>B</strong>
-                                rachflächen angezeigt. Beim turnusmäßigen Import
-                                der Daten aus dem Fachverfahren
-                                WuNDa/Potenzialflächen werden für alle
-                                Potenzialflächen Aliasse generiert, die den
-                                Kennbuchstaben aus den Kategorie-Symbolen und
-                                ein Leerzeichen als Präfix erhalten. So entsteht
-                                z. B für die Wohnbauflächen
-                                &quot;Stollenstraße&quot; der Alias &quot;W
-                                Stollenstraße&quot;. Damit können Sie durch die
-                                Eingabe des jeweiligen Kennbuchstabens und eines
-                                Leerzeichens im Eingabefeld eine Auswahlliste
-                                aller Potenzialflächen dieser Kategorie
-                                generieren, z. B. durch Eingabe von &quot;W
-                                &quot; eine Auswahlliste aller
-                                Wohnbaupotenzialflächen.
-                              </p>
-                            </>
-                          }
-                          zoomstufe={18}
-                        />
-                      </div>
+                      <InKartePositionierenText
+                        pretext={
+                          <>
+                            <p>
+                              Um in der Karte direkt zu einer bestimmten Adresse
+                              zu gelangen, geben Sie den Anfang des betreffenden
+                              Straßennamens im Eingabefeld links unten ein
+                              (mindestens 2 Zeichen). In der inkrementellen
+                              Auswahlliste werden Ihnen passende Treffer
+                              angeboten. (Wenn Sie weitere Zeichen eingeben,
+                              wird der Inhalt der Auswahlliste angepasst.) Sie
+                              können auch andere Suchbegriffe eingeben, nämlich
+                              Stadtteil (Stadtbezirk oder Quartier), Straßenname
+                              (bei Straßen ohne zugeordnete Hausnummern) oder
+                              "Point of Interest" (interessanter Ort, kurz als
+                              POI bezeichnet).
+                            </p>
+                            <p>
+                              Durch das in der Auswahlliste vorangestellte
+                              Symbol erkennen Sie, ob es sich bei einem Treffer
+                              um einen <Icon name="circle" /> Stadtbezirk, ein{" "}
+                              <Icon name="pie-chart" /> Quartier, eine{" "}
+                              <Icon name="home" /> Adresse, eine{" "}
+                              <Icon name="road" /> Straße ohne Hausnummern,
+                              einen <Icon name="tag" /> POI, die{" "}
+                              <Icon name="tags" /> alternative Bezeichnung eines
+                              POI, eine <Icon name="child" />{" "}
+                              Kindertageseinrichtung oder eine{" "}
+                              <Icon name="graduation-cap" /> Schule handelt.
+                            </p>
+                            <p>
+                              Zusätzlich können Sie auch die Bezeichnung einer
+                              Potenzialfläche als Suchbegriff eingeben. Die
+                              Kategorien der Treffer werden in der Auswahlliste
+                              durch die Symbole{" "}
+                              <IconComp name="square" overlay="G" /> für{" "}
+                              <strong>G</strong>ewerbepotenzialflächen,{" "}
+                              <IconComp name="square" overlay="W" /> für{" "}
+                              <strong>W</strong>ohnbaupotenzialflächen,{" "}
+                              <IconComp name="square" overlay="N" /> für Wieder
+                              <strong>N</strong>
+                              utzungspotenziale,{" "}
+                              <IconComp name="square" overlay="L" /> für Bau
+                              <strong>L</strong>
+                              ücken und perspektivisch auch{" "}
+                              <IconComp name="square" overlay="B" /> für{" "}
+                              <strong>B</strong>
+                              rachflächen angezeigt. Beim turnusmäßigen Import
+                              der Daten aus dem Fachverfahren
+                              WuNDa/Potenzialflächen werden für alle
+                              Potenzialflächen Aliasse generiert, die den
+                              Kennbuchstaben aus den Kategorie-Symbolen und ein
+                              Leerzeichen als Präfix erhalten. So entsteht z. B
+                              für die Wohnbauflächen &quot;Stollenstraße&quot;
+                              der Alias &quot;W Stollenstraße&quot;. Damit
+                              können Sie durch die Eingabe des jeweiligen
+                              Kennbuchstabens und eines Leerzeichens im
+                              Eingabefeld eine Auswahlliste aller
+                              Potenzialflächen dieser Kategorie generieren, z.
+                              B. durch Eingabe von &quot;W &quot; eine
+                              Auswahlliste aller Wohnbaupotenzialflächen.
+                            </p>
+                          </>
+                        }
+                        zoomstufe={18}
+                      />
                     ),
                   },
                 },

@@ -9,7 +9,6 @@ import { InKartePositionierenText } from ".";
 import { wuppertalCollabProjectVersion } from "..";
 import { action } from "@storybook/addon-actions";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
-import AdressMarker from "./assets/AdressMarker.jpg";
 import { Link } from "react-scroll";
 import Icon from "react-cismap/commons/Icon";
 
@@ -109,7 +108,7 @@ export const TextInKartePositionieren: StoryObj = {
           <Link
             to="MeinThemenstadtplan"
             containerId="myMenu"
-            onClick={action("filter")}
+            onClick={() => action("filter")}
             className="renderAsLink"
           >
             Filtereinstellungen
