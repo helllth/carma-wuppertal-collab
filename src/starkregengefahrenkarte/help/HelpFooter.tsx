@@ -30,8 +30,7 @@ const HelpFooter: React.FC<HelpFooterProps> = ({
         <a
           className="pleaseRenderAsLink"
           onClick={() => {
-            setAppMenuActiveMenuSection("help");
-            scroller.scrollTo("Datengrundlage", { containerId: "myMenu" });
+            setAppMenuActiveMenuSection("datengrundlage");
           }}
         >
           (Details und Nutzungsbedingungen)
