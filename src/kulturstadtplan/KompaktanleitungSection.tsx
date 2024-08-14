@@ -5,6 +5,8 @@ import bergischeMusikschule from "./assets/bergische_musikschule.png";
 import kontakthof from "./assets/kontakthof.png";
 import veranstaltungsorteZusammen from "./assets/veranstaltungsorte_zusammen.png";
 import AdressMarker from "./assets/AdressMarker.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearchLocation } from "@fortawesome/free-solid-svg-icons";
 import { KompaktAnleitungStyle, KompaktAnleitungTitle } from "./SectionTitles";
 import {
   MeinStandortText,
@@ -144,7 +146,12 @@ export const KompaktanleitungSection = () => {
                           Veranstaltungen geführt werden, finden sie zusätzlich
                           noch eine <Icon name="calendar" /> Verknüpfung zu
                           wuppertal-live.de, wo sie für viele Veranstaltungen
-                          auch Online-Tickets erwerben können.
+                          auch Online-Tickets erwerben können. Mit dem
+                          Lupensymbol{" "}
+                          <FontAwesomeIcon icon={faSearchLocation} /> wird die
+                          Karte auf den POI, der gerade den Fokus hat,
+                          zentriert und gleichzeitig ein großer
+                          Betrachtungsmaßstab (Zoomstufe 15) eingestellt.{" "}
                         </p>
                         <p>
                           Wenn Sie noch nicht aktiv einen bestimmten POI im
