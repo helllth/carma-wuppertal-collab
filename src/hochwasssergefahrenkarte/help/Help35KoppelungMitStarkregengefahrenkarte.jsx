@@ -23,6 +23,7 @@ const Component = () => {
             </a>{" "} 
             auf einem Endgerät in zwei Fenstern desselben Browsers 
             gestartet werden, sind sie standardmäßig miteinander gekoppelt. 
+            (Achtung: Dieses Verhalten steht nicht bei Browsern für mobile Geräte zur Verfügung.) 
             Änderungen des Kartenausschnittes (Position und Maßstab), die in einer 
             der beiden Anwendungen erfolgen, werden dadurch automatisch auch in der 
             anderen Anwendung durchgeführt. Das funktioniert auch bei{" "}
