@@ -2,6 +2,10 @@ import Icon from "react-cismap/commons/Icon";
 import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
 import Section from "react-cismap/topicmaps/menu/Section";
 import { getSymbolSVGGetter } from "react-cismap/tools/uiHelper";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSearchLocation,
+} from "@fortawesome/free-solid-svg-icons";
 import AdressMarker from "./assets/AdressMarker.jpg";
 import {
   MeinStandortText,
@@ -141,6 +145,12 @@ export const KompaktanleitungSection = ({
                           Aqua-Aktiv-Kursprogramm des Sport- und Bäderamtes.
                           Dort können Sie online Fitnesskurse in diesen Bädern
                           buchen.
+                          Mit dem
+                          Lupensymbol{" "}
+                          <FontAwesomeIcon icon={faSearchLocation} /> wird die
+                          Karte auf das Bad, das gerade den Fokus hat,
+                          zentriert und gleichzeitig ein großer
+                          Betrachtungsmaßstab (Zoomstufe 15) eingestellt.{" "}
                         </p>
                         <p>
                           Wenn Sie noch kein Schwimmbad im aktuellen
@@ -163,16 +173,6 @@ export const KompaktanleitungSection = ({
                           <Icon name="chevron-circle-up" /> an derselben Stelle
                           können Sie die Info-Box dann wieder vollständig
                           einblenden.
-                        </p>
-                        <p>
-                          Zu einigen Schwimmbädern bieten wir Ihnen Fotos oder
-                          Fotoserien an. Sie finden dann ein Vorschaubild direkt
-                          über der Info-Box. Klicken Sie auf das Vorschaubild,
-                          um einen Bildbetrachter ("Leuchtkasten") mit dem Foto
-                          / der Fotoserie zu öffnen. Wenn wir hier auf
-                          Bildmaterial zugreifen, das der Urheber auch selbst im
-                          Internet publiziert, finden Sie im Fußbereich des
-                          Bildbetrachters einen Link auf dieses Angebot.
                         </p>
                       </div>
                     ),
