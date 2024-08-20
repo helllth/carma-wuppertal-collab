@@ -20,7 +20,7 @@ export const MenuIntroduction = ({
       >
         Einstellungen
       </Link>{" "}
-      können Sie die Darstellung der Hintergrundfkarte und der Bäder an Ihre
+      können Sie die Darstellung der Hintergrundkarte und der Bäder an Ihre
       Vorlieben anpassen. Wählen Sie{" "}
       <Link
         className="useAClassNameToRenderProperLink"
@@ -32,7 +32,19 @@ export const MenuIntroduction = ({
       >
         Kompaktanleitung
       </Link>{" "}
-      für detailliertere Bedienungsinformationen.
+      für detailliertere Bedienungsinformationen und{" "}
+      <Link
+        id="lnkUDZ"
+        to="digiTal"
+        containerId="myMenu"
+        smooth={true}
+        delay={100}
+        onClick={() => setAppMenuActiveMenuSection("digiTal")}
+        className="renderAsLink"
+      >
+        Urbaner Digitaler Zwilling
+      </Link>{" "}
+      für eine Einordnung der Bäderkarte in das Gesamtsystem des Digitalen Zwillings der Stadt Wuppertal. 
     </span>
   );
 };
