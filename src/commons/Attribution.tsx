@@ -12,7 +12,7 @@ export const Attribution: React.FC<AttributionProps> = ({
   return (
     <div>
       <b>
-        Teilzwilling {applicationName} #{applicationVersion}
+        Teilzwilling {applicationName} {applicationVersion}
       </b>{" "}
       powered by{" "}
       <a href="https://cismet.de/" target="_cismet">
@@ -34,7 +34,7 @@ export const Attribution: React.FC<AttributionProps> = ({
       >
         Datenschutzerklärung
       </a>{" "}
-      |{" "} 
+      |{" "}
       <a
         target="_blank"
         rel="noopener noreferrer"
