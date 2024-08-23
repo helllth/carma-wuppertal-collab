@@ -82,7 +82,7 @@ export const KompaktanleitungSection = ({
                     content: (
                       <div>
                         <p>
-                          Die <strong>Bäderkarte Wuppertal</strong> bietet ihnen
+                          Die <strong>Bäderkarte Wuppertal</strong> bietet Ihnen
                           die folgenden Hintergrundkarten an, die auf
                           verschiedenen Geodatendiensten und Geodaten basieren:
                         </p>
@@ -270,12 +270,9 @@ export const KompaktanleitungSection = ({
                         <p>
                           Unter "<strong>Einstellungen</strong>" können Sie im
                           Anwendungsmenü <Icon name="bars" /> festlegen, wie die
-                          POI und die Hintergrundkarte angezeigt werden sollen.
-                          Zu den POI können Sie auswählen, ob Ihre unter "
-                          <strong>Mein Themenstadtplan</strong>" festgelegte
-                          Lebenslagen-Filterung in einer Titelzeile ausgeprägt
-                          wird oder nicht. Weiter können Sie festlegen, ob
-                          räumlich nah beieinander liegende POI maßstabsabhängig
+                          Bäder und die Hintergrundkarte angezeigt werden sollen.
+                          Weiter können Sie festlegen, ob
+                          räumlich nah beieinander liegende Bäder maßstabsabhängig
                           zu einem Punktsymbol zusammengefasst werden oder
                           nicht. Unter "
                           <em>
@@ -283,7 +280,7 @@ export const KompaktanleitungSection = ({
                           </em>
                           " können Sie in Abhängigkeit von Ihrer
                           Bildschirmauflösung und Ihrem Sehvermögen auswählen,
-                          ob die POI mit kleinen (25 Pixel), mittleren (35
+                          ob die Bäder mit kleinen (25 Pixel), mittleren (35
                           Pixel) oder großen (45 Pixel) Symbolen angezeigt
                           werden.
                         </p>
@@ -304,7 +301,7 @@ export const KompaktanleitungSection = ({
                           CSS3-Filtereffekte unterstützt, also z. B. nicht beim
                           Microsoft Internet Explorer. Die Nacht-Karte erzeugt
                           einen deutlicheren Kontrast mit den farbigen
-                          POI-Symbolen, die unterschiedlichen Flächennutzungen
+                          Symbolen, die unterschiedlichen Flächennutzungen
                           in der Hintergrundkarte lassen sich aber nicht mehr so
                           gut unterscheiden wie in der Tag-Karte. Als dritte
                           Möglichkeit steht eine Luftbildkarte zur Verfügung,
@@ -327,12 +324,10 @@ export const KompaktanleitungSection = ({
                     type: "REACTCOMP",
                     content: (
                       <p>
-                        Ihre Themenauswahl und Einstellungen bleiben auch nach
+                        Ihre Einstellungen bleiben auch nach
                         einem Neustart der Anwendung erhalten. (Es sei denn, Sie
                         löschen den Browser-Verlauf einschließlich der
-                        gehosteten App-Daten.) Damit können Sie mit wenigen
-                        Klicks aus unserem Online-Stadtplan einen dauerhaft für
-                        Sie optimierten Themenstadtplan machen.
+                        gehosteten App-Daten.)
                       </p>
                     ),
                   },
