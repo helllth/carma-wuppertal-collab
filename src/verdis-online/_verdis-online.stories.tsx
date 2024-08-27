@@ -1,7 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Introduction, Menu10Datengrundlagen } from ".";
+import {
+  Introduction,
+  Menu10Datengrundlagen,
+  Menu20MeinKassenzeichen,
+  Menu30KartenhintergruendeText,
+} from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
+import Section from "react-cismap/topicmaps/menu/Section";
 
 const meta: Meta = {
   title: "Verdis-online",
@@ -18,10 +24,19 @@ export const ModalMenu: StoryObj = {
     return (
       <TopicMapContextProvider appKey="storybook-appkey">
         <ModalApplicationMenu
-          menuSections={[<Menu10Datengrundlagen />]}
+          menuSections={[
+            <Menu10Datengrundlagen />,
+            <Menu20MeinKassenzeichen />,
+            <Section
+              key="kartenhintergruende"
+              sectionKey="kartenhintergruende"
+              sectionTitle="Hintergrundkarten"
+              sectionBsStyle="info"
+              sectionContent={<Menu30KartenhintergruendeText />}
+            />,
+          ]}
           visible={true}
         />
-        ,
       </TopicMapContextProvider>
     );
   },
