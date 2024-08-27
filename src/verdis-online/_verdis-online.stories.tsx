@@ -12,6 +12,7 @@ import {
   AnderungswunscheIntroduction,
   anderungswunscheSimpleTexts,
   AnderungswunscheHint,
+  AnderungswunscheIntroductionAus,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -57,7 +58,12 @@ export const ModalMenu: StoryObj = {
 
 export const IntroductionAnderungswunsche: StoryObj = {
   render: () => {
-    return <AnderungswunscheIntroduction />;
+    return (
+      <div>
+        <AnderungswunscheIntroduction />
+        <AnderungswunscheIntroductionAus />
+      </div>
+    );
   },
 };
 export const TitleAnderungswunsche: StoryObj = {

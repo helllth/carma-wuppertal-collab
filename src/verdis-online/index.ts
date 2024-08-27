@@ -7,3 +7,7 @@ export { Menu41Mailservice } from "./modal-menu/Menu41Mailservice";
 export { Menu42Aenderungen } from "./modal-menu/Menu42Aenderungen";
 export { Menu50FAQ } from "./modal-menu/Menu50FAQ";
 export { Menu60Datenschutz } from "./modal-menu/Menu60Datenschutz";
+export { AnderungswunscheIntroduction } from "./modal-anderungswunsche/AnderungswunscheIntroduction";
+export { AnderungswunscheIntroductionAus } from "./modal-anderungswunsche/AnderungswunscheIntroductionAus";
+export { anderungswunscheSimpleTexts } from "./modal-anderungswunsche/anderungswunscheSimpleTexts";
+export { AnderungswunscheHint } from "./modal-anderungswunsche/AnderungswunscheHint";
