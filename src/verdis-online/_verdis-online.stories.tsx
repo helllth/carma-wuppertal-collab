@@ -4,6 +4,11 @@ import {
   Menu10Datengrundlagen,
   Menu20MeinKassenzeichen,
   Menu30KartenhintergruendeText,
+  Menu40Anleitung,
+  Menu41Mailservice,
+  Menu42Aenderungen,
+  Menu50FAQ,
+  Menu60Datenschutz,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -34,6 +39,11 @@ export const ModalMenu: StoryObj = {
               sectionBsStyle="info"
               sectionContent={<Menu30KartenhintergruendeText />}
             />,
+            <Menu40Anleitung />,
+            <Menu41Mailservice />,
+            <Menu42Aenderungen />,
+            <Menu50FAQ />,
+            <Menu60Datenschutz />,
           ]}
           visible={true}
         />
