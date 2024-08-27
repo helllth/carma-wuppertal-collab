@@ -9,6 +9,9 @@ import {
   Menu42Aenderungen,
   Menu50FAQ,
   Menu60Datenschutz,
+  AnderungswunscheIntroduction,
+  anderungswunscheSimpleTexts,
+  AnderungswunscheHint,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -48,6 +51,28 @@ export const ModalMenu: StoryObj = {
           visible={true}
         />
       </TopicMapContextProvider>
+    );
+  },
+};
+
+export const IntroductionAnderungswunsche: StoryObj = {
+  render: () => {
+    return <AnderungswunscheIntroduction />;
+  },
+};
+export const TitleAnderungswunsche: StoryObj = {
+  render: () => {
+    return <span>{anderungswunscheSimpleTexts.andrTitle}</span>;
+  },
+};
+export const HintAnderungswunsche: StoryObj = {
+  render: () => {
+    const { draftHint } = anderungswunscheSimpleTexts;
+    return (
+      <div>
+        <p>{draftHint}</p>
+        <AnderungswunscheHint />
+      </div>
     );
   },
 };
