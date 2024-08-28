@@ -27,6 +27,7 @@ import {
   VersiegelteFlaeche,
   KassenzeichenViewerGefahrensignal,
   panelTitles,
+  Kontaktinformationen,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -175,5 +176,11 @@ export const PanelTitles: StoryObj = {
         <h5>{panelTitles.kassenzeichenTitleChart}</h5>
       </div>
     );
+  },
+};
+
+export const KontaktInformationen: StoryObj = {
+  render: () => {
+    return <Kontaktinformationen textColor="black" />;
   },
 };
