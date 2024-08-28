@@ -26,6 +26,7 @@ import {
   StaedtStrassenflaecheOekopflaster,
   VersiegelteFlaeche,
   KassenzeichenViewerGefahrensignal,
+  panelTitles,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -161,6 +162,18 @@ export const KurzinfosKassenzeichenViewer: StoryObj = {
           <KassenzeichenViewerGefahrensignal />
         </p>
       </Alert>
+    );
+  },
+};
+
+export const PanelTitles: StoryObj = {
+  render: () => {
+    return (
+      <div>
+        <h5>{panelTitles.contactTitle}</h5>
+        <h5>{panelTitles.kassenzeichenTitle}</h5>
+        <h5>{panelTitles.kassenzeichenTitleChart}</h5>
+      </div>
     );
   },
 };

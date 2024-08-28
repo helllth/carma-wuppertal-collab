@@ -24,3 +24,4 @@ export { StaedtStrassenflaeche } from "./kurzinfos/flaechenart/StaedtStrassenfla
 export { StaedtStrassenflaecheOekopflaster } from "./kurzinfos/flaechenart/StaedtStrassenflaecheOekopflaster";
 export { VersiegelteFlaeche } from "./kurzinfos/flaechenart/VersiegelteFlaeche";
 export { KassenzeichenViewerGefahrensignal } from "./kurzinfos/kassenzeichen-viewer/KassenzeichenViewerGefahrensignal";
+export { panelTitles } from "./panels/panelTitles";
