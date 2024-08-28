@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
   Introduction,
+  modalMenuTitleText,
   Menu10Datengrundlagen,
   Menu20MeinKassenzeichen,
   Menu30KartenhintergruendeText,
@@ -24,6 +25,7 @@ import {
   StaedtStrassenflaeche,
   StaedtStrassenflaecheOekopflaster,
   VersiegelteFlaeche,
+  KassenzeichenViewerGefahrensignal,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -34,12 +36,17 @@ const meta: Meta = {
   title: "Verdis-online",
 };
 export default meta;
-
-export const MenuIntroduction: StoryObj = {
+export const MenuModalTitle: StoryObj = {
+  render: () => {
+    return <div>{modalMenuTitleText}</div>;
+  },
+};
+export const MenuModalIntroduction: StoryObj = {
   render: () => {
     return <Introduction />;
   },
 };
+
 export const ModalMenu: StoryObj = {
   render: () => {
     return (
@@ -140,6 +147,18 @@ export const KurzinfosFlaechenart: StoryObj = {
         </p>
         <p>
           <VersiegelteFlaeche />
+        </p>
+      </Alert>
+    );
+  },
+};
+
+export const KurzinfosKassenzeichenViewer: StoryObj = {
+  render: () => {
+    return (
+      <Alert variant="danger" dismissible>
+        <p>
+          <KassenzeichenViewerGefahrensignal />
         </p>
       </Alert>
     );
