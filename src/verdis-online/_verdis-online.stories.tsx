@@ -18,6 +18,12 @@ import {
   DirekteinleitungOffenesGewaesser,
   VersickerungsanlageMitNotueberlauf,
   Versickernd,
+  Dachflaeche,
+  Gruendachflaeche,
+  Oekopflaster,
+  StaedtStrassenflaeche,
+  StaedtStrassenflaecheOekopflaster,
+  VersiegelteFlaeche,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -107,6 +113,33 @@ export const KurzinfosAnschlussgrad: StoryObj = {
         </p>
         <p>
           <VersickerungsanlageMitNotueberlauf />
+        </p>
+      </Alert>
+    );
+  },
+};
+
+export const KurzinfosFlaechenart: StoryObj = {
+  render: () => {
+    return (
+      <Alert variant="warning" dismissible>
+        <p>
+          <Dachflaeche />
+        </p>
+        <p>
+          <Gruendachflaeche />
+        </p>
+        <p>
+          <Oekopflaster />
+        </p>
+        <p>
+          <StaedtStrassenflaeche />
+        </p>
+        <p>
+          <StaedtStrassenflaecheOekopflaster />
+        </p>
+        <p>
+          <VersiegelteFlaeche />
         </p>
       </Alert>
     );

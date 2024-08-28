@@ -16,3 +16,9 @@ export { DirekteinleitungInVerrohrtesGewaesser } from "./kurzinfos/anschlussgrad
 export { DirekteinleitungOffenesGewaesser } from "./kurzinfos/anschlussgrad/DirekteinleitungOffenesGewaesser";
 export { VersickerungsanlageMitNotueberlauf } from "./kurzinfos/anschlussgrad/VersickerungsanlageMitNotueberlauf";
 export { Versickernd } from "./kurzinfos/anschlussgrad/Versickernd";
+export { Dachflaeche } from "./kurzinfos/flaechenart/Dachflaeche";
+export { Gruendachflaeche } from "./kurzinfos/flaechenart/Gruendachflaeche";
+export { Oekopflaster } from "./kurzinfos/flaechenart/Oekopflaster";
+export { StaedtStrassenflaeche } from "./kurzinfos/flaechenart/StaedtStrassenflaeche";
+export { StaedtStrassenflaecheOekopflaster } from "./kurzinfos/flaechenart/StaedtStrassenflaecheOekopflaster";
+export { VersiegelteFlaeche } from "./kurzinfos/flaechenart/VersiegelteFlaeche";
