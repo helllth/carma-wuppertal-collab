@@ -28,6 +28,7 @@ import {
   KassenzeichenViewerGefahrensignal,
   panelTitles,
   Kontaktinformationen,
+  tooltips,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -182,5 +183,24 @@ export const PanelTitles: StoryObj = {
 export const KontaktInformationen: StoryObj = {
   render: () => {
     return <Kontaktinformationen textColor="black" />;
+  },
+};
+
+export const Tooltips: StoryObj = {
+  render: () => {
+    const { flachenInfoTooltip, diagrammTooltip, ansprechpartner } = tooltips;
+    return (
+      <div>
+        <p>
+          {flachenInfoTooltip.ausblenden} - {flachenInfoTooltip.einblenden}
+        </p>
+        <p>
+          {diagrammTooltip.ausblenden} - {diagrammTooltip.einblenden}
+        </p>
+        <p>
+          {ansprechpartner.ausblenden} - {ansprechpartner.einblenden}
+        </p>
+      </div>
+    );
   },
 };
