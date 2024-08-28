@@ -13,10 +13,16 @@ import {
   anderungswunscheSimpleTexts,
   AnderungswunscheHint,
   AnderungswunscheIntroductionAus,
+  AmKanalAngeschlossen,
+  DirekteinleitungInVerrohrtesGewaesser,
+  DirekteinleitungOffenesGewaesser,
+  VersickerungsanlageMitNotueberlauf,
+  Versickernd,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
 import Section from "react-cismap/topicmaps/menu/Section";
+import { Alert } from "react-bootstrap";
 
 const meta: Meta = {
   title: "Verdis-online",
@@ -79,6 +85,30 @@ export const HintAnderungswunsche: StoryObj = {
         <p>{draftHint}</p>
         <AnderungswunscheHint />
       </div>
+    );
+  },
+};
+
+export const KurzinfosAnschlussgrad: StoryObj = {
+  render: () => {
+    return (
+      <Alert variant="warning" dismissible>
+        <p>
+          <AmKanalAngeschlossen />
+        </p>
+        <p>
+          <DirekteinleitungInVerrohrtesGewaesser />
+        </p>
+        <p>
+          <DirekteinleitungOffenesGewaesser />
+        </p>
+        <p>
+          <Versickernd />
+        </p>
+        <p>
+          <VersickerungsanlageMitNotueberlauf />
+        </p>
+      </Alert>
     );
   },
 };

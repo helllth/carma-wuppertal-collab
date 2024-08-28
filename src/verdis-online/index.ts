@@ -11,3 +11,8 @@ export { AnderungswunscheIntroduction } from "./modal-anderungswunsche/Anderungs
 export { AnderungswunscheIntroductionAus } from "./modal-anderungswunsche/AnderungswunscheIntroductionAus";
 export { anderungswunscheSimpleTexts } from "./modal-anderungswunsche/anderungswunscheSimpleTexts";
 export { AnderungswunscheHint } from "./modal-anderungswunsche/AnderungswunscheHint";
+export { AmKanalAngeschlossen } from "./kurzinfos/anschlussgrad/AmKanalAngeschlossen";
+export { DirekteinleitungInVerrohrtesGewaesser } from "./kurzinfos/anschlussgrad/DirekteinleitungInVerrohrtesGewaesser";
+export { DirekteinleitungOffenesGewaesser } from "./kurzinfos/anschlussgrad/DirekteinleitungOffenesGewaesser";
+export { VersickerungsanlageMitNotueberlauf } from "./kurzinfos/anschlussgrad/VersickerungsanlageMitNotueberlauf";
+export { Versickernd } from "./kurzinfos/anschlussgrad/Versickernd";
