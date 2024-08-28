@@ -1,7 +1,7 @@
 import Icon from "react-cismap/commons/Icon";
 import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
 import Section from "react-cismap/topicmaps/menu/Section";
-import AdressMarker from "./assets/AdressMarker.jpg";
+// import AdressMarker from "./assets/AdressMarker.jpg";
 import PoiZusammen from "./assets/poi_zusammen.png";
 import Keinethemenausw from "./assets/sf_keinethemenausw.png";
 import {

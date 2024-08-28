@@ -2,7 +2,7 @@ import Icon from "react-cismap/commons/Icon";
 import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
 import Section from "react-cismap/topicmaps/menu/Section";
 import PoiZusammen from "./assets/colorcircle_k.jpg";
-import AdressMarker from "./assets/AdressMarker.jpg";
+// import AdressMarker from "./assets/AdressMarker.jpg";
 import Merkliste from "./assets/merkliste_akt.jpg";
 import Activfilter from "./assets/filter_akt.jpg";
 import { MeinStandortText, InKartePositionierenText } from "../commons";

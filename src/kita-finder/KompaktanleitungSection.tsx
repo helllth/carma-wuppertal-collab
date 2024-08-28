@@ -3,7 +3,7 @@ import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks"
 import Section from "react-cismap/topicmaps/menu/Section";
 import KitaZusammen from "./assets/kita_zusammen.png";
 import VorherTreffer from "./assets/vorher_treffer.png";
-import AdressMarker from "./assets/AdressMarker.jpg";
+// import AdressMarker from "./assets/AdressMarker.jpg";
 import {
   MeinStandortText,
   StadtplanTagNachtText,
