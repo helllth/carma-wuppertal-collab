@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
-
 import { action } from "@storybook/addon-actions";
-
 import {
   Introduction,
   Datengrundlage,
@@ -11,6 +9,7 @@ import {
   InKartePositionieren,
   Standort,
   Modellberechnungen,
+  Aussagekraft,
 } from ".";
 
 const meta: Meta = {
@@ -48,6 +47,7 @@ export const ModalHelpAndInfoHitze: StoryObj = {
                 "setAppMenuActiveMenuSection"
               )}
             />,
+            <Aussagekraft />,
           ]}
           visible={true}
         />
