@@ -13,7 +13,7 @@ import {
 } from ".";
 
 const meta: Meta = {
-  title: "Wupp-topic-maps",
+  title: "Hitzeinderstadt",
 };
 
 export default meta;
