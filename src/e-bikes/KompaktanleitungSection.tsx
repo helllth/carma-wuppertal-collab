@@ -62,7 +62,7 @@ export const KompaktanleitungSection = () => {
                             target="_legal"
                             href="https://offenedaten-wuppertal.de/dataset/verleih-e-fahrr%C3%A4der-wuppertal"
                           >
-                            Verleih E-Fahrräder Wuppertal
+                            Verleih E-Fahrräder Wuppertal{" "} 
                           </a>
                           und{" "}
                           <a
