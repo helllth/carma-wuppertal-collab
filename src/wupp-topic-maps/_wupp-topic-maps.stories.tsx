@@ -4,7 +4,7 @@ import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMe
 
 import { action } from "@storybook/addon-actions";
 
-import { Introduction, Datengrundlage } from ".";
+import { Introduction, Datengrundlage, Karteninhalt } from ".";
 
 const meta: Meta = {
   title: "Wupp-topic-maps",
@@ -25,6 +25,11 @@ export const ModalHelpAndInfoHitze: StoryObj = {
         <ModalApplicationMenu
           menuSections={[
             <Datengrundlage
+              setAppMenuActiveMenuSection={action(
+                "setAppMenuActiveMenuSection"
+              )}
+            />,
+            <Karteninhalt
               setAppMenuActiveMenuSection={action(
                 "setAppMenuActiveMenuSection"
               )}
