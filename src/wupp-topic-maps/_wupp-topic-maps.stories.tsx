@@ -4,7 +4,12 @@ import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMe
 
 import { action } from "@storybook/addon-actions";
 
-import { Introduction, Datengrundlage, Karteninhalt } from ".";
+import {
+  Introduction,
+  Datengrundlage,
+  Karteninhalt,
+  InKartePositionieren,
+} from ".";
 
 const meta: Meta = {
   title: "Wupp-topic-maps",
@@ -34,6 +39,7 @@ export const ModalHelpAndInfoHitze: StoryObj = {
                 "setAppMenuActiveMenuSection"
               )}
             />,
+            <InKartePositionieren />,
           ]}
           visible={true}
         />
