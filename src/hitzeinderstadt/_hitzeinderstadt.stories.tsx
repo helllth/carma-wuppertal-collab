@@ -10,6 +10,9 @@ import {
   Standort,
   Modellberechnungen,
   Aussagekraft,
+  tooltipText,
+  menuTitle,
+  Footer,
 } from ".";
 
 const meta: Meta = {
@@ -21,6 +24,18 @@ export default meta;
 export const IntroductionHitze: StoryObj = {
   render: () => {
     return <Introduction />;
+  },
+};
+
+export const MenuTooltip: StoryObj = {
+  render: () => {
+    return <span>{tooltipText}</span>;
+  },
+};
+
+export const MenuTitle: StoryObj = {
+  render: () => {
+    return <span>{menuTitle}</span>;
   },
 };
 
@@ -52,6 +67,17 @@ export const ModalHelpAndInfoHitze: StoryObj = {
           visible={true}
         />
       </TopicMapContextProvider>
+    );
+  },
+};
+
+export const MenuFooter: StoryObj = {
+  render: () => {
+    return (
+      <Footer
+        version="xyz"
+        setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
+      />
     );
   },
 };
