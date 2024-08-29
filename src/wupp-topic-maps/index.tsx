@@ -3,3 +3,4 @@ export { Help10Datengrundlage as Datengrundlage } from "./hitze/Help10Datengrund
 export { Help20Karteninhalt as Karteninhalt } from "./hitze/Help20Karteninhalt";
 export { Help30InKartePositionieren as InKartePositionieren } from "./hitze/Help30InKartePositionieren";
 export { Help40MeinStandort as Standort } from "./hitze/Help40MeinStandort";
+export { Help60Modellberechnungen as Modellberechnungen } from "./hitze/Help60Modellberechnungen";

@@ -10,6 +10,7 @@ import {
   Karteninhalt,
   InKartePositionieren,
   Standort,
+  Modellberechnungen,
 } from ".";
 
 const meta: Meta = {
@@ -42,6 +43,11 @@ export const ModalHelpAndInfoHitze: StoryObj = {
             />,
             <InKartePositionieren />,
             <Standort />,
+            <Modellberechnungen
+              setAppMenuActiveMenuSection={action(
+                "setAppMenuActiveMenuSection"
+              )}
+            />,
           ]}
           visible={true}
         />
