@@ -9,6 +9,7 @@ import {
   Datengrundlage,
   Karteninhalt,
   InKartePositionieren,
+  Standort,
 } from ".";
 
 const meta: Meta = {
@@ -40,6 +41,7 @@ export const ModalHelpAndInfoHitze: StoryObj = {
               )}
             />,
             <InKartePositionieren />,
+            <Standort />,
           ]}
           visible={true}
         />
