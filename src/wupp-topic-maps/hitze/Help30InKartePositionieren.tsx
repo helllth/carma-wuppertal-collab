@@ -4,7 +4,7 @@ import Icon from "react-cismap/commons/Icon";
 export const Help30InKartePositionieren = () => {
   return (
     <Section
-      key="InKartePositionieren"
+      key="positionieren"
       sectionKey="positionieren"
       sectionTitle="In Karte positionieren"
       sectionBsStyle="success"
