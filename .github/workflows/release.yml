@@ -35,7 +35,7 @@ jobs:
           git fetch --all
           git checkout main
           git reset --hard dev  # Reset main to match dev
-          git push origin main
+          git push origin main --force
 
       # Step 2: Make a npm version command to update package.json and create tags
       - name: Change release version and create tag
@@ -53,7 +53,7 @@ jobs:
         run: |
           git checkout dev
           git reset --hard main  # Reset dev to match main
-          git push origin dev
+          git push origin dev --force
       # Additional steps for deployment and build process
       # copied from gh-pages
       - name: prepare 0
