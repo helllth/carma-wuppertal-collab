@@ -171,7 +171,7 @@ export const Modal: React.FC<ModalProps> = ({ visible, version }) => {
             <div>
               <p>
                 Um ein B-Plan-Verfahren direkt anzusteuern, geben Sie den Anfang
-                der B-Plan-Nummer im Eingabefeld rechts neben&nbsp;
+                der B-Plan-Nummer im Eingabefeld rechts neben dem Lupen-Symbol&nbsp;
                 <Icon name="search" />
                 &nbsp;ein (mindestens 2 Ziffern). Alle Verfahren, die mit diesen
                 Ziffern beginnen, werden Ihnen in einer inkrementellen

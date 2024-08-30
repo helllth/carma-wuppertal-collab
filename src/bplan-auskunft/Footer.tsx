@@ -11,7 +11,7 @@ export const Footer = ({
 }: FooterProps) => {
   return (
     <MenuFooter
-      title="B-Plan-Auskunft Wupperta"
+      title="B-Plan-Auskunft Wuppertal"
       version={version}
       setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
     />

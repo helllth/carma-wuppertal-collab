@@ -17,7 +17,9 @@ const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
           Diese Anwendung basiert auf dem <b>DigiTal Zwilling</b>, dem{" "}
           <a
             href="https://smart.wuppertal.de/projekte/digital-zwilling/digitaler-zwilling.php"
-            title={""}
+            title="DigiTal Zwilling"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Urbanen Digitalen Zwilling der Stadt Wuppertal
           </a>
@@ -33,14 +35,18 @@ const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
         Wuppertaler Smart-City-Projekts{" "}
         <a
           href="https://smart.wuppertal.de/strategie/strategieprozess.php"
-          title={""}
+          title="Eine Smart City Strategie für Wuppertal"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           smart.wuppertal
         </a>
         . Das Projekt wird im Rahmen der dritten Session des Förderprogramms{" "}
         <a
           href="https://www.bmwsb.bund.de/Webs/BMWSB/DE/themen/stadt-wohnen/staedtebau/smart-cities/smart-cities-node.html"
-          title={""}
+          title="Smart Cities: Stadtentwicklung im digitalen Zeitalter"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Smart Cities made in Germany
         </a>{" "}
