@@ -4,8 +4,7 @@ import { getCollabedHelpComponentConfig } from ".";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
 
 const meta: Meta = {
-  title: "
-  ",
+  title: "geoportal",
 };
 
 export default meta;
