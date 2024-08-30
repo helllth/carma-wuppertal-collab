@@ -13,6 +13,7 @@ import {
   tooltipText,
   menuTitle,
   Footer,
+  searchTextPlaceholder,
 } from ".";
 
 const meta: Meta = {
@@ -79,5 +80,11 @@ export const MenuFooter: StoryObj = {
         setAppMenuActiveMenuSection={action("setAppMenuActiveMenuSection")}
       />
     );
+  },
+};
+
+export const TextInSearchPlaceholder: StoryObj = {
+  render: () => {
+    return <div>{searchTextPlaceholder}</div>;
   },
 };

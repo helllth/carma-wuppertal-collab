@@ -5,3 +5,7 @@ export { Help30InKartePositionieren as InKartePositionieren } from "./hitze/Help
 export { Help40MeinStandort as Standort } from "./hitze/Help40MeinStandort";
 export { Help60Modellberechnungen as Modellberechnungen } from "./hitze/Help60Modellberechnungen";
 export { Help70Aussagekraft as Aussagekraft } from "./hitze/Help70Aussagekraft";
+export { Footer } from "./Footer";
+export { tooltipText } from "./tooltips";
+export { menuTitle } from "./menuTitle";
+export { searchTextPlaceholder } from "./searchTextPlaceholder";

@@ -8,3 +8,4 @@ export { Help70Aussagekraft as Aussagekraft } from "./hitze/Help70Aussagekraft";
 export { Footer } from "./Footer";
 export { tooltipText } from "./tooltips";
 export { menuTitle } from "./menuTitle";
+export { searchTextPlaceholder } from "./searchTextPlaceholder";
