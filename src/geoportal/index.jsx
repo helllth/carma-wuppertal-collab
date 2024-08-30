@@ -1,11 +1,6 @@
 import React, { useContext } from "react";
-import {
-  Help05Introduction,
-  //   Help20Karteninhalt,
-  //   Help80ModellfehlerMelden,
-  //   Help90Haftungsausschluss,
-} from "@cismet-collab/rainhazardmaps-base-texts";
 
+import Help05Introduction from "./help/Help05Introduction";
 import Help10AllgemeineHinweise from "./help/Help10AllgemeineHinweise";
 import Help15Datengrundlage from "./help/Help15Datengrundlage";
 import Help20Karteninhalt from "./help/Help20Karteninhalt";
