@@ -1,13 +1,11 @@
 import GenericModalMenuSection from "react-cismap/topicmaps/menu/Section";
 
-const Component = ({ uiState, uiStateActions }) => {
+const Component = () => {
   return (
     <GenericModalMenuSection
-      uiState={uiState}
-      uiStateActions={uiStateActions}
       sectionKey="szenarien"
       sectionTitle="Simulierte Szenarien"
-      sectionBsStyle="info"
+      sectionBsStyle="warning"
       sectionContent={
         <div>
           Lorem Ipsum is simply dummy text of the printing and typesetting

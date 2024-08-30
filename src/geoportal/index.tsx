@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
-
+import { useContext } from "react";
 import Help05Introduction from "./help/Help05Introduction";
-import Help10AllgemeineHinweise from "./help/Help10AllgemeineHinweise";
 import Help15Datengrundlage from "./help/Help15Datengrundlage";
 import Help20Karteninhalt from "./help/Help20Karteninhalt";
 import Help30InKartePositionieren from "./help/Help30InKartePositionieren";
@@ -13,23 +11,16 @@ import Help70AussagekraftDerSimulationen from "./help/Help70AussagekraftDerSimul
 import Help80ModellfehlerMelden from "./help/Help80ModellfehlerMelden";
 import Help90Haftungsausschluss from "./help/Help90Haftungsausschluss";
 import Help98DigitalerZwilling from "./help/Help98DigitalerZwilling";
-import DigiTalLogo from "./help/assets/Logo_DigiTalZwilling.png";
 import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
-import HelpFooter from "./help/HelpFooter";
+import { Footer } from "./Footer";
 
-const getCollabedHelpComponentConfig = ({
-  version,
-  versionString,
-  reactCismapRHMVersion,
-  footerLogoUrl = DigiTalLogo,
-  email,
-}) => {
+const getCollabedHelpComponentConfig = ({ versionString }) => {
   const MyFooter = () => {
-    const { setAppMenuActiveMenuSection } = useContext(UIDispatchContext);
+    const { setAppMenuActiveMenuSection } =
+      useContext<typeof UIDispatchContext>(UIDispatchContext);
     return (
-      <HelpFooter
+      <Footer
         version={versionString}
-        title="Hochwassergefahrenkarte Wuppertal"
         setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
       />
     );
@@ -39,7 +30,6 @@ const getCollabedHelpComponentConfig = ({
   const menuIcon = "info";
   const menuTitle = "Kompaktanleitung und Hintergrundinformationen";
   const menuSections = [
-    <Help10AllgemeineHinweise key="AllgemeineHinweise" />,
     <Help15Datengrundlage key="Datengrundlage" />,
     <Help20Karteninhalt key="Karteninhalt" />,
     <Help30InKartePositionieren key="InKartePositionieren" />,
@@ -48,9 +38,9 @@ const getCollabedHelpComponentConfig = ({
     <Help50WasserstandAbfragen key="WasserstandAbfragen" />,
     <Help60SimulierteSzenarien key="SimulierteSzenarien" />,
     <Help70AussagekraftDerSimulationen key="AussagekraftDerSimulationen" />,
-    <Help80ModellfehlerMelden key="ModellfehlerMelden" email={email} />,
+    <Help80ModellfehlerMelden key="ModellfehlerMelden" />,
     <Help90Haftungsausschluss key="Haftungsausschluss" />,
-    <Help98DigitalerZwilling key="zwilling" email={email} />,
+    <Help98DigitalerZwilling key="zwilling" />,
   ];
 
   return {

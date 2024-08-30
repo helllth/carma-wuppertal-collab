@@ -5,7 +5,7 @@ const Component = () => {
     <GenericModalMenuSection
       sectionKey="koppelung"
       sectionTitle="Koppelung mit Starkregengefahrenkarte"
-      sectionBsStyle="success"
+      sectionBsStyle="warning"
       sectionContent={
         <div>
           Lorem Ipsum is simply dummy text of the printing and typesetting

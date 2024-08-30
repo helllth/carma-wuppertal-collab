@@ -5,7 +5,7 @@ const Component = () => {
     <GenericModalMenuSection
       sectionKey="standort"
       sectionTitle="Mein Standort"
-      sectionBsStyle="success"
+      sectionBsStyle="danger"
       sectionContent={
         <div>
           Lorem Ipsum is simply dummy text of the printing and typesetting
