@@ -8,15 +8,14 @@ const Component = () => {
       sectionBsStyle="success"
       sectionContent={
         <div>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Could now she how in was sleep dropped in by back shall come into
+          needed wild that picture they to have would by her succeeding, hair a
+          with the I first should expected line of so got her solitary the and
+          that coffee that omens, treble-range are quitting for high line text,
+          parts else. A have the unprofitable both the leather at neighbours in
+          on each written and assignment. When me the his degree read. She that
+          the equation, of by hand. Select picture spare not got in social and
+          parameters absolutely he and that if the alphabet carpeting of.
         </div>
       }
     />
