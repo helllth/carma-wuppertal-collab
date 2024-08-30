@@ -11,7 +11,7 @@ export const Footer = ({
 }: FooterProps) => {
   return (
     <MenuFooter
-      title="TopicMaps Wuppertal"
+      title="Teilzwilling Hitze in Wuppertal"
       version={version}
       setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
     />
