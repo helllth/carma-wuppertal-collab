@@ -38,7 +38,7 @@ export const KompaktanleitungSection = () => {
                     content: (
                       <div>
                         <p>
-                          Die Karte <b>Hintergrund</b> bietet ihnen die
+                          Die <b>Klimaortkarte</b> bietet ihnen die
                           folgenden Hintergrundkarten an, die auf verschiedenen
                           Geodatendiensten und Geodaten basieren:
                         </p>
