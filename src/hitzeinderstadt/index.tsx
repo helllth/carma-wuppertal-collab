@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
 import { Footer } from "./Footer";
-import { TopicMapContext } from "react-cismap/contexts/TopicMapContextProvider";
+// import { TopicMapContext } from "react-cismap/contexts/TopicMapContextProvider";
 
 export { tooltipText } from "./tooltips";
 export { menuTitle } from "./menuTitle";
@@ -15,11 +15,11 @@ import { Help60Modellberechnungen as Modellberechnungen } from "./hitze/Help60Mo
 import { Help70Aussagekraft as Aussagekraft } from "./hitze/Help70Aussagekraft";
 
 const getCollabedHelpComponentConfig = ({
-  version,
+  // version,
   versionString,
-  reactCismapRHMVersion,
-  footerLogoUrl,
-  email,
+  // reactCismapRHMVersion,
+  // footerLogoUrl,
+  // email,
 }) => {
   const MyFooter = () => {
     const { setAppMenuActiveMenuSection } =
