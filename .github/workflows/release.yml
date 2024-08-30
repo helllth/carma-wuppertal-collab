@@ -33,10 +33,9 @@ jobs:
       - name: Checkout main branch and reset to dev
         run: |
           git fetch --all
-          git checkout dev
-          git branch -D main || true
-          git checkout -b main
-          git push --force origin main
+          git checkout main
+          git reset --hard dev  # Reset main to match dev
+          git push origin main
 
       # Step 2: Make a npm version command to update package.json and create tags
       - name: Change release version and create tag
