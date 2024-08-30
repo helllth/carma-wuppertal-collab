@@ -43,6 +43,7 @@ export const verleihstationSVG = `<?xml version="1.0" encoding="UTF-8" standalon
 export const getSymbolSVG = (
   svgSize = 30,
   bg = "#FF0000",
+  kind = "-",
   svgStyleRelatedId = "default",
   svgCodeInput = verleihstationSVG
 ) => {

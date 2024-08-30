@@ -1,6 +1,10 @@
 import Section from "react-cismap/topicmaps/menu/Section";
 import ConfigurableDocBlocks from "react-cismap/topicmaps/ConfigurableDocBlocks";
-import { getSymbolSVG } from "./helper/styler";
+import {
+  getSymbolSVG,
+  ladestationSVG,
+  verleihstationSVG,
+} from "./helper/styler";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Icon from "react-cismap/commons/Icon";
@@ -18,15 +22,23 @@ export const KompaktanleitungSection = () => {
     30,
     "#1EA342",
     "pr",
-    "onlineSVGinHELP"
+    "onlineSVGinHELP",
+    ladestationSVG
   );
   const chargingOfflineSVG = getSymbolSVG(
     30,
     "#999999",
     "pr",
-    "offlineSVGinHELP"
+    "offlineSVGinHELP",
+    ladestationSVG
   );
-  const rentingSVG = getSymbolSVG(30, "#EC7529", "pr", "verleihSVGinHELP");
+  const rentingSVG = getSymbolSVG(
+    30,
+    "#EC7529",
+    "pr",
+    "verleihSVGinHELP",
+    verleihstationSVG
+  );
   return (
     <Section
       sectionKey="help"
@@ -62,7 +74,7 @@ export const KompaktanleitungSection = () => {
                             target="_legal"
                             href="https://offenedaten-wuppertal.de/dataset/verleih-e-fahrr%C3%A4der-wuppertal"
                           >
-                            Verleih E-Fahrräder Wuppertal{" "} 
+                            Verleih E-Fahrräder Wuppertal{" "}
                           </a>
                           und{" "}
                           <a
