@@ -3,12 +3,19 @@ import Logo_DigiTalZwilling from "./assets/Logo_DigiTalZwilling.png";
 import KFW_Logo from "./assets/KFW_Logo.jpg";
 import BMWSB_Logo from "./assets/BMWSB_Logo.png";
 
+const imageStyle = { height: "120px" };
+
 const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
   return (
     <div>
       <p>
         <img
-          style={{ marginBottom: 0, marginLeft: 20, float: "right" }}
+          style={{
+            marginBottom: 0,
+            marginLeft: 20,
+            float: "right",
+            ...imageStyle,
+          }}
           alt="Logo DigiTal Zwilling"
           height="120"
           src={Logo_DigiTalZwilling}
@@ -64,7 +71,12 @@ const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
                 title={""}
                 target="_zwilling"
               >
-                <img alt="Logo BMWSB" height="120" src={BMWSB_Logo} />
+                <img
+                  alt="Logo BMWSB"
+                  height="120"
+                  src={BMWSB_Logo}
+                  // style={imageStyle}
+                />
               </a>
             </td>
             <td style={{ textAlign: "left", paddingBottom: 10 }}>
@@ -73,7 +85,12 @@ const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
                 href="https://www.kfw.de/kfw.de.html"
                 title={""}
               >
-                <img alt="Logo KFW" height="120" src={KFW_Logo} />
+                <img
+                  alt="Logo KFW"
+                  height="120"
+                  src={KFW_Logo}
+                  // style={imageStyle}
+                />
               </a>
             </td>
           </tr>
