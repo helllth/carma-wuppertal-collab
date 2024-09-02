@@ -84,8 +84,12 @@ const Component = () => {
                     href="https://www.kfw.de/kfw.de.html"
                     title={""}
                   >
-                    style={{ height: "120px" }}
-                    <img alt="Logo KFW" height="120" src={KFW_Logo} />
+                    <img
+                      alt="Logo KFW"
+                      height="120"
+                      src={KFW_Logo}
+                      style={{ height: "120px" }}
+                    />
                   </a>
                 </td>
               </tr>
