@@ -14,7 +14,7 @@ const Component = () => {
         <div>
           <p>
             <img
-              style={{ marginBottom: 0, marginLeft: 20 }}
+              style={{ marginBottom: 0, marginLeft: 20, height: "120px" }}
               target="_zwilling"
               alt="Logo DigiTal Zwilling"
               height="120"
