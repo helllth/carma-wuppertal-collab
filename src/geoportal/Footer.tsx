@@ -11,7 +11,7 @@ export const Footer = ({
 }: FooterProps) => {
   return (
     <MenuFooter
-      title="TopicMaps Wuppertal"
+      title="Geoportal"
       version={version}
       setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
     />
