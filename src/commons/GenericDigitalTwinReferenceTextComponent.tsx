@@ -64,12 +64,7 @@ const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
                 title={""}
                 target="_zwilling"
               >
-                <img
-                  alt="Logo BMWSB"
-                  height="120"
-                  src={BMWSB_Logo}
-                  style={{ height: "120px" }}
-                />
+                <img alt="Logo BMWSB" height="120" src={BMWSB_Logo} />
               </a>
             </td>
             <td style={{ textAlign: "left", paddingBottom: 10 }}>
@@ -78,12 +73,7 @@ const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
                 href="https://www.kfw.de/kfw.de.html"
                 title={""}
               >
-                <img
-                  alt="Logo KFW"
-                  height="120"
-                  src={KFW_Logo}
-                  style={{ height: "120px" }}
-                />
+                <img alt="Logo KFW" height="120" src={KFW_Logo} />
               </a>
             </td>
           </tr>
