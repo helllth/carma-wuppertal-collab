@@ -5,7 +5,7 @@ const Component = () => {
     <GenericModalMenuSection
       sectionKey="haftungsausschluss"
       sectionTitle="Haftungsausschluss"
-      sectionBsStyle="success"
+      sectionBsStyle="danger"
       sectionContent={
         <div>
           Could now she how in was sleep dropped in by back shall come into

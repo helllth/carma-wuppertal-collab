@@ -5,7 +5,7 @@ const Component = () => {
     <GenericModalMenuSection
       sectionKey="standort"
       sectionTitle="Mein Standort"
-      sectionBsStyle="danger"
+      sectionBsStyle="success"
       sectionContent={
         <div>
           Could now she how in was sleep dropped in by back shall come into

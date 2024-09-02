@@ -3,8 +3,8 @@ import GenericModalMenuSection from "react-cismap/topicmaps/menu/Section";
 const Component = () => {
   return (
     <GenericModalMenuSection
-      sectionKey="karteninhalt"
-      sectionTitle="Karteninhalt auswählen"
+      sectionKey="einstellungen"
+      sectionTitle="Einstellungen"
       sectionBsStyle="success"
       sectionContent={
         <div>

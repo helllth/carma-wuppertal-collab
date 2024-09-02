@@ -31,14 +31,8 @@ const getCollabedHelpComponentConfig = ({ versionString }) => {
   const menuTitle = "Kompaktanleitung und Hintergrundinformationen";
   const menuSections = [
     <Help15Datengrundlage key="Datengrundlage" />,
-    <Help20Karteninhalt key="Karteninhalt" />,
     <Help30InKartePositionieren key="InKartePositionieren" />,
-    <Help35KoppelungMitStarkregengefahrenkarte key="Koppelung" />,
     <Help40MeinStandort key="MeinStandort" />,
-    <Help50WasserstandAbfragen key="WasserstandAbfragen" />,
-    <Help60SimulierteSzenarien key="SimulierteSzenarien" />,
-    <Help70AussagekraftDerSimulationen key="AussagekraftDerSimulationen" />,
-    <Help80ModellfehlerMelden key="ModellfehlerMelden" />,
     <Help90Haftungsausschluss key="Haftungsausschluss" />,
     <Help98DigitalerZwilling key="zwilling" />,
   ];
