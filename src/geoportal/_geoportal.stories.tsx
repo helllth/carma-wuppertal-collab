@@ -8,7 +8,7 @@ import {
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
 
 const meta: Meta = {
-  title: "geoportal",
+  title: "Geoportal",
 };
 
 export default meta;
