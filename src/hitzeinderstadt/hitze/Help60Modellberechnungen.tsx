@@ -102,7 +102,7 @@ export const Help60Modellberechnungen = () => {
             </li>
           </ul>
           <p>
-            Mit der Schaltfläche <strong>Zukunftsszenario 2050-2016</strong> im
+            Mit der Schaltfläche <strong>Zukunftsszenario 2050-2060</strong> im
             Kontrollfeld unter der Überschrift <strong>Modellberechnung</strong>{" "}
             blenden Sie alle Rasterzellen als violetten Decker ein, die in der
             Klimatopkartierung für das Zukunftsszenario als Stadtklima- oder

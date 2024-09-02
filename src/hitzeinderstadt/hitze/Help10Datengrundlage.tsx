@@ -9,7 +9,7 @@ export const Help10Datengrundlage = () => {
     <Section
       key="datengrundlage"
       sectionKey="datengrundlage"
-      sectionTitle="Datenerhebung"
+      sectionTitle="Datengrundlagen"
       sectionBsStyle="warning"
       sectionContent={
         <div>

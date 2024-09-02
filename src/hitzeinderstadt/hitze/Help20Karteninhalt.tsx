@@ -28,7 +28,7 @@ export const Help20Karteninhalt = () => {
             dargestellten Schaltfläche wird die zugehörige Datenebene wieder
             ausgeblendet. Weil sich die hitzebelasteten und die stark
             hitzebelasteten Rasterzellen nicht überlappen und die Hitzebelastung
-            im Zukunftsszenario 2050-2016 als transparenter Decker ausgeprägt
+            im Zukunftsszenario 2050-2060 als transparenter Decker ausgeprägt
             wird, können die drei Datenebenen beliebig kombiniert werden.
             Details zu den Modellberechnungen finden Sie hier in der
             Kompaktanleitung unter{" "}

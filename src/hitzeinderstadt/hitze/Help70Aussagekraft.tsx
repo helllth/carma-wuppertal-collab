@@ -17,7 +17,7 @@ export const Help70Aussagekraft = () => {
             hier einfließt, ist das gewählte Szenario für die Entwicklung der
             Treibhausgasemissionen. Die Wissenschaftsgemeinde hat hierzu die
             sogenannten &quot;Repräsentativen Konzentrationspfade&quot; (
-            <a target="_more" href="http://www.iiasa.ac.at/web-apps/tnt/RcpDb/">
+            <a target="_more" href="https://iiasa.ac.at/models-tools-data/rcp">
               Representative Concentration Pathways, abgekürzt RCP
             </a>
             ) erstellt. Für unser Zukunftsszenario wurde das
@@ -36,8 +36,8 @@ export const Help70Aussagekraft = () => {
             Das gewählte Treibhausgas-Szenario wird für eine Vorhersage der
             Klimaentwicklung (hier der mittlere Jahrestemperaturen) in ein
             globales Klimamodell eingebracht - man muss im ersten Schritt immer
-            das gesamte System &quot;Erde&quot; betrachten! Das
-            Potsdam-Instituts für Klimafolgenforschung (PIK) hat hierbei 21
+            das gesamte System &quot;Erde&quot; betrachten. Das
+            Potsdam-Institut für Klimafolgenforschung (PIK) hat hierbei 21
             globale Klimamodelle (Global Climate Models, abgekürzt GCM)
             eingesetzt, deren Ergebnisse natürlich streuen. Das PIK hat daher
             für jedes betrachtete RCP-Szenario eine hohe, eine geringe und eine
