@@ -1,14 +1,8 @@
 import { useContext } from "react";
 import Help05Introduction from "./help/Help05Introduction";
 import Help15Datengrundlage from "./help/Help15Datengrundlage";
-import Help20Karteninhalt from "./help/Help20Karteninhalt";
 import Help30InKartePositionieren from "./help/Help30InKartePositionieren";
-import Help35KoppelungMitStarkregengefahrenkarte from "./help/Help35KoppelungMitStarkregengefahrenkarte";
 import Help40MeinStandort from "./help/Help40MeinStandort";
-import Help50WasserstandAbfragen from "./help/Help50WasserstandAbfragen";
-import Help60SimulierteSzenarien from "./help/Help60SimulierteSzenarien";
-import Help70AussagekraftDerSimulationen from "./help/Help70AussagekraftDerSimulationen";
-import Help80ModellfehlerMelden from "./help/Help80ModellfehlerMelden";
 import Help90Haftungsausschluss from "./help/Help90Haftungsausschluss";
 import Help98DigitalerZwilling from "./help/Help98DigitalerZwilling";
 import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
