@@ -12,6 +12,7 @@ import { Help30InKartePositionieren as InKartePositionieren } from "./hitze/Help
 import { Help40MeinStandort as Standort } from "./hitze/Help40MeinStandort";
 import { Help60Modellberechnungen as Modellberechnungen } from "./hitze/Help60Modellberechnungen";
 import { Help70Aussagekraft as Aussagekraft } from "./hitze/Help70Aussagekraft";
+import { GenericDigitalTwinReferenceSection } from "../commons";
 
 const getCollabedHelpComponentConfig = ({
   // version,
@@ -41,6 +42,7 @@ const getCollabedHelpComponentConfig = ({
     <Standort />,
     <Modellberechnungen />,
     <Aussagekraft />,
+    <GenericDigitalTwinReferenceSection />,
   ];
 
   return {
