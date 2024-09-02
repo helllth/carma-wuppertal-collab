@@ -7,6 +7,8 @@ import Help90Haftungsausschluss from "./help/Help90Haftungsausschluss";
 import Help98DigitalerZwilling from "./help/Help98DigitalerZwilling";
 import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
 import { Footer } from "./Footer";
+export { tooltipText } from "./tooltips";
+export { searchTextPlaceholder } from "./searchTextPlaceholder";
 
 const getCollabedHelpComponentConfig = ({ versionString }) => {
   const MyFooter = () => {
