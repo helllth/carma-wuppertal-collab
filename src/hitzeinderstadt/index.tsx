@@ -14,13 +14,7 @@ import { Help60Modellberechnungen as Modellberechnungen } from "./hitze/Help60Mo
 import { Help70Aussagekraft as Aussagekraft } from "./hitze/Help70Aussagekraft";
 import { GenericDigitalTwinReferenceSection } from "../commons";
 
-const getCollabedHelpComponentConfig = ({
-  // version,
-  versionString,
-  // reactCismapRHMVersion,
-  // footerLogoUrl,
-  // email,
-}) => {
+const getCollabedHelpComponentConfig = ({ versionString }) => {
   const MyFooter = () => {
     const { setAppMenuActiveMenuSection } =
       useContext<typeof UIDispatchContext>(UIDispatchContext);
