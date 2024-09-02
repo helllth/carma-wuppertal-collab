@@ -75,7 +75,7 @@ const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
                   alt="Logo BMWSB"
                   height="120"
                   src={BMWSB_Logo}
-                  // style={imageStyle}
+                  style={imageStyle}
                 />
               </a>
             </td>
@@ -89,7 +89,7 @@ const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
                   alt="Logo KFW"
                   height="120"
                   src={KFW_Logo}
-                  // style={imageStyle}
+                  style={imageStyle}
                 />
               </a>
             </td>
