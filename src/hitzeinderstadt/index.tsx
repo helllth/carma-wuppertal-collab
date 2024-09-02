@@ -4,7 +4,6 @@ import { Footer } from "./Footer";
 // import { TopicMapContext } from "react-cismap/contexts/TopicMapContextProvider";
 
 export { tooltipText } from "./tooltips";
-export { menuTitle } from "./menuTitle";
 export { searchTextPlaceholder } from "./searchTextPlaceholder";
 import { Help05Introduction as Introduction } from "./hitze/Help05Introduction";
 import { Help10Datengrundlage as Datengrundlage } from "./hitze/Help10Datengrundlage";

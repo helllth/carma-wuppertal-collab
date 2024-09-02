@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
-import { getCollabedHelpComponentConfig } from ".";
+import {
+  getCollabedHelpComponentConfig,
+  searchTextPlaceholder,
+  tooltipText,
+} from ".";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
 
 const meta: Meta = {
@@ -30,5 +34,17 @@ export const ModalHelpAndInfoHitze: StoryObj = {
         />
       </TopicMapContextProvider>
     );
+  },
+};
+
+export const TextInSearchPlaceholder: StoryObj = {
+  render: () => {
+    return <div>{searchTextPlaceholder}</div>;
+  },
+};
+
+export const TextTooltip: StoryObj = {
+  render: () => {
+    return <div>{tooltipText}</div>;
   },
 };
