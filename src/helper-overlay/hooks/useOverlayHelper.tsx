@@ -1,30 +1,30 @@
 import { useState, useLayoutEffect } from "react";
 
-const useOverlayHelper = (
+export const useOverlayHelper = (
+  ref,
   options = {
     primary: {
       containerPos: "center",
       contentPos: "center",
-      contentWidth: "default",
       content: <div></div>,
     },
   }
 ) => {
-  const [ref, setRef] = useState<HTMLElement | null>(null);
-  const { containerPos, contentPos, contentWidth, content } = options.primary;
+  const [config, setConfig] = useState({});
   useLayoutEffect(() => {
     if (!ref) return;
+
+    const { containerPos, contentPos, content } = options.primary;
 
     const config = {
       el: ref,
       content,
       containerPos,
       contentPos,
-      contentWidth,
     };
+
+    setConfig(config);
   }, [ref]);
 
-  return setRef;
+  return config;
 };
-
-export default useOverlayHelper;

@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { getCollabedHelpComponentConfig } from ".";
+import { getCollabedHelpComponentConfig, useOverlayHelper } from ".";
 
 const meta: Meta = {
   title: "Helper overlay",
@@ -9,8 +10,14 @@ export default meta;
 
 export const Menüleiste: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("GAZETTEER_SUCHE");
-    return <div>{element?.primary.content}</div>;
+    const element = getCollabedHelpComponentConfig("MENULEISTE");
+    const elRef = useRef<HTMLDivElement>(null);
+    const el = useOverlayHelper(elRef, element);
+    return (
+      <div>
+        <div ref={elRef}>Menüleiste</div>
+      </div>
+    );
   },
 };
 
