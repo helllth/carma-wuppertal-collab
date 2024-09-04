@@ -9,9 +9,8 @@ export default meta;
 
 export const Menüleiste: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("VOLLBILD");
-
-    return <>{element?.primary.conten}</>;
+    const element = getCollabedHelpComponentConfig("GAZETTEER_SUCHE");
+    return <div>{element?.primary.content}</div>;
   },
 };
 

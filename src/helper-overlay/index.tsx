@@ -1,61 +1,59 @@
 export const elements = {
-  menuTour: {
+  menu: {
     key: "MENULEISTE",
     containerPos: "center",
     contentPos: "center",
     content: <div>Menüleiste</div>,
   },
-  layerWrapperTourRef: {
-    message: "LAYERBUTTONS",
-    options: {
-      containerPos: "center",
-      contentPos: "center",
-      content: <div>Layer Buttons</div>,
-    },
+  layerWrapper: {
+    key: "LAYERBUTTONS",
+    containerPos: "center",
+    contentPos: "center",
+    content: <div>Layer Buttons</div>,
   },
-  hintergrundTour: {
+  hintergrund: {
     key: "HINTERGRUND",
-    conetn: <div>Hintergrund</div>,
+    content: <div>Hintergrund</div>,
     containerPos: "center",
     contentPos: "center",
   },
-  modalMenuTourRef: {
+  modalMenu: {
     key: "MENU",
     containerPos: "center",
     contentPos: "center",
-    message: <div>Menü</div>,
+    content: <div>Menü</div>,
   },
-  zoomControlTour: {
+  zoomControl: {
     key: "ZOOM",
     content: <div>Zoom</div>,
     containerPos: "center",
     contentPos: "left-center",
   },
-  fullScreenControlTour: {
+  fullScreenControl: {
     key: "VOLLBILD",
-    conten: <div>Vollbild</div>,
+    content: <div>Vollbild</div>,
     containerPos: "center",
     contentPos: "left-center",
   },
-  navigatorControlTour: {
+  navigatorControl: {
     key: "MINE_POSITION",
     content: <div>Mine Position</div>,
     containerPos: "center",
     contentPos: "left-center",
   },
-  homeControlTour: {
+  homeControl: {
     key: "RATHAUS",
     content: <div>Rathaus</div>,
     containerPos: "center",
     contentPos: "left-center",
   },
-  measurementControlTour: {
+  measurementControl: {
     key: "MESSUNGEN",
     content: <div>Messungen</div>,
     containerPos: "center",
     contentPos: "left-center",
   },
-  gazetteerControlTour: {
+  gazetteerControl: {
     key: "GAZETTEER_SUCHE",
     content: "Gazetteer Suche",
     containerPos: "center",
@@ -75,16 +73,3 @@ export const getCollabedHelpComponentConfig = (keyId) => {
   }
   return undefined;
 };
-
-// export const getCollabedHelpComponentConfig = (key) => {
-//   if (key === "LAYERBUTTONS") {
-//     return {
-//       primary: {
-//         contentPos: "UPPER",
-//         content: <div>Layer Buttons</div>,
-//       },
-//       secondary: {content: <Popover>Lsdlkgjlksdjkldfjlkgfdjayer Buttons</Popover>},
-//     };
-//   }
-//   return undefined;
-// };
