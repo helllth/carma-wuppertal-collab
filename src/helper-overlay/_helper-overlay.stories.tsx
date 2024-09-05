@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { getCollabedHelpComponentConfig, useOverlayHelper } from ".";
+import { getCollabedHelpComponentConfig, geoElements } from ".";
 import { LibHelperOverlay as DisplayContentHelper } from "./components/LibHelperOverlay";
+import { useOverlayHelper } from "./hooks/useOverlayHelper";
 
 const meta: Meta = {
   title: "Helper overlay",
@@ -10,7 +11,7 @@ export default meta;
 
 export const Menüleiste: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("MENULEISTE");
+    const element = getCollabedHelpComponentConfig("MENULEISTE", geoElements);
     const config = useOverlayHelper(element);
     return (
       <div>
@@ -22,7 +23,7 @@ export const Menüleiste: StoryObj = {
 
 export const LayerButtons: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("LAYERBUTTONS");
+    const element = getCollabedHelpComponentConfig("LAYERBUTTONS", geoElements);
     const config = useOverlayHelper(element);
     return (
       <div>
@@ -34,7 +35,7 @@ export const LayerButtons: StoryObj = {
 
 export const Hintergrund: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("HINTERGRUND");
+    const element = getCollabedHelpComponentConfig("HINTERGRUND", geoElements);
     const config = useOverlayHelper(element);
     return (
       <div>
@@ -46,7 +47,7 @@ export const Hintergrund: StoryObj = {
 
 export const Menü: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("MENU");
+    const element = getCollabedHelpComponentConfig("MENU", geoElements);
     const config = useOverlayHelper(element);
     return (
       <div>
@@ -58,7 +59,7 @@ export const Menü: StoryObj = {
 
 export const Zoom: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("ZOOM");
+    const element = getCollabedHelpComponentConfig("ZOOM", geoElements);
     const config = useOverlayHelper(element);
     return (
       <div>
@@ -70,7 +71,7 @@ export const Zoom: StoryObj = {
 
 export const Vollbild: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("VOLLBILD");
+    const element = getCollabedHelpComponentConfig("VOLLBILD", geoElements);
     const config = useOverlayHelper(element);
     return (
       <div>
@@ -82,7 +83,10 @@ export const Vollbild: StoryObj = {
 
 export const MinePosition: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("MINE_POSITION");
+    const element = getCollabedHelpComponentConfig(
+      "MINE_POSITION",
+      geoElements
+    );
     const config = useOverlayHelper(element);
     return (
       <div>
@@ -94,7 +98,7 @@ export const MinePosition: StoryObj = {
 
 export const Rathaus: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("RATHAUS");
+    const element = getCollabedHelpComponentConfig("RATHAUS", geoElements);
     const config = useOverlayHelper(element);
     return (
       <div>
@@ -106,7 +110,7 @@ export const Rathaus: StoryObj = {
 
 export const Messungen: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("MESSUNGEN");
+    const element = getCollabedHelpComponentConfig("MESSUNGEN", geoElements);
     const config = useOverlayHelper(element);
     return (
       <div>
@@ -118,7 +122,10 @@ export const Messungen: StoryObj = {
 
 export const GazetteerSuche: StoryObj = {
   render: () => {
-    const element = getCollabedHelpComponentConfig("GAZETTEER_SUCHE");
+    const element = getCollabedHelpComponentConfig(
+      "GAZETTEER_SUCHE",
+      geoElements
+    );
     const config = useOverlayHelper(element);
     return (
       <div>
