@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { getCollabedHelpComponentConfig, geoElements } from ".";
-import { LibHelperOverlay as DisplayContentHelper } from "./components/LibHelperOverlay";
-import { useOverlayHelper } from "./hooks/useOverlayHelper";
+import { getCollabedHelpComponentConfig } from "../index";
+import { geoElements, backgroundSettings } from ".";
+import { LibHelperOverlay as DisplayContentHelper } from "../components/LibHelperOverlay";
+import { useOverlayHelper } from "../hooks/useOverlayHelper";
 
 const meta: Meta = {
-  title: "Helper overlay",
+  title: "Geoportal helper overlay",
 };
 
 export default meta;
@@ -131,6 +132,22 @@ export const GazetteerSuche: StoryObj = {
       <div>
         <DisplayContentHelper config={config} />
       </div>
+    );
+  },
+};
+
+export const Background: StoryObj = {
+  render: () => {
+    const { transparency, color } = backgroundSettings;
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "90vh",
+          backgroundColor: color,
+          opacity: transparency,
+        }}
+      ></div>
     );
   },
 };
