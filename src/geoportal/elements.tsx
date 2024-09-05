@@ -40,6 +40,7 @@ export const elements = {
     content: <div>Meine Position</div>,
     containerPos: "center",
     contentPos: "left-center",
+    contentWidth: "100px",
   },
   homeControl: {
     key: "RATHAUS",
