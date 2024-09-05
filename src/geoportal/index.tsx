@@ -9,6 +9,8 @@ import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
 import { Footer } from "./Footer";
 export { tooltipText } from "./tooltips";
 export { searchTextPlaceholder } from "./searchTextPlaceholder";
+export { elements as geoElements } from "./elements";
+export { backgroundSettings } from "./backgroundSettings";
 
 const getCollabedHelpComponentConfig = ({ versionString }) => {
   const MyFooter = () => {

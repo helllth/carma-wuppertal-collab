@@ -36,8 +36,8 @@ export const elements = {
     contentPos: "left-center",
   },
   navigatorControl: {
-    key: "MINE_POSITION",
-    content: <div>Mine Position</div>,
+    key: "MEINE_POSITION",
+    content: <div>Meine Position</div>,
     containerPos: "center",
     contentPos: "left-center",
   },
