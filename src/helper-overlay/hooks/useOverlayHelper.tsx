@@ -1,7 +1,6 @@
 import { useState, useLayoutEffect } from "react";
 
 export const useOverlayHelper = (
-  ref,
   options = {
     primary: {
       containerPos: "center",
@@ -10,21 +9,22 @@ export const useOverlayHelper = (
     },
   }
 ) => {
-  const [config, setConfig] = useState({});
+  const [config, setConfig] = useState<any>();
   useLayoutEffect(() => {
-    if (!ref) return;
+    if (!options?.primary) return;
 
-    const { containerPos, contentPos, content } = options.primary;
+    if (!config) {
+      const { containerPos, contentPos, content } = options.primary;
 
-    const config = {
-      el: ref,
-      content,
-      containerPos,
-      contentPos,
-    };
+      const newConfig = {
+        content,
+        containerPos,
+        contentPos,
+      };
 
-    setConfig(config);
-  }, [ref]);
+      setConfig(newConfig);
+    }
+  }, [options, config]);
 
   return config;
 };

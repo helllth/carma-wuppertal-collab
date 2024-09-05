@@ -1,6 +1,6 @@
-import { useRef } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { getCollabedHelpComponentConfig, useOverlayHelper } from ".";
+import { LibHelperOverlay as DisplayContentHelper } from "./components/LibHelperOverlay";
 
 const meta: Meta = {
   title: "Helper overlay",
@@ -11,11 +11,10 @@ export default meta;
 export const Menüleiste: StoryObj = {
   render: () => {
     const element = getCollabedHelpComponentConfig("MENULEISTE");
-    const elRef = useRef<HTMLDivElement>(null);
-    const el = useOverlayHelper(elRef, element);
+    const config = useOverlayHelper(element);
     return (
       <div>
-        <div ref={elRef}>Menüleiste</div>
+        <DisplayContentHelper config={config} />
       </div>
     );
   },
@@ -23,54 +22,108 @@ export const Menüleiste: StoryObj = {
 
 export const LayerButtons: StoryObj = {
   render: () => {
-    return <div>Text</div>;
+    const element = getCollabedHelpComponentConfig("LAYERBUTTONS");
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} />
+      </div>
+    );
   },
 };
 
 export const Hintergrund: StoryObj = {
   render: () => {
-    return <div>Text</div>;
+    const element = getCollabedHelpComponentConfig("HINTERGRUND");
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} />
+      </div>
+    );
   },
 };
 
 export const Menü: StoryObj = {
   render: () => {
-    return <div>Text</div>;
+    const element = getCollabedHelpComponentConfig("MENU");
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} />
+      </div>
+    );
   },
 };
 
 export const Zoom: StoryObj = {
   render: () => {
-    return <div>Text</div>;
+    const element = getCollabedHelpComponentConfig("ZOOM");
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} />
+      </div>
+    );
   },
 };
 
 export const Vollbild: StoryObj = {
   render: () => {
-    return <div>Text</div>;
+    const element = getCollabedHelpComponentConfig("VOLLBILD");
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} />
+      </div>
+    );
   },
 };
 
 export const MinePosition: StoryObj = {
   render: () => {
-    return <div>Text</div>;
+    const element = getCollabedHelpComponentConfig("MINE_POSITION");
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} />
+      </div>
+    );
   },
 };
 
 export const Rathaus: StoryObj = {
   render: () => {
-    return <div>Text</div>;
+    const element = getCollabedHelpComponentConfig("RATHAUS");
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} />
+      </div>
+    );
   },
 };
 
 export const Messungen: StoryObj = {
   render: () => {
-    return <div>Text</div>;
+    const element = getCollabedHelpComponentConfig("MESSUNGEN");
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} />
+      </div>
+    );
   },
 };
 
 export const GazetteerSuche: StoryObj = {
   render: () => {
-    return <div>Text</div>;
+    const element = getCollabedHelpComponentConfig("GAZETTEER_SUCHE");
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} />
+      </div>
+    );
   },
 };
