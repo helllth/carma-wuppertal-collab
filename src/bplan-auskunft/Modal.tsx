@@ -246,6 +246,7 @@ export const Modal: React.FC<ModalProps> = ({ visible, version }) => {
                 POI können Sie die Suche mit dem Werkzeug <Icon name="times" />{" "}
                 links neben dem Eingabefeld zurücksetzen (s.{" "}
                 <a
+                  className="useAClassNameToRenderProperLink"
                   onClick={() =>
                     setAppMenuActiveMenuSection("suche-ueber-bplan-nummer")
                   }
@@ -288,16 +289,22 @@ export const Modal: React.FC<ModalProps> = ({ visible, version }) => {
               </p>
               <p>
                 Alternativ k&ouml;nnen Sie die Treffermenge mit den
-                Schaltfl&auml;chen <a>&gt;&gt;</a> (n&auml;chster Treffer) und
+                Schaltfl&auml;chen <a
+                 className="useAClassNameToRenderProperLink"
+                >&gt;&gt;</a> (n&auml;chster Treffer) und
                 &nbsp;
-                <a>&lt;&lt;</a> (vorheriger Treffer) durchmustern. (Die
+                <a
+                 className="useAClassNameToRenderProperLink"
+                >&lt;&lt;</a> (vorheriger Treffer) durchmustern. (Die
                 Treffermenge ist geordnet nach zunehmendem Abstand des Plans vom
                 Bezugspunkt ihrer Suche.)
               </p>
               <p>
                 Mit&nbsp;
-                <a>alle Treffer anzeigen</a>
-                &nbsp; k&ouml;nnen Sie den Kartenausschnitt zuvor so anpassen,
+                <a
+                className="useAClassNameToRenderProperLink"
+                >alle Treffer anzeigen</a>
+                &nbsp;k&ouml;nnen Sie den Kartenausschnitt zuvor so anpassen,
                 dass alle Pl&auml;ne der Treffermenge vollst&auml;ndig angezeigt
                 werden.
               </p>
@@ -308,6 +315,7 @@ export const Modal: React.FC<ModalProps> = ({ visible, version }) => {
                 diese so verkleinern, dass nur noch die B-Plan-Nummer und das
                 verkleinerte PDF-Symbol zum{" "}
                 <a
+                  className="useAClassNameToRenderProperLink"
                   onClick={() => {
                     setAppMenuActiveMenuSection("dokuumente-betrachten");
                   }}
@@ -353,7 +361,7 @@ export const Modal: React.FC<ModalProps> = ({ visible, version }) => {
                 Stadtverwaltung Wuppertal, Stand 04/2020 sind sie für rund 72%
                 der Wuppertaler B-Pläne verfügbar. Die Namenskonventionen für
                 die vielfältigen Zusatzdateien sind im Dokument{" "}
-                <a href={""} target="_info">
+                <a href={"https://wunda-geoportal-docs.cismet.de/bplaene_dokumente/Info_BPlan-Zusatzdokumente_WUP.pdf"} target="_info">
                   Info Dateinamen
                 </a>{" "}
                 beschrieben, das in der Navigationsleiste als oberstes

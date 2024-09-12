@@ -54,6 +54,7 @@ export const FlaechenInDerArbeitskarteAuswaehlenUndAbfragen: React.FC<
               ausgeführt, die den Dokumentenviewer mit den zugehörigen Dokumenten
               öffnen (s.{" "}
               <a
+                className="useAClassNameToRenderProperLink"
                 onClick={() => setAppMenuActiveMenuSection("DokumenteBetrachten")}
               >
                 Dokumente betrachten
