@@ -5,43 +5,9 @@ import {
   faSquareEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import {
-  Modal,
-  Accordion,
-  Card,
-  Table,
-  useAccordionToggle,
-} from "react-bootstrap";
+import { Modal, Accordion, Card, Table } from "react-bootstrap";
 import { normalizeInput } from "./helper/eMobiHelper";
-
-function CustomToggle({ children, eventKey, color }) {
-  const decoratedOnClick = useAccordionToggle(eventKey, () => {});
-  const [hovered, setHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
-
-  return (
-    <span
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={decoratedOnClick}
-      style={{
-        color,
-        cursor: "pointer",
-        textDecoration: hovered ? "underline" : "none",
-      }}
-    >
-      {children}
-    </span>
-  );
-}
+import CustomAccordionToggle from "../../commons/CustomAccordionToggle";
 
 const SecondaryInfoModal = ({ feature, setOpen }) => {
   const close = () => {
@@ -165,11 +131,11 @@ const SecondaryInfoModal = ({ feature, setOpen }) => {
         <Accordion style={{ marginBottom: 6 }} defaultActiveKey={"0"}>
           <Card style={{ backgroundColor: "#bce8f1" }}>
             <Card.Header>
-              <CustomToggle eventKey="0" color="#31708f">
+              <CustomAccordionToggle eventKey="0" color="#31708f">
                 {!!ladestation.status === false
                   ? "Lademöglichkeit momentan nicht verfügbar (offline)"
                   : "Lademöglichkeit verfügbar (online)"}
-              </CustomToggle>
+              </CustomAccordionToggle>
               {/* <Accordion.Toggle as={Button} variant="link" eventKey="0">
                 {ladestation.status === false
                   ? "Lademöglichkeit momentan nicht verfügbar (offline)"
@@ -209,9 +175,9 @@ const SecondaryInfoModal = ({ feature, setOpen }) => {
         <Accordion style={{ marginBottom: 6 }} defaultActiveKey={"1"}>
           <Card style={{ backgroundColor: "#faebcc", color: "black" }}>
             <Card.Header>
-              <CustomToggle eventKey="1" color="#8a6d3b">
+              <CustomAccordionToggle eventKey="1" color="#8a6d3b">
                 Bezahlen
-              </CustomToggle>
+              </CustomAccordionToggle>
             </Card.Header>
             <Accordion.Collapse eventKey="1">
               <Card.Body style={{ backgroundColor: "white" }}>
@@ -231,9 +197,9 @@ const SecondaryInfoModal = ({ feature, setOpen }) => {
         <Accordion style={{ marginBottom: 6 }} defaultActiveKey={"2"}>
           <Card style={{ backgroundColor: "#d6e9c6" }}>
             <Card.Header>
-              <CustomToggle eventKey="2" color="#3c763d">
+              <CustomAccordionToggle eventKey="2" color="#3c763d">
                 Betreiber
-              </CustomToggle>
+              </CustomAccordionToggle>
             </Card.Header>
             <Accordion.Collapse eventKey="2">
               <Card.Body style={{ backgroundColor: "white" }}>
