@@ -1,19 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
+import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
 import {
   getCollabedHelpComponentConfig,
-  tooltipText,
   searchTextPlaceholder,
-  geoElements,
-  backgroundSettings,
+  tooltipText,
 } from ".";
-import {
-  getCollabedHelpComponentConfig as getCollabedHelpElementsConfig,
-  LibHelperOverlay as DisplayContentHelper,
-  useOverlayHelper,
-} from "../helper-overlay/index";
-import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
-import SecondaryInfoModal from "./sachdatenabfrage-modals/EMobiModal";
 
 const meta: Meta = {
   title: "Geoportal",
