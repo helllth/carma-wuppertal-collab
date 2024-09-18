@@ -42,6 +42,8 @@ export const normalizeInput = (properties: {
   if (properties.offen) {
     if (properties.offen.includes("24-7")) {
       oeffnungszeiten = "24/7";
+    } else {
+      oeffnungszeiten = properties.offen;
     }
   }
 
