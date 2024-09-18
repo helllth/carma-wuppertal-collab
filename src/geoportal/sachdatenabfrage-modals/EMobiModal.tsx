@@ -9,7 +9,7 @@ import { Modal, Accordion, Card, Table } from "react-bootstrap";
 import { normalizeInput } from "./helper/eMobiHelper";
 import CustomAccordionToggle from "../../commons/CustomAccordionToggle";
 
-const SecondaryInfoModal = ({ feature, setOpen }) => {
+const EMobiModal = ({ feature, setOpen }) => {
   const close = () => {
     setOpen(false);
   };
@@ -136,11 +136,6 @@ const SecondaryInfoModal = ({ feature, setOpen }) => {
                   ? "Lademöglichkeit momentan nicht verfügbar (offline)"
                   : "Lademöglichkeit verfügbar (online)"}
               </CustomAccordionToggle>
-              {/* <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                {ladestation.status === false
-                  ? "Lademöglichkeit momentan nicht verfügbar (offline)"
-                  : "Lademöglichkeit verfügbar (online)"}
-              </Accordion.Toggle> */}
             </Card.Header>
             <Accordion.Collapse eventKey="0">
               <Card.Body style={{ backgroundColor: "white" }}>
@@ -226,4 +221,4 @@ const SecondaryInfoModal = ({ feature, setOpen }) => {
   );
 };
 
-export default SecondaryInfoModal;
+export default EMobiModal;
