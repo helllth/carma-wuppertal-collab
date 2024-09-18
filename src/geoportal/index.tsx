@@ -11,7 +11,7 @@ export { tooltipText } from "./tooltips";
 export { searchTextPlaceholder } from "./searchTextPlaceholder";
 export { elements as geoElements } from "./elements";
 export { backgroundSettings } from "./backgroundSettings";
-export { default as EMobiModal } from "./sachdatenabfrage-modals/EMobiModal";
+export { additionalInfoFactory } from "./sachdatenabfrage-modals/helper/factory";
 
 const getCollabedHelpComponentConfig = ({ versionString }) => {
   const MyFooter = () => {
