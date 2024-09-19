@@ -12,7 +12,7 @@ export const VersionNumberLoginPage = ({
   return (
     <div style={{ color: textColor, fontSize: fonntSize }}>
       <span>
-        VerDIS - online {version} powered by{" "}
+        {version} powered by{" "}
         <a
           style={{ color: textColor }}
           href="https://cismet.de/"
@@ -36,6 +36,7 @@ export const VersionNumberLoginPage = ({
         >
           carma
         </a>{" "}
+        (
         <a
           style={{ color: textColor }}
           target="_blank"
@@ -53,6 +54,7 @@ export const VersionNumberLoginPage = ({
         >
           Impressum
         </a>
+        )
       </span>
     </div>
   );
