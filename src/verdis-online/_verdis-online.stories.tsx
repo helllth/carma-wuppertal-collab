@@ -29,6 +29,7 @@ import {
   panelTitles,
   Kontaktinformationen,
   tooltips,
+  VersionNumberLoginPage,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -183,6 +184,12 @@ export const PanelTitles: StoryObj = {
 export const KontaktInformationen: StoryObj = {
   render: () => {
     return <Kontaktinformationen textColor="black" />;
+  },
+};
+
+export const LoginPageVersionNumber: StoryObj = {
+  render: () => {
+    return <VersionNumberLoginPage textColor="black" version="xyz" />;
   },
 };
 

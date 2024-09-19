@@ -26,4 +26,5 @@ export { VersiegelteFlaeche } from "./kurzinfos/flaechenart/VersiegelteFlaeche";
 export { KassenzeichenViewerGefahrensignal } from "./kurzinfos/kassenzeichen-viewer/KassenzeichenViewerGefahrensignal";
 export { panelTitles } from "./panels/panelTitles";
 export { Kontaktinformationen } from "./Kontaktinformationen";
+export { VersionNumberLoginPage } from "./VersionNumberLoginPage";
 export { tooltips } from "./tooltips";
