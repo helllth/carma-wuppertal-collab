@@ -7,7 +7,7 @@ interface VersionNumberLoginPageProps {
 export const VersionNumberLoginPage = ({
   textColor = "white",
   version,
-  fonntSize = "21px",
+  fonntSize = "18px",
 }: VersionNumberLoginPageProps) => {
   return (
     <div style={{ color: textColor, fontSize: fonntSize }}>

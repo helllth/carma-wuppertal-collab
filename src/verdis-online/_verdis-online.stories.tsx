@@ -30,6 +30,7 @@ import {
   Kontaktinformationen,
   tooltips,
   VersionNumberLoginPage,
+  KompaktanleitungFooter,
 } from ".";
 import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 import ModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
@@ -190,6 +191,12 @@ export const KontaktInformationen: StoryObj = {
 export const LoginPageVersionNumber: StoryObj = {
   render: () => {
     return <VersionNumberLoginPage textColor="black" version="xyz" />;
+  },
+};
+
+export const FooterKompaktanleitung: StoryObj = {
+  render: () => {
+    return <KompaktanleitungFooter version="xyz" />;
   },
 };
 

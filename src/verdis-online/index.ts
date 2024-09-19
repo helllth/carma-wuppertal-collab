@@ -27,4 +27,5 @@ export { KassenzeichenViewerGefahrensignal } from "./kurzinfos/kassenzeichen-vie
 export { panelTitles } from "./panels/panelTitles";
 export { Kontaktinformationen } from "./Kontaktinformationen";
 export { VersionNumberLoginPage } from "./VersionNumberLoginPage";
+export { KompaktanleitungFooter } from "./KompaktanleitungFooter";
 export { tooltips } from "./tooltips";
