@@ -24,7 +24,7 @@ const Component = ({ email }) => {
             <div>
               Die Hochwassergefahrenkarte basiert auf dem <b>DigiTal Zwilling</b>, 
               dem{" "}  
-              <a href="https://smart.wuppertal.de/projekte/digital-zwilling/digitaler-zwilling.php" title={""}>
+              <a href="https://smart.wuppertal.de/projekte/digitaler-zwilling.php" title={""}>
                 Urbanen Digitalen Zwilling der Stadt Wuppertal
               </a>. Sie stellt einen themenspezifischen Ausschnitt aus den Daten und 
               Methoden des DigiTal Zwillings für den ebenfalls spezifischen Anwendungsfall 
