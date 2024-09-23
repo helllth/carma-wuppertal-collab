@@ -1,8 +1,11 @@
-import type { GetCollabedHelpComponentConfig } from "../helperTypes";
+import type {
+  ElementType,
+  GetCollabedHelpComponentConfig,
+} from "../helperTypes";
 
 export const getCollabedHelpComponentConfig = (
   keyId: string,
-  elements
+  elements: ElementType
 ): GetCollabedHelpComponentConfig => {
   for (const k in elements) {
     if (elements[k].key === keyId) {
