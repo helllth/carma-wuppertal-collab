@@ -5,7 +5,7 @@ import type {
 
 export const getCollabedHelpComponentConfig = (
   keyId: string,
-  elements: ElementType
+  elements: Record<string, ElementType>
 ): GetCollabedHelpComponentConfig => {
   for (const k in elements) {
     if (elements[k].key === keyId) {
