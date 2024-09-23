@@ -1,3 +1,5 @@
+import { GazetteerControl } from "./secondary/GazetteerControl";
+
 export const elements = {
   menu: {
     key: "MENULEISTE",
@@ -59,5 +61,8 @@ export const elements = {
     content: "Gazetteer Suche",
     containerPos: "center",
     contentPos: "center",
+    secondary: {
+      content: <GazetteerControl />,
+    },
   },
 };
