@@ -1,3 +1,4 @@
+import { Popover } from "antd";
 import { useEffect, useState } from "react";
 
 export function LibHelperOverlay({
@@ -6,7 +7,6 @@ export function LibHelperOverlay({
   color = "white",
 }) {
   const [hightlightRects, setHightlightRects] = useState<any>(null);
-  const [showSecondary, setShowSecondary] = useState<boolean>(false);
 
   useEffect(() => {
     if (config) {
@@ -41,25 +41,32 @@ export function LibHelperOverlay({
           marginTop: "1rem",
         }}
       >
-        {hightlightRects && (
-          <div
-            style={{
-              cursor: hightlightRects.secondaryComponent ? "pointer" : "auto",
-              textAlign: "center",
-            }}
-            onClick={() => setShowSecondary(!showSecondary)}
-          >
-            {hightlightRects.content}
-          </div>
-        )}
-        {showSecondary && hightlightRects.secondaryComponent && (
-          <>
-            <hr />
-            <div>
-              {hightlightRects ? hightlightRects.secondaryComponent : ""}
+        {hightlightRects &&
+          (hightlightRects.secondaryComponent ? (
+            <Popover
+              content={hightlightRects.secondaryComponent.content}
+              trigger="click"
+              placement={hightlightRects.secondaryComponent.secondaryPos}
+              autoAdjustOverflow={false}
+            >
+              <span
+                style={{
+                  cursor: "pointer",
+                }}
+              >
+                {hightlightRects.content}
+              </span>
+            </Popover>
+          ) : (
+            <div
+              style={{
+                cursor: hightlightRects.secondaryComponent ? "pointer" : "auto",
+                textAlign: "center",
+              }}
+            >
+              {hightlightRects.content}
             </div>
-          </>
-        )}
+          ))}
       </div>
     </div>
   );

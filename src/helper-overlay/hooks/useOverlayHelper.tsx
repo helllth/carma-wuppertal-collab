@@ -14,7 +14,7 @@ export const useOverlayHelper = (options: GetCollabedHelpComponentConfig) => {
         containerPos,
         contentPos,
         ...(options.secondary && {
-          secondaryComponent: options.secondary.content,
+          secondaryComponent: options.secondary,
         }),
       };
 
