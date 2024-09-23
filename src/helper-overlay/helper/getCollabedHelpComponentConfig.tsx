@@ -1,4 +1,9 @@
-export const getCollabedHelpComponentConfig = (keyId, elements) => {
+import type { GetCollabedHelpComponentConfig } from "../helperTypes";
+
+export const getCollabedHelpComponentConfig = (
+  keyId,
+  elements
+): GetCollabedHelpComponentConfig => {
   for (const k in elements) {
     if (elements[k].key === keyId) {
       const settings = {

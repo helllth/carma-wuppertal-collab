@@ -1,17 +1,11 @@
 import { useState, useLayoutEffect } from "react";
+import type { GetCollabedHelpComponentConfig } from "../helperTypes";
 
-export const useOverlayHelper = (
-  options = {
-    primary: {
-      containerPos: "center",
-      contentPos: "center",
-      content: <div></div>,
-    },
-  }
-) => {
+export const useOverlayHelper = (options: GetCollabedHelpComponentConfig) => {
   const [config, setConfig] = useState<any>();
   useLayoutEffect(() => {
     if (!options?.primary) return;
+    console.log("xxx hook", options);
 
     if (!config) {
       const { containerPos, contentPos, content } = options.primary;
@@ -20,6 +14,9 @@ export const useOverlayHelper = (
         content,
         containerPos,
         contentPos,
+        ...(options.secondary && {
+          secondaryComponent: options.secondary.content,
+        }),
       };
 
       setConfig(newConfig);

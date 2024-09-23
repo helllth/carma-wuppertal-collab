@@ -18,6 +18,8 @@ export function LibHelperOverlay({
         content,
       });
     }
+
+    console.log("xxx desplay", config);
   }, [config]);
 
   return (
