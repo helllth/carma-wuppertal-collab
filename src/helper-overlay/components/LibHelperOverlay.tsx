@@ -45,6 +45,7 @@ export function LibHelperOverlay({
           <div
             style={{
               cursor: hightlightRects.secondaryComponent ? "pointer" : "auto",
+              textAlign: "center",
             }}
             onClick={() => setShowSecondary(!showSecondary)}
           >
