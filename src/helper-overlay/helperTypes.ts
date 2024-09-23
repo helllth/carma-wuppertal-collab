@@ -47,3 +47,15 @@ export type OptionsOverlayHelper = {
 };
 
 export type GetCollabedHelpComponentConfig = OptionsOverlayHelper | undefined;
+
+export type ElementType = {
+  key: string;
+  containerPos?: PositionOverlayHelper;
+  contentPos?: PositionOverlayHelper;
+  content: JSX.Element | string;
+  contentWidth?: string;
+  secondary?: {
+    content: JSX.Element | string;
+    secondaryPos?: SecondaryPlacement;
+  };
+};

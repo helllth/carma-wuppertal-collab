@@ -1,7 +1,7 @@
 import type { GetCollabedHelpComponentConfig } from "../helperTypes";
 
 export const getCollabedHelpComponentConfig = (
-  keyId,
+  keyId: string,
   elements
 ): GetCollabedHelpComponentConfig => {
   for (const k in elements) {

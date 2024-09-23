@@ -1,6 +1,7 @@
+import type { ElementType } from "../helper-overlay/helperTypes";
 import { GazetteerControl } from "./secondary/GazetteerControl";
 
-export const elements = {
+export const elements: Record<string, ElementType> = {
   menu: {
     key: "MENULEISTE",
     containerPos: "center",
