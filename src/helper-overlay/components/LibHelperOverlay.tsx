@@ -9,17 +9,18 @@ export function LibHelperOverlay({
 
   useEffect(() => {
     if (config) {
-      const { content, containerPos, contentPos } = config;
+      const { content, containerPos, contentPos, secondaryComponent } = config;
       const pos = getContainerPosition(containerPos);
       const contPos = getElementPosition(contentPos);
       setHightlightRects({
         pos,
         contPos,
         content,
+        ...(secondaryComponent && {
+          secondaryComponent,
+        }),
       });
     }
-
-    console.log("xxx desplay", config);
   }, [config]);
 
   return (
@@ -40,6 +41,8 @@ export function LibHelperOverlay({
         }}
       >
         <span>{hightlightRects ? hightlightRects.content : ""}</span>
+        <hr />
+        <div>{hightlightRects ? hightlightRects.secondaryComponent : ""}</div>
       </div>
     </div>
   );

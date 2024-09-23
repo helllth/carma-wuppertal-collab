@@ -5,7 +5,6 @@ export const useOverlayHelper = (options: GetCollabedHelpComponentConfig) => {
   const [config, setConfig] = useState<any>();
   useLayoutEffect(() => {
     if (!options?.primary) return;
-    console.log("xxx hook", options);
 
     if (!config) {
       const { containerPos, contentPos, content } = options.primary;

@@ -63,6 +63,7 @@ export const elements = {
     contentPos: "center",
     secondary: {
       content: <GazetteerControl />,
+      secondaryPos: "top",
     },
   },
 };
