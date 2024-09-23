@@ -6,6 +6,7 @@ export function LibHelperOverlay({
   color = "white",
 }) {
   const [hightlightRects, setHightlightRects] = useState<any>(null);
+  const [showSecondary, setShowSecondary] = useState<boolean>(false);
 
   useEffect(() => {
     if (config) {
@@ -40,9 +41,24 @@ export function LibHelperOverlay({
           marginTop: "1rem",
         }}
       >
-        <span>{hightlightRects ? hightlightRects.content : ""}</span>
-        <hr />
-        <div>{hightlightRects ? hightlightRects.secondaryComponent : ""}</div>
+        {hightlightRects && (
+          <div
+            style={{
+              cursor: hightlightRects.secondaryComponent ? "pointer" : "auto",
+            }}
+            onClick={() => setShowSecondary(!showSecondary)}
+          >
+            {hightlightRects.content}
+          </div>
+        )}
+        {showSecondary && hightlightRects.secondaryComponent && (
+          <>
+            <hr />
+            <div>
+              {hightlightRects ? hightlightRects.secondaryComponent : ""}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
