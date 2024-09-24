@@ -39,6 +39,12 @@ export function LibHelperOverlay({
       <div
         style={{
           marginTop: "1rem",
+          height: "95vh",
+          width: "96%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignContent: "center",
         }}
       >
         {hightlightRects &&
@@ -52,6 +58,9 @@ export function LibHelperOverlay({
               <span
                 style={{
                   cursor: "pointer",
+                  textAlign: "center",
+                  width: "max-content",
+                  margin: "0 auto",
                 }}
               >
                 {hightlightRects.content}
@@ -60,8 +69,9 @@ export function LibHelperOverlay({
           ) : (
             <div
               style={{
-                cursor: hightlightRects.secondaryComponent ? "pointer" : "auto",
                 textAlign: "center",
+                width: "max-content",
+                margin: "0 auto",
               }}
             >
               {hightlightRects.content}

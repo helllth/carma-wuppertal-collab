@@ -64,7 +64,7 @@ export const elements: Record<string, ElementType> = {
     contentPos: "center",
     secondary: {
       content: <GazetteerControl />,
-      secondaryPos: "bottom",
+      secondaryPos: "top",
     },
   },
 };
