@@ -5,6 +5,7 @@ export function LibHelperOverlay({
   config,
   transparency = 0.8,
   color = "white",
+  primaryMargin = "0 auto",
 }) {
   const [hightlightRects, setHightlightRects] = useState<any>(null);
 
@@ -60,7 +61,7 @@ export function LibHelperOverlay({
                   cursor: "pointer",
                   textAlign: "center",
                   width: "max-content",
-                  margin: "0 auto",
+                  margin: primaryMargin,
                 }}
               >
                 {hightlightRects.content}
@@ -71,7 +72,7 @@ export function LibHelperOverlay({
               style={{
                 textAlign: "center",
                 width: "max-content",
-                margin: "0 auto",
+                margin: primaryMargin,
               }}
             >
               {hightlightRects.content}

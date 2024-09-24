@@ -1,5 +1,6 @@
 import type { ElementType } from "../helper-overlay/helperTypes";
 import { GazetteerControl } from "./secondary/GazetteerControl";
+import { MeasurementsText } from "./secondary/MeasurementsText";
 
 export const elements: Record<string, ElementType> = {
   menu: {
@@ -56,15 +57,15 @@ export const elements: Record<string, ElementType> = {
     content: <div>Messungen</div>,
     containerPos: "center",
     contentPos: "left-center",
+    secondary: {
+      content: <MeasurementsText />,
+      secondaryPos: "right",
+    },
   },
   gazetteerControl: {
     key: "GAZETTEER_SUCHE",
     content: "Gazetteer Suche",
     containerPos: "center",
     contentPos: "center",
-    secondary: {
-      content: <GazetteerControl />,
-      secondaryPos: "top",
-    },
   },
 };
