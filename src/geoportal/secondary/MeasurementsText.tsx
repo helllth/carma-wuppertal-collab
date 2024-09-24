@@ -5,7 +5,10 @@ import stepFour from "./assets/m-step-4.png";
 
 export const MeasurementsText = () => {
   return (
-    <ul style={{ margin: "0", paddingLeft: "20px", maxWidth: "600px" }}>
+    <ul
+      className="overlay-helper-ul-class"
+      style={{ margin: "0", paddingLeft: "20px", maxWidth: "600px" }}
+    >
       <li>
         Die Schaltfläche aktiviert einen Modus zum Messen von Strecken und/oder
         Flächen, nicht nur eine einmalige Messung.
