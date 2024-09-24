@@ -37,6 +37,12 @@ export function LibHelperOverlay({
         opacity: transparency,
       }}
     >
+      {hightlightRects && hightlightRects.secondaryComponent && (
+        <div style={{ fontSize: "12px", color: "#333", marginTop: "5px" }}>
+          Klicken um die Secondary Komponente zu sehen
+        </div>
+      )}
+
       <div
         style={{
           marginTop: "1rem",
