@@ -25,14 +25,18 @@ export const MeasurementsText = () => {
         Verfügung.
       </li>
       <div>
-        <div style={{ marginTop: "10px" }}>
+        <div
+          style={{
+            marginTop: "10px",
+            marginLeft: "-10px",
+            display: "flex",
+            gap: "10px",
+          }}
+        >
           <img src={stepOne} style={{ height: "120px" }} />
-          <img src={stepTwo} style={{ height: "120px", margin: "0 10px" }} />
+          <img src={stepTwo} style={{ height: "120px" }} />
           <img src={stepThree} style={{ height: "120px" }} />
-          <img
-            src={stepFour}
-            style={{ height: "120px", margin: "0 0 0 10px" }}
-          />
+          <img src={stepFour} style={{ height: "120px" }} />
         </div>
       </div>
     </ul>
