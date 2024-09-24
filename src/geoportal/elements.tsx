@@ -1,5 +1,4 @@
 import type { ElementType } from "../helper-overlay/helperTypes";
-import { GazetteerControl } from "./secondary/GazetteerControl";
 import { MeasurementsText } from "./secondary/MeasurementsText";
 
 export const elements: Record<string, ElementType> = {
