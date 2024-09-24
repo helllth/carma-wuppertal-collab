@@ -38,8 +38,17 @@ export function LibHelperOverlay({
       }}
     >
       {hightlightRects && hightlightRects.secondaryComponent && (
-        <div style={{ fontSize: "12px", color: "#333", marginTop: "5px" }}>
-          Klicken um die Secondary Komponente zu sehen
+        <div
+          style={{
+            fontSize: "12px",
+            marginTop: "5px",
+            textAlign: "right",
+            width: "98%",
+            paddingRight: "15px",
+            color: "#919090",
+          }}
+        >
+          Auf den Text klicken um sekundäre Komponente zu öffnen
         </div>
       )}
 
