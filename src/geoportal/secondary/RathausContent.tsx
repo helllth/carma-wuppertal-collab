@@ -36,7 +36,7 @@ export const RathausContent = () => {
             gap: "10px",
           }}
         >
-          <video height="120px" controls>
+          <video height="120px" loop autoPlay muted>
             <source src={stepOne} type="video/mp4" />
           </video>
           <img src={stepTwo} style={{ height: "120px" }} />
