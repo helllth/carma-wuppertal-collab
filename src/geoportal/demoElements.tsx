@@ -1,75 +1,26 @@
 import type { ElementType } from "../helper-overlay/helperTypes";
-import { MeasurementsText } from "./secondary/MeasurementsText";
-import { RathausContent } from "./secondary/RathausContent";
+import { DemoVideo } from "./secondary/DemoVideo";
+import { DemoGif } from "./secondary/DemoGif";
 
 export const demoElements: Record<string, ElementType> = {
-  menu: {
-    key: "MENULEISTE",
-    containerPos: "center",
-    contentPos: "center",
-    content: <div>Menüleiste</div>,
-  },
-  layerWrapper: {
-    key: "LAYERBUTTONS",
-    containerPos: "center",
-    contentPos: "center",
-    content: <div>Layer Buttons</div>,
-  },
-  hintergrund: {
-    key: "HINTERGRUND",
-    content: <div>Hintergrund</div>,
-    containerPos: "center",
-    contentPos: "center",
-  },
-  modalMenu: {
-    key: "MENU",
-    containerPos: "center",
-    contentPos: "center",
-    content: <div>Menü</div>,
-  },
-  zoomControl: {
-    key: "ZOOM",
-    content: <div>Zoom</div>,
-    containerPos: "center",
-    contentPos: "left-center",
-  },
-  fullScreenControl: {
-    key: "VOLLBILD",
-    content: <div>Vollbild</div>,
-    containerPos: "center",
-    contentPos: "left-center",
-  },
-  navigatorControl: {
-    key: "MEINE_POSITION",
-    content: <div>Meine Position</div>,
-    containerPos: "center",
-    contentPos: "left-center",
-    contentWidth: "100px",
-  },
-  homeControl: {
-    key: "RATHAUS",
-    content: <div>Rathaus</div>,
+  videoControl: {
+    key: "DEMOVIDEO",
+    content: <div>Demo video</div>,
     containerPos: "center",
     contentPos: "left-center",
     secondary: {
-      content: <RathausContent />,
+      content: <DemoVideo />,
       secondaryPos: "right",
     },
   },
-  measurementControl: {
-    key: "MESSUNGEN",
-    content: <div>Messungen</div>,
+  gifControl: {
+    key: "DEMOGIF",
+    content: <div>Demo gif</div>,
     containerPos: "center",
     contentPos: "left-center",
     secondary: {
-      content: <MeasurementsText />,
+      content: <DemoGif />,
       secondaryPos: "right",
     },
-  },
-  gazetteerControl: {
-    key: "GAZETTEER_SUCHE",
-    content: "Gazetteer Suche",
-    containerPos: "center",
-    contentPos: "center",
   },
 };

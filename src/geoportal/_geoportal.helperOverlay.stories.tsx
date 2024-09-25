@@ -155,9 +155,21 @@ export const Background: StoryObj = {
   },
 };
 
-export const DemoRathaus: StoryObj = {
+export const DemoVideo: StoryObj = {
   render: () => {
-    const element = getCollabedHelpElementsConfig("RATHAUS", demoElements);
+    const element = getCollabedHelpElementsConfig("DEMOVIDEO", demoElements);
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
+      </div>
+    );
+  },
+};
+
+export const DemoGif: StoryObj = {
+  render: () => {
+    const element = getCollabedHelpElementsConfig("DEMOGIF", demoElements);
     const config = useOverlayHelper(element);
     return (
       <div>
