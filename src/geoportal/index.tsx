@@ -10,6 +10,7 @@ import { Footer } from "./Footer";
 export { tooltipText } from "./tooltips";
 export { searchTextPlaceholder } from "./searchTextPlaceholder";
 export { elements as geoElements } from "./elements";
+export { demoElements } from "./demoElements";
 export { backgroundSettings } from "./backgroundSettings";
 export { additionalInfoFactory } from "./sachdatenabfrage-modals/helper/factory";
 

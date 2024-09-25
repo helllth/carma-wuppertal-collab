@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { geoElements, backgroundSettings } from ".";
+import { geoElements, backgroundSettings, demoElements } from ".";
 import {
   getCollabedHelpComponentConfig as getCollabedHelpElementsConfig,
   LibHelperOverlay as DisplayContentHelper,
@@ -151,6 +151,18 @@ export const Background: StoryObj = {
           opacity: transparency,
         }}
       ></div>
+    );
+  },
+};
+
+export const DemoRathaus: StoryObj = {
+  render: () => {
+    const element = getCollabedHelpElementsConfig("RATHAUS", demoElements);
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
+      </div>
     );
   },
 };
