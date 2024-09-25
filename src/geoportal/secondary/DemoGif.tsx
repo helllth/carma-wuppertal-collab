@@ -1,4 +1,4 @@
-import stepOne from "./assets/demo-gif.gif";
+import stepOne from "./assets/m-demo-gif.gif";
 
 export const DemoGif = () => {
   return (
@@ -33,7 +33,7 @@ export const DemoGif = () => {
             gap: "10px",
           }}
         >
-          <img src={stepOne} style={{ height: "383px" }} />
+          <img src={stepOne} style={{ height: "360px" }} />
         </div>
       </div>
     </ul>

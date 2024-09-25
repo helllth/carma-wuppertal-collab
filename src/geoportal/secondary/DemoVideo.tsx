@@ -1,4 +1,4 @@
-import stepOne from "./assets/rathaus-video-4.mp4";
+import stepOne from "./assets/m-vide-demo.mp4";
 
 export const DemoVideo = () => {
   return (
@@ -33,7 +33,7 @@ export const DemoVideo = () => {
             gap: "10px",
           }}
         >
-          <video width="100%" height="383px" loop autoPlay muted>
+          <video width="100%" height="383px" controls muted>
             <source src={stepOne} type="video/mp4" />
           </video>
         </div>
