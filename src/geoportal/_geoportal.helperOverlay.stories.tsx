@@ -43,7 +43,7 @@ export const Hintergrund: StoryObj = {
     const config = useOverlayHelper(element);
     return (
       <div>
-        <DisplayContentHelper config={config} primaryMargin="0 0 0 auto" />
+        <DisplayContentHelper config={config} primaryPlaceInStory="right" />
       </div>
     );
   },
@@ -55,7 +55,7 @@ export const Menü: StoryObj = {
     const config = useOverlayHelper(element);
     return (
       <div>
-        <DisplayContentHelper config={config} primaryMargin="0 0 0 auto" />
+        <DisplayContentHelper config={config} primaryPlaceInStory="right" />
       </div>
     );
   },
@@ -67,7 +67,7 @@ export const Zoom: StoryObj = {
     const config = useOverlayHelper(element);
     return (
       <div>
-        <DisplayContentHelper config={config} primaryMargin="" />
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
       </div>
     );
   },
@@ -79,7 +79,7 @@ export const Vollbild: StoryObj = {
     const config = useOverlayHelper(element);
     return (
       <div>
-        <DisplayContentHelper config={config} primaryMargin="" />
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
       </div>
     );
   },
@@ -94,7 +94,7 @@ export const MeinePosition: StoryObj = {
     const config = useOverlayHelper(element);
     return (
       <div>
-        <DisplayContentHelper config={config} primaryMargin="" />
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
       </div>
     );
   },
@@ -106,7 +106,7 @@ export const Rathaus: StoryObj = {
     const config = useOverlayHelper(element);
     return (
       <div>
-        <DisplayContentHelper config={config} primaryMargin="" />
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
       </div>
     );
   },
@@ -118,7 +118,7 @@ export const Messungen: StoryObj = {
     const config = useOverlayHelper(element);
     return (
       <div>
-        <DisplayContentHelper config={config} primaryMargin="" />
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
       </div>
     );
   },

@@ -5,9 +5,22 @@ export function LibHelperOverlay({
   config,
   transparency = 0.8,
   color = "white",
-  primaryMargin = "0 auto",
+  primaryPlaceInStory = "center",
 }) {
   const [hightlightRects, setHightlightRects] = useState<any>(null);
+  let primaryMargin;
+
+  switch (primaryPlaceInStory) {
+    case "center":
+      primaryMargin = "0 auto";
+      break;
+    case "left":
+      primaryMargin = "";
+      break;
+    case "right":
+      primaryMargin = "0 0 0 auto";
+      break;
+  }
 
   useEffect(() => {
     if (config) {
