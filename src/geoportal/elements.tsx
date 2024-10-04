@@ -53,7 +53,7 @@ export const elements: Record<string, ElementType> = {
   },
   measurementControl: {
     key: "MESSUNGEN",
-    content: <div>Messungen</div>,
+    content: <div><b>Modus Strecke/Fläche messen</b></div>,
     containerPos: "center",
     contentPos: "left-center",
     secondary: {
