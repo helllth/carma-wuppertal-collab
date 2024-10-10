@@ -23,7 +23,7 @@ const GenericDigitalTwinReferenceTextComponent: React.FC = () => {
         <div>
           Diese Anwendung basiert auf dem <b>DigiTal Zwilling</b>, dem{" "}
           <a
-            href="https://smart.wuppertal.de/projekte/digitaler-zwilling.php"
+            href="https://smart.wuppertal.de/projekte/digital-zwilling.php"
             title="DigiTal Zwilling"
             target="_blank"
             rel="noopener noreferrer"
