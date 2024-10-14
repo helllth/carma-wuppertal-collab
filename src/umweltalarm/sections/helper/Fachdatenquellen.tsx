@@ -133,7 +133,7 @@ export const Fachdatenquellen = () => {
           <strong>Städtische Flurstücke</strong>: Filterung des tagesaktuellen{" "}
           <a
             target="_more"
-            href="https://www.bezreg-koeln.nrw.de/brk_internet/geobasis/liegenschaftskataster/alkis/index.html"
+            href="https://www.bezreg-koeln.nrw.de/geobasis-nrw/produkte-und-dienste/liegenschaftskataster/aktuelles-liegenschaftskataster"
           >
             ALKIS
           </a>
