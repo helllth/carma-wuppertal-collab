@@ -83,5 +83,9 @@ export const elements: Record<string, ElementType> = {
       bottom: 0,
       right: 10,
     },
+    secondary: {
+      content: <InfoboxText />,
+      secondaryPos: "left",
+    },
   },
 };
