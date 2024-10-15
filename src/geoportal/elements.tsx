@@ -60,6 +60,7 @@ export const elements: Record<string, ElementType> = {
     ),
     containerPos: "center",
     contentPos: "left-center",
+    contentWidth: "214px",
     secondary: {
       content: <MeasurementsText />,
       secondaryPos: "right",
