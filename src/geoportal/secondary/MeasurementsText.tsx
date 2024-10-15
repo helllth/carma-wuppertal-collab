@@ -10,9 +10,9 @@ export const MeasurementsText = () => {
       style={{ margin: "0", paddingLeft: "20px", maxWidth: "600px" }}
     >
       <div>
-        Klicken/Tippen zum Zeichnen von Messgeometrien | 
+        Wechselschalter zum An-/Abschalten des Messungsmodus | Klicken/Tippen zum Zeichnen von Messgeometrien | 
         Linienzüge beenden mit Doppelklick, Polygone schließen durch erneutes Anklicken des Startpunktes | 
-        Verwalten mehrerer Messgeometrien in der Info-Box | Speicherung der Messgeometrien im Browser-Speicher
+        Ergebnisanzeige und Verwalten mehrerer Messgeometrien in der Info-Box | Speicherung der Messgeometrien im Browser-Speicher
       </div>
       <div>
         <div

@@ -74,7 +74,11 @@ export const elements: Record<string, ElementType> = {
   },
   infoboxControl: {
     key: "INFOBOX",
-    content: <div>Infobox</div>,
+    content: (
+      <div>
+        <b>Info-Box</b>
+      </div>
+    ),
     position: {
       bottom: 0,
       right: 10,
