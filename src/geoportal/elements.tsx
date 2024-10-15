@@ -76,12 +76,8 @@ export const elements: Record<string, ElementType> = {
     key: "INFOBOX",
     content: <div>Infobox</div>,
     position: {
-      position: "absolute",
       bottom: 0,
       right: 10,
-      width: "350px",
-      height: "137px",
-      color: "white",
     },
   },
 };
