@@ -41,7 +41,7 @@ export type OptionsOverlayHelper = {
     containerPos?: PositionOverlayHelper;
     contentPos?: PositionOverlayHelper;
     contentWidth?: string;
-    customCss?: React.CSSProperties;
+    position?: React.CSSProperties;
     content: JSX.Element | string;
   };
   secondary?: Secondary;
@@ -55,7 +55,7 @@ export type ElementType = {
   contentPos?: PositionOverlayHelper;
   content: JSX.Element | string;
   contentWidth?: string;
-  customCss?: React.CSSProperties;
+  position?: React.CSSProperties;
   secondary?: {
     content: JSX.Element | string;
     secondaryPos?: SecondaryPlacement;

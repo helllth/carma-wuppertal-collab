@@ -75,7 +75,7 @@ export const elements: Record<string, ElementType> = {
   infoboxControl: {
     key: "INFOBOX",
     content: <div>Infobox</div>,
-    customCss: {
+    position: {
       position: "absolute",
       bottom: 0,
       right: 10,
