@@ -139,6 +139,18 @@ export const GazetteerSuche: StoryObj = {
   },
 };
 
+export const Infobox: StoryObj = {
+  render: () => {
+    const element = getCollabedHelpElementsConfig("INFOBOX", geoElements);
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} primaryPlaceInStory="right" />
+      </div>
+    );
+  },
+};
+
 export const Background: StoryObj = {
   render: () => {
     const { transparency, color } = backgroundSettings;

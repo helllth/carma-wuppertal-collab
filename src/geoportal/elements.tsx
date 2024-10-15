@@ -53,7 +53,11 @@ export const elements: Record<string, ElementType> = {
   },
   measurementControl: {
     key: "MESSUNGEN",
-    content: <div><b>Modus Strecke/Fläche messen</b></div>,
+    content: (
+      <div>
+        <b>Modus Strecke/Fläche messen</b>
+      </div>
+    ),
     containerPos: "center",
     contentPos: "left-center",
     secondary: {
@@ -66,5 +70,17 @@ export const elements: Record<string, ElementType> = {
     content: "Gazetteer Suche",
     containerPos: "center",
     contentPos: "center",
+  },
+  infoboxControl: {
+    key: "INFOBOX",
+    content: <div>Infobox</div>,
+    customCss: {
+      position: "absolute",
+      bottom: 0,
+      right: 10,
+      width: "350px",
+      height: "137px",
+      color: "white",
+    },
   },
 };
