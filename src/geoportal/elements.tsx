@@ -1,5 +1,6 @@
 import type { ElementType } from "../helper-overlay/helperTypes";
 import { MeasurementsText } from "./secondary/MeasurementsText";
+import { InfoboxText } from "./secondary/InfoboxText";
 
 export const elements: Record<string, ElementType> = {
   menu: {
