@@ -4,12 +4,16 @@ import stepThree from "./assets/m-step-3.png";
 import stepFour from "./assets/m-step-4.png";
 
 interface MeasurementsTextProps {
-  setActiveKey?: (key: string) => void;
+  showSecondaryWithKey?: (key: string) => void;
 }
 
 export const MeasurementsText = ({
-  setActiveKey = () => {},
+  showSecondaryWithKey = () => {},
 }: MeasurementsTextProps) => {
+  const showSecondaryWithKeyHandler = (e, key: string) => {
+    e.stopPropagation();
+    showSecondaryWithKey(key);
+  };
   return (
     <ul
       className="overlay-helper-ul-class"
@@ -34,7 +38,7 @@ export const MeasurementsText = ({
           <img
             src={stepOne}
             style={{ height: "120px" }}
-            onClick={() => setActiveKey("INFOBOX")}
+            onClick={(e) => showSecondaryWithKeyHandler(e, "INFOBOX")}
           />
           <img src={stepTwo} style={{ height: "120px" }} />
           <img src={stepThree} style={{ height: "120px" }} />
