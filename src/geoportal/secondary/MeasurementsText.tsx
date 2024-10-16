@@ -22,7 +22,7 @@ export const MeasurementsText = ({
       <div>
         Wechselschalter zum An-/Abschalten des Messungsmodus (2D) | Klicken/Tippen zum Zeichnen von Messgeometrien | 
         Linienzüge beenden mit Doppelklick, Polygone schließen durch erneutes Anklicken des Startpunktes | 
-        Ergebnisanzeige und Verwalten mehrerer Messgeometrien in der Info-Box | Speicherung der Messgeometrien im Browser-Speicher
+        Ergebnisanzeige und Verwalten mehrerer Messgeometrien in der Info-Box | Speicherung der Messgeometrien im Browser
       </div>
       <div>
         <div
