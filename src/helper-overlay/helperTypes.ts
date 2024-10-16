@@ -38,6 +38,7 @@ export type Secondary = {
 
 export type OptionsOverlayHelper = {
   primary: {
+    key: string;
     containerPos?: PositionOverlayHelper;
     contentPos?: PositionOverlayHelper;
     contentWidth?: string;
