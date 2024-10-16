@@ -3,16 +3,24 @@ import stepTwo from "./assets/m-step-2.png";
 import stepThree from "./assets/m-step-3.png";
 import stepFour from "./assets/m-step-4.png";
 
-export const MeasurementsText = () => {
+interface MeasurementsTextProps {
+  setActiveKey?: (key: string) => void;
+}
+
+export const MeasurementsText = ({
+  setActiveKey = () => {},
+}: MeasurementsTextProps) => {
   return (
     <ul
       className="overlay-helper-ul-class"
       style={{ margin: "0", paddingLeft: "20px", maxWidth: "600px" }}
     >
       <div>
-        Wechselschalter zum An-/Abschalten des Messungsmodus | Klicken/Tippen zum Zeichnen von Messgeometrien | 
-        Linienzüge beenden mit Doppelklick, Polygone schließen durch erneutes Anklicken des Startpunktes | 
-        Ergebnisanzeige und Verwalten mehrerer Messgeometrien in der Info-Box | Speicherung der Messgeometrien im Browser-Speicher
+        Wechselschalter zum An-/Abschalten des Messungsmodus | Klicken/Tippen
+        zum Zeichnen von Messgeometrien | Linienzüge beenden mit Doppelklick,
+        Polygone schließen durch erneutes Anklicken des Startpunktes |
+        Ergebnisanzeige und Verwalten mehrerer Messgeometrien in der Info-Box |
+        Speicherung der Messgeometrien im Browser-Speicher
       </div>
       <div>
         <div
@@ -23,7 +31,11 @@ export const MeasurementsText = () => {
             gap: "10px",
           }}
         >
-          <img src={stepOne} style={{ height: "120px" }} />
+          <img
+            src={stepOne}
+            style={{ height: "120px" }}
+            onClick={() => setActiveKey("INFOBOX")}
+          />
           <img src={stepTwo} style={{ height: "120px" }} />
           <img src={stepThree} style={{ height: "120px" }} />
           <img src={stepFour} style={{ height: "120px" }} />
