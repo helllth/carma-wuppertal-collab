@@ -20,11 +20,17 @@ export const MeasurementsText = ({
       style={{ margin: "0", paddingLeft: "20px", maxWidth: "600px" }}
     >
       <div>
+<<<<<<< HEAD
         Wechselschalter zum An-/Abschalten des Messungsmodus | Klicken/Tippen
         zum Zeichnen von Messgeometrien | Linienzüge beenden mit Doppelklick,
         Polygone schließen durch erneutes Anklicken des Startpunktes |
         Ergebnisanzeige und Verwalten mehrerer Messgeometrien in der Info-Box |
         Speicherung der Messgeometrien im Browser-Speicher
+=======
+        Wechselschalter zum An-/Abschalten des Messungsmodus (2D) | Klicken/Tippen zum Zeichnen von Messgeometrien | 
+        Linienzüge beenden mit Doppelklick, Polygone schließen durch erneutes Anklicken des Startpunktes | 
+        Ergebnisanzeige und Verwalten mehrerer Messgeometrien in der Info-Box | Speicherung der Messgeometrien im Browser-Speicher
+>>>>>>> 1951356 (Secondary Element für Vollbildmodus)
       </div>
       <div>
         <div

@@ -1,6 +1,7 @@
 import type { ElementType } from "../helper-overlay/helperTypes";
 import { MeasurementsText } from "./secondary/MeasurementsText";
 import { InfoboxText } from "./secondary/InfoboxText";
+import { FullScreenModeText } from "./secondary/FullScreenModeText";
 
 export const elements: Record<string, ElementType> = {
   menu: {
@@ -35,9 +36,18 @@ export const elements: Record<string, ElementType> = {
   },
   fullScreenControl: {
     key: "VOLLBILD",
-    content: <div>Vollbild</div>,
+    content: (
+      <div>
+        <b>Vollbildmodus</b>
+      </div>
+    ),
     containerPos: "center",
     contentPos: "left-center",
+    contentWidth: "200px",
+    secondary: {
+      content: <FullScreenModeText />,
+      secondaryPos: "right",
+    },
   },
   navigatorControl: {
     key: "MEINE_POSITION",
