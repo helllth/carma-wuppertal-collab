@@ -39,7 +39,7 @@ export const MeasurementsText = ({
           <img src={stepTwo} style={{ height: "120px" }} />
           <img
             src={stepThree}
-            style={{ height: "120px" }}
+            style={{ height: "120px", cursor: "pointer" }}
             onClick={(e) => showSecondaryWithKeyHandler(e, "INFOBOX")}
           />
           <img src={stepFour} style={{ height: "120px" }} />
