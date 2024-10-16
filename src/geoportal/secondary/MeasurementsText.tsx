@@ -35,13 +35,13 @@ export const MeasurementsText = ({
             gap: "10px",
           }}
         >
+          <img src={stepOne} style={{ height: "120px" }} />
+          <img src={stepTwo} style={{ height: "120px" }} />
           <img
-            src={stepOne}
+            src={stepThree}
             style={{ height: "120px" }}
             onClick={(e) => showSecondaryWithKeyHandler(e, "INFOBOX")}
           />
-          <img src={stepTwo} style={{ height: "120px" }} />
-          <img src={stepThree} style={{ height: "120px" }} />
           <img src={stepFour} style={{ height: "120px" }} />
         </div>
       </div>
