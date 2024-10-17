@@ -5,13 +5,7 @@ import stepFour from "./assets/m-step-4.png";
 import { Link } from "../../helper-overlay/components/Link";
 import { OverlayTourProvider } from "../../helper-overlay/components/OverlayTourProvider";
 
-interface MeasurementsTextProps {
-  showSecondaryWithKey?: (key: string) => void;
-}
-
-export const MeasurementsText = ({
-  showSecondaryWithKey = () => {},
-}: MeasurementsTextProps) => {
+export const MeasurementsText = () => {
   return (
     <OverlayTourProvider>
       <ul

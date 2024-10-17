@@ -86,8 +86,4 @@ export type OverlayTourAction = (arg: OverlayHelperConfig) => void;
 
 export type OverlayTourProviderProps = {
   children: JSX.Element;
-  showOverlay: boolean;
-  closeOverlay: () => void;
-  transparency?: number;
-  color?: string;
 };

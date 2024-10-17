@@ -11,7 +11,6 @@ export const Link = ({ children, target }: LinkProps) => {
   const { setSecondaryWithKey } =
     useContext<OverlayTourContextSettings>(OverlayTourContext);
   const showSecondaryWithKeyHandler = (e) => {
-    console.log("xxx context callbac", setSecondaryWithKey);
     e.stopPropagation();
     setSecondaryWithKey(target);
   };

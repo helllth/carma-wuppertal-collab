@@ -1,25 +1,19 @@
-import React, { useState, createContext } from "react";
+import { useState, createContext } from "react";
 import type {
-  ç as OverlayTourContextSettings,
+  OverlayTourContext as OverlayTourContextSettings,
   OverlayTourProviderProps,
   OverlayHelperConfig,
 } from "../helperTypes";
 
 export const OverlayTourContext = createContext<OverlayTourContextSettings>({
   configs: [],
-  addConfig: (arg) => {},
-  removeConfig: (arg) => {},
+  addConfig: () => {},
+  removeConfig: () => {},
   showSecondaryWithKey: null,
-  setSecondaryWithKey: (key) => {},
+  setSecondaryWithKey: () => {},
 });
 
-export const OverlayTourProvider = ({
-  children,
-  showOverlay = false,
-  closeOverlay = () => {},
-  transparency = 0.8,
-  color = "black",
-}: OverlayTourProviderProps) => {
+export const OverlayTourProvider = ({ children }: OverlayTourProviderProps) => {
   const [configs, setConfigs] = useState<OverlayHelperConfig[]>([]);
   const [secondaryKey, setSecondaryKey] = useState<null | string>(null);
 
