@@ -9,9 +9,7 @@ export const OverlayTourContext = createContext<OverlayTourContextSettings>({
 });
 
 export const OverlayTourProvider = ({
-  setSecondaryWithKey = () => {
-    console.log("xxx overlay provider root");
-  },
+  setSecondaryWithKey = () => {},
   children,
 }: OverlayTourProviderProps) => {
   return (
