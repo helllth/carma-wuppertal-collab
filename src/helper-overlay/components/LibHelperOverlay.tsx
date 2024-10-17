@@ -1,11 +1,12 @@
 import { Popover } from "antd";
-import { useEffect, useState } from "react";
+import { cloneElement, useEffect, useState } from "react";
 
 export function LibHelperOverlay({
   config,
   transparency = 0.8,
   color = "white",
   primaryPlaceInStory = "center",
+  showSecondaryWithKey,
 }) {
   const [hightlightRects, setHightlightRects] = useState<any>(null);
   let primaryMargin;
@@ -103,7 +104,9 @@ export function LibHelperOverlay({
                 margin: primaryMargin,
               }}
             >
-              {hightlightRects.content}
+              {cloneElement(hightlightRects.content, {
+                showSecondaryWithKey: showSecondaryWithKey,
+              })}
             </div>
           ))}
       </div>

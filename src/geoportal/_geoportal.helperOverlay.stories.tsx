@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
+import { action } from "@storybook/addon-actions";
 import { geoElements, backgroundSettings, demoElements } from ".";
 import {
   getCollabedHelpComponentConfig as getCollabedHelpElementsConfig,
@@ -118,7 +118,11 @@ export const Messungen: StoryObj = {
     const config = useOverlayHelper(element);
     return (
       <div>
-        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
+        <DisplayContentHelper
+          config={config}
+          primaryPlaceInStory="left"
+          showSecondaryWithKey={action("showSecondaryWithKey")}
+        />
       </div>
     );
   },
