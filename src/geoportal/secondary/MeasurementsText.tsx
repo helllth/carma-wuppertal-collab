@@ -2,6 +2,7 @@ import stepOne from "./assets/m-step-1.png";
 import stepTwo from "./assets/m-step-2.png";
 import stepThree from "./assets/m-step-3.png";
 import stepFour from "./assets/m-step-4.png";
+import { LinkSecondaryComponent } from "./helper/LinkSecondaryComponent";
 
 interface MeasurementsTextProps {
   showSecondaryWithKey?: (key: string) => void;
@@ -20,9 +21,11 @@ export const MeasurementsText = ({
       style={{ margin: "0", paddingLeft: "20px", maxWidth: "600px" }}
     >
       <div>
-        Wechselschalter zum An-/Abschalten des Messungsmodus (2D) | Klicken/Tippen zum Zeichnen von Messgeometrien | 
-        Linienzüge beenden mit Doppelklick, Polygone schließen durch erneutes Anklicken des Startpunktes | 
-        Ergebnisanzeige und Verwalten mehrerer Messgeometrien in der Info-Box | Speicherung der Messgeometrien im Browser
+        Wechselschalter zum An-/Abschalten des Messungsmodus (2D) |
+        Klicken/Tippen zum Zeichnen von Messgeometrien | Linienzüge beenden mit
+        Doppelklick, Polygone schließen durch erneutes Anklicken des
+        Startpunktes | Ergebnisanzeige und Verwalten mehrerer Messgeometrien in
+        der Info-Box | Speicherung der Messgeometrien im Browser
       </div>
       <div>
         <div
@@ -35,11 +38,12 @@ export const MeasurementsText = ({
         >
           <img src={stepOne} style={{ height: "120px" }} />
           <img src={stepTwo} style={{ height: "120px" }} />
-          <img
-            src={stepThree}
-            style={{ height: "120px", cursor: "pointer" }}
-            onClick={(e) => showSecondaryWithKeyHandler(e, "INFOBOX")}
-          />
+          <LinkSecondaryComponent
+            target="INFOBOX"
+            showSecondaryWithKey={showSecondaryWithKey}
+          >
+            <img src={stepThree} style={{ height: "120px" }} />
+          </LinkSecondaryComponent>
           <img src={stepFour} style={{ height: "120px" }} />
         </div>
       </div>
