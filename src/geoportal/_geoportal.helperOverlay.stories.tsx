@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import { geoElements, backgroundSettings, demoElements } from ".";
 import {
   getCollabedHelpComponentConfig as getCollabedHelpElementsConfig,

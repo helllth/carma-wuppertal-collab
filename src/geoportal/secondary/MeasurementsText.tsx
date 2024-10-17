@@ -6,11 +6,11 @@ import { Link } from "../../helper-overlay/components/Link";
 import { OverlayTourContext as OverlayTourProvider } from "../../helper-overlay/components/OverlayTourProvider";
 
 interface MeasurementsTextProps {
-  setSecondaryWithKey: (key: string) => void;
+  setSecondaryWithKey?: (key: string) => void;
 }
 
 export const MeasurementsText = ({
-  setSecondaryWithKey,
+  setSecondaryWithKey = () => {},
 }: MeasurementsTextProps) => {
   return (
     <OverlayTourProvider.Provider value={{ setSecondaryWithKey }}>
