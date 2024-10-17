@@ -62,3 +62,32 @@ export type ElementType = {
     secondaryPos?: SecondaryPlacement;
   };
 };
+
+export type OverlayTourContext = {
+  configs: OverlayHelperConfig[];
+  addConfig: OverlayTourAction;
+  removeConfig: OverlayTourAction;
+  showSecondaryWithKey: null | string;
+  setSecondaryWithKey: (key: string) => void;
+};
+
+export interface OverlayHelperConfig {
+  key: string;
+  el?: HTMLElement;
+  content: JSX.Element | string;
+  containerPos?: PositionOverlayHelper;
+  contentPos?: PositionOverlayHelper;
+  contentWidth?: string;
+  position?: React.CSSProperties;
+  secondary?: Secondary;
+}
+
+export type OverlayTourAction = (arg: OverlayHelperConfig) => void;
+
+export type OverlayTourProviderProps = {
+  children: JSX.Element;
+  showOverlay: boolean;
+  closeOverlay: () => void;
+  transparency?: number;
+  color?: string;
+};
