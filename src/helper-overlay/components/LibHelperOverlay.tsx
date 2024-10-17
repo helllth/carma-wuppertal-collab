@@ -6,7 +6,7 @@ export function LibHelperOverlay({
   transparency = 0.8,
   color = "white",
   primaryPlaceInStory = "center",
-  showSecondaryWithKey,
+  showSecondaryWithKey = () => {},
 }) {
   const [hightlightRects, setHightlightRects] = useState<any>(null);
   let primaryMargin;
