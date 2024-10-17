@@ -3,7 +3,7 @@ import type { OverlayTourContext as OverlayTourContextSettings } from "../helper
 import { useContext } from "react";
 
 interface LinkProps {
-  children: JSX.Element;
+  children: JSX.Element | string;
   target: string;
 }
 
@@ -15,7 +15,10 @@ export const Link = ({ children, target }: LinkProps) => {
     setSecondaryWithKey(target);
   };
   return (
-    <span onClick={showSecondaryWithKeyHandler} style={{ cursor: "pointer" }}>
+    <span
+      onClick={showSecondaryWithKeyHandler}
+      style={{ cursor: "pointer", color: "blue" }}
+    >
       {children}
     </span>
   );
