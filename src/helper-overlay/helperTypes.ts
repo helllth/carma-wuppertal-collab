@@ -64,10 +64,6 @@ export type ElementType = {
 };
 
 export type OverlayTourContext = {
-  configs: OverlayHelperConfig[];
-  addConfig: OverlayTourAction;
-  removeConfig: OverlayTourAction;
-  showSecondaryWithKey: null | string;
   setSecondaryWithKey: (key: string) => void;
 };
 

@@ -3,11 +3,17 @@ import stepTwo from "./assets/m-step-2.png";
 import stepThree from "./assets/m-step-3.png";
 import stepFour from "./assets/m-step-4.png";
 import { Link } from "../../helper-overlay/components/Link";
-import { OverlayTourProvider } from "../../helper-overlay/components/OverlayTourProvider";
+import { OverlayTourContext as OverlayTourProvider } from "../../helper-overlay/components/OverlayTourProvider";
 
-export const MeasurementsText = () => {
+interface MeasurementsTextProps {
+  setSecondaryWithKey: (key: string) => void;
+}
+
+export const MeasurementsText = ({
+  setSecondaryWithKey,
+}: MeasurementsTextProps) => {
   return (
-    <OverlayTourProvider>
+    <OverlayTourProvider.Provider value={{ setSecondaryWithKey }}>
       <ul
         className="overlay-helper-ul-class"
         style={{ margin: "0", paddingLeft: "20px", maxWidth: "600px" }}
@@ -36,6 +42,6 @@ export const MeasurementsText = () => {
           </div>
         </div>
       </ul>
-    </OverlayTourProvider>
+    </OverlayTourProvider.Provider>
   );
 };

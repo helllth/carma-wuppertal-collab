@@ -118,11 +118,7 @@ export const Messungen: StoryObj = {
     const config = useOverlayHelper(element);
     return (
       <div>
-        <DisplayContentHelper
-          config={config}
-          primaryPlaceInStory="left"
-          showSecondaryWithKey={action("showSecondaryWithKey")}
-        />
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
       </div>
     );
   },
