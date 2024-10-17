@@ -43,7 +43,7 @@ export const elements: Record<string, ElementType> = {
     ),
     containerPos: "center",
     contentPos: "left-center",
-    contentWidth: "200px",
+    contentWidth: "99px",
     secondary: {
       content: <FullScreenModeText />,
       secondaryPos: "right",
@@ -79,7 +79,7 @@ export const elements: Record<string, ElementType> = {
   },
   gazetteerControl: {
     key: "GAZETTEER_SUCHE",
-    content: "Gazetteer Suche",
+    content: <div>Gazetteer Suche</div>,
     containerPos: "center",
     contentPos: "center",
   },
