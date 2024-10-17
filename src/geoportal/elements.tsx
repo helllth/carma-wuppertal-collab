@@ -2,6 +2,7 @@ import type { ElementType } from "../helper-overlay/helperTypes";
 import { MeasurementsText } from "./secondary/MeasurementsText";
 import { InfoboxText } from "./secondary/InfoboxText";
 import { FullScreenModeText } from "./secondary/FullScreenModeText";
+import { OverlayTourProvider } from "../helper-overlay/components/OverlayTourProvider";
 
 export const elements: Record<string, ElementType> = {
   menu: {
@@ -73,7 +74,11 @@ export const elements: Record<string, ElementType> = {
     contentPos: "left-center",
     contentWidth: "214px",
     secondary: {
-      content: <MeasurementsText />,
+      content: (
+        <OverlayTourProvider>
+          <MeasurementsText />
+        </OverlayTourProvider>
+      ),
       secondaryPos: "right",
     },
   },

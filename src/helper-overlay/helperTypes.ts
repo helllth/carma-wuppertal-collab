@@ -82,4 +82,5 @@ export type OverlayTourAction = (arg: OverlayHelperConfig) => void;
 
 export type OverlayTourProviderProps = {
   children: JSX.Element;
+  setSecondaryWithKey?: (key: string) => void;
 };
