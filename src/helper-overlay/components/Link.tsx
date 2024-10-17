@@ -17,9 +17,9 @@ export const Link = ({ children, target }: LinkProps) => {
   return (
     <span
       onClick={showSecondaryWithKeyHandler}
-      style={{ cursor: "pointer", color: "blue" }}
+      style={{ cursor: "pointer", color: "#4493F8" }}
     >
-      {children}
+      <u>{children}</u>
     </span>
   );
 };
