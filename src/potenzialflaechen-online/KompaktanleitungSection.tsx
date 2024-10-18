@@ -173,35 +173,35 @@ export const KompaktanleitungSection = () => {
                             Handlungsprogrammen systematisch erhoben, zuletzt im{" "}
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=12384"
+                              href="https://ris.wuppertal.de/vo0050.asp?__kvonr=12384"
                             >
                               Handlungsprogramm Gewerbeflächen von 2011
                             </a>{" "}
                             (
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/to0050.php?__ktonr=50039"
+                              href="https://ris.wuppertal.de/to0050.asp?__ktonr=50039"
                             >
                               Ratsbeschluss vom 23.05.2011
                             </a>
                             ) mit{" "}
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=18635"
+                              href="https://ris.wuppertal.de/vo0050.asp?__kvonr=18635"
                             >
                               Fortschreibung im Jahr 2017
                             </a>{" "}
                             (
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/to0050.php?__ktonr=83736"
+                              href="https://ris.wuppertal.de/to0050.asp?__ktonr=83736"
                             >
                               Ratsbeschluss vom 07.05.2018
                             </a>
                             ) und{" "}
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=24105"
+                              href="https://ris.wuppertal.de/vo0050.asp?__kvonr=24105"
                             >
                               Aktualisierung im Jahr 2020
                             </a>{" "}
@@ -226,28 +226,28 @@ export const KompaktanleitungSection = () => {
                             29.06.2009), das Konzept &quot;
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=23214"
+                              href="https://ris.wuppertal.de/vo0050.asp?__kvonr=23214"
                             >
                               Neue Wohnbauflächen für Wuppertal
                             </a>
                             &quot; (
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/to0050.php?__ktonr=100704"
+                              href="https://ris.wuppertal.de/to0050.asp?__ktonr=100704"
                             >
                               Ratsbeschluss vom 22.06.2020
                             </a>
                             ) und das{" "}
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=24476"
+                              href="https://ris.wuppertal.de/vo0050.asp?__kvonr=24476"
                             >
                               Innenentwicklungskonzept Wuppertal
                             </a>{" "}
                             (
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/to0050.php?__ktonr=102431"
+                              href="https://ris.wuppertal.de/to0050.asp?__ktonr=102431"
                             >
                               Ratsbeschluss vom 07.12.2020
                             </a>
@@ -300,14 +300,14 @@ export const KompaktanleitungSection = () => {
                             Brachflächen im Jahr 2005, erneuert mit dem{" "}
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=17710&amp;voselect=13689"
+                              href="https://ris.wuppertal.de/vo0050.asp?__kvonr=17710&amp;voselect=13689"
                             >
                               Handlungsprogramm Brachflächen 2016
                             </a>{" "}
                             (Kenntnisnahme durch den Rat am 02.05.2016),{" "}
                             <a
                               target="_more"
-                              href="https://ris.wuppertal.de/vo0050.php?__kvonr=20083"
+                              href="https://ris.wuppertal.de/vo0050.asp?__kvonr=20083"
                             >
                               Fortschreibung im Jahr 2017
                             </a>{" "}
