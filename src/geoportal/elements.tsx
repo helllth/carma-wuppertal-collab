@@ -46,7 +46,11 @@ export const elements: Record<string, ElementType> = {
     contentPos: "left-center",
     contentWidth: "99px",
     secondary: {
-      content: <FullScreenModeText />,
+      content: ( 
+      <OverlayTourProvider>
+        <FullScreenModeText />
+      </OverlayTourProvider>
+      ),
       secondaryPos: "right",
     },
   },
