@@ -47,10 +47,10 @@ export const elements: Record<string, ElementType> = {
     contentPos: "left-center",
     contentWidth: "99px",
     secondary: {
-      content: ( 
-      <OverlayTourProvider>
-        <FullScreenModeText />
-      </OverlayTourProvider>
+      content: (
+        <OverlayTourProvider>
+          <FullScreenModeText />
+        </OverlayTourProvider>
       ),
       secondaryPos: "right",
     },
@@ -62,17 +62,42 @@ export const elements: Record<string, ElementType> = {
     contentPos: "left-center",
     contentWidth: "100px",
   },
+  mapModeToggleControl: {
+    key: "2D_3D_TOGGLE",
+    content: <div>Wechsel von 2D- und 3D-Ansicht</div>,
+    containerPos: "center",
+    contentPos: "left-center",
+    contentWidth: "100px",
+  },
+  alignNorthControl: {
+    key: "EINNORDEN",
+    content: <div>Nach Norden ausrichten</div>,
+    containerPos: "center",
+    contentPos: "left-center",
+    contentWidth: "100px",
+  },
+  featureInfoControl: {
+    key: "SACHDATENABFRAGE",
+    content: <div>Modus Sachdatenabfrage</div>,
+    containerPos: "center",
+    contentPos: "left-center",
+    contentWidth: "100px",
+  },
   homeControl: {
     key: "RATHAUS",
-    content: <div><b>Zum Ausgangspunkt</b></div>,
+    content: (
+      <div>
+        <b>Zum Ausgangspunkt</b>
+      </div>
+    ),
     containerPos: "center",
     contentPos: "left-center",
     contentWidth: "214px",
     secondary: {
-      content: ( 
-      <OverlayTourProvider>
-        <HomeText />
-      </OverlayTourProvider>
+      content: (
+        <OverlayTourProvider>
+          <HomeText />
+        </OverlayTourProvider>
       ),
       secondaryPos: "right",
     },

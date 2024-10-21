@@ -123,6 +123,45 @@ export const Messungen: StoryObj = {
   },
 };
 
+export const Wechsel2D3D: StoryObj = {
+  render: () => {
+    const element = getCollabedHelpElementsConfig("2D_3D_TOGGLE", geoElements);
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
+      </div>
+    );
+  },
+};
+
+export const Einnorden: StoryObj = {
+  render: () => {
+    const element = getCollabedHelpElementsConfig("EINNORDEN", geoElements);
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
+      </div>
+    );
+  },
+};
+
+export const Sachdatenabfrage: StoryObj = {
+  render: () => {
+    const element = getCollabedHelpElementsConfig(
+      "SACHDATENABFRAGE",
+      geoElements
+    );
+    const config = useOverlayHelper(element);
+    return (
+      <div>
+        <DisplayContentHelper config={config} primaryPlaceInStory="left" />
+      </div>
+    );
+  },
+};
+
 export const GazetteerSuche: StoryObj = {
   render: () => {
     const element = getCollabedHelpElementsConfig(
