@@ -92,7 +92,7 @@ export const elements: Record<string, ElementType> = {
     ),
     containerPos: "center",
     contentPos: "left-center",
-    contentWidth: "214px",
+    contentWidth: "149px",
     secondary: {
       content: (
         <OverlayTourProvider>
