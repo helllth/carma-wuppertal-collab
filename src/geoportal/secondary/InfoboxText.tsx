@@ -1,3 +1,5 @@
+import { Link } from "../../helper-overlay/components/Link";
+
 export const InfoboxText = () => {
   return (
     <ul
@@ -6,7 +8,7 @@ export const InfoboxText = () => {
     >
       <div>
         Nur sichtbar in Modi mit Anzeige von Objektinformationen (<b>2D</b>)| 
-        Modus Strecke/Fläche messen: Navigation in zuvor angelegten Messgeometrien, 
+        <Link target="MESSUNGEN">Modus Strecke/Fläche messen</Link>: Navigation in zuvor angelegten Messgeometrien, 
         Anzeige der Messergebnisse, Löschen von Messgeometrien | 
         Modus Sachdaten abfragen: Anzeige der wichtigsten Informationen/Links zum 
         selektierten Objekt und/oder zu den Objekten an der ausgewählten Position 

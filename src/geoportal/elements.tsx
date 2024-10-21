@@ -104,7 +104,11 @@ export const elements: Record<string, ElementType> = {
       right: 10,
     },
     secondary: {
-      content: <InfoboxText />,
+      content: (
+        <OverlayTourProvider>
+          <InfoboxText />
+        </OverlayTourProvider>
+      ),
       secondaryPos: "left",
     },
   },
