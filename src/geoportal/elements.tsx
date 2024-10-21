@@ -63,7 +63,7 @@ export const elements: Record<string, ElementType> = {
     contentWidth: "100px",
   },
   homeControl: {
-    key: "HOME",
+    key: "RATHAUS",
     content: <div><b>zum Ausgangspunkt</b></div>,
     containerPos: "center",
     contentPos: "left-center",
