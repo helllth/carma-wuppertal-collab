@@ -64,7 +64,7 @@ export const elements: Record<string, ElementType> = {
   },
   homeControl: {
     key: "RATHAUS",
-    content: <div><b>zum Ausgangspunkt</b></div>,
+    content: <div><b>Zum Ausgangspunkt</b></div>,
     containerPos: "center",
     contentPos: "left-center",
     secondary: {
