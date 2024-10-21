@@ -67,6 +67,7 @@ export const elements: Record<string, ElementType> = {
     content: <div><b>Zum Ausgangspunkt</b></div>,
     containerPos: "center",
     contentPos: "left-center",
+    contentWidth: "214px",
     secondary: {
       content: ( 
       <OverlayTourProvider>
