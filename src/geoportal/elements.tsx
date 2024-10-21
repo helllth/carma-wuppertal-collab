@@ -3,6 +3,7 @@ import { MeasurementsText } from "./secondary/MeasurementsText";
 import { InfoboxText } from "./secondary/InfoboxText";
 import { FullScreenModeText } from "./secondary/FullScreenModeText";
 import { OverlayTourProvider } from "../helper-overlay/components/OverlayTourProvider";
+import { HomeText } from "./secondary/HomeText";
 
 export const elements: Record<string, ElementType> = {
   menu: {
@@ -62,10 +63,18 @@ export const elements: Record<string, ElementType> = {
     contentWidth: "100px",
   },
   homeControl: {
-    key: "RATHAUS",
-    content: <div>Rathaus</div>,
+    key: "HOME",
+    content: <div><b>zum Ausgangspunkt</b></div>,
     containerPos: "center",
     contentPos: "left-center",
+    secondary: {
+      content: ( 
+      <OverlayTourProvider>
+        <HomeText />
+      </OverlayTourProvider>
+      ),
+      secondaryPos: "right",
+    },
   },
   measurementControl: {
     key: "MESSUNGEN",
