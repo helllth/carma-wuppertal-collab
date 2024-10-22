@@ -6,7 +6,7 @@ export const HomeText = () => {
     >
       <div>
         Klicken/Tippen für Rückkehr zum Ausgangspunkt (<b>2D</b> und <b>3D</b>) | 
-        feste  Voreinstellung: Rathaus Wuppertal-Barmen | im 3D-Modus Schrägansicht  
+        feste  Voreinstellung: Rathaus Wuppertal-Barmen | im 3D-Modus als Schrägansicht  
       </div>
     </ul>
   );
