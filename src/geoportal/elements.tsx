@@ -4,6 +4,7 @@ import { InfoboxText } from "./secondary/InfoboxText";
 import { FullScreenModeText } from "./secondary/FullScreenModeText"
 import { HomeText } from "./secondary/HomeText";
 import { FeatureInfoText } from "./secondary/FeatureInfoText";
+import { LocatorText } from "./secondary/LocatorText";
 import { OverlayTourProvider } from "../helper-overlay/components/OverlayTourProvider";
 
 
@@ -59,10 +60,19 @@ export const elements: Record<string, ElementType> = {
   },
   navigatorControl: {
     key: "MEINE_POSITION",
-    content: <div>Meine Position</div>,
+    content: <div><b>Mein Standort</b></div>,
     containerPos: "center",
     contentPos: "left-center",
     contentWidth: "100px",
+    secondary: {
+      content: (
+        <OverlayTourProvider>
+          <LocatorText />
+        </OverlayTourProvider>
+      ),
+      secondaryPos: "right",
+    },
+
   },
   mapModeToggleControl: {
     key: "2D_3D_TOGGLE",
