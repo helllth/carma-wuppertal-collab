@@ -1,9 +1,11 @@
 import type { ElementType } from "../helper-overlay/helperTypes";
 import { MeasurementsText } from "./secondary/MeasurementsText";
 import { InfoboxText } from "./secondary/InfoboxText";
-import { FullScreenModeText } from "./secondary/FullScreenModeText";
-import { OverlayTourProvider } from "../helper-overlay/components/OverlayTourProvider";
+import { FullScreenModeText } from "./secondary/FullScreenModeText"
 import { HomeText } from "./secondary/HomeText";
+import { FeatureInfoText } from "./secondary/FeatureInfoText";
+import { OverlayTourProvider } from "../helper-overlay/components/OverlayTourProvider";
+
 
 export const elements: Record<string, ElementType> = {
   menu: {
@@ -78,10 +80,18 @@ export const elements: Record<string, ElementType> = {
   },
   featureInfoControl: {
     key: "SACHDATENABFRAGE",
-    content: <div>Modus Sachdatenabfrage</div>,
+    content: <div><b>Modus Sachdatenabfrage</b></div>,
     containerPos: "center",
     contentPos: "left-center",
     contentWidth: "181px",
+    secondary: {
+      content: (
+        <OverlayTourProvider>
+          <FeatureInfoText />
+        </OverlayTourProvider>
+      ),
+      secondaryPos: "right",
+    },
   },
   homeControl: {
     key: "RATHAUS",
