@@ -20,6 +20,7 @@ const getCollabedHelpComponentConfig = ({ versionString }) => {
       useContext<typeof UIDispatchContext>(UIDispatchContext);
     return (
       <Footer
+        title="Hitzebelastungskarte Wuppertal"
         version={versionString}
         setAppMenuActiveMenuSection={setAppMenuActiveMenuSection}
       />
