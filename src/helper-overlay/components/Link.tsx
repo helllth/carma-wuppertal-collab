@@ -10,7 +10,7 @@ interface LinkProps {
 }
 
 export const Link = ({ children, target, section }: LinkProps) => {
-  const { setSecondaryWithKey, showOverlay } =
+  const { setSecondaryWithKey } =
     useContext<OverlayTourContextSettings>(OverlayTourContext);
   const { setAppMenuActiveMenuSection, setAppMenuVisible } =
     useContext<typeof UIDispatchContext>(UIDispatchContext);
@@ -22,7 +22,6 @@ export const Link = ({ children, target, section }: LinkProps) => {
     }
 
     if (section) {
-      showOverlay(false);
       setAppMenuVisible(true);
       setAppMenuActiveMenuSection(section);
     }
