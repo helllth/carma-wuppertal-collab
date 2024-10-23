@@ -16,7 +16,7 @@ export const Help10Datengrundlage = () => {
           <p>
             Die Modellberechnungen zu den Hitzebelastungen in der Stadt
             Wuppertal wurden vom Ingenieurbüro{" "}
-            <a target="_more" href="http://www.k.plan.ruhr/">
+            <a target="_more" href="https://www.stadtklima.ruhr/">
               K.PLAN Klima.Umwelt &amp; Planung GmbH
             </a>{" "}
             im Zusammenhang mit der Erstellung des Gutachtens{" "}

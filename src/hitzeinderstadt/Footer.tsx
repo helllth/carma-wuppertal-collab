@@ -37,7 +37,7 @@ export const Footer = ({
         <a
           className="pleaseRenderAsLink"
           target="_blank"
-          href="http://www.k.plan.ruhr/"
+          href="https://www.stadtklima.ruhr/"
         >
           K.PLAN Klima.Umwelt & Planung GmbH{" "}
         </a>
