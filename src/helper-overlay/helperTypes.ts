@@ -65,6 +65,7 @@ export type ElementType = {
 
 export type OverlayTourContext = {
   setSecondaryWithKey: (key: string) => void;
+  showOverlay: (show: boolean) => void;
 };
 
 export interface OverlayHelperConfig {
@@ -83,4 +84,5 @@ export type OverlayTourAction = (arg: OverlayHelperConfig) => void;
 export type OverlayTourProviderProps = {
   children: JSX.Element;
   setSecondaryWithKey?: (key: string) => void;
+  showOverlay?: (show: boolean) => void;
 };

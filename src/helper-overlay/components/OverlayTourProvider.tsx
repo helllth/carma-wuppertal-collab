@@ -6,14 +6,16 @@ import type {
 
 export const OverlayTourContext = createContext<OverlayTourContextSettings>({
   setSecondaryWithKey: () => {},
+  showOverlay: () => {},
 });
 
 export const OverlayTourProvider = ({
   setSecondaryWithKey = () => {},
+  showOverlay = () => {},
   children,
 }: OverlayTourProviderProps) => {
   return (
-    <OverlayTourContext.Provider value={{ setSecondaryWithKey }}>
+    <OverlayTourContext.Provider value={{ setSecondaryWithKey, showOverlay }}>
       {children}
     </OverlayTourContext.Provider>
   );
