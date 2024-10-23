@@ -1,18 +1,29 @@
 import { OverlayTourContext } from "./OverlayTourProvider";
 import type { OverlayTourContext as OverlayTourContextSettings } from "../helperTypes";
 import { useContext } from "react";
+import { UIDispatchContext } from "react-cismap/contexts/UIContextProvider";
 
 interface LinkProps {
   children: JSX.Element | string;
-  target: string;
+  target?: string;
+  section?: string;
 }
 
-export const Link = ({ children, target }: LinkProps) => {
+export const Link = ({ children, target, section }: LinkProps) => {
   const { setSecondaryWithKey } =
     useContext<OverlayTourContextSettings>(OverlayTourContext);
+  const { setAppMenuActiveMenuSection } =
+    useContext<typeof UIDispatchContext>(UIDispatchContext);
+
   const showSecondaryWithKeyHandler = (e) => {
     e.stopPropagation();
-    setSecondaryWithKey(target);
+    if (target) {
+      setSecondaryWithKey(target);
+    }
+
+    if (section) {
+      setAppMenuActiveMenuSection(section);
+    }
   };
   return (
     <span

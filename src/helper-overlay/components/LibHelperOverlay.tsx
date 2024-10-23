@@ -1,5 +1,6 @@
 import { Popover } from "antd";
 import { cloneElement, useEffect, useState } from "react";
+import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
 
 export function LibHelperOverlay({
   config,
@@ -40,77 +41,80 @@ export function LibHelperOverlay({
   }, [config]);
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        zIndex: 1000,
-        width: "100vw",
-        height: "100vh",
-        background: color,
-        opacity: transparency,
-      }}
-    >
-      {hightlightRects && hightlightRects.secondaryComponent && (
-        <div
-          style={{
-            fontSize: "12px",
-            marginTop: "5px",
-            textAlign: "right",
-            width: "98%",
-            paddingRight: "15px",
-            color: "#919090",
-          }}
-        >
-          Auf den Text klicken um sekundäre Komponente zu öffnen
-        </div>
-      )}
-
+    <TopicMapContextProvider appKey="storybook-appkey">
+      {" "}
       <div
         style={{
-          marginTop: "1rem",
-          height: "95vh",
-          width: "96%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignContent: "center",
+          position: "fixed",
+          top: 0,
+          zIndex: 1000,
+          width: "100vw",
+          height: "100vh",
+          background: color,
+          opacity: transparency,
         }}
       >
-        {hightlightRects &&
-          (hightlightRects.secondaryComponent ? (
-            <Popover
-              content={hightlightRects.secondaryComponent.content}
-              trigger="click"
-              placement={hightlightRects.secondaryComponent.secondaryPos}
-              autoAdjustOverflow={false}
-            >
-              <span
+        {hightlightRects && hightlightRects.secondaryComponent && (
+          <div
+            style={{
+              fontSize: "12px",
+              marginTop: "5px",
+              textAlign: "right",
+              width: "98%",
+              paddingRight: "15px",
+              color: "#919090",
+            }}
+          >
+            Auf den Text klicken um sekundäre Komponente zu öffnen
+          </div>
+        )}
+
+        <div
+          style={{
+            marginTop: "1rem",
+            height: "95vh",
+            width: "96%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignContent: "center",
+          }}
+        >
+          {hightlightRects &&
+            (hightlightRects.secondaryComponent ? (
+              <Popover
+                content={hightlightRects.secondaryComponent.content}
+                trigger="click"
+                placement={hightlightRects.secondaryComponent.secondaryPos}
+                autoAdjustOverflow={false}
+              >
+                <span
+                  style={{
+                    cursor: "pointer",
+                    textAlign: "center",
+                    width: "max-content",
+                    margin: primaryMargin,
+                  }}
+                >
+                  {hightlightRects.content}
+                </span>
+              </Popover>
+            ) : (
+              <div
                 style={{
-                  cursor: "pointer",
                   textAlign: "center",
                   width: "max-content",
                   margin: primaryMargin,
                 }}
               >
-                {hightlightRects.content}
-              </span>
-            </Popover>
-          ) : (
-            <div
-              style={{
-                textAlign: "center",
-                width: "max-content",
-                margin: primaryMargin,
-              }}
-            >
-              {cloneElement(hightlightRects.content, {
-                showSecondaryWithKey: showSecondaryWithKey,
-              })}
-            </div>
-          ))}
+                {cloneElement(hightlightRects.content, {
+                  showSecondaryWithKey: showSecondaryWithKey,
+                })}
+              </div>
+            ))}
+        </div>
       </div>
-    </div>
+    </TopicMapContextProvider>
   );
 }
 
