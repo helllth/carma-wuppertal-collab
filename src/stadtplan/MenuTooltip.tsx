@@ -1,5 +1,5 @@
 export const MenuTooltip = ({
-  text = "helllth3: Themenstadtplan | Einstellungen | Kompaktanleitung",
+  text = "helllth4: Themenstadtplan | Einstellungen | Kompaktanleitung",
 }) => {
   return text;
 };
