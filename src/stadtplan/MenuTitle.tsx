@@ -1,5 +1,5 @@
 export const MenuTitle = ({
-  title = "Themenstadtplan, Einstellungen und Kompaktanleitung",
+  title = "helllth: Themenstadtplan, Einstellungen und Kompaktanleitung",
 }) => {
   return title;
 };
