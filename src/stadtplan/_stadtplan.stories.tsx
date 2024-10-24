@@ -59,7 +59,7 @@ export const Kompaktanleitung: StoryObj = {
 export const TitleMenu: StoryObj = {
   render: () => {
     return (
-      <MenuTitle title="Themenstadtplan, Einstellungen und Kompaktanleitung" />
+      <MenuTitle title="helllth: Themenstadtplan, Einstellungen und Kompaktanleitung" />
     );
   },
 };
